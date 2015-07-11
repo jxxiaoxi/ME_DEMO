@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<!-- the datetime settings activity in the AndroidManifest.xml name -->
+	<string name="activity_name">"com.android.settings.Settings$DateTimeSettingsActivity"</string>
+	<string name="package_name">"com.android.settings"</string>
+</resources>

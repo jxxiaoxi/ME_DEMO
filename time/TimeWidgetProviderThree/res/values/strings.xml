@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">Digital Clock</string>
+	<string name="title_activity_time_widget_provider">Digital Clock</string>
+	<string name="day_of_week">E</string>
+</resources>

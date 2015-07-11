@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HyThreeDigitalClock xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/timeprivder" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:time_0="@drawable/time_0"
+	android:time_1="@drawable/time_1" android:time_2="@drawable/time_2"
+	android:time_3="@drawable/time_3" android:time_4="@drawable/time_4"
+	android:time_5="@drawable/time_5" android:time_6="@drawable/time_6"
+	android:time_7="@drawable/time_7" android:time_8="@drawable/time_8"
+	android:time_9="@drawable/time_9" android:time_am="@drawable/time_am"
+	android:time_pm="@drawable/time_pm" android:time_background="@drawable/time_background"
+	android:day_of_week="@string/day_of_week" />
