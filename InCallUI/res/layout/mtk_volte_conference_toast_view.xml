@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:paddingTop="30dip"
+                android:paddingBottom="30dip"
+                android:background="@drawable/mtk_volte_conference_toast_bg" >
+        <TextView android:id="@+id/toast_msg"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="18sp"
+                   android:textColor="@android:color/white"
+                  />
+</RelativeLayout>

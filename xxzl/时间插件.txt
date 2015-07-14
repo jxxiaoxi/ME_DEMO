@@ -1,0 +1,914 @@
+ frameworks/base/api/current.txt                    |  76 ++++++++
+ .../java/android/widget/HyFourDigitalClock.java    | 197 +++++++++++++++++++++
+ .../java/android/widget/HyOneDigitalClock.java     | 184 +++++++++++++++++++
+ .../java/android/widget/HyTwoDigitalClock.java     | 182 +++++++++++++++++++
+ .../java/android/widget/HyXiaoMiDigitalClock.java  | 178 +++++++++++++++++++
+ .../core/res/res/layout/hy_fourdigitalclock.xml    |  40 +++++
+ .../core/res/res/layout/hy_onedigitalclock.xml     |  42 +++++
+ .../core/res/res/layout/hy_threedigitalclock.xml   |  41 +++++
+ .../core/res/res/layout/hy_twodigitalclock.xml     |  42 +++++
+ .../core/res/res/layout/hy_xiaomidigitalclock.xml  |  33 ++++
+ frameworks/base/core/res/res/values/attrs.xml      |  17 ++
+ frameworks/base/core/res/res/values/public.xml     |  21 +++
+ frameworks/base/core/res/res/values/symbols.xml    |  14 ++
+ packages/apps/TimeWidgetProviderFour/Android.mk    |  10 ++
+ .../TimeWidgetProviderFour/AndroidManifest.xml     |  23 +++
+ .../apps/TimeWidgetProviderFour/default.properties |  11 ++
+ .../res/drawable-hdpi/ic_launcher.png              | Bin 0 -> 19150 bytes
+ .../res/drawable-hdpi/time_0.png                   | Bin 0 -> 3844 bytes
+ .../res/drawable-hdpi/time_1.png                   | Bin 0 -> 3169 bytes
+ .../res/drawable-hdpi/time_2.png                   | Bin 0 -> 3796 bytes
+ .../res/drawable-hdpi/time_3.png                   | Bin 0 -> 3936 bytes
+ .../res/drawable-hdpi/time_4.png                   | Bin 0 -> 3496 bytes
+ .../res/drawable-hdpi/time_5.png                   | Bin 0 -> 3810 bytes
+ .../res/drawable-hdpi/time_6.png                   | Bin 0 -> 4053 bytes
+ .../res/drawable-hdpi/time_7.png                   | Bin 0 -> 3485 bytes
+ .../res/drawable-hdpi/time_8.png                   | Bin 0 -> 4054 bytes
+ .../res/drawable-hdpi/time_9.png                   | Bin 0 -> 4095 bytes
+ .../res/drawable-hdpi/time_am.png                  | Bin 0 -> 3277 bytes
+ .../res/drawable-hdpi/time_background.png          | Bin 0 -> 4645 bytes
+ .../res/drawable-hdpi/time_background111.png       | Bin 0 -> 5447 bytes
+ .../res/drawable-hdpi/time_dot.png                 | Bin 0 -> 2895 bytes
+ .../res/drawable-hdpi/time_pm.png                  | Bin 0 -> 3235 bytes
+ .../res/drawable-ldpi/ic_launcher.png              | Bin 0 -> 12276 bytes
+ .../res/drawable-mdpi/ic_launcher.png              | Bin 0 -> 11041 bytes
+ .../res/drawable-mdpi/time_0.png                   | Bin 0 -> 3375 bytes
+ .../res/drawable-mdpi/time_1.png                   | Bin 0 -> 3041 bytes
+ .../res/drawable-mdpi/time_2.png                   | Bin 0 -> 3417 bytes
+ .../res/drawable-mdpi/time_3.png                   | Bin 0 -> 3499 bytes
+ .../res/drawable-mdpi/time_4.png                   | Bin 0 -> 3188 bytes
+ .../res/drawable-mdpi/time_5.png                   | Bin 0 -> 3437 bytes
+ .../res/drawable-mdpi/time_6.png                   | Bin 0 -> 3547 bytes
+ .../res/drawable-mdpi/time_7.png                   | Bin 0 -> 3246 bytes
+ .../res/drawable-mdpi/time_8.png                   | Bin 0 -> 3570 bytes
+ .../res/drawable-mdpi/time_9.png                   | Bin 0 -> 3554 bytes
+ .../res/drawable-mdpi/time_am.png                  | Bin 0 -> 3103 bytes
+ .../res/drawable-mdpi/time_background.png          | Bin 0 -> 4474 bytes
+ .../res/drawable-mdpi/time_dot.png                 | Bin 0 -> 2864 bytes
+ .../res/drawable-mdpi/time_pm.png                  | Bin 0 -> 3079 bytes
+ .../res/drawable-xhdpi/ic_launcher.png             | Bin 0 -> 12276 bytes
+ .../TimeWidgetProviderFour/res/layout/desktop.xml  |  11 ++
+ .../res/values-zh-rCN/strings.xml                  |   6 +
+ .../TimeWidgetProviderFour/res/values/config.xml   |   6 +
+ .../TimeWidgetProviderFour/res/values/strings.xml  |   5 +
+ .../TimeWidgetProviderFour/res/values/styles.xml   |   5 +
+ .../res/xml/appwidget_provider.xml                 |   8 +
+ .../TimeWidgetProviderFour.java                    |  36 ++++
+ packages/apps/TimeWidgetProviderOne/Android.mk     |  10 ++
+ .../apps/TimeWidgetProviderOne/AndroidManifest.xml |  24 +++
+ .../apps/TimeWidgetProviderOne/default.properties  |  11 ++
+ .../res/drawable-hdpi/ic_launcher.png              | Bin 0 -> 20991 bytes
+ .../res/drawable-hdpi/time_0.png                   | Bin 0 -> 5655 bytes
+ .../res/drawable-hdpi/time_1.png                   | Bin 0 -> 3423 bytes
+ .../res/drawable-hdpi/time_2.png                   | Bin 0 -> 5302 bytes
+ .../res/drawable-hdpi/time_3.png                   | Bin 0 -> 5950 bytes
+ .../res/drawable-hdpi/time_4.png                   | Bin 0 -> 4206 bytes
+ .../res/drawable-hdpi/time_5.png                   | Bin 0 -> 5249 bytes
+ .../res/drawable-hdpi/time_6.png                   | Bin 0 -> 6178 bytes
+ .../res/drawable-hdpi/time_7.png                   | Bin 0 -> 4456 bytes
+ .../res/drawable-hdpi/time_8.png                   | Bin 0 -> 6287 bytes
+ .../res/drawable-hdpi/time_9.png                   | Bin 0 -> 6182 bytes
+ .../res/drawable-hdpi/time_am.png                  | Bin 0 -> 3236 bytes
+ .../res/drawable-hdpi/time_background.png          | Bin 0 -> 7596 bytes
+ .../res/drawable-hdpi/time_pm.png                  | Bin 0 -> 3173 bytes
+ .../res/drawable-ldpi/ic_launcher.png              | Bin 0 -> 12276 bytes
+ .../res/drawable-mdpi/ic_launcher.png              | Bin 0 -> 5099 bytes
+ .../res/drawable-mdpi/time_0.png                   | Bin 0 -> 4760 bytes
+ .../res/drawable-mdpi/time_1.png                   | Bin 0 -> 3263 bytes
+ .../res/drawable-mdpi/time_2.png                   | Bin 0 -> 4549 bytes
+ .../res/drawable-mdpi/time_3.png                   | Bin 0 -> 4956 bytes
+ .../res/drawable-mdpi/time_4.png                   | Bin 0 -> 3820 bytes
+ .../res/drawable-mdpi/time_5.png                   | Bin 0 -> 4441 bytes
+ .../res/drawable-mdpi/time_6.png                   | Bin 0 -> 5022 bytes
+ .../res/drawable-mdpi/time_7.png                   | Bin 0 -> 3874 bytes
+ .../res/drawable-mdpi/time_8.png                   | Bin 0 -> 5118 bytes
+ .../res/drawable-mdpi/time_9.png                   | Bin 0 -> 5026 bytes
+ .../res/drawable-mdpi/time_am.png                  | Bin 0 -> 3184 bytes
+ .../res/drawable-mdpi/time_background.png          | Bin 0 -> 8269 bytes
+ .../res/drawable-mdpi/time_pm.png                  | Bin 0 -> 3154 bytes
+ .../res/drawable-xhdpi/ic_launcher.png             | Bin 0 -> 12276 bytes
+ .../TimeWidgetProviderOne/res/layout/desktop.xml   |  12 ++
+ .../res/values-zh-rCN/strings.xml                  |   6 +
+ .../TimeWidgetProviderOne/res/values/config.xml    |   6 +
+ .../TimeWidgetProviderOne/res/values/strings.xml   |   5 +
+ .../TimeWidgetProviderOne/res/values/styles.xml    |   5 +
+ .../res/xml/appwidget_provider.xml                 |   8 +
+ .../TimeWidgetProviderOne.java                     |  36 ++++
+ packages/apps/TimeWidgetProviderTwo/Android.mk     |  10 ++
+ .../apps/TimeWidgetProviderTwo/AndroidManifest.xml |  24 +++
+ .../TimeWidgetProviderTwo.png                      | Bin 0 -> 484309 bytes
+ .../apps/TimeWidgetProviderTwo/default.properties  |  11 ++
+ .../res/drawable-hdpi/ic_launcher.png              | Bin 0 -> 6367 bytes
+ .../res/drawable-hdpi/time_0.png                   | Bin 0 -> 2322 bytes
+ .../res/drawable-hdpi/time_1.png                   | Bin 0 -> 1363 bytes
+ .../res/drawable-hdpi/time_2.png                   | Bin 0 -> 2242 bytes
+ .../res/drawable-hdpi/time_3.png                   | Bin 0 -> 2526 bytes
+ .../res/drawable-hdpi/time_4.png                   | Bin 0 -> 1480 bytes
+ .../res/drawable-hdpi/time_5.png                   | Bin 0 -> 2231 bytes
+ .../res/drawable-hdpi/time_6.png                   | Bin 0 -> 2589 bytes
+ .../res/drawable-hdpi/time_7.png                   | Bin 0 -> 1681 bytes
+ .../res/drawable-hdpi/time_8.png                   | Bin 0 -> 2622 bytes
+ .../res/drawable-hdpi/time_9.png                   | Bin 0 -> 2551 bytes
+ .../res/drawable-hdpi/time_am.png                  | Bin 0 -> 1244 bytes
+ .../res/drawable-hdpi/time_background.png          | Bin 0 -> 6036 bytes
+ .../res/drawable-hdpi/time_pm.png                  | Bin 0 -> 1200 bytes
+ .../res/drawable-ldpi/ic_launcher.png              | Bin 0 -> 12276 bytes
+ .../res/drawable-mdpi/ic_launcher.png              | Bin 0 -> 2899 bytes
+ .../res/drawable-mdpi/time_0.png                   | Bin 0 -> 1867 bytes
+ .../res/drawable-mdpi/time_1.png                   | Bin 0 -> 1295 bytes
+ .../res/drawable-mdpi/time_2.png                   | Bin 0 -> 1807 bytes
+ .../res/drawable-mdpi/time_3.png                   | Bin 0 -> 1971 bytes
+ .../res/drawable-mdpi/time_4.png                   | Bin 0 -> 1458 bytes
+ .../res/drawable-mdpi/time_5.png                   | Bin 0 -> 1834 bytes
+ .../res/drawable-mdpi/time_6.png                   | Bin 0 -> 2015 bytes
+ .../res/drawable-mdpi/time_7.png                   | Bin 0 -> 1511 bytes
+ .../res/drawable-mdpi/time_8.png                   | Bin 0 -> 2002 bytes
+ .../res/drawable-mdpi/time_9.png                   | Bin 0 -> 1989 bytes
+ .../res/drawable-mdpi/time_am.png                  | Bin 0 -> 1117 bytes
+ .../res/drawable-mdpi/time_background.png          | Bin 0 -> 4781 bytes
+ .../res/drawable-mdpi/time_pm.png                  | Bin 0 -> 1116 bytes
+ .../res/drawable-xhdpi/ic_launcher.png             | Bin 0 -> 12276 bytes
+ .../TimeWidgetProviderTwo/res/layout/desktop.xml   |  11 ++
+ .../res/values-zh-rCN/strings.xml                  |   6 +
+ .../TimeWidgetProviderTwo/res/values/config.xml    |   6 +
+ .../TimeWidgetProviderTwo/res/values/strings.xml   |   5 +
+ .../TimeWidgetProviderTwo/res/values/styles.xml    |   5 +
+ .../res/xml/appwidget_provider.xml                 |   8 +
+ .../TimeWidgetProviderTwo.java                     |  37 ++++
+ packages/apps/TimeWidgetProviderXiaoMi/Android.mk  |  10 ++
+ .../TimeWidgetProviderXiaoMi/AndroidManifest.xml   |  24 +++
+ .../TimeWidgetProviderMi.png                       | Bin 0 -> 529431 bytes
+ .../TimeWidgetProviderXiaoMi/default.properties    |  11 ++
+ .../res/drawable-hdpi/ic_launcher.png              | Bin 0 -> 16066 bytes
+ .../res/drawable-hdpi/time_0.png                   | Bin 0 -> 4086 bytes
+ .../res/drawable-hdpi/time_1.png                   | Bin 0 -> 3191 bytes
+ .../res/drawable-hdpi/time_2.png                   | Bin 0 -> 3872 bytes
+ .../res/drawable-hdpi/time_3.png                   | Bin 0 -> 4112 bytes
+ .../res/drawable-hdpi/time_4.png                   | Bin 0 -> 3389 bytes
+ .../res/drawable-hdpi/time_5.png                   | Bin 0 -> 3801 bytes
+ .../res/drawable-hdpi/time_6.png                   | Bin 0 -> 4200 bytes
+ .../res/drawable-hdpi/time_7.png                   | Bin 0 -> 3481 bytes
+ .../res/drawable-hdpi/time_8.png                   | Bin 0 -> 4373 bytes
+ .../res/drawable-hdpi/time_9.png                   | Bin 0 -> 4221 bytes
+ .../res/drawable-hdpi/time_background.png          | Bin 0 -> 6682 bytes
+ .../res/drawable-ldpi/ic_launcher.png              | Bin 0 -> 12276 bytes
+ .../res/drawable-mdpi/ic_launcher.png              | Bin 0 -> 7923 bytes
+ .../res/drawable-mdpi/time_0.png                   | Bin 0 -> 3665 bytes
+ .../res/drawable-mdpi/time_1.png                   | Bin 0 -> 3053 bytes
+ .../res/drawable-mdpi/time_2.png                   | Bin 0 -> 3491 bytes
+ .../res/drawable-mdpi/time_3.png                   | Bin 0 -> 3656 bytes
+ .../res/drawable-mdpi/time_4.png                   | Bin 0 -> 3178 bytes
+ .../res/drawable-mdpi/time_5.png                   | Bin 0 -> 3439 bytes
+ .../res/drawable-mdpi/time_6.png                   | Bin 0 -> 3772 bytes
+ .../res/drawable-mdpi/time_7.png                   | Bin 0 -> 3225 bytes
+ .../res/drawable-mdpi/time_8.png                   | Bin 0 -> 3713 bytes
+ .../res/drawable-mdpi/time_9.png                   | Bin 0 -> 3735 bytes
+ .../res/drawable-mdpi/time_background.png          | Bin 0 -> 5571 bytes
+ .../res/drawable-xhdpi/ic_launcher.png             | Bin 0 -> 12276 bytes
+ .../res/layout/desktop.xml                         |  10 ++
+ .../res/values-zh-rCN/strings.xml                  |   6 +
+ .../TimeWidgetProviderXiaoMi/res/values/config.xml |   6 +
+ .../res/values/strings.xml                         |   5 +
+ .../TimeWidgetProviderXiaoMi/res/values/styles.xml |   5 +
+ .../res/xml/appwidget_provider.xml                 |   8 +
+ .../TimeWidgetProviderXiaoMi.java                  |  37 ++++
+ 174 files changed, 1556 insertions(+)
+ create mode 100644 frameworks/base/core/java/android/widget/HyFourDigitalClock.java
+ create mode 100644 frameworks/base/core/java/android/widget/HyOneDigitalClock.java
+ create mode 100644 frameworks/base/core/java/android/widget/HyTwoDigitalClock.java
+ create mode 100644 frameworks/base/core/java/android/widget/HyXiaoMiDigitalClock.java
+ create mode 100644 frameworks/base/core/res/res/layout/hy_fourdigitalclock.xml
+ create mode 100644 frameworks/base/core/res/res/layout/hy_onedigitalclock.xml
+ create mode 100644 frameworks/base/core/res/res/layout/hy_threedigitalclock.xml
+ create mode 100644 frameworks/base/core/res/res/layout/hy_twodigitalclock.xml
+ create mode 100644 frameworks/base/core/res/res/layout/hy_xiaomidigitalclock.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/Android.mk
+ create mode 100644 packages/apps/TimeWidgetProviderFour/AndroidManifest.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/default.properties
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_am.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_background111.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_dot.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-hdpi/time_pm.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-ldpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_am.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_dot.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-mdpi/time_pm.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/drawable-xhdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/layout/desktop.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/values-zh-rCN/strings.xml
+ create mode 100755 packages/apps/TimeWidgetProviderFour/res/values/config.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/values/strings.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/values/styles.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/res/xml/appwidget_provider.xml
+ create mode 100644 packages/apps/TimeWidgetProviderFour/src/com/android/timewidgetproviderfour/TimeWidgetProviderFour.java
+ create mode 100644 packages/apps/TimeWidgetProviderOne/Android.mk
+ create mode 100644 packages/apps/TimeWidgetProviderOne/AndroidManifest.xml
+ create mode 100644 packages/apps/TimeWidgetProviderOne/default.properties
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_am.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-hdpi/time_pm.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-ldpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_am.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-mdpi/time_pm.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/drawable-xhdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/layout/desktop.xml
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/values-zh-rCN/strings.xml
+ create mode 100755 packages/apps/TimeWidgetProviderOne/res/values/config.xml
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/values/strings.xml
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/values/styles.xml
+ create mode 100644 packages/apps/TimeWidgetProviderOne/res/xml/appwidget_provider.xml
+ create mode 100644 packages/apps/TimeWidgetProviderOne/src/com/android/timewidgetproviderone/TimeWidgetProviderOne.java
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/Android.mk
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/AndroidManifest.xml
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/TimeWidgetProviderTwo.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/default.properties
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_am.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-hdpi/time_pm.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-ldpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_am.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-mdpi/time_pm.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/drawable-xhdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/layout/desktop.xml
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/values-zh-rCN/strings.xml
+ create mode 100755 packages/apps/TimeWidgetProviderTwo/res/values/config.xml
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/values/strings.xml
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/values/styles.xml
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/res/xml/appwidget_provider.xml
+ create mode 100644 packages/apps/TimeWidgetProviderTwo/src/com/android/timewidgetprovidertwo/TimeWidgetProviderTwo.java
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/Android.mk
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/AndroidManifest.xml
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/TimeWidgetProviderMi.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/default.properties
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-hdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-ldpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_0.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_1.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_2.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_3.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_4.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_5.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_6.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_7.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_8.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_9.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-mdpi/time_background.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/drawable-xhdpi/ic_launcher.png
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/layout/desktop.xml
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/values-zh-rCN/strings.xml
+ create mode 100755 packages/apps/TimeWidgetProviderXiaoMi/res/values/config.xml
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/values/strings.xml
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/values/styles.xml
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/res/xml/appwidget_provider.xml
+ create mode 100644 packages/apps/TimeWidgetProviderXiaoMi/src/com/android/timewidgetproviderxiaomi/TimeWidgetProviderXiaoMi.java
+diff --git a/frameworks/base/api/current.txt b/frameworks/base/api/current.txt
++    field public static final int day_of_week = 16843780; // 0x1010404
++    field public static final int img_time_dot = 16843778; // 0x1010402
++    field public static final int time_0 = 16843770; // 0x10103fa
++    field public static final int time_1 = 16843771; // 0x10103fb
++    field public static final int time_2 = 16843772; // 0x10103fc
++    field public static final int time_3 = 16843773; // 0x10103fd
++    field public static final int time_4 = 16843774; // 0x10103fe
++    field public static final int time_5 = 16843766; // 0x10103f6
++    field public static final int time_6 = 16843767; // 0x10103f7
++    field public static final int time_7 = 16843768; // 0x10103f8
++    field public static final int time_8 = 16843769; // 0x10103f9
++    field public static final int time_9 = 16843782; // 0x1010406
++    field public static final int time_am = 16843781; // 0x1010405
++    field public static final int time_background = 16843779; // 0x1010403
++    field public static final int time_pm = 16843777; // 0x1010401
++  public class HyFourDigitalClock extends android.widget.RelativeLayout {
++    ctor public HyFourDigitalClock(android.content.Context);
++    ctor public HyFourDigitalClock(android.content.Context, android.util.AttributeSet);
++    method public java.lang.String forMatCurdate(java.lang.String);
++    method public void setDateFormat();
++    method public void updateDateTime();
++  }
++
++  public class HyFourDigitalClock.UpBroadcastReceiver extends android.content.BroadcastReceiver {
++    ctor public HyFourDigitalClock.UpBroadcastReceiver();
++    method public void onReceive(android.content.Context, android.content.Intent);
++  }
++
++  public class HyOneDigitalClock extends android.widget.RelativeLayout {
++    ctor public HyOneDigitalClock(android.content.Context);
++    ctor public HyOneDigitalClock(android.content.Context, android.util.AttributeSet);
++    method public void setDateFormat();
++    method public void updateDateTime();
++  }
++
++  public class HyOneDigitalClock.UpBroadcastReceiver extends android.content.BroadcastReceiver {
++    ctor public HyOneDigitalClock.UpBroadcastReceiver();
++    method public void onReceive(android.content.Context, android.content.Intent);
++  }
++
++  public class HyThreeDigitalClock extends android.widget.RelativeLayout {
++    ctor public HyThreeDigitalClock(android.content.Context);
++    ctor public HyThreeDigitalClock(android.content.Context, android.util.AttributeSet);
++    method public void setDateFormat();
++    method public void updateDateTime();
++  }
++
++  public class HyThreeDigitalClock.UpBroadcastReceiver extends android.content.BroadcastReceiver {
++    ctor public HyThreeDigitalClock.UpBroadcastReceiver();
++    method public void onReceive(android.content.Context, android.content.Intent);
++  }
++
++  public class HyTwoDigitalClock extends android.widget.RelativeLayout {
++    ctor public HyTwoDigitalClock(android.content.Context);
++    ctor public HyTwoDigitalClock(android.content.Context, android.util.AttributeSet);
++    method public void setDateFormat();
++    method public void updateDateTime();
++  }
++
++  public class HyTwoDigitalClock.UpBroadcastReceiver extends android.content.BroadcastReceiver {
++    ctor public HyTwoDigitalClock.UpBroadcastReceiver();
++    method public void onReceive(android.content.Context, android.content.Intent);
++  }
++
++  public class HyXiaoMiDigitalClock extends android.widget.RelativeLayout {
++    ctor public HyXiaoMiDigitalClock(android.content.Context);
++    ctor public HyXiaoMiDigitalClock(android.content.Context, android.util.AttributeSet);
++    method public void setDateFormat();
++    method public void updateDateTime();
++  }
++
++  public class HyXiaoMiDigitalClock.UpBroadcastReceiver extends android.content.BroadcastReceiver {
++    ctor public HyXiaoMiDigitalClock.UpBroadcastReceiver();
++    method public void onReceive(android.content.Context, android.content.Intent);
++  }
++
+   public class ImageButton extends android.widget.ImageView {
+     ctor public ImageButton(android.content.Context);
+     ctor public ImageButton(android.content.Context, android.util.AttributeSet);
+diff --git a/frameworks/base/core/java/android/widget/HyFourDigitalClock.java b/frameworks/base/core/java/android/widget/HyFourDigitalClock.java
+new file mode 100644
++++ b/frameworks/base/core/java/android/widget/HyFourDigitalClock.java
+@@ -0,0 +1,197 @@
++
++package android.widget;
++
++import android.content.BroadcastReceiver;
++import android.content.Context;
++import android.content.Intent;
++import android.content.IntentFilter;
++import android.content.res.TypedArray;
++import android.database.ContentObserver;
++import android.os.Handler;
++import android.provider.Settings;
++import android.text.format.DateFormat;
++import android.text.format.Time;
++import android.util.AttributeSet;
++import android.util.Log;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.widget.RemoteViews.RemoteView;
++
++import com.android.internal.R;
++
++import java.util.Date;
++import java.util.regex.Matcher;
++import java.util.regex.Pattern;
++
++@RemoteView
++public class HyFourDigitalClock extends RelativeLayout {
++    private ImageView mTimeMinOne;
++    private ImageView mTimeMinTen;
++    private ImageView mTimeHourOne;
++    private ImageView mTimeHourTen;
++    private ImageView mTimeFormat;
++    private ImageView mTimeDot;
++    private static boolean mIs24Hour;
++    private TextView mDayofweek;
++    private TextView mTvDate;
++    private RelativeLayout mTimeprivder;
++    
++    private boolean mAttached;
++    private UpBroadcastReceiver mBroadcastReceiver;
++    private ContentObserver mFormatChangeObserver;
++    private TypedArray mTypedArray;
++    private static final int drawableId[] = {
++            com.android.internal.R.styleable.HyOneDigitalClock_time_0,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_1,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_2,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_3,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_4,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_5,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_6,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_7,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_8,
++            com.android.internal.R.styleable.HyOneDigitalClock_time_9
++    };
++
++    public HyFourDigitalClock(Context context) {
++        // TODO Auto-generated constructor stub
++        super(context);
++        Log.e("liuwei", "HyOneDigitalClock1");
++        initClock(context);
++    }
++
++    public HyFourDigitalClock(Context context, AttributeSet attrs) {
++        super(context, attrs);
++        Log.e("liuwei", "HyOneDigitalClock2");
++        mTypedArray= context.obtainStyledAttributes(attrs,  
++                com.android.internal.R.styleable.HyOneDigitalClock); 
++
++        initClock(context);
++    }
++
++    private void initClock(Context context) {
++
++        final LayoutInflater inflater = LayoutInflater.from(context);
++        inflater.inflate(R.layout.hy_fourdigitalclock, this, true);
++        mTimeDot = (ImageView)this.findViewById(R.id.time_dot);
++        Log.e("liuwei","..........................."+mTimeDot);
++        mTimeDot.setBackgroundDrawable(mTypedArray.getDrawable(com.android.internal.R.styleable.HyOneDigitalClock_img_time_dot));
++        mTimeprivder = (RelativeLayout) this.findViewById(R.id.timeprivder);
++        mTimeprivder.setBackgroundDrawable(mTypedArray.getDrawable(com.android.internal.R.styleable.HyOneDigitalClock_time_background));
++        mTimeMinOne = (ImageView) this.findViewById(R.id.time_min_one);
++        mTimeMinTen = (ImageView) this.findViewById(R.id.time_min_ten);
++        mTimeHourOne = (ImageView) this.findViewById(R.id.time_hour_one);
++        mTimeHourTen = (ImageView) this.findViewById(R.id.time_hour_ten);
++        mTimeFormat = (ImageView) this.findViewById(R.id.timeformat);
++        mDayofweek = (TextView) this.findViewById(R.id.dayofweek);
++        mTvDate = (TextView) this.findViewById(R.id.tv_date);
++        Log.e("liuwei", "initClock");
++        updateDateTime();
++    }
++
++    public void updateDateTime() {
++        mIs24Hour = android.text.format.DateFormat.is24HourFormat(mContext);
++        Time t = new Time();
++        t.setToNow();
++        int hour = t.hour;
++        int min = t.minute;
++        mTimeMinOne.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[min % 10]));
++        mTimeMinTen.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[min / 10]));
++        Log.e("liuwei", "mIs24Hour : " + mIs24Hour);
++        if (mIs24Hour) {
++            mTimeFormat.setVisibility(View.GONE);
++            mTimeHourOne.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[hour % 10]));
++            mTimeHourTen.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[hour / 10]));
++        } else {
++            mTimeFormat.setVisibility(View.VISIBLE);
++            if (hour >= 12) {
++                hour = (hour == 12) ? hour : hour % 12;
++                mTimeFormat.setBackgroundDrawable(mTypedArray.getDrawable(com.android.internal.R.styleable.HyOneDigitalClock_time_pm));
++            } else {
++                if (hour == 0)
++                    hour = 12;
++                mTimeFormat.setBackgroundDrawable(mTypedArray.getDrawable(com.android.internal.R.styleable.HyOneDigitalClock_time_am));
++            }
++            if (hour >= 10) {
++                mTimeHourTen.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[1]));
++            } else {
++                mTimeHourTen.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[0]));
++            }
++            mTimeHourOne.setBackgroundDrawable(mTypedArray.getDrawable(drawableId[hour  % 10]));
++        }
++
++        Date dt = new Date();
++        String curDate = (String) DateFormat.getDateFormat(mContext).format(dt);
++
++        mTvDate.setText(forMatCurdate(curDate));
++        mDayofweek.setText(DateFormat.format(mTypedArray
++                .getString(com.android.internal.R.styleable.HyOneDigitalClock_day_of_week),
++                new Date()));
++    }
++
++    public String forMatCurdate(String date) {
++        Pattern pattern = Pattern.compile("[-/]*[0-9]{4}[-/]*");
++        Matcher matcher = pattern.matcher(date);
++        StringBuffer stringBuffer = new StringBuffer();
++        while (matcher.find())
++        {
++            matcher.appendReplacement(stringBuffer, "");
++        }
++        matcher.appendTail(stringBuffer);
++        return stringBuffer.toString();
++    }
++
++    @Override
++    protected void onAttachedToWindow() {
++        super.onAttachedToWindow();
++        if (!mAttached) {
++            mAttached = true;
++            IntentFilter filter = new IntentFilter();
++
++            filter.addAction(Intent.ACTION_TIME_TICK);
++            filter.addAction(Intent.ACTION_TIME_CHANGED);
++            filter.addAction(Intent.ACTION_TIMEZONE_CHANGED);
++            mBroadcastReceiver = new UpBroadcastReceiver();
++            getContext().registerReceiver(mBroadcastReceiver, filter);
++            mFormatChangeObserver = new FormatChangeObserver();
++            getContext().getContentResolver().registerContentObserver(
++                    Settings.System.CONTENT_URI, true, mFormatChangeObserver);
++
++        }
++    }
++
++    public class UpBroadcastReceiver extends BroadcastReceiver {
++
++        @Override
++        public void onReceive(Context context, Intent intent) {
++            // TODO Auto-generated method stub
++            updateDateTime();
++        }
++
++    }
++
++    private class FormatChangeObserver extends ContentObserver {
++        public FormatChangeObserver() {
++            super(new Handler());
++        }
++
++        @Override
++        public void onChange(boolean selfChange) {
++            Log.e("liuwei", "the system date format change");
++            setDateFormat();
++        }
++    }
++
++    public void setDateFormat() {
++        updateDateTime();
++    }
++
++    @Override
++    protected void onDetachedFromWindow() {
++        super.onDetachedFromWindow();
++        if (mAttached) {
++            getContext().unregisterReceiver(mBroadcastReceiver);
++            mAttached = false;
++        }
++    }
++}
++++ b/frameworks/base/core/res/res/layout/hy_fourdigitalclock.xml
+@@ -0,0 +1,40 @@
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++	xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
++	android:layout_height="wrap_content" android:id="@+id/timeprivder"  android:gravity="center">
++	<LinearLayout android:layout_width="wrap_content"
++		android:layout_height="wrap_content">
++		<LinearLayout android:layout_width="wrap_content"
++			android:id="@+id/timepr" android:layout_height="wrap_content"
++			android:orientation="horizontal">
++			<ImageView android:id="@+id/time_hour_ten"
++				android:layout_width="wrap_content" android:layout_height="wrap_content"
++				android:layout_marginRight="3dip" />
++			<ImageView android:id="@+id/time_hour_one"
++				android:layout_width="wrap_content" android:layout_height="wrap_content" />
++			<ImageView android:id="@+id/time_dot" android:layout_width="wrap_content"
++				android:layout_height="wrap_content" />
++			<ImageView android:id="@+id/time_min_ten"
++				android:layout_width="wrap_content" android:layout_height="wrap_content"
++				android:layout_marginRight="3dip" />
++			<ImageView android:id="@+id/time_min_one"
++				android:layout_width="wrap_content" android:layout_height="wrap_content" />
++		</LinearLayout>
++		<LinearLayout android:layout_width="37dip" android:id="@+id/timepr"
++			android:layout_marginLeft="3dip" android:layout_height="wrap_content"
++			android:orientation="vertical">
++			<ImageView android:id="@+id/timeformat"
++				android:layout_width="wrap_content" android:layout_height="wrap_content" />
++		</LinearLayout>
++		<LinearLayout android:layout_width="wrap_content"
++			android:gravity="center" android:id="@+id/timelayout"
++			android:layout_height="wrap_content" android:orientation="vertical">
++			<TextView android:id="@+id/dayofweek" android:layout_width="wrap_content"
++				android:textColor="#ffb4f51f" android:layout_height="wrap_content"
++				android:textSize="16dip" android:layout_marginTop="5dip"/>
++			<TextView android:id="@+id/tv_date" android:layout_width="wrap_content"
++				android:layout_marginTop="5dip" android:layout_height="wrap_content"
++				android:textColor="#ffb4f51f" android:gravity="center_horizontal"
++				android:textAppearance="?android:attr/textAppearanceLarge" />
++		</LinearLayout>
++	</LinearLayout>
++</RelativeLayout>
+--- a/frameworks/base/core/res/res/values/attrs.xml
++++ b/frameworks/base/core/res/res/values/attrs.xml
+@@ -6201,5 +6201,22 @@
+         <attr name="spread_hand_minute" format="reference"/>
+         <attr name="spread_hand_second" format="reference"/>
+     </declare-styleable>
++    <declare-styleable name="HyOneDigitalClock">
++	<attr name="time_0" format="reference" />
++	<attr name="time_1" format="reference" />
++	<attr name="time_2" format="reference" />
++	<attr name="time_3" format="reference" />
++	<attr name="time_4" format="reference" />
++	<attr name="time_5" format="reference" />
++	<attr name="time_6" format="reference" />
++	<attr name="time_7" format="reference" />
++	<attr name="time_8" format="reference" />
++	<attr name="time_9" format="reference" />
++	<attr name="time_am" format="reference" />
++	<attr name="time_pm" format="reference" />
++	<attr name="img_time_dot" format="reference" />
++	<attr name="time_background" format="reference" />
++	<attr name="day_of_week" format="string" />
++    </declare-styleable>
+ 
+ </resources>
+diff --git a/frameworks/base/core/res/res/values/public.xml b/frameworks/base/core/res/res/values/public.xml
+index 63e64be..22dc21c 100644
+--- a/frameworks/base/core/res/res/values/public.xml
++++ b/frameworks/base/core/res/res/values/public.xml
+@@ -2098,6 +2098,27 @@
+ 
+ 
+ <!-- ===============================================================
++     HY: Resources added
++     =============================================================== -->
++
++  <public type="attr" name="time_0" id="0x10103fa" />
++  <public type="attr" name="time_1" id="0x10103fb" />
++  <public type="attr" name="time_2" id="0x10103fc" />
++  <public type="attr" name="time_3" id="0x10103fd" />
++  <public type="attr" name="time_4" id="0x10103fe" />
++  <public type="attr" name="time_5" id="0x10103f6" />
++  <public type="attr" name="time_6" id="0x10103f7" />
++  <public type="attr" name="time_7" id="0x10103f8" />
++  <public type="attr" name="time_8" id="0x10103f9" />
++  <public type="attr" name="time_9" id="0x1010406" />
++  <public type="attr" name="time_am" id="0x1010405" />
++  <public type="attr" name="time_pm" id="0x1010401" />
++  <public type="attr" name="img_time_dot" id="0x1010402" />
++  <public type="attr" name="time_background" id="0x1010403" />
++  <public type="attr" name="day_of_week" id="0x1010404" />
++
++
++<!-- ===============================================================
+      SPRD: Resources added
+      =============================================================== -->
+   <public type="string" name="ActiveUnconCf" />
+diff --git a/frameworks/base/core/res/res/values/symbols.xml b/frameworks/base/core/res/res/values/symbols.xml
+index 70ad63b..b806067 100644
+--- a/frameworks/base/core/res/res/values/symbols.xml
++++ b/frameworks/base/core/res/res/values/symbols.xml
+@@ -1829,4 +1829,18 @@
+   <java-symbol type="string" name="global_action_restart" />
+   <java-symbol type="string" name="reboot_confirm" />
+   <java-symbol type="drawable" name="ic_lock_restart" />
++  <java-symbol type="layout" name="hy_onedigitalclock" />
++  <java-symbol type="layout" name="hy_twodigitalclock" />
++  <java-symbol type="layout" name="hy_threedigitalclock" />
++  <java-symbol type="layout" name="hy_xiaomidigitalclock" />
++  <java-symbol type="layout" name="hy_fourdigitalclock" />
++  <java-symbol type="id" name="timeprivder" />
++  <java-symbol type="id" name="tv_date" />
++  <java-symbol type="id" name="dayofweek" />
++  <java-symbol type="id" name="timeformat" />
++  <java-symbol type="id" name="time_hour_ten" />
++  <java-symbol type="id" name="time_hour_one" />
++  <java-symbol type="id" name="time_min_ten" />
++  <java-symbol type="id" name="time_min_one" />
++  <java-symbol type="id" name="time_dot" />
+ </resources>
+diff --git a/packages/apps/TimeWidgetProviderFour/Android.mk b/packages/apps/TimeWidgetProviderFour/Android.mk
+new file mode 100644
+index 0000000..83d7652
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/Android.mk
+@@ -0,0 +1,10 @@
++LOCAL_PATH:= $(call my-dir)
++include $(CLEAR_VARS)
++
++#LOCAL_SRC_FILES := $(call all-java-files-under, src)
++LOCAL_SRC_FILES := $(call all-subdir-java-files)
++LOCAL_PACKAGE_NAME := TimeWidgetProviderFour
++LOCAL_CERTIFICATE := platform
++
++include $(BUILD_PACKAGE)
++
+diff --git a/packages/apps/TimeWidgetProviderFour/AndroidManifest.xml b/packages/apps/TimeWidgetProviderFour/AndroidManifest.xml
+new file mode 100644
+index 0000000..00a40af
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/AndroidManifest.xml
+@@ -0,0 +1,23 @@
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++	package="com.android.timewidgetproviderfour" android:versionCode="1"
++	android:versionName="1.0">
++
++	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="15" />
++
++	<application android:icon="@drawable/ic_launcher"
++		android:label="@string/app_name" android:theme="@style/AppTheme">
++		<receiver android:name=".TimeWidgetProviderFour">
++			<meta-data android:name="android.appwidget.provider"
++				android:resource="@xml/appwidget_provider"></meta-data>
++			<intent-filter>
++				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
++				<action android:name="android.intent.action.TIME_SET" />
++				<action android:name="android.intent.action.TIMEZONE_CHANGED" />
++				<action android:name="android.intent.action.LOCALE_CHANGED" />
++				<action android:name="android.intent.action.TIME_TICK" />
++			</intent-filter>
++		</receiver>
++		<service android:name=".TimeWidgetProviderFour$UpdateService" />
++	</application>
++	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
++</manifest>
+diff --git a/packages/apps/TimeWidgetProviderFour/res/layout/desktop.xml b/packages/apps/TimeWidgetProviderFour/res/layout/desktop.xml
+new file mode 100644
+index 0000000..b896827
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/res/layout/desktop.xml
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<HyFourDigitalClock xmlns:android="http://schemas.android.com/apk/res/android"
++	android:id="@+id/timeprivder" android:layout_width="wrap_content" android:gravity="center"
++	android:layout_height="wrap_content" android:time_0="@drawable/time_0"
++	android:time_1="@drawable/time_1" android:time_2="@drawable/time_2"
++	android:time_3="@drawable/time_3" android:time_4="@drawable/time_4"
++	android:time_5="@drawable/time_5" android:time_6="@drawable/time_6"
++	android:time_7="@drawable/time_7" android:time_8="@drawable/time_8" android:img_time_dot="@drawable/time_dot"
++	android:time_9="@drawable/time_9" android:time_background="@drawable/time_background"
++	android:day_of_week="@string/day_of_week" android:time_am="@drawable/time_am"
++        android:time_pm="@drawable/time_pm"/>
+diff --git a/packages/apps/TimeWidgetProviderFour/res/values-zh-rCN/strings.xml b/packages/apps/TimeWidgetProviderFour/res/values-zh-rCN/strings.xml
+new file mode 100644
+index 0000000..e0a8bfb
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/res/values-zh-rCN/strings.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <string name="app_name">数字时钟</string>
++    <string name="title_activity_time_widget_provider">数字时钟</string>
++    <string name="day_of_week">EEEE</string>
++</resources>
+\ No newline at end of file
+diff --git a/packages/apps/TimeWidgetProviderFour/res/values/config.xml b/packages/apps/TimeWidgetProviderFour/res/values/config.xml
+new file mode 100755
+index 0000000..58f6e3c
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/res/values/config.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++	<!-- the datetime settings activity in the AndroidManifest.xml name -->
++	<string name="activity_name">"com.android.settings.Settings$DateTimeSettingsActivity"</string>
++	<string name="package_name">"com.android.settings"</string>
++</resources>
+diff --git a/packages/apps/TimeWidgetProviderFour/res/values/strings.xml b/packages/apps/TimeWidgetProviderFour/res/values/strings.xml
+new file mode 100644
+index 0000000..8555473
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/res/values/strings.xml
+@@ -0,0 +1,5 @@
++<resources>
++	<string name="app_name">Digital Clock</string>
++	<string name="title_activity_time_widget_provider">Digital Clock</string>
++	<string name="day_of_week">E</string>
++</resources>
+diff --git a/packages/apps/TimeWidgetProviderFour/res/values/styles.xml b/packages/apps/TimeWidgetProviderFour/res/values/styles.xml
+new file mode 100644
+index 0000000..4dba0d0
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/res/values/styles.xml
+@@ -0,0 +1,5 @@
++<resources>
++
++    <style name="AppTheme" parent="android:Theme.Light" />
++
++</resources>
+\ No newline at end of file
+diff --git a/packages/apps/TimeWidgetProviderFour/res/xml/appwidget_provider.xml b/packages/apps/TimeWidgetProviderFour/res/xml/appwidget_provider.xml
+new file mode 100644
+index 0000000..1f56eb2
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/res/xml/appwidget_provider.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="utf-8"?>
++<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" 
++    android:minWidth="294.0dip"
++    android:minHeight="120.0dip"
++    android:updatePeriodMillis="10"
++    android:previewImage="@drawable/ic_launcher"
++    android:initialLayout="@layout/desktop">
++</appwidget-provider>
+diff --git a/packages/apps/TimeWidgetProviderFour/src/com/android/timewidgetproviderfour/TimeWidgetProviderFour.java b/packages/apps/TimeWidgetProviderFour/src/com/android/timewidgetproviderfour/TimeWidgetProviderFour.java
+new file mode 100644
+index 0000000..5e2ab8b
+--- /dev/null
++++ b/packages/apps/TimeWidgetProviderFour/src/com/android/timewidgetproviderfour/TimeWidgetProviderFour.java
+@@ -0,0 +1,36 @@
++
++package com.android.timewidgetproviderfour;
+
+import android.app.PendingIntent;
+import android.appwidget.AppWidgetManager;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.widget.RemoteViews;
+
+public class TimeWidgetProviderFour extends BroadcastReceiver {
+    public Context mContext;
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        // TODO Auto-generated method stub
+        String action = intent.getAction();
+
+        if (AppWidgetManager.ACTION_APPWIDGET_UPDATE.equals(action)) {
+            RemoteViews updateViews = new RemoteViews(context.getPackageName(),
+                    R.layout.desktop);
+            Intent openApp = new Intent();
+            openApp.setClassName(context.getString(R.string.package_name),
+                    context.getString(R.string.activity_name));
+            openApp.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, openApp,
+                    PendingIntent.FLAG_UPDATE_CURRENT);
+            updateViews.setOnClickPendingIntent(R.id.timeprivder, pendingIntent);
+            ComponentName thisWidget = new ComponentName(context, TimeWidgetProviderFour.class);
+
+            AppWidgetManager manager = AppWidgetManager.getInstance(context);
+            manager.updateAppWidget(thisWidget, updateViews);
+        }
+    }
+}

@@ -1,0 +1,914 @@
+diff --git a/packages/apps/Settings/Android.mk b/packages/apps/Settings/Android.mk
+index 97e5e29..9f3c899 100644
+--- a/packages/apps/Settings/Android.mk
++++ b/packages/apps/Settings/Android.mk
+@@ -1,7 +1,7 @@
+ LOCAL_PATH:= $(call my-dir)
+ include $(CLEAR_VARS)
+ ifeq ($(strip $(HY_SUPPORT_SETTING_TAB_STYLE)), yes)
+-ifeq ($(HY_WHITE_THEME_SETTINGS), yes)
++ifeq ($(HY_WHITE_THEME_SETTINGS), no)
+ LOCAL_MANIFEST_FILE := tab/WhiteThemeSettings/AndroidManifest.xml
+ else
+ LOCAL_MANIFEST_FILE := tab/AndroidManifest.xml
+diff --git a/packages/apps/Settings/res/values/arrays.xml b/packages/apps/Settings/res/values/arrays.xml
+index 98c726f..66f7e3b 100644
+--- a/packages/apps/Settings/res/values/arrays.xml
++++ b/packages/apps/Settings/res/values/arrays.xml
+@@ -1167,5 +1167,9 @@
+         <!-- Memory is critical. -->
+         <item>critical</item>
+     </string-array>
+-
++    <!-- added by liuwei for tab style begin-->
++    <declare-styleable name="SwichPreference">
++        <attr name="iconswich" format="reference" />
++    </declare-styleable>
++    <!-- added by liuwei for tab style end-->
+ </resources>
+diff --git a/packages/apps/Settings/res/values/strings.xml b/packages/apps/Settings/res/values/strings.xml
+index d3d0713..0b5587b 100755
+--- a/packages/apps/Settings/res/values/strings.xml
++++ b/packages/apps/Settings/res/values/strings.xml
+@@ -4908,4 +4908,8 @@
+     <string name="individual_title">Individuation</string>
+     <string name="language_time_title">Language &amp; time</string>
+     <string name="audio_profiles">Audio Profiles</string>
++    <!-- added by liuwei for tab style begin-->
++    <string name="tab_display">个人</string>
++    <string name="tab_general">设备</string>
++    <!-- added by liuwei for tab style end-->
+ </resources>
+diff --git a/packages/apps/Settings/src/com/android/settings/Settings.java b/packages/apps/Settings/src/com/android/settings/Settings.java
+index ef76c6d..a9d09b9 100644
+--- a/packages/apps/Settings/src/com/android/settings/Settings.java
++++ b/packages/apps/Settings/src/com/android/settings/Settings.java
+@@ -24,6 +24,8 @@ import android.app.Activity;
+ import android.app.AlertDialog;
+ import android.app.Dialog;
+ import android.app.DialogFragment;
++import android.app.Fragment;
++import android.app.FragmentManager;
+ import android.app.admin.DevicePolicyManager;
+ import android.content.BroadcastReceiver;
+ import android.content.ComponentName;
+@@ -50,8 +52,10 @@ import android.preference.PreferenceFragment;
+ import android.text.TextUtils;
+ import android.util.Log;
+ import android.view.LayoutInflater;
++import android.view.MotionEvent;
+ import android.view.View;
+ import android.view.View.OnClickListener;
++import android.view.View.OnTouchListener;
+ import android.view.ViewGroup;
+ import android.widget.ArrayAdapter;
+ import android.widget.Button;
+@@ -65,6 +69,7 @@ import android.app.Activity;
+ 
+ import com.android.internal.util.ArrayUtils;
+ import com.android.internal.telephony.TelephonyIntents;
++import com.android.settings.NetWorkFragment.NetWorkFragmentListener;
+ import com.android.settings.accessibility.AccessibilitySettings;
+ import com.android.settings.accessibility.ToggleAccessibilityServicePreferenceFragment;
+ import com.android.settings.accessibility.ToggleCaptioningPreferenceFragment;
+@@ -133,8 +138,10 @@ import android.app.ActionBar;
+ import android.app.ActionBar.Tab;
+ import android.app.ActionBar.TabListener;
+ import android.app.FragmentTransaction;
++import android.support.v13.app.FragmentPagerAdapter;
+ import android.support.v4.view.ViewPager;
+ import android.support.v4.view.PagerAdapter;
++import android.support.v4.view.ViewPager.OnPageChangeListener;
+ /**
+  * Top-level settings activity to handle single pane and double pane UI layout.
+  */
+@@ -161,7 +168,8 @@ public class Settings extends PreferenceActivity
+     public static boolean TAB_STYLE = FeatureOption.HY_SUPPORT_SETTING_TAB_STYLE;
+     static final int DIALOG_ONLY_ONE_HOME = 1;
+ 
+-    private static boolean sShowNoHomeNotice = false;
++	// add by liuwei for tab style
++	public static boolean sShowNoHomeNotice = false;
+ 
+     private String mFragmentClass;
+     private int mTopLevelHeaderId;
+@@ -241,6 +249,10 @@ public class Settings extends PreferenceActivity
+                 if (mBatteryPresent != batteryPresent) {
+                     mBatteryPresent = batteryPresent;
+                     invalidateHeaders();
++					// add by liuwei for Tab
++					if (!mBatteryPresent && mMoreFragment != null && TAB_STYLE) {
++						mMoreFragment.moreFragmentRemoveBattery();
++					}
+                 }
+             }
+         }
+@@ -319,6 +331,15 @@ public class Settings extends PreferenceActivity
+         PDebug.End("Settings.onCreate");
+ 		//add by liuwei for tab style
+ 		if (TAB_STYLE) {
++			if (getClass().getName().equals("com.android.settings.Settings")) {
++				setContentView(R.layout.tab_settings);
++				ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
++				viewPager
++						.setAdapter(new ViewPagerAdapter(getFragmentManager()));
++				viewPager.setOnPageChangeListener(mPageChangeListener);
++				mViewPager = viewPager;
++			}
++
+ 			mInflater = (LayoutInflater) this
+ 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+ 			if (this.getClass().equals(Settings.class)) {
+@@ -359,10 +380,6 @@ public class Settings extends PreferenceActivity
+ 
+         ListAdapter listAdapter = getListAdapter();
+         if (listAdapter instanceof HeaderAdapter) {
+-            // add by liuwei for tab style
+-			if (TAB_STYLE) {
+-				((HeaderAdapter) listAdapter).flushViewCache();
+-			}
+ 			((HeaderAdapter) listAdapter).resume();
+             ///M: add for sim management
+             ((HeaderAdapter) listAdapter).isSimManagementAvailable(this);
+@@ -486,13 +503,90 @@ public class Settings extends PreferenceActivity
+         //
+     };
+ 
++	// add by liuwei for tab style
++    private static final String[] ENTRY_FRAGMENTS_TAB = {
++        WirelessSettings.class.getName(),
++        WifiSettings.class.getName(),
++        AdvancedWifiSettings.class.getName(),
++        BluetoothSettings.class.getName(),
++        TetherSettings.class.getName(),
++        WifiP2pSettings.class.getName(),
++        VpnSettings.class.getName(),
++        DateTimeSettings.class.getName(),
++        LocalePicker.class.getName(),
++        InputMethodAndLanguageSettings.class.getName(),
++        SpellCheckersSettings.class.getName(),
++        UserDictionaryList.class.getName(),
++        UserDictionarySettings.class.getName(),
++        SoundSettings.class.getName(),
++        DisplaySettings.class.getName(),
++        DeviceInfoSettings.class.getName(),
++        ManageApplications.class.getName(),
++        ProcessStatsUi.class.getName(),
++        NotificationStation.class.getName(),
++        LocationSettings.class.getName(),
++        SecuritySettings.class.getName(),
++        PrivacySettings.class.getName(),
++        DeviceAdminSettings.class.getName(),
++        AccessibilitySettings.class.getName(),
++        ToggleCaptioningPreferenceFragment.class.getName(),
++        TextToSpeechSettings.class.getName(),
++        Memory.class.getName(),
++        DevelopmentSettings.class.getName(),
++        UsbSettings.class.getName(),
++        AndroidBeam.class.getName(),
++        WifiDisplaySettings.class.getName(),
++        PowerUsageSummary.class.getName(),
++        AccountSyncSettings.class.getName(),
++        CryptKeeperSettings.class.getName(),
++        DataUsageSummary.class.getName(),
++        DreamSettings.class.getName(),
++        UserSettings.class.getName(),
++        NotificationAccessSettings.class.getName(),
++        ManageAccountsSettings.class.getName(),
++        PrintSettingsFragment.class.getName(),
++        PrintJobSettingsFragment.class.getName(),
++        TrustedCredentialsSettings.class.getName(),
++        PaymentSettings.class.getName(),
++        KeyboardLayoutPickerFragment.class.getName(),
++        //M@:
++        SimManagement.class.getName(),
++        SimInfoEditor.class.getName(),
++        //Class name same as Activity name so use full name here
++        com.mediatek.gemini.SimDataRoamingSettings.class.getName(),
++        AudioProfileSettings.class.getName(),
++        Editprofile.class.getName(),
++        HDMISettings.class.getName(),
++        SelectSimCardFragment.class.getName(),
++        UsbSharingChoose.class.getName(),
++        UsbSharingInfo.class.getName(),
++        TetherWifiSettings.class.getName(),
++        DrmSettings.class.getName(),
++        NfcSettings.class.getName(),
++        WifiGprsSelector.class.getName(),
++        BeamShareHistory.class.getName(),
++        CardEmulationSettings.class.getName(),
++        MtkAndroidBeam.class.getName(),
++        HotKnotSettings.class.getName(),
++        HomeSettings.class.getName()
++    };
++
+     @Override
+     protected boolean isValidFragment(String fragmentName) {
+         // Almost all fragments are wrapped in this,
+         // except for a few that have their own activities.
+-        for (int i = 0; i < ENTRY_FRAGMENTS.length; i++) {
+-            if (ENTRY_FRAGMENTS[i].equals(fragmentName)) return true;
+-        }
++		// add by liuwei for tab style
++		if (TAB_STYLE) {
++			for (int i = 0; i < ENTRY_FRAGMENTS_TAB.length; i++) {
++				if (ENTRY_FRAGMENTS_TAB[i].equals(fragmentName))
++					return true;
++			}
++		} else {
++			for (int i = 0; i < ENTRY_FRAGMENTS.length; i++) {
++				if (ENTRY_FRAGMENTS[i].equals(fragmentName))
++					return true;
++			}
++		}
+         return false;
+     }
+ 
+@@ -571,6 +665,10 @@ public class Settings extends PreferenceActivity
+     public Intent getIntent() {
+         Intent superIntent = super.getIntent();
+         String startingFragment = getStartingFragmentClass(superIntent);
++		// add by liuwei for tab style
++		if (TAB_STYLE) {
++			intFragment();
++		}
+         // This is called from super.onCreate, isMultiPane() is not yet reliable
+         // Do not use onIsHidingHeaders either, which relies itself on this method
+         if (startingFragment != null && !onIsMultiPane()) {
+@@ -668,18 +766,7 @@ public class Settings extends PreferenceActivity
+     public void onBuildHeaders(List<Header> headers) {
+         if (!onIsHidingHeaders()) {
+             PDebug.Start("loadHeadersFromResource");
+-			//add by liuwei for tab style
+-			if (TAB_STYLE) {
+-				ListAdapter listAdapter = getListAdapter();
+-				loadHeadersFromResource(mHeadersCategory, headers);
+-				if (listAdapter instanceof HeaderAdapter) {
+-					((HeaderAdapter) listAdapter).flushViewCache();
+-					((HeaderAdapter) listAdapter).resume();
+-					((HeaderAdapter) listAdapter).notifyDataSetChanged();
+-				}
+-			} else {
+-				loadHeadersFromResource(R.xml.settings_headers, headers);
+-			}
++		    loadHeadersFromResource(R.xml.settings_headers, headers);
+             PDebug.End("loadHeadersFromResource");
+             updateHeaderList(headers);
+         }
+@@ -990,9 +1077,6 @@ public class Settings extends PreferenceActivity
+         private boolean mIsSimEnable = false;
+         private AuthenticatorHelper mAuthHelper;
+         private DevicePolicyManager mDevicePolicyManager;
+-        //add by liuwei for tab style
+-        private View[] mViewCache;
+-        private int mViewCacheSize = 0;
+ 
+         private static class HeaderViewHolder {
+             ImageView icon;
+@@ -1057,36 +1141,15 @@ public class Settings extends PreferenceActivity
+             mBluetoothEnabler = new BluetoothEnabler(context, new Switch(context));
+             mHotKnotEnabler = new HotKnotEnabler(context, new Switch(context));
+             mDevicePolicyManager = dpm;
+-            //add by liuwei for tab style
+-			if (TAB_STYLE) {
+-				mViewCacheSize = objects.size();
+-				mViewCache = new View[mViewCacheSize];
+-			}
+         }
+ 
+-		//add by liuwei for tab style
+-		public boolean flushViewCache() {
+-			int currentCount = getCount();
+-			mViewCacheSize = currentCount;
+-			mViewCache = null;
+-			mViewCache = new View[mViewCacheSize];
+-			return true;
+-		}
+-
+         @Override
+         public View getView(int position, View convertView, ViewGroup parent) {
+             //add by liuwei for tab style
+-			if (TAB_STYLE && position >= mViewCacheSize) {
+-				flushViewCache();
+-			}
+             HeaderViewHolder holder;
+             Header header = getItem(position);
+             int headerType = getHeaderType(header);
+             View view = null;
+-            //add by liuwei for tab style
+-			if (TAB_STYLE) {
+-				convertView = mViewCache[position];
+-			}
+ 
+             if (convertView == null) {
+                 holder = new HeaderViewHolder();
+@@ -1132,18 +1195,9 @@ public class Settings extends PreferenceActivity
+                         break;
+                 }
+                 view.setTag(holder);
+-                //add by liuwei for tab style
+-				if (TAB_STYLE) {
+-					mViewCache[position] = view;
+-				}
+ 			} else {
+ 				view = convertView;
+-				// add by liuwei for tab sytle
+-				if (TAB_STYLE) {
+-					return view;
+-				} else {
+-					holder = (HeaderViewHolder) view.getTag();
+-				}
++				holder = (HeaderViewHolder) view.getTag();
+ 			}
+ 
+             // All view fields must be updated every time, because the view may be recycled
+@@ -1367,6 +1421,70 @@ public class Settings extends PreferenceActivity
+         sShowNoHomeNotice = true;
+     }
+ 
++    //add by liuwei for tab style
++	private ViewPager mViewPager = null;
++	public NetWorkFragment mNetWorkFragment = null;
++	public DeviceFragment mDeviceFragment = null;
++	public PersonFragment mPersonFragment = null;
++	public MoreFragment mMoreFragment = null;
++	Switch wifi = null;
++	Switch bluetooth = null;
++	Switch hotknot = null;
++
++	private SwichPreference mWifi;
++	private Preference mPreference;
++	private String mPreferenceKey;
++
++	public void intFragment() {
++		mNetWorkFragment = NetWorkFragment.getInstance();
++		mDeviceFragment = DeviceFragment.getInstance();
++		mPersonFragment = PersonFragment.getInstance();
++		mMoreFragment = MoreFragment.getInstance();
++	}
++
++	private OnPageChangeListener mPageChangeListener = new OnPageChangeListener() {
++		@Override
++		public void onPageScrollStateChanged(int state) {
++		}
++
++		@Override
++		public void onPageScrolled(int position, float positionOffset,
++				int positionOffsetPixels) {
++		}
++
++		@Override
++		public void onPageSelected(int position) {
++			mActionBar.setSelectedNavigationItem(position);
++		}
++
++	};
++
++	public class ViewPagerAdapter extends FragmentPagerAdapter {
++		public ViewPagerAdapter(FragmentManager fm) {
++			super(fm);
++		}
++
++		@Override
++		public Fragment getItem(int position) {
++			switch (position) {
++			case 0:
++				return mNetWorkFragment;
++			case 1:
++				return mDeviceFragment;
++			case 2:
++				return mPersonFragment;
++			case 3:
++				return mMoreFragment;
++			}
++			return null;
++		}
++
++		@Override
++		public int getCount() {
++			return 4;
++		}
++	}
++
+     /*
+      * Settings subclasses for launching independently.
+      */
+@@ -1440,88 +1558,93 @@ public class Settings extends PreferenceActivity
+     public static class PaymentSettingsActivity extends Settings { /* empty */ }
+     public static class PrintSettingsActivity extends Settings { /* empty */ }
+     public static class PrintJobSettingsActivity extends Settings { /* empty */ }
+-	//add by liuwei for tab style
+-    private void setupTab() {
+-        mActionBar = getActionBar();
+-        mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+-        int tabHeight = (int) getResources().getDimensionPixelSize(R.dimen.uui_tab_height);
+-        mActionBar.setTabHeight(tabHeight);
+-        mActionBar.setDisplayShowTitleEnabled(false);
+-        mActionBar.setDisplayShowHomeEnabled(false);
+-        setupNetWork();
+-        setupDevice();
+-        setupPersonal();
+-        setupMore();
+-        setCurrentTab(mCurrentTabIndex);
+-    }
+-    private void setupNetWork() {
+-        final Tab tab = mActionBar.newTab();
+-        LayoutInflater inflater = getLayoutInflater();
+-        View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
+-        ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
+-        if (dialView != null) {
+-            dialView.setImageResource(R.drawable.tab_network);
+-        }
+-        TextView dialText = (TextView) view.findViewById(R.id.tab_text);
+-        if (dialText != null) {
+-            dialText.setText(R.string.status_operator);
+-        }
+-        tab.setCustomView(view);
+-        tab.setTag(R.xml.settings_headers_network);
+-        tab.setTabListener(mTabListener);
+-        mActionBar.addTab(tab);
+-    }
+-    private void setupDevice() {
+-        final Tab tab = mActionBar.newTab();
+-        LayoutInflater inflater = getLayoutInflater();
+-        View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
+-        ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
+-        if (dialView != null) {
+-            dialView.setImageResource(R.drawable.tab_device);
+-        }
+-        TextView dialText = (TextView) view.findViewById(R.id.tab_text);
+-        if (dialText != null) {
+-            dialText.setText(R.string.header_category_device);
+-        }
+-        tab.setCustomView(view);
+-        tab.setTag(R.xml.settings_headers_device);
+-        tab.setTabListener(mTabListener);
+-        mActionBar.addTab(tab);
+-    }
+-    private void setupPersonal() {
+-        final Tab tab = mActionBar.newTab();
+-        LayoutInflater inflater = getLayoutInflater();
+-        View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
+-        ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
+-        if (dialView != null) {
+-            dialView.setImageResource(R.drawable.tab_personal);
+-        }
+-        TextView dialText = (TextView) view.findViewById(R.id.tab_text);
+-        if (dialText != null) {
+-            dialText.setText(R.string.header_category_personal);
+-        }
+-        tab.setCustomView(view);
+-        tab.setTag(R.xml.settings_headers_personal);
+-        tab.setTabListener(mTabListener);
+-        mActionBar.addTab(tab);
+-    }
+-    private void setupMore() {
+-        final Tab tab = mActionBar.newTab();
+-        LayoutInflater inflater = getLayoutInflater();
+-        View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
+-        ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
+-        if (dialView != null) {
+-            dialView.setImageResource(R.drawable.tab_more);
+-        }
+-        TextView dialText = (TextView) view.findViewById(R.id.tab_text);
+-        if (dialText != null) {
+-            dialText.setText(R.string.wifi_more);
+-        }
+-        tab.setCustomView(view);
+-        tab.setTag(R.xml.settings_headers_more);
+-        tab.setTabListener(mTabListener);
+-        mActionBar.addTab(tab);
+-    }
++    //add by liuwei for tab style
++    public static class HomeSettingsActivity extends Settings { /* empty */ }
++
++	// add by liuwei for tab style
++	private void setupTab() {
++		mActionBar = getActionBar();
++		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
++		int tabHeight = (int) getResources().getDimensionPixelSize(
++				R.dimen.uui_tab_height);
++//		mActionBar.setTabHeight(tabHeight);
++		mActionBar.setDisplayShowTitleEnabled(false);
++		mActionBar.setDisplayShowHomeEnabled(false);
++		setupNetWork();
++		setupDevice();
++		setupPersonal();
++		setupMore();
++		setCurrentTab(mCurrentTabIndex);
++	}
++
++	private void setupNetWork() {
++		final Tab tab = mActionBar.newTab();
++		LayoutInflater inflater = getLayoutInflater();
++		View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
++		ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
++		if (dialView != null) {
++			dialView.setImageResource(R.drawable.tab_network);
++		}
++		TextView dialText = (TextView) view.findViewById(R.id.tab_text);
++		if (dialText != null) {
++			dialText.setText(R.string.status_operator);
++		}
++		tab.setCustomView(view);
++		tab.setTabListener(mTabListener);
++		mActionBar.addTab(tab);
++	}
++
++	private void setupDevice() {
++		final Tab tab = mActionBar.newTab();
++		LayoutInflater inflater = getLayoutInflater();
++		View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
++		ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
++		if (dialView != null) {
++			dialView.setImageResource(R.drawable.tab_device);
++		}
++		TextView dialText = (TextView) view.findViewById(R.id.tab_text);
++		if (dialText != null) {
++			dialText.setText(R.string.header_category_device);
++		}
++		tab.setCustomView(view);
++		tab.setTabListener(mTabListener);
++		mActionBar.addTab(tab);
++	}
++
++	private void setupPersonal() {
++		final Tab tab = mActionBar.newTab();
++		LayoutInflater inflater = getLayoutInflater();
++		View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
++		ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
++		if (dialView != null) {
++			dialView.setImageResource(R.drawable.tab_personal);
++		}
++		TextView dialText = (TextView) view.findViewById(R.id.tab_text);
++		if (dialText != null) {
++			dialText.setText(R.string.header_category_personal);
++		}
++		tab.setCustomView(view);
++		// tab.setTag(R.xml.settings_headers_personal);
++		tab.setTabListener(mTabListener);
++		mActionBar.addTab(tab);
++	}
++
++	private void setupMore() {
++		final Tab tab = mActionBar.newTab();
++		LayoutInflater inflater = getLayoutInflater();
++		View view = inflater.inflate(R.layout.setting_tab_new_ui, null);
++		ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
++		if (dialView != null) {
++			dialView.setImageResource(R.drawable.tab_more);
++		}
++		TextView dialText = (TextView) view.findViewById(R.id.tab_text);
++		if (dialText != null) {
++			dialText.setText(R.string.wifi_more);
++		}
++		tab.setCustomView(view);
++		tab.setTabListener(mTabListener);
++		mActionBar.addTab(tab);
++	}
+ 
+     public void setCurrentTab(int position) {
+         mCurrentTabIndex = position;
+@@ -1537,15 +1660,8 @@ public class Settings extends PreferenceActivity
+ 
+ 		@Override
+ 		public void onTabSelected(Tab tab, FragmentTransaction ft) {
+-			int tag = (Integer) tab.getTag();
+-
+-			if (mHeadersCategory != tag) {
+-				mCurrentTabIndex = tab.getPosition();
+-				Log.i("TabSettings", "mCurrentTab = " + mCurrentTabIndex);
+-				getIntent().putExtra("tab_index", mCurrentTabIndex);
+-				mHeadersCategory = tag;
+-				invalidateHeaders();
+-			}
++			mCurrentTabIndex = tab.getPosition();
++			mViewPager.setCurrentItem(mCurrentTabIndex);
+ 		}
+ 
+ 		@Override
+diff --git a/packages/apps/Settings/tab/AndroidManifest.xml b/packages/apps/Settings/tab/AndroidManifest.xml
+index 9999b95..0cca226 100755
+--- a/packages/apps/Settings/tab/AndroidManifest.xml
++++ b/packages/apps/Settings/tab/AndroidManifest.xml
+@@ -130,6 +130,17 @@
+                 android:resource="@id/wireless_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="WirelessSettings"
++                android:exported="true"
++                android:targetActivity="Settings$WirelessSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.WirelessSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/wireless_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+ 
+         <!-- Top-level settings -->
+ 
+@@ -317,6 +328,17 @@
+                 android:resource="@id/bluetooth_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".bluetooth.BluetoothSettings"
++                android:exported="true"
++                android:targetActivity="Settings$BluetoothSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.bluetooth.BluetoothSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/bluetooth_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <!-- Keep compatibility with old shortcuts. -->
+         <activity-alias android:name=".bluetooth.BluetoothSettings"
+                 android:uiOptions="splitActionBarWhenNarrow"
+@@ -460,6 +482,17 @@
+                 android:resource="@id/date_time_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="DateTimeSettings"
++                android:exported="true"
++                android:targetActivity="Settings$DateTimeSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.DateTimeSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/date_time_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="DateTimeSettingsSetupWizard"
+                   android:label="@string/date_and_time"
+                   android:theme="@android:style/Theme.Holo.NoActionBar"
+@@ -501,6 +534,17 @@
+                 android:resource="@id/language_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".inputmethod.InputMethodAndLanguageSettings"
++                android:exported="true"
++                android:targetActivity="Settings$InputMethodAndLanguageSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.inputmethod.InputMethodAndLanguageSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/language_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$KeyboardLayoutPickerActivity"
+                 android:label="@string/keyboard_layout_picker_title"
+                 android:clearTaskOnLaunch="true">
+@@ -633,6 +677,17 @@
+                 android:resource="@id/sound_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="com.mediatek.audioprofile.AudioProfileSettings"
++                android:exported="true"
++                android:targetActivity="Settings$AudioProfileSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.mediatek.audioprofile.AudioProfileSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/audioprofle_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$SoundSettingsActivity"
+                 android:label="@string/sound_settings"
+                 android:taskAffinity=""
+@@ -708,6 +763,17 @@
+                 android:resource="@id/about_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="DeviceInfoSettings"
++                android:exported="true"
++                android:targetActivity="Settings$DeviceInfoSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.DeviceInfoSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/about_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="SettingsLicenseActivity"
+                 android:label="@string/settings_license_activity_title"
+                 android:configChanges="orientation|screenSize">
+@@ -907,6 +973,17 @@
+                 android:resource="@id/location_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".location.LocationSettings"
++                android:exported="true"
++                android:targetActivity="Settings$LocationSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.location.LocationSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/location_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$SecuritySettingsActivity"
+                 android:label="@string/security_settings_title"
+                 android:configChanges="orientation|keyboardHidden|screenSize"
+@@ -925,6 +1002,17 @@
+                 android:resource="@id/security_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".SecuritySettings"
++                android:exported="true"
++                android:targetActivity="Settings$SecuritySettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.SecuritySettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/security_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="MonitoringCertInfoActivity"
+                 android:label="@string/ssl_ca_cert_dialog_title"
+                 android:theme="@style/Transparent"
+@@ -984,6 +1072,17 @@
+                 android:resource="@id/privacy_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="PrivacySettings"
++                android:exported="true"
++                android:targetActivity="Settings$PrivacySettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.PrivacySettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/privacy_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="SetFullBackupPassword"
+                 android:theme="@android:style/Theme.Holo.DialogWhenLarge"
+                 android:exported="false">
+@@ -1075,6 +1174,17 @@
+                 android:resource="@id/accessibility_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".accessibility.AccessibilitySettings"
++                android:exported="true"
++                android:targetActivity="Settings$AccessibilitySettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.accessibility.AccessibilitySettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/accessibility_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$CaptioningSettingsActivity"
+                 android:label="@string/accessibility_captioning_title"
+                 android:taskAffinity="com.android.settings"
+@@ -1201,6 +1311,17 @@
+                 android:resource="@id/storage_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".deviceinfo.Memory"
++                android:exported="true"
++                android:targetActivity="Settings$StorageSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.deviceinfo.Memory" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/storage_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name=".deviceinfo.MiscFilesHandler"
+                 android:theme="@android:style/Theme.Holo.DialogWhenLarge"/>
+ 
+@@ -1279,6 +1400,17 @@
+                 android:resource="@id/print_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name=".print.PrintSettingsFragment"
++                android:exported="true"
++                android:targetActivity="Settings$PrintSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.print.PrintSettingsFragment" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/print_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$PrintJobSettingsActivity"
+                 android:label="@string/print_print_job"
+                 android:taskAffinity="com.android.settings"
+@@ -1743,6 +1875,17 @@
+                 android:resource="@id/data_usage_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="DataUsageSummary"
++                android:exported="true"
++                android:targetActivity="Settings$DataUsageSummaryActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.DataUsageSummary" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/data_usage_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$DreamSettingsActivity"
+                 android:uiOptions="splitActionBarWhenNarrow"
+                 android:label="@string/screensaver_settings_title"
+@@ -1791,6 +1934,18 @@
+             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
+                 android:resource="@id/nfc_payment_settings" />
+         </activity>
++
++        <!-- liuwei -->
++        <activity-alias android:name=".nfc.PaymentSettings"
++                android:exported="true"
++                android:targetActivity="Settings$PaymentSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.nfc.PaymentSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/nfc_payment_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name=".nfc.PaymentDefaultDialog"
+                   android:label="@string/nfc_payment_set_default_label"
+                   android:excludeFromRecents="true"
+@@ -2047,6 +2202,17 @@
+                 android:resource="@id/sim_settings" />
+         </activity>
+ 
++        <!-- liuwei -->
++        <activity-alias android:name="com.mediatek.gemini.SimManagement"
++                android:exported="true"
++                android:targetActivity="Settings$SimManagementActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.mediatek.gemini.SimManagement" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/sim_settings" />
++        </activity-alias>
++        <!-- liuwei -->
++
+         <activity android:name="Settings$SimListEntranceActivity"
+                 android:clearTaskOnLaunch="true">
+             <intent-filter>
+@@ -2169,6 +2335,17 @@
+         <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+             android:value="com.mediatek.settings.hotknot.HotKnotSettings" />
+     </activity>
++
++        <!-- liuwei -->
++        <activity-alias android:name="com.mediatek.settings.hotknot.HotKnotSettings"
++                android:exported="true"
++                android:targetActivity="Settings$HotKnotSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.mediatek.settings.hotknot.HotKnotSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/hotknot_settings" />
++        </activity-alias>
++        <!-- liuwei -->
+     
+ 
+     <!-- add by zhanglongtao begin -->
+@@ -2179,5 +2356,31 @@
+         </intent-filter>
+     </receiver>
+     <!-- add by zhanglongtao end -->
++
++    <!-- liuwei  start-->
++        <!-- HomeSettings-->
++        <activity android:name="Settings$HomeSettingsActivity"
++                android:taskAffinity=""
++                android:excludeFromRecents="true">
++            <intent-filter>
++                <action android:name="android.intent.action.MAIN" />
++                <category android:name="android.intent.category.DEFAULT" />
++            </intent-filter>
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.HomeSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/home_settings" />
++        </activity>
++
++        <activity-alias android:name="HomeSettings"
++                android:exported="true"
++                android:targetActivity="Settings$HomeSettingsActivity">
++            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
++                android:value="com.android.settings.HomeSettings" />
++            <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
++                android:resource="@id/home_settings" />
++        </activity-alias>
++
++    <!-- liuwei end-->
+     </application>
+ </manifest>

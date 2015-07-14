@@ -1,0 +1,1 @@
+1.在settings.java这个类中，onceate（）-->super.onCreate(savedInstanceState)-->PreferenceActivity中的onceate（）-->onBuildHeaders(mHeaders)-->调用Sttings.java中的onBuildHeaders(mHeaders) --> 执行完上一步回到PreferenceActivity中执行setListAdapter(new HeaderAdapter(this, mHeaders))-->执行settings.java中的HeaderAdapter(this, mHeaders)-->

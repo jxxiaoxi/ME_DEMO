@@ -1,0 +1,92 @@
+#!/usr/bin/env python
+import os
+import commands
+import sys
+import re
+import string
+
+def make_listp ():
+    make_cmd = "./makeMtk listp"
+    os.system(make_cmd)
+
+
+def make_project (project_name):
+    make_project_cmd = "./makeMtk -o=TARGET_BUILD_VARIANT=user"+" "+project_name+" "+"n"
+    os.system("git add complie_script.py; git checkout;git clean -fd;git reset complie_script.py;git pull")
+    os.system(make_project_cmd)
+
+
+
+def make_software_iso (project_name,build_version):
+    src_path ="out/target/product/"+project_name
+    #if src_path not exists():
+    #    print "not sources"
+
+    #os.chdir(src_path)
+    #print "the path =="+os.system("pwd");
+    current_path = os.getcwd().split('/')
+    current_path_string = current_path[len(current_path)-1]
+    print current_path
+    if current_path_string.find("HUIYUE82"):
+        soft_ware = "mkdir "+"MT6582_4.4.2_"+project_name.upper()+"_"+build_version
+        soft_file_dir = "MT6582_4.4.2_"+project_name.upper()+"_"+build_version
+        print "huiye 82"
+    elif current_path_string.find("HUIYUE92"):
+        print "huiye 92"
+        soft_ware = "mkdir "+"MT6592_4.4.2_"+project_name.upper()+"_"+build_version
+        soft_file_dir = "MT6592_4.4.2_"+project_name.upper()+"_"+build_version
+    else:
+        print "not project "
+    
+    if not  os.path.exists(soft_file_dir):
+        os.system(soft_ware)
+    else :  
+        os.system("rm -rf "+soft_file_dir)
+        os.system(soft_ware)
+
+    all_cp_cmd = ("cp -i "+src_path+"/boot.img "+soft_file_dir,"cp -i "+src_path+"/cache.img "+soft_file_dir,
+                  "cp -i "+src_path+"/EBR1 "+soft_file_dir,"cp -i "+src_path+"/EBR2 "+soft_file_dir,
+                  "cp -i "+src_path+"/lk.bin "+soft_file_dir,"cp -i "+src_path+"/logo.bin "+soft_file_dir,
+                  "cp -i "+src_path+"/MBR "+soft_file_dir,"cp -i "+src_path+"/MT6582_Android_scatter.txt "+soft_file_dir,
+                  "cp -i "+src_path+"/recovery.img "+soft_file_dir,"cp -i "+src_path+"/secro.img " +soft_file_dir,
+                  "cp -i "+src_path+"/system.img "+soft_file_dir,"cp -i "+src_path+"/userdata.img " +soft_file_dir,
+                  "cp -i "+src_path+"/preloader_"+project_name+".bin "+soft_file_dir)
+    for cmdinfo in all_cp_cmd:
+        print cmdinfo
+        os.system(cmdinfo)
+    if os.path.exists(soft_file_dir):
+        os.chdir(soft_file_dir)
+        if  not os.path.exists("database"):
+            os.system("mkdir database")
+        else :
+            os.system("rm -rf database")
+            os.system("mkdir database")
+        os.system("cd ../..")
+        os.system("pwd")
+    cp_database_cmd = ("cp -i out/target/product/"+project_name+"/obj/CODEGEN/cgen/APDB_MT6582_S01_KK1.MP3_ "+soft_file_dir+"/database",
+                      "cp -i mediatek/custom/common/modem/huiyue82_slt_cb_kk[lttg_csfb]/BPLGUInfoCustomAppSrcP_MT6290_S01_MOLY_LR9_W1414A_MD_LWTG_MP_V3_P16_5_ltg_n "+soft_file_dir+"/database")
+    for cp_info in cp_database_cmd:
+        os.system(cp_info)
+    # os.system("grep -nrw 'APDB_MT6582_S01_KK1.MP3_' .")
+        
+        
+def commpress_soft (project_name,build_version):
+    tar_soft_dir = "MT6582_4.4.2_"+project_name.upper()+"_"+build_version
+    cm_cmds ="tar zcvf "+tar_soft_dir+".tar.gz  "+tar_soft_dir
+    if os.path.exists(tar_soft_dir+".tar.gz"):
+        os.system("rm -rf "+tar_soft_dir+".tar.gz")
+        print "rm -rf "+tar_soft_dir+".tar.gz"
+        os.system(cm_cmds)
+    else :
+        os.system(cm_cmds)
+
+if __name__ == '__main__':
+    print "please input sign_path and src_path"
+    if len(sys.argv)>3:
+        print "input params erro"
+        system.exit(-1)
+    
+    #make_listp()
+    #make_project(sys.argv[1])
+    make_software_iso(sys.argv[1],sys.argv[2])
+    commpress_soft(sys.argv[1],sys.argv[2])

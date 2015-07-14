@@ -1,0 +1,2 @@
+不能加压rar文件 sudo apt-get install unrar
+获取root下的权限 sudo chown -R liuwei ./Android_Software/ 在liuwei用户下获取root下Android_Software的权限

@@ -1,0 +1,23 @@
+把这个文件放在项目的根目录下，在git status的时候，可以过滤掉你不想要的东西，文件里面的俄内容就是过滤的目录.
+
+内容如下：
+
+#################################
+# folder
+#################################
+/out/
+/bootable/bootloader/lk/out
+/kernel/mediatek/custom/out
+/mediatek/external/vtmal/custom/common
+/mediatek/kernel/trace32/
+
+#################################
+# files
+#################################
+auto_sync_android.log
+checkenv.log
+makeMtk.ini
+/mediatek/preloader/feature_hex
+/mediatek/preloader/*.bin
+/mediatek/misc/ota_scatter.txt
+kernel/drivers/custom_emi.c

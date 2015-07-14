@@ -1,0 +1,7 @@
+
+-keep class com.mediatek.vt.VTelProvider
+{
+	public static void postEventFromNative(int, int, int, java.lang.Object);
+}
+
+-verbose

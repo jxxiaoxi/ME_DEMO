@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+**
+** Copyright 2007 The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="gemini_sim_info_number_display_format_entries">
+        <item>Алғашқы 4 сан</item>
+        <item>Соңғы 4 сан</item>
+        <item>Көрсетпеу</item>
+    </string-array>
+    <string-array name="gemini_sim_roaming_reminder_entries">
+        <item>Бір рет</item>
+        <item>Әрдайым</item>
+        <item>Ешқашан</item>
+    </string-array>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item>GSM/WCDMA (автоматты режим)</item>
+        <item>Тек WCDMA</item>
+        <item>Тек GSM </item>
+    </string-array>
+    <string-array name="auto_time_entries">
+    	<item>Желі уақытын пайдалану</item>
+    	<item>GPS уақытын пайдалану</item>
+    	<item>Өшіру</item>
+    </string-array>
+    <string-array name="hdmi_video_mode_entries">
+        <item>Толық экран</item>
+        <item>Мейлінше қиыстыру</item>
+        <item>Бастапқы өлшем</item>
+    </string-array>
+    <string-array name="hdmi_deep_color_entries">
+        <item>8 бит</item>
+        <item>Авто</item>
+        <item>10 бит</item>
+        <item>12 бит</item>
+    </string-array>
+		<skip/>
+	<string-array name="sim_slot">
+		<item>(көрсетілмеген)</item>
+		<item>1-SIM карта ұяшығы</item>
+		<item>2-SIM карта ұяшығы</item>
+	</string-array>
+   <string-array name="wifi_WEP_security_type">
+        <item>Авто</item>
+        <item>WEP ASCII</item>
+        <item>Он алтылық WEP</item>
+    </string-array>
+    <string-array name="wifi_hotspot_disable_policy_entries">
+        <item>Әрдайым</item>
+        <item>5 минут бойы әрекетсіз күй кезінде өшіру</item>
+        <item>10 минут бойы әрекетсіз күй кезінде өшіру</item>
+    </string-array>
+    <string-array name="tethered_ipv6_entries">
+        <item>ipv4</item>
+        <item>IPv4 &amp; IPv6</item>
+    </string-array>
+    <string-array name="tethered_ipv6_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="wifi_ap_wps_mode_entries">
+        <item>Push түймешігі</item>
+        <item>Клиент PIN коды</item>
+    </string-array>
+    <string-array name="wifi_ap_max_connection_entries">
+        <item>1 пайдаланушы</item>
+        <item>2 пайдаланушы</item>
+        <item>3 пайдаланушы</item>
+        <item>4 пайдаланушы</item>
+        <item>5 пайдаланушы</item>
+        <item>6 пайдаланушы</item>
+        <item>7 пайдаланушы</item>
+        <item>8 пайдаланушы</item>
+    </string-array>
+    <string-array name="mouse_primary_button_titles">
+        <item>Тінтуірдің оң жақ түймесі</item>
+        <item>Тінтуірдің сол жақ түймесі</item>
+    </string-array>
+    <string-array name="wfd_720p_resolution_entry">
+        <item>720p (60 кадр/сек)</item>
+        <item>﻿720p (30 frames/sec)</item>
+    </string-array>
+    <string-array name="wfd_1080p_resolution_entry">
+        <item>1080p (30 кадр/сек)</item>
+        <item>720p (60 кадр/сек)</item>
+        <item>720p (30 кадр/сек)</item>
+    </string-array>
+    <string-array name="wfd_resolution_entry">
+        <item>1080p FHD (Бейнелер үшін)</item>
+        <item>720p HD (Ойындар үшін)</item>
+    </string-array>
+</resources>

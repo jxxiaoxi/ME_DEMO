@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Add for VoLTE conference Call  -->
+    <string name="volte_add_conference_member_title">Add to conference</string>
+    <string name="add_member_msg">Type number or name</string>
+    <string name="card_title_incoming_conference">Conference invitation</string>
+    <string name="addConferenceMemeberText">Add member</string>
+    <string name="add_conference_member_limit">Can only add one number at a time.</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> joined the conference.</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> left the conference.</string>
+    <string name="conference_member_adding">Adding <xliff:g id="member_name">%s</xliff:g> ...</string>
+    <string name="conference_member_add_fail">Failed to add <xliff:g id="member_name">%s</xliff:g> .</string>
+
+    <!-- Text for VoLTE conference "remove conference member" button -->
+    <string name="removeMember">Remove</string>
+
+    <!-- Text for VoLTE conference "status" indication -->
+    <string name="memberStatus">Status</string>
+
+    <!-- Add for VoLTE SS Indication -->
+    <string name="volte_call_waiting_indication_text">The other side is in call, please wait...</string>
+
+</resources>

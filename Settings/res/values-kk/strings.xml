@@ -1,0 +1,2089 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="yes">Иә</string>
+    <string name="no">Файлды басып шығару үшін қолжетімді қолданба жоқ.</string>
+    <string name="create">Жасау</string>
+    <string name="allow">Рұқсат ету</string>
+    <string name="deny">Тыйым салу</string>
+     <skip/>
+    <string name="device_info_default">Белгісіз</string>
+    <plurals name="show_dev_countdown">
+        <item quantity="one">Әзірлеуші болғанға дейін <xliff:g id="step_count">%1$d</xliff:g> қадам қалды.</item>
+        <item quantity="other">Әзірлеуші болғанға дейін <xliff:g id="step_count">%1$d</xliff:g> қадам қалды.</item>
+    </plurals>
+    <string name="show_dev_on">Сіз енді әзірлеушісіз!</string>
+    <string name="show_dev_already">Қажеті жоқ, сіз әлдеқашаннан әзірлеушісіз. </string>
+     <skip/>
+    <string name="header_category_wireless_networks">Сымсыз желілер</string>
+    <string name="header_category_device">Құрылғы</string>
+    <string name="header_category_personal">ЖЕКЕ ДЕРЕКТЕР</string>
+    <string name="header_category_system">Жүйе</string>
+    <string name="turn_on_radio">Радионы қосу</string>
+    <string name="turn_off_radio">Радионы өшіру</string>
+    <string name="sms_over_ims_on">IMS арқылы SMS қосу </string>
+    <string name="sms_over_ims_off">IMS арқылы SMS өшіру</string>
+    <string name="ims_reg_required_on">Міндетті IMS тіркеуі қосылған</string>
+    <string name="ims_reg_required_off">Міндетті IMS тіркеуі өшірілген</string>
+    <string name="lte_ram_dump_on">LTE ЖСҚ тазарту функциясын қосу </string>
+    <string name="lte_ram_dump_off">LTE ЖСҚ тазарту функциясын өшіру</string>
+    <string name="radioInfo_menu_viewADN">SIM картадағы мекенжай кітабын көру</string>
+    <string name="radioInfo_menu_viewFDN">Белгіленген теру нөмірлерін көрсету</string>
+    <string name="radioInfo_menu_viewSDN">Қызметтік теру нөмірлерін көрсету</string>
+    <string name="radioInfo_menu_getPDP">PDP тізімін алу</string>
+    <string name="radioInfo_service_in">Қызмет көрсету аясында</string>
+    <string name="radioInfo_service_out">Қызмет көрсету аясынан тыс</string>
+    <string name="radioInfo_service_emergency">Тек төтенше қызмет қоңыраулары</string>
+    <string name="radioInfo_service_off">Радио өшірулі</string>
+    <string name="radioInfo_roaming_in">Роуминг</string>
+    <string name="radioInfo_roaming_not">Роуминг жоқ</string>
+    <string name="radioInfo_phone_idle">Әрекетсіз күй</string>
+    <string name="radioInfo_phone_ringing">Қоңырау шалу</string>
+    <string name="radioInfo_phone_offhook">Қоңырау шалуда</string>
+    <string name="radioInfo_data_disconnected">Өшірілді</string>
+    <string name="radioInfo_data_connecting">Қосылуда</string>
+    <string name="radioInfo_data_connected">Қосылды</string>
+    <string name="radioInfo_data_suspended">Уақытша тоқтатылған</string>
+    <string name="radioInfo_unknown">Белгісіз</string>
+    <string name="radioInfo_display_packets">pkts</string>
+    <string name="radioInfo_display_bytes">байт</string>
+    <string name="radioInfo_display_dbm">dBm</string>
+    <string name="radioInfo_display_asu">asu</string>
+    <string name="radioInfo_lac">LAC</string>
+    <string name="radioInfo_cid">CID</string>
+    <string name="sdcard_unmount" product="nosdcard">USB жадыны өшіру</string>
+    <string name="sdcard_unmount" product="default">SD картасын шығару</string>
+    <string name="sdcard_format" product="nosdcard">USB жадындағы деректерді жою</string>
+    <string name="sdcard_format" product="default">SD картасындағы деректі жою</string>
+    <string name="small_font">Кіші</string>
+    <string name="medium_font">Орташа</string>
+    <string name="large_font">Үлкен</string>
+    <string name="font_size_preview_text">Servez à ce monsieur une bière et des kiwis.</string>
+    <string name="font_size_save">OK</string>
+    <string name="sdcard_setting" product="nosdcard">USB жады</string>
+    <string name="sdcard_setting" product="default">SD карта</string>
+    <string name="battery_info_status_label">Батарея күйі:</string>
+    <string name="battery_info_power_label">Қуат:</string>
+    <string name="battery_info_scale_label">Батарея шкаласы:</string>
+    <string name="battery_info_level_label">Батарея зарядының деңгейі:</string>
+    <string name="battery_info_health_label">Батареяның жұмысқа қабілеттілігі:</string>
+    <string name="battery_info_technology_label">Батарея технологиясы:</string>
+    <string name="battery_info_voltage_label">Батарея кернеуі:</string>
+    <string name="battery_info_voltage_units">мВ</string>
+    <string name="battery_info_temperature_label">Батарея температурасы:</string>
+    <string name="battery_info_temperature_units">\u00B0 C</string>
+    <string name="battery_info_uptime">Іске қосылғаннан кейінгі уақыт:</string>
+    <string name="battery_info_awake_battery">Батареядан жұмыс істеу уақыты:</string>
+    <string name="battery_info_awake_plugged">Зарядтау кезіндегі жұмыс уақыты:</string>
+    <string name="battery_info_screen_on">Экранның жұмыс уақыты:</string>
+    <string name="battery_info_status_unknown">Белгісіз</string>
+    <string name="battery_info_status_charging">Зарядталуда</string>
+    <string name="battery_info_status_charging_ac">(Қуатты желіден пайдалану)</string>
+    <string name="battery_info_status_charging_usb">(USB)</string>
+    <string name="battery_info_status_charging_wireless">(Wi-Fi арқылы)</string>
+    <string name="battery_info_status_discharging">Зарядтау орындалмауда</string>
+    <string name="battery_info_status_not_charging">Зарядтау орындалмауда</string>
+    <string name="battery_info_status_full">ТОЛЫҚ</string>
+    <string name="battery_info_power_unplugged">Ажыратулы тұр</string>
+    <string name="battery_info_power_ac">Желі арқылы</string>
+    <string name="battery_info_power_usb">USB</string>
+    <string name="battery_info_power_wireless">Wi-Fi арқылы</string>
+    <string name="battery_info_power_ac_usb">Желі+USB арқылы</string>
+    <string name="battery_info_power_unknown">Белгісіз</string>
+    <string name="battery_info_health_unknown">Белгісіз</string>
+    <string name="battery_info_health_good">Жақсы</string>
+    <string name="battery_info_health_overheat">Қызып кетті</string>
+    <string name="battery_info_health_dead">Заряды таусылған</string>
+    <string name="battery_info_health_over_voltage">Кернеу тым жоғары</string>
+    <string name="battery_info_health_unspecified_failure">Белгісіз қате</string>
+    <string name="battery_info_health_cold">Салқын</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="bluetooth_is_discoverable">Жақындағы барлық Bluetooth құрылғыларына көрінеді (<xliff:g id="discoverable_time_period">%1$s</xliff:g>)</string>
+    <string name="bluetooth_is_discoverable_always">Жақындағы барлық Bluetooth құрылғыларына көрінеді</string>
+    <string name="bluetooth_not_visible_to_other_devices">Басқа Bluetooth құрылғыларына көрінбейді</string>
+    <string name="bluetooth_only_visible_to_paired_devices">Тек жұптастырылған құрылғыларға көрінеді</string>
+    <string name="bluetooth_visibility_timeout">Көріну уақыты бітті</string>
+    <string name="bluetooth_lock_voice_dialing">Дауыстық нөмір теруді құлыптау</string>
+    <string name="bluetooth_lock_voice_dialing_summary">Экран құлыпталған кезінде, Bluetooth телефонының қолданылуына жол бермеу</string>
+    <string name="bluetooth_devices">Bluetooth құрылғылары</string>
+    <string name="bluetooth_device_name">Құрылғы аты</string>
+    <string name="bluetooth_device_details">Құрылғы параметрлері</string>
+    <string name="bluetooth_profile_details">Профиль параметрлері</string>
+    <string name="bluetooth_name_not_set">Аты орнатылмаған, тіркелгі атын пайдалану</string>
+    <string name="bluetooth_scan_for_devices">Құрылғыларды іздеу</string>
+    <string name="bluetooth_rename_device" product="tablet">Планшет атын өзгерту</string>
+    <string name="bluetooth_rename_device" product="default">Телефон атын өзгерту</string>
+    <string name="bluetooth_rename_button">Атын өзгерту</string>
+    <string name="bluetooth_disconnect_title">Ажырату қажет пе?</string>
+    <string name="bluetooth_disconnect_all_profiles"><br/><b><xliff:g id="device_name">%1$s</xliff:g></b> құрылғысымен байланыс ажыратылады</string>
+    <string name="bluetooth_disable_profile_title">Профильді ажырату қажет пе?</string>
+    <string name="bluetooth_disable_profile_message"><br/><b><xliff:g id="profile_name">%1$s</xliff:g></b><br/><br/> профилі <br/><b><xliff:g id="device_name">%2$s</xliff:g></b> құрылғысынан ажыратылады</string>
+    <string name="bluetooth_connected">Қосылды</string>
+    <string name="bluetooth_connected_no_headset">Қосылды (HSP/HFP басқа)</string>
+    <string name="bluetooth_connected_no_a2dp">Қосылды (A2DP басқа)</string>
+    <string name="bluetooth_connected_no_map">Қосылған (хабарламаларға қатынасу жоқ)</string>
+    <string name="bluetooth_connected_no_headset_no_a2dp">Қосылды (HSP/HFP/A2DP басқа)</string>
+    <string name="bluetooth_disconnected">Өшірілді</string>
+    <string name="bluetooth_disconnecting">Ажыратылуды\u2026</string>
+    <string name="bluetooth_connecting">Байланысу\u2026</string>
+    <string name="bluetooth_unknown"/>
+    <string name="bluetooth_pairing">Жұптастырылуда\u2026</string>
+    <string name="bluetooth_device">Аталмаған Bluetooth құрылғысы</string>
+    <string name="progress_scanning">Іздеу</string>
+    <string name="bluetooth_no_devices_found">Bluetooth құрылғылары табылмады.</string>
+    <string name="bluetooth_notif_ticker">Bluetooth жұптастыру сұрауы</string>
+    <string name="bluetooth_notif_title">Жұптастыру сұрауы</string>
+    <string name="bluetooth_notif_message"><xliff:g id="device_name">%1$s</xliff:g> құрылғысымен жұптастыру үшін түртіңіз.</string>
+    <string name="bluetooth_show_received_files">Алынған файлдарды көрсету</string>
+    <string name="device_picker">Bluetooth құрылғысын таңдау</string>
+    <string name="bluetooth_permission_request">"Bluetooth қосу үшін рұқсат сұрау"</string>
+    <string name="bluetooth_ask_enablement">Қолданба Bluetooth қосу рұқсатын сұрайды.</string>
+    <string name="bluetooth_ask_discovery" product="tablet">Қолданба үшін планшетіңіз басқа Bluetooth құрылғыларына <xliff:g id="timeout">%1$d</xliff:g> секунд көрінуі қажет.</string>
+    <string name="bluetooth_ask_discovery" product="default">Қолданба үшін телефоныңыз басқа Bluetooth құрылғыларына <xliff:g id="timeout">%1$d</xliff:g> секунд көрінуі қажет.</string>
+    <string name="bluetooth_ask_lasting_discovery" product="tablet">Қолданба үшін планшетіңіз басқа Bluetooth құрылғыларына көрінуі қажет. Оны кейін Bluetooth параметрлерінде өзгертуге болады.</string>
+    <string name="bluetooth_ask_lasting_discovery" product="default">Қолданба үшін планшетіңізде Bluetooth қосылып, ол басқа Bluetooth құрылғыларына <xliff:g id="timeout">%1$d</xliff:g> секунд көрінуі қажет.</string>
+    <string name="bluetooth_ask_enablement_and_discovery" product="tablet">Қолданба үшін телефоныңызда Bluetooth қосылып, ол басқа Bluetooth құрылғыларына <xliff:g id="timeout">%1$d</xliff:g> секунд көрінуі қажет.</string>
+    <string name="bluetooth_ask_enablement_and_discovery" product="default">Қолданба үшін телефоныңыз басқа Bluetooth құрылғыларына <xliff:g id="timeout">%1$d</xliff:g> секунд көрінуі қажет.</string>
+    <string name="bluetooth_ask_enablement_and_lasting_discovery" product="tablet">Қолданба үшін планшетіңізде Bluetooth қосылып, ол басқа Bluetooth құрылғыларына көрінуі қажет. Оны кейін Bluetooth параметрлерінде өзгертуге болады.</string>
+    <string name="bluetooth_ask_enablement_and_lasting_discovery" product="default">Қолданба үшін телефоныңыз басқа Bluetooth құрылғыларына көрінуі қажет. Оны кейін Bluetooth параметрлерінде өзгертуге болады.</string>
+    <string name="bluetooth_turning_on">"Bluetooth қосылуда\u2026"</string>
+    <string name="bluetooth_turning_off">"Bluetooth өшірілуде\u2026"</string>
+    <string name="bluetooth_auto_connect">Автоматты түрде қосу</string>
+    <string name="bluetooth_connection_permission_request">"Bluetooth қосу сұрауы"</string>
+    <string name="bluetooth_connection_notif_message">"\u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022 құрылғысына қосылу үшін түртіңіз."</string>
+    <string name="bluetooth_connection_dialog_text">"\u0022<xliff:g id="device_name">%1$s</xliff:g>\u0022 құрылғысына қосылу қажет пе?"</string>
+    <string name="bluetooth_phonebook_request">Телефон кітапшасына қатынасуға сұрау</string>
+    <string name="bluetooth_pb_acceptance_dialog_text">%1$s құрылғысы контактілеріңіз бен қоңыраулар журналына қатынасу рұқсатын сұрайды. %2$s құрылғысына қатынасуды рұқсат ету қажет пе?</string>
+    <string name="bluetooth_remember_choice">Бұл сұрақты бұдан әрі қоймау</string>
+    <string name="bluetooth_pb_remember_choice">Бұл сұрақты бұдан әрі қоймау</string>
+    <string name="bluetooth_map_request">"%1$s арқылы қашықтықтан хабарға қол жеткізу сауалына рұқсат ету"</string>
+    <string name="bluetooth_map_acceptance_dialog_text">%1$s хабарламаларыңызға қатынасуды қажет етеді. %2$s пайдаланушысына рұқсат беру қажет пе?</string>
+    <string name="date_and_time">Күн және уақыт параметрлері</string>
+    <string name="choose_timezone">Уақыт белдеуін таңдау</string>
+    <string name="default_date_format"><xliff:g id="default_date_format">MM/dd/yyyy</xliff:g></string>
+    <string name="normal_date_format">Жергілікті (<xliff:g id="date" example="12-31-2009">%s</xliff:g>)</string>
+    <string name="display_preview_label">Алдын ала көру:</string>
+    <string name="display_font_size_label">Қаріп өлшемі:</string>
+    <string name="intent_sender_data_label"><xliff:g id="data">Деректер:</xliff:g></string>
+    <string name="intent_sender_sendbroadcast_text"><xliff:g id="broadcast">таратылымын</xliff:g> жіберу</string>
+    <string name="intent_sender_action_label"><xliff:g id="action">Әрекет</xliff:g>:</string>
+    <string name="intent_sender_startactivity_text"><xliff:g id="activity">әрекетін</xliff:g> бастау</string>
+    <string name="intent_sender_resource_label"><xliff:g id="resource">Ресурс</xliff:g>:</string>
+    <string name="intent_sender_account_label">Тіркелгі:</string>
+    <string name="proxy_settings_title">Прокси</string>
+    <string name="proxy_clear_text">Тазалау</string>
+    <string name="proxy_port_label">Прокси-сервер порты</string>
+    <string name="proxy_exclusionlist_label">Прокси-серверді келесі үшін пайдаланбау</string>
+    <string name="proxy_exclusionlist_hint">example.com,mycomp.test.com,localhost</string>
+    <string name="proxy_defaultView_text">Әдепкі параметрлерді қалпына келтіру</string>
+    <string name="proxy_action_text">Дайын</string>
+    <string name="proxy_hostname_label">Прокси-сервер хостының атауы</string>
+    <string name="proxy_hostname_hint">proxy.example.com</string>
+    <string name="proxy_error">Назар аударыңыз!</string>
+    <string name="proxy_error_dismiss">OK</string>
+    <string name="proxy_error_invalid_host">Енгізілген хост аты жарамсыз.</string>
+    <string name="proxy_error_invalid_exclusion_list">Енгізілген ерекшелік тізімі тиісті түрде пішімделмеген. Шығарылған домендер тізімін үтір арқылы енгізіңіз.</string>
+    <string name="proxy_error_empty_port">Порт өрісін толтыру қажет.</string>
+    <string name="proxy_error_empty_host_set_port">Хост өрісі толтырылмаса, порт өрісі де бос болу қажет.</string>
+    <string name="proxy_error_invalid_port">Енгізілген порт жарамсыз.</string>
+    <string name="proxy_warning_limited_support">НТТР прокси-сервері браузер арқылы пайдаланылады, бірақ оны басқа қолданбалар арқылы пайдалану мүмкін емес.</string>
+    <string name="proxy_url">"PAC URL: "</string>
+    <string name="radio_info_signal_location_label">Орналасқан жері:</string>
+    <string name="radio_info_neighboring_location_label">Жақын орналасқан CID:</string>
+    <string name="radio_info_cellinfo_label">Желі индексі:</string>
+    <string name="radio_info_data_attempts_label">Дерек әрекеттері:</string>
+    <string name="radio_info_gprs_service_label">GPRS қызметі:</string>
+    <string name="radio_info_roaming_label">Роуминг:</string>
+    <string name="radio_info_imei_label">ІМЕІ:</string>
+    <string name="radio_info_call_redirect_label">Қоңырау бағытын өзгерту:</string>
+    <string name="radio_info_ppp_resets_label">Іске қосылудан бері PPP ысыру әрекеттерінің саны:</string>
+    <string name="radio_info_gsm_disconnects_label">GSM ажырату:</string>
+    <string name="radio_info_current_network_label">Ағымдағы желі:</string>
+    <string name="radio_info_data_successes_label">Сәтті дерек өңдеу әрекеттерінің саны:</string>
+    <string name="radio_info_ppp_received_label">Алынған РРР:</string>
+    <string name="radio_info_gsm_service_label">GSM қызметі:</string>
+    <string name="radio_info_signal_strength_label">Сигнал күші:</string>
+    <string name="radio_info_call_status_label">Қоңырау күйі:</string>
+    <string name="radio_info_ppp_sent_label">Жіберілген РРР:</string>
+    <string name="radio_info_radio_resets_label">Радионы бастапқы қалпына келтіру:</string>
+    <string name="radio_info_message_waiting_label">Күтудегі хабар:</string>
+    <string name="radio_info_phone_number_label">Телефон нөмірі:</string>
+    <string name="radio_info_band_mode_label">Радиостанцияны таңдау</string>
+    <string name="radio_info_network_type_label">Желі түрі:</string>
+    <string name="radio_info_set_perferred_label">Ұсынылатын желі түрін орнату:</string>
+    <string name="radio_info_ping_ipaddr">IP мекенжайының ping тексерісін орындау:</string>
+    <string name="radio_info_ping_hostname">Хост атауының рing тексерісін орындау (www.google.com):</string>
+    <string name="radio_info_http_client_test">НТТР клиентін тексеру:</string>
+    <string name="ping_test_label">Рing тексерісін орындау:</string>
+    <string name="radio_info_smsc_label">SMSC:</string>
+    <string name="radio_info_smsc_update_label">Жаңарту</string>
+    <string name="radio_info_smsc_refresh_label">Жаңарту</string>
+    <string name="radio_info_toggle_dns_check_label">DNS тексерісін ауыстыру</string>
+    <string name="oem_radio_info_label">ОЕМ ақпараты/параметрлер</string>
+    <string name="band_mode_title">GSM/UMTS жиілігін орнату</string>
+    <string name="band_mode_loading">Жиілік тізімі қотарылуда\u2026</string>
+    <string name="band_mode_set">Орнату</string>
+    <string name="band_mode_failed">Сәтсіз</string>
+    <string name="band_mode_succeeded">Сәтті</string>
+    <string name="sdcard_changes_instructions">USB кабелі қайта қосылғанда өзгерістер күшіне енеді.</string>
+    <string name="sdcard_settings_screen_mass_storage_text">USB ауқымды жадын қосу</string>
+    <string name="sdcard_settings_total_bytes_label">Жалпы байт:</string>
+    <string name="sdcard_settings_not_present_status" product="nosdcard">USB жады қосылмаған.</string>
+    <string name="sdcard_settings_not_present_status" product="default">SD картасы жоқ.</string>
+    <string name="sdcard_settings_available_bytes_label">Қолжетімді байт:</string>
+    <string name="sdcard_settings_mass_storage_status" product="nosdcard">USB жады ауқымды жады құрылғысы ретінде пайдаланылуда.</string>
+    <string name="sdcard_settings_mass_storage_status" product="default">SD картасы ауқымды жады құрылғысы ретінде пайдаланылуда.</string>
+    <string name="sdcard_settings_unmounted_status" product="nosdcard">USB жадысын алып тастауға болады.</string>
+    <string name="sdcard_settings_unmounted_status" product="default">SD картасын алып тастауға болады.</string>
+    <string name="sdcard_settings_bad_removal_status" product="nosdcard">USB жадысы қолданыс кезінде алып тасталынды!</string>
+    <string name="sdcard_settings_bad_removal_status" product="default">SD картасы қолданыс кезінде алып тасталынды!</string>
+    <string name="sdcard_settings_used_bytes_label">Пайдаланылған байт:</string>
+    <string name="sdcard_settings_scanning_status" product="nosdcard">USB жадысын сканерлеу\u2026</string>
+    <string name="sdcard_settings_scanning_status" product="default">SD картасын сканерлеу\u2026</string>
+    <string name="sdcard_settings_read_only_status" product="nosdcard">USB жады тек оқу үшін қосылды.</string>
+    <string name="sdcard_settings_read_only_status" product="default">SD картасы тек оқу үшін қосылды.</string>
+    <string name="skip_label">Өткізіп жіберу</string>
+    <string name="next_label">Келесі</string>
+    <string name="language_picker_title">Тіл</string>
+    <string name="activity_picker_label">Әрекетті таңдау</string>
+    <string name="debug_intent_sender_label">Debug intent sender</string>
+    <string name="device_info_label">Құрылғы туралы ақпарат</string>
+    <string name="battery_info_label">Батарея туралы ақпарат</string>
+    <string name="display_label">Экран</string>
+    <string name="phone_info_label" product="tablet">Планшет туралы ақпарат</string>
+    <string name="phone_info_label" product="default">Телефон туралы ақпарат</string>
+    <string name="sd_card_settings_label" product="nosdcard">USB жады</string>
+    <string name="sd_card_settings_label" product="default">SD карта</string>
+    <string name="proxy_settings_label">Прокси-сервер параметрлері</string>
+    <string name="cancel">Болдырмау</string>
+    <string name="settings_label">Параметрлер</string>
+    <string name="settings_label_launcher">Параметрлер</string>
+    <string name="settings_shortcut">Параметрлер таңбашасы</string>
+    <string name="airplane_mode">Ұшақ режимі</string>
+    <string name="radio_controls_title">Басқа топтар\u2026</string>
+    <string name="wireless_networks_settings_title">Сымсыз желілер</string>
+    <string name="radio_controls_summary">Wi\u2011Fi, Bluetooth, ұшақ режимін, VPN және мобильді желілерді басқару</string>
+    <string name="roaming">Деректер роумингісі</string>
+    <string name="roaming_enable">Роумингтегі деректер қызметтерін қосу</string>
+    <string name="roaming_disable">Роумингтегі деректер қызметтерін қосу</string>
+    <string name="roaming_reenable_message">Деректерді жіберу тоқтатылды, себебі телефон үй желісенен тыс жерде, ал деректер роумингі өшірулі.</string>
+    <string name="roaming_turn_it_on_button">Қосу</string>
+    <string name="roaming_warning">Деректер роумингін пайдалану, айтарлықтай шығынға әкелуі мүмкін!</string>
+    <string name="roaming_warning_multiuser" product="tablet">Деректер роумингін пайдалану, айтарлықтай шығынға әкелуі мүмкін!\n\nБұл параметрлер планшеттің барлық пайдаланушыларына ықпал етеді.</string>
+    <string name="roaming_warning_multiuser" product="default">Деректер роумингін пайдалану, айтарлықтай шығынға әкелуі мүмкін!\n\nБұл параметрлер телефонның барлық пайдаланушыларына ықпал етеді.</string>
+    <string name="roaming_reenable_title">Деректер роумингіне рұқсат ету қажет пе?</string>
+    <string name="networks">Операторды таңдау</string>
+    <string name="sum_carrier_select">Желі операторын таңдау</string>
+    <skip/>
+    <string name="date_and_time_settings_title">Күні және уақыты</string>
+    <string name="date_and_time_settings_title_setup_wizard">Күнін және уақытын орнату</string>
+    <string name="date_and_time_settings_summary">Күнін, уақытын, уақыт белдеуін және пішімдерді орнату</string>
+    <string name="date_time_auto">Автоматты күн мен уақыт</string>
+    <string name="date_time_auto_summaryOn">Желі уақытын пайдалану</string>
+    <string name="date_time_auto_summaryOff">Желі уақытын пайдалану</string>
+    <string name="zone_auto">Автоматты уақыт белдеуі </string>
+    <string name="zone_auto_summaryOn">Желіден берілген уақыт белдеуін пайдалану</string>
+    <string name="zone_auto_summaryOff">Желіден берілген уақыт белдеуін пайдалану</string>
+    <string name="date_time_24hour">24 сағаттық пішімді пайдалану</string>
+    <string name="date_time_set_time">Уақытты орнату</string>
+    <string name="date_time_set_timezone">Уақыт белдеуін таңдау</string>
+    <string name="date_time_set_date">Күнін орнату</string>
+    <string name="date_time_date_format">Күн пішімін таңдау</string>
+    <string name="zone_list_menu_sort_alphabetically">Алфавит бойынша реттеу</string>
+    <string name="zone_list_menu_sort_by_timezone">Уақыт белдеуі бойынша реттеу</string>
+    <string name="date_picker_title">Мерзімі</string>
+    <string name="time_picker_title">Уақыт</string>
+    <skip/>
+    <string name="biometric_weak_improve_matching_title">Бетті анықтау функциясын баптау</string>
+    <string name="biometric_weak_liveliness_title">Бет сәйкестігін тексеру</string>
+    <string name="biometric_weak_liveliness_summary" msgid="7980026533493781616">Құлыптан босату үшін, көзді ашып-жұму қажет</string>
+    <string name="lock_after_timeout">Автоматты түрде құлыптау</string>
+    <string name="lock_after_timeout_summary">Ұйқы режиміне ауысқаннан кейін <xliff:g id="timeout_string">%1$s</xliff:g></string>
+    <string name="show_owner_info_on_lockscreen_label">Иесі туралы ақпараттықұлыптау экранында көрсету</string>
+    <string name="owner_info_settings_title">Иесі туралы ақпарат</string>
+    <string name="security_enable_widgets_title">Виджеттерді қосу</string>
+    <string name="security_enable_widgets_disabled_summary">Әкімші тарапынан өшірілген</string>
+    <string name="owner_info_settings_summary"/>
+    <string name="owner_info_settings_edit_text_hint">Құлыптау экранында көрсету үшін мәтінді енгізіңіз</string>
+    <string name="show_user_info_on_lockscreen_label">Пайдаланушы туралы ақпаратты экранда көрсету</string>
+    <string name="user_info_settings_title">Пайдаланушы туралы ақпарат</string>
+    <string name="show_profile_info_on_lockscreen_label">Құлыптау экранындағы профильді көрсету</string>
+    <string name="profile_info_settings_title">Профиль ақпараты</string>
+    <string name="location_settings_title">Орналасқан жері</string>
+    <string name="security_settings_title">Қауіпсіздік</string>
+    <string name="security_settings_summary">Менің орналасқан жерім, экранды құлыптан босату, SIM картаны құлыптау, тіркелгі деректер жадын құлыптау функциясын орнату</string>
+    <string name="cdma_security_settings_summary">Менің орналасқан жерім, экранды құлыптан босату, тіркелгі деректер жадын құлыптау функциясын орнату</string>
+    <string name="security_passwords_title">Құпия сөздер</string>
+    <string name="crypt_keeper_settings_title">Шифрлау</string>
+    <string name="crypt_keeper_encrypt_title" product="tablet">Планшетті шифрлау</string>
+    <string name="crypt_keeper_encrypt_title" product="default">Телефонды шифрлау</string>
+    <string name="crypt_keeper_encrypt_summary" product="tablet">Әрбір қосқан кезде планшеттің шифрын шешу үшін, сандық PIN кодын немесе құпия сөзді талап ету</string>
+    <string name="crypt_keeper_encrypt_summary" product="default">Әрбір қосқан кезде телефонның шифрын шешу үшін, сандық PIN кодын немесе құпия сөзді талап ету</string>
+    <string name="crypt_keeper_encrypted_summary">Шифрланған</string>
+    <string name="crypt_keeper_desc" product="tablet">Тіркелгілерді, параметрлерді, жүктелген қолданбаларды, сонымен қатар олардың деректерін, мультмедиа және олардың файлдарын шифрлауға болады. Осыдан кейін, құрылғыны әрбір қосқан кезде сандық PIN кодын немесе құпия сөзді енгізу қажет. Планшетті шифрдан шығару үшін, зауыттық деректерді қалпына келтіріп, барлық деректеріңізді тазалау қажеттігі туындайды.\n\nШифрлауға бір сағат немесе одан көп уақыт қажет. Батарея толықтай зарядталып, шифрлау аяқталғанша планшет қуат көзіне қосылуы керек. Егер шифрлау процесі тоқтатылса, деректердің кейбірі немесе барлығы жоғалады.</string>
+    <string name="crypt_keeper_desc" product="default">Тіркелгілерді, параметрлерді, жүктелген қолданбаларды, сонымен қатар олардың деректерін, мультмедиа және олардың файлдарын шифрлауға болады. Осыдан кейін, құрылғыны әрбір қосқан кезде сандық PIN кодын немесе құпия сөзді енгізу қажет. Телефонды шифрдан шығару үшін, зауыттық деректерді қалпына келтіріп, барлық деректеріңізді тазалау қажеттігі туындайды.\n\nШифрлауға бір сағат немесе одан көп уақыт қажет. Батарея толықтай зарядталып, шифрлау аяқталғанша планшет қуат көзіне қосылуы керек. Егер шифрлау процесі тоқтатылса, деректердің кейбірі немесе барлығы жоғалады.</string>
+    <string name="crypt_keeper_button_text" product="tablet">Планшетті шифрлау</string>
+    <string name="crypt_keeper_button_text" product="default">Телефонды шифрлау</string>
+    <string name="crypt_keeper_low_charge_text">Батареяны зарядтап, әрекетті қайталаңыз.</string>
+    <string name="crypt_keeper_unplugged_text">Зарядтаушы құрылғыны қосып, әрекетті қайталаңыз.</string>
+    <string name="crypt_keeper_dialog_need_password_title">Экранды құлыптау PIN коды немесе құпия сөз көрсетілмеген</string>
+    <string name="crypt_keeper_dialog_need_password_message">Шифрлау алдында, экранды құлыптау PIN кодын немесе құпия сөзді орнату қажет.</string>
+    <string name="crypt_keeper_confirm_title">Шифрлауды орындау қажет пе?</string>
+    <string name="crypt_keeper_final_desc" product="tablet">Егер шифрлау әрекеті қайтарусыз болып, ол тоқтатылса, сіз деректерді жоғалтасыз. Шифрлау бір сағат немесе одан көп уақыт алады, бұл кезде планшет бірнеше рет қайта қосылады.</string>
+    <string name="crypt_keeper_final_desc" product="default">Егер шифрлау әрекеті қайтарусыз болып, ол тоқтатылса, сіз деректерді жоғалтасыз. Шифрлау бір сағат немесе одан көп уақыт алады, бұл кезде телефон бірнеше рет қайта қосылады.</string>
+    <string name="crypt_keeper_setup_title">Шифрлау</string>
+    <string name="crypt_keeper_setup_description" product="tablet">Планшеттің шифрлануын күтіңіз. <xliff:g id="percent" example="50">^1</xliff:g>% орындалды.</string>
+    <string name="crypt_keeper_setup_description" product="default">Телефонның шифрлануын күтіңіз. <xliff:g id="percent" example="50">^1</xliff:g>% орындалды.</string>
+    <string name="crypt_keeper_cooldown">Әрекетті <xliff:g id="delay" example="15">^1</xliff:g> секундтан кейін қайталаңыз.</string>
+    <string name="crypt_keeper_enter_password">Құпия сөзді енгізіңіз</string>
+    <string name="crypt_keeper_failed_title">Шифрлау сәтсіз аяқталды</string>
+    <string name="crypt_keeper_failed_summary" product="tablet">Шифрлау тоқтатылды және аяқтау мүмкін емес. Нәтижесінде планшеттегі деректер енді қолжетімсіз. \n\n Планшетті әрі қарай пайдалану үшін, реттеулерді қалпына келтіру қажет. Осы әрекеттен кейін планшетті реттеген кезде, Google тіркелгісінде резервтік көшірмелері жасалған барлық деректеріңізді қайта қалпына келтіру мүмкіндігі болады.</string>
+    <string name="crypt_keeper_failed_summary" product="default">Шифрлау тоқтатылды және аяқтау мүмкін емес. Нәтижесінде телефондағы деректер енді қолжетімсіз. \n\n Планшетті әрі қарай пайдалану үшін, реттеулерді қалпына келтіру қажет. Осы әрекеттен кейін планшетті реттеген кезде, Google тіркелгісінде резервтік көшірмелері жасалған барлық деректеріңізді қайта қалпына келтіру мүмкіндігі болады.</string>
+    <string name="crypt_keeper_switch_input_method">Енгізу әдісін ауыстыру</string>
+    <skip/>
+    <skip/>
+    <string name="lock_settings_picker_title">Экран құлпын таңдау</string>
+    <string name="backup_lock_settings_picker_title">Резервтік құлыптау әдісін таңдау</string>
+    <skip/>
+    <string name="unlock_set_unlock_launch_picker_title">Экранды құлыптау</string>
+    <string name="unlock_set_unlock_launch_picker_change_title">Экран құлпын өзгерту</string>
+    <string name="unlock_set_unlock_launch_picker_change_summary">Графикалық кілтті, PIN кодын немесе құпия сөз қауіпсіздігін өзгерту</string>
+    <string name="unlock_set_unlock_launch_picker_enable_summary">Экранды құляптау әдісін таңдау</string>
+    <string name="unlock_backup_info_summary">Бетті құлыптан босату функциясы бетіңізді көре алмаған кезде, құлыптан босату үшін не істеу қажет?</string>
+    <string name="unlock_set_unlock_off_title">Жоқ</string>
+    <string name="unlock_set_unlock_off_summary"/>
+    <string name="unlock_set_unlock_none_title">Экранды құлыптан босату үшін сырғытыңыз</string>
+    <string name="unlock_set_unlock_none_summary">Қауіпсіздік өшірулі</string>
+    <string name="unlock_set_unlock_biometric_weak_title">Бет сәйкестігі арқылы құлыптан босату</string>
+    <string name="unlock_set_unlock_biometric_weak_summary">Қауіпсіздік деңгейі төмен (тәжірибелік функция)</string>
+    <string name="unlock_set_unlock_pattern_title">Графикалық кілт</string>
+    <string name="unlock_set_unlock_pattern_summary">Қауіпсіздік деңгейі орташа</string>
+    <string name="unlock_set_unlock_pin_title">PIN коды</string>
+    <string name="unlock_set_unlock_pin_summary">Орташа-жоғары қауіпсіздік</string>
+    <string name="unlock_set_unlock_password_title">Құпия сөз</string>
+    <string name="unlock_set_unlock_password_summary">Қауіпсіздік деңгейі жоғары</string>
+    <string name="unlock_set_unlock_disabled_summary">Әкімші, тіркелгі деректер жады, шифрлау саясаты немесе тіркелгі деректер жады арқылы ажыратылды</string>
+    <string name="unlock_set_unlock_mode_off">Жоқ</string>
+    <string name="unlock_set_unlock_mode_none">Экранды құлыптан босату үшін сырғытыңыз</string>
+    <string name="unlock_set_unlock_mode_biometric_weak">Бет сәйкестігі арқылы құлыптан босату</string>
+    <string name="unlock_set_unlock_mode_pattern">Графикалық кілт</string>
+    <string name="unlock_set_unlock_mode_pin">PIN коды</string>
+    <string name="unlock_set_unlock_mode_password">Құпия сөз</string>
+    <string name="unlock_disable_lock_title">Экран құлпын алып тастау</string>
+    <string name="unlock_disable_lock_pattern_summary">Құлыптан босату графикалық кілтін жою</string>
+    <string name="unlock_disable_lock_pin_summary">Құлыптан босату PIN кодын жою</string>
+    <string name="unlock_disable_lock_password_summary">Құлыптан босату құпия сөзін жою</string>
+    <string name="unlock_change_lock_pattern_title">Құлыптан босату сызбасын өзгерту</string>
+    <string name="unlock_change_lock_pin_title">Құлыптан босату PIN кодын өзгерту</string>
+    <string name="unlock_change_lock_password_title">Құлыптан босату құпия сөзін өзгерту</string>
+    <string name="lockpassword_password_too_short">Құпия сөз кемінде %d таңбадан тұру қажет</string>
+    <string name="lockpassword_pin_too_short">PIN коды кемінде %d саннан тұру қажет</string>
+    <string name="lockpassword_press_continue">Аяқтағаннан кейін Жалғастыру опциясын түртіңіз</string>
+    <string name="lockpassword_continue_label">Жалғастыру</string>
+    <string name="lockpassword_password_too_long">Құпия сөз <xliff:g id="number" example="17">%d</xliff:g> таңбадан аз болуы қажет.</string>
+    <string name="lockpassword_pin_too_long">PIN коды <xliff:g id="number" example="17">%d</xliff:g> саннан аз болуы қажет.</string>
+    <string name="lockpassword_pin_contains_non_digits">PIN коды 0-9 дейінгі сандардан тұру қажет.</string>
+    <string name="lockpassword_pin_recently_used">Құрылғы әкімшісі соңғы PIN кодын пайдалануға рұқсат етпейді.</string>
+    <string name="lockpassword_illegal_character">Құпия сөзде рұқсат етілмеген таңба бар.</string>
+    <string name="lockpassword_password_requires_alpha">Құпия сөзде кем дегенде бір әріп қамтылуы қажет.</string>
+    <string name="lockpassword_password_requires_digit">Құпия сөзде кем дегенде бір сан қамтылуы қажет.</string>
+    <string name="lockpassword_password_requires_symbol">Құпия сөзде кем дегенде бір белгі қамтылуы қажет.</string>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="one">Құпия сөзде кем дегенде 1 әріп қамтылуы қажет.</item>
+        <item quantity="other">Құпия сөзде кем дегенде %d әріп қамтылуы қажет.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="one">Құпия сөзде кем дегенде 1 кіші әріп қамтылуы қажет.</item>
+        <item quantity="other">Құпия сөз кем дегенде %d кіші әріп қамтылуы қажет.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="one">Құпия сөзде кем дегенде 1 бас әріп қамтылуы қажет.</item>
+        <item quantity="other">Құпия сөзде кем дегенде %d бас әріп қамтылуы қажет.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="one">Құпия сөзде кем дегенде 1 сан қамтылуы қажет.</item>
+        <item quantity="other">Құпия сөзде кем дегенде %d сан қамтылуы қажет.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="one">Құпия сөзде кем дегенде 1 арнайы белгі қамтылуы қажет.</item>
+        <item quantity="other">Құпия сөзде кем дегенде %d арнайы белгі қамтылуы қажет.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="one">Құпия сөзде кем дегенде 1 әріптік емес таңба қамтылуы қажет.</item>
+        <item quantity="other">Құпия сөзде кем дегенде %d әріптік емес таңба қамтылуы қажет.</item>
+    </plurals>
+    <string name="lockpassword_password_recently_used">Құрылғы әкімшісі соңғы құпия сөзді пайдалануға рұқсат етпейді.</string>
+    <string name="lockpassword_ok_label">OK</string>
+    <string name="lockpassword_cancel_label">Болдырмау</string>
+    <string name="lockpattern_tutorial_cancel_label">Болдырмау</string>
+    <string name="lockpattern_tutorial_continue_label">Келесі</string>
+    <string name="lock_setup" msgid="5507462851158901718">Орнату аяқталды.</string>
+    <string name="device_admin_title">Құрылғы әкімшілігі</string>
+    <string name="manage_device_admin">Құрылғы әкімшілері</string>
+    <string name="manage_device_admin_summary">Құрылғы әкімшілерін көрсетіңіз немесе ажыратыңыз</string>
+    <string name="manage_notification_access">Хабарландыруға кіру рұқсаты</string>
+    <string name="manage_notification_access_summary_zero">Бағдарламалар хабарландыруларды оқи алмайды</string>
+    <plurals name="manage_notification_access_summary_nonzero">
+        <item quantity="one">%d бағдарлама хабарландыруларды оқи алады</item>
+        <item quantity="other">%d бағдарлама хабарландыруларды оқи алады</item>
+    </plurals>
+    <string name="no_notification_listeners">Хабарландыруды тыңдау функциялары орнатылмады.</string>
+    <string name="notification_listener_security_warning_title"><xliff:g id="service" example="NotificationReader">%1$s</xliff:g> іске қосу қажет пе?</string>
+    <string name="notification_listener_security_warning_summary"><xliff:g id="notification_listener_name">%1$s</xliff:g> контакт аттары мен сізге жіберілген хабарлама мәтіні сияқты жеке ақпаратты қамтуы мүмкін жүйе арқылы немесе кез келген орнатылған бағдарлама арқылы жіберілген барлық хабарландыруларды оқуға мүмкіндік береді. Бұл, сонымен қатар, осы хабарландыруларды қабылдамауы мүмкін немесе олардағы басқару түймелерін түртуге мүмкіндік береді.</string>
+    <string name="bluetooth_quick_toggle_title">Bluetooth</string>
+    <string name="bluetooth_quick_toggle_summary">Bluetooth қосу</string>
+    <string name="bluetooth_settings">Bluetooth</string>
+    <string name="bluetooth_settings_title">Bluetooth</string>
+    <string name="bluetooth_settings_summary">Қосылымдарды басқару, құрылғы атын және ықтималдығын орнату</string>
+    <string name="bluetooth_pairing_request">Bluetooth жұптастыру сұрауы</string>
+    <string name="bluetooth_enter_pin_msg"><xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</xliff:g> құрылғысына қосылу үшін PIN кодын енгізіңіз:</string>
+    <string name="bluetooth_enter_passkey_msg"><xliff:g id="bold">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold">&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</xliff:g> құрылғысына қосылу үшін құрылғының қажетті қатынасу кілтін енгізіңіз:</string>
+    <string name="bluetooth_enable_alphanumeric_pin">PIN кодында әріптер мен белгілер бер</string>
+    <string name="bluetooth_pin_values_hint">Әдетте 0000 немесе 1234</string>
+    <string name="bluetooth_enter_pin_other_device">Осы PIN кодын басқа құрылғыға енгізу қажет болуы мүмкін.</string>
+    <string name="bluetooth_enter_passkey_other_device">Осы қатынасу кілтін басқа құрылғыға енгізу қажет болуы мүмкін.</string>
+    <string name="bluetooth_confirm_passkey_msg"><br/><b><xliff:g id="device_name">%1$s</xliff:g></b><br/><br/> құрылғысына қосылу үшін, ол құрылғыда <br/><b><xliff:g id="passkey">%2$s</xliff:g></b> қатынасу кілті көрсетілгеніне көз жеткізіңіз</string>
+    <string name="bluetooth_incoming_pairing_msg"><br/><b><xliff:g id="device_name">%1$s</xliff:g></b>&lt;br&gt;&lt;br&gt; құрылғысының сұрауы. Осы құрылғымен жұптасу қажет пе?</string>
+    <string name="bluetooth_display_passkey_pin_msg"><xliff:g id="bold1">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="device_name">%1$s</xliff:g><xliff:g id="end_bold1">&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;</xliff:g> құрылғысына қосылу үшін, сол құрылғыда <xliff:g id="bold2">&lt;br&gt;&lt;b&gt;</xliff:g><xliff:g id="passkey">%2$s</xliff:g><xliff:g id="end_bold2">&lt;/b&gt;</xliff:g> қатынасу кілтін енгізіңіз, содан кейін Return немесе Enter пернесін басыңыз.</string>
+    <string name="bluetooth_pairing_accept">Жұптастыру</string>
+    <string name="bluetooth_pairing_decline">Болдырмау</string>
+    <string name="bluetooth_error_title"/>
+    <string name="bluetooth_pairing_error_message"><xliff:g id="device_name">%1$s</xliff:g> құрылғысымен жұптасу мүмкін болмады.</string>
+    <string name="bluetooth_pairing_pin_error_message">PIN коды немесе қатынасу кілті дұрыс болмағандықтан, <xliff:g id="device_name">%1$s</xliff:g> құрылғысымен жұптасу мүмкін болмады.</string>
+    <string name="bluetooth_pairing_device_down_error_message"><xliff:g id="device_name">%1$s</xliff:g> құрылғысымен байланысу мүмкін емес.</string>
+    <string name="bluetooth_pairing_rejected_error_message"><xliff:g id="device_name">%1$s</xliff:g> құрылғысы жұптасуды қабылдамады.</string>
+    <string name="bluetooth_connecting_error_message"><xliff:g id="device_name">%1$s</xliff:g> құрылғысына қосылу мүмкін болмады.</string>
+    <string name="bluetooth_preference_scan_title">Құрылғыларды іздеу</string>
+    <string name="bluetooth_search_for_devices">Құрылғыларды іздеу</string>
+    <string name="bluetooth_searching_for_devices">Wi-Fi желілері ізделуде\u2026</string>
+    <string name="bluetooth_preference_device_settings">Құрылғы параметрлері</string>
+    <string name="bluetooth_preference_paired_devices">Жұптасқан құрылғылар</string>
+    <string name="bluetooth_preference_found_devices">Қолжетімді құрылғылар</string>
+    <string name="bluetooth_device_context_connect">Қосылу</string>
+    <string name="bluetooth_device_context_disconnect">Ажырату</string>
+    <string name="bluetooth_device_context_pair_connect">Жұптастыру және қосылу</string>
+    <string name="bluetooth_device_context_unpair">Жұптастыруды болдырмау</string>
+    <string name="bluetooth_device_context_disconnect_unpair">Ажырату және жұптастыруды болдырмау</string>
+    <string name="bluetooth_device_context_connect_advanced">Опциялар\u2026</string>
+    <string name="bluetooth_menu_advanced">Кеңейтілген</string>
+    <string name="bluetooth_advanced_titlebar">Bluetooth қосымша параметрлері</string>
+    <string name="bluetooth_empty_list_bluetooth_off">Құрылғыларды табу үшін, Bluetooth қосыңыз.</string>
+    <string name="bluetooth_connect_specific_profiles_title">Қосылуда\u2026</string>
+    <string name="bluetooth_profile_a2dp">A2DP профилі</string>
+    <string name="bluetooth_profile_headset">HSP/HFP профилі</string>
+    <string name="bluetooth_profile_opp">Файлды тасымалдау</string>
+    <string name="bluetooth_profile_hid">Енгізу құрылғысы</string>
+    <string name="bluetooth_profile_pan">Интернетке қатынас</string>
+    <string name="bluetooth_profile_pan_nap">Интернет қосылымын ортақтастыру</string>
+    <string name="bluetooth_profile_map">Хабарламаларға қатынасу</string>
+    <string name="bluetooth_disconnect_a2dp_profile"><xliff:g id="device_name">%1$s</xliff:g> құрылғысы аудио мультимедадан ажыратылады.</string>
+    <string name="bluetooth_disconnect_headset_profile"><xliff:g id="device_name">%1$s</xliff:g> құрылғысықұлаққап профилінен ажыратылады.</string>
+    <string name="bluetooth_disconnect_hid_profile"><xliff:g id="device_name">%1$s</xliff:g> құрылғысы енгізу құрылғысынан ажыратылады.</string>
+    <string name="bluetooth_disconnect_pan_user_profile"><xliff:g id="device_name">%1$s</xliff:g> құрылғысы арқылы интернетке қатынасу ажыратылады.</string>
+    <string name="bluetooth_disconnect_pan_nap_profile" product="tablet"><xliff:g id="device_name">%1$s</xliff:g> құрылғысы осы планшеттің интернет қосылымын ортақ пайдаланудан ажыратылады.</string>
+    <string name="bluetooth_disconnect_pan_nap_profile" product="default"><xliff:g id="device_name">%1$s</xliff:g> құрылғысы осы телефонның интернет қосылымын ортақ пайдаланудан ажыратылады.</string>
+    <string name="bluetooth_device_advanced_title">Жұптасқан Bluetooth құрылғысы</string>
+    <string name="bluetooth_device_advanced_online_mode_title">Қосылу</string>
+    <string name="bluetooth_device_advanced_online_mode_summary">Bluetooth құрылғысына қосу</string>
+    <string name="bluetooth_device_advanced_profile_header_title">Профильдер</string>
+    <string name="bluetooth_device_advanced_rename_device">Атын өзгерту</string>
+    <string name="bluetooth_device_advanced_enable_opp_title">Кіріс файл тасымалдарына рұқсат ету</string>
+    <string name="bluetooth_a2dp_profile_summary_connected">Мультимедиалық аудиоқұрылғыға қосылды</string>
+    <string name="bluetooth_headset_profile_summary_connected">Телефонның аудиоқұрылғысына қосылды</string>
+    <string name="bluetooth_opp_profile_summary_connected">Файлды тасымалдау серверіне қосылды</string>
+    <string name="bluetooth_map_profile_summary_connected">Картаға қосылған</string>
+    <string name="bluetooth_opp_profile_summary_not_connected">Файлды тасымалдау серверіне қосылмады</string>
+    <string name="bluetooth_hid_profile_summary_connected">Енгізу құрылғысына қосылды</string>
+    <string name="bluetooth_pan_user_profile_summary_connected">Интернетке қатынасу құрылғысына қосылды</string>
+    <string name="bluetooth_pan_nap_profile_summary_connected">Жергілікті интернет қосылымын құрылғы арқылы ортақ пайдалану</string>
+    <string name="bluetooth_a2dp_profile_summary_use_for">Мультимедиалық аудиоқұрылға үшін пайдалану</string>
+    <string name="bluetooth_headset_profile_summary_use_for">Телефонның аудиоқұрылғысы үшін пайдалану</string>
+    <string name="bluetooth_opp_profile_summary_use_for">Файлды тасымалдау үшін пайдалану</string>
+    <string name="bluetooth_hid_profile_summary_use_for">Енгізу үшін пайдалану</string>
+    <string name="bluetooth_pan_profile_summary_use_for">Интернетке қатынасу үшін пайдалану</string>
+    <string name="bluetooth_map_profile_summary_use_for">Карта үшін пайдалану</string>
+    <string name="bluetooth_dock_settings">Док-станция параметрлері</string>
+    <string name="bluetooth_dock_settings_title">Док-станцияны дыбыс үшін пайдалану</string>
+    <string name="bluetooth_dock_settings_headset">Док-станцияны спикерфон ретінде пайдалану</string>
+    <string name="bluetooth_dock_settings_a2dp">Музыка және мультимедиа үшін пайдалану</string>
+    <string name="bluetooth_dock_settings_remember">Параметрлерді есте сақтау</string>
+    <string name="wifi_display_settings_title">Экранды ортақ пайдалану</string>
+    <string name="wifi_display_enable_menu_item">Сымсыз дисплейді іске қосу</string>
+    <string name="wifi_display_no_devices_found">Жақын орналасқан құрылғы табылмады.</string>
+    <string name="wifi_display_status_connecting">Қосылуда</string>
+    <string name="wifi_display_status_connected">Қосылды</string>
+    <string name="wifi_display_status_in_use">Қолданыста</string>
+    <string name="wifi_display_status_not_available">Қолжетімсіз</string>
+    <string name="wifi_display_details">Дисплей параметрлері</string>
+    <string name="wifi_display_options_title">Сымсыз дисплей опциялары</string>
+    <string name="wifi_display_options_forget">Жою</string>
+    <string name="wifi_display_options_done">Дайын</string>
+    <string name="wifi_display_options_name">Аты</string>
+    <string name="nfc_quick_toggle_title">NFC</string>
+    <string name="nfc_quick_toggle_summary" product="tablet">Планшет басқа құрылғымен жанасқанда деректердің алмасуына рұқсат ету</string>
+    <string name="nfc_quick_toggle_summary" product="default">Телефон басқа құрылғымен жанасқанда деректердің алмасуына рұқсат ету</string>
+    <string name="android_beam_settings_title">Android Beam</string>
+    <string name="android_beam_on_summary">NFC арқылы қолданба мазмұнын жіберу үшін дайын</string>
+    <string name="android_beam_off_summary">Өшіру</string>
+    <string name="android_beam_disabled_summary">NFC өшірулі болғандықтан қолжетімсіз</string>
+    <string name="android_beam_label">Android Beam</string>
+    <string name="android_beam_explained">Осы функция қосулы болған кезде, құрылғыларды бір-біріне жақын ұстай отыра, қолданба мазмұнын басқа NFC құрылғысына жібере аласыз. Мысалы, браузер беттерін, YouTube бейнелерін, контактілерді және т.б. Жіберуге болады.\n\nЕкі құрылғыны бір-біріне жақындатып (екеуі екі жақа қарап тұру керек) содан кейін экранды түртіңіз. Қолданба жіберіліп жатқан деректерді анықтайды. </string>
+    <string name="nsd_quick_toggle_title">Желі қызметтерін табу</string>
+    <string name="nsd_quick_toggle_summary">Басқа құрылғылардағы қолданбаларға, осы құрылғыдағы қолданбаларды табуға рұқсат ету</string>
+     <skip/>
+    <string name="wifi_quick_toggle_title">Wi\u2011Fi</string>
+    <string name="wifi_quick_toggle_summary">Wi\u2011Fi желісін іске қосу</string>
+    <string name="wifi_settings">Wi\u2011Fi</string>
+    <string name="wifi_settings_category">Wi\u2011Fi параметрлері</string>
+    <string name="wifi_settings_title">Wi\u2011Fi</string>
+    <string name="wifi_settings_summary">Сымсыз желінің қатынас нүктелерін реттеу және басқару</string>
+    <string name="wifi_setup_wizard_title">Wi\u2011Fi таңдау</string>
+    <string name="wifi_starting">Wi\u2011Fi желісін іске қосу\u2026</string>
+    <string name="wifi_stopping">Wi\u2011Fi желісін өшіру\u2026</string>
+    <string name="wifi_error">Қате</string>
+    <string name="wifi_in_airplane_mode">Ұшу режимі</string>
+    <string name="wifi_fail_to_scan">Желілерді іздеу мүмкін емес</string>
+    <string name="wifi_notify_open_networks">Желі туралы хабарландыру</string>
+    <string name="wifi_notify_open_networks_summary">Ашық желі қолжетімді болған кезде маған хабарлау</string>
+    <string name="wifi_poor_network_detection">Нашар байланыстарды болдырмау</string>
+    <string name="wifi_poor_network_detection_summary">Wi\u2011Fi желісінде жақсы интернет байланысы болғанша, оны пайдаланбау</string>
+    <string name="wifi_scan_always_available">Сканерлеу әрқашан қолжетімді</string>
+    <string name="wifi_scan_always_available_summary">Wi-Fi өшірулі болған кезде де, желілер үшін Google орналастыру қызметі мен басқа бағдарламалардың сканерлеуіне рұқсат беру</string>
+    <string name="wifi_install_credentials">Сертификаттарды орнату</string>
+    <string name="wifi_scan_notify_text_location_on">Орналасқан жер дәлдігін жақсарту үшін және басқа мақсаттар үшін, Wi-Fi желісі өшірулі болған кезде де, жақын орналасқан желілер үшін Google және басқа бағдарламалар сканерлеуі мүмкін. Егер оның орындалғанын қаламасаңыз, қолжетімді Кеңейтілген &gt; Сканерлеу пәрменін таңдаңыз. </string>
+    <string name="wifi_scan_notify_text_location_off">Wi-Fi желісі өшірулі болған кезде де, бағдарламалар жақын орналасқан желілер үшін сканерлеуі мүмкін. Егер оның орындалмауын қаласаңыз, қолжетімді Кеңейтілген &gt; Сканерлеу пәрменін таңдаңыз. </string>
+    <string name="wifi_scan_notify_remember_choice">Қайта көрсетпеу</string>
+    <string name="wifi_setting_sleep_policy_title">Ұйықтағанда Wi\u2011Fi желісін қосулы ұстау</string>
+    <string name="wifi_setting_sleep_policy_error">Параметрді өзгерту кезінде ақау орын алды</string>
+    <string name="wifi_suspend_optimizations">Wi\u2011Fi желісін оңтайландыру</string>
+    <string name="wifi_suspend_optimizations_summary">Wi\u2011Fi желісі қосулы болғанда, батарея қолданысын азайту</string>
+    <string name="wifi_add_network">Желі қосу</string>
+    <string name="wifi_access_points">Wi\u2011Fi желілері</string>
+    <string name="wifi_menu_wps_pbc">WPS түймесі</string>
+    <string name="wifi_menu_more_options">Қосымша</string>
+    <string name="wifi_menu_wps_pin">WPS Pin кодын енгізу</string>
+    <string name="wifi_menu_p2p">Wi\u2011Fi Direct</string>
+    <string name="wifi_menu_scan">Іздеу</string>
+    <string name="wifi_menu_advanced">Кеңейтілген</string>
+    <string name="wifi_menu_connect">Желіге қосылу</string>
+    <string name="wifi_menu_forget">Желіні жою</string>
+    <string name="wifi_menu_modify">Желіні өзгерту</string>
+    <string name="wifi_empty_list_wifi_off">Қолжетімді желілерді көру үшін, Wi\u2011Fi желісін іске қосыңыз. </string>
+    <string name="wifi_empty_list_wifi_on">Wi\u2011Fi желілерін іздеу\u2026</string>
+    <string name="wifi_empty_list_user_restricted">Wi\u2011Fi желісін өзгертуге рұқсатыңыз жоқ.</string>
+    <string name="wifi_other_network">Басқа желілер\u2026</string>
+    <string name="wifi_more">Қосымша параметрлер</string>
+    <string name="wifi_setup_wps">Автореттеу (WPS)</string>
+    <string name="wifi_required_info_text">Орнатуды аяқтау үшін, планшетті Wi\u2011Fi желісіне қосу қажет. Орнатқаннан кейін, мобильді деректер мен Wi\u2011Fi арасында ауыстыруға болады.</string>
+     <skip/>
+    <string name="wifi_show_advanced">Қосымша опцияларды көрсету</string>
+    <string name="wifi_wps_setup_title">Wi\u2011Fi Protected Setup</string>
+    <string name="wifi_wps_setup_msg">WPS іске қосылуда\u2026</string>
+    <string name="wifi_wps_onstart_pbc">Маршрутизатордағы Wi\u2011Fi Protected Setup түймесін басыңыз. Ол \"WPS\" деп аталады немесе осы таңбаны қамтиды.</string>
+    <string name="wifi_wps_onstart_pin">Wi\u2011Fi маршрутизаторына <xliff:g id="number">%1$s</xliff:g> PIN кодын енгізіңіз. Орнатудың аяқталуы үшін екі минутқа дейінгі уақытты алуы мүмкін.</string>
+    <string name="wifi_wps_complete">WPS іске қосу сәтті орындалды. Желіге қосылуда\u2026</string>
+    <string name="wifi_wps_connected">Wi\u2011Fi <xliff:g id="network_name">%s</xliff:g> желісіне қосылды</string>
+    <string name="wifi_wps_in_progress">WPS реттеу орындалуда және де оны аяқтау үшін екі минутқа дейін уақыт қажет</string>
+    <string name="wifi_wps_failed_generic">WPS іске қосу сәтсіз аяқталды. Бірнеше минуттан кейін әрекетті қайталаңыз.</string>
+    <string name="wifi_wps_failed_wep">Сымсыз жол жоспарлағышының қауіпсіздігін реттеуге (WEP) қолдау көрсетілмейді</string>
+    <string name="wifi_wps_failed_tkip">Сымсыз жол жоспарлағышының қауіпсіздігін реттеуге (ТКІР) қолдау көрсетілмейді</string>
+    <string name="wifi_wps_failed_auth">Аутентификация ақаулығы. Әрекетті қайталаңыз.</string>
+    <string name="wifi_wps_failed_overlap">Басқа WPS сеансы анықталды. Бірнеше минуттан кейін әрекетті қайталаңыз.</string>
+    <string name="wifi_ssid">Желі SSID</string>
+    <string name="wifi_ssid_hint">SSID енгізіңіз</string>
+    <string name="wifi_security">Қауіпсіздік</string>
+    <string name="wifi_signal">Сигнал күші</string>
+    <string name="wifi_status">Күй</string>
+    <string name="wifi_speed">Байланыс жылдамдығы</string>
+    <string name="wifi_ip_address">IP мекенжайы</string>
+    <string name="wifi_eap_method">ЕАР әдісі</string>
+    <string name="please_select_phase2">Аутентификацияның 2-кезеңі</string>
+    <string name="wifi_eap_ca_cert">Сертификаттау орталығының сертификаты</string>
+    <string name="wifi_eap_user_cert">Пайдаланушы сертификаты</string>
+    <string name="wifi_eap_identity">Сәйкестік куәлігі</string>
+    <string name="wifi_eap_anonymous">Анонимдік сәйкестік куәлігі</string>
+    <string name="wifi_password">Құпия сөз</string>
+    <string name="wifi_show_password">Құпия сөзді көрсету</string>
+    <string name="wifi_ip_settings">IP параметрлері</string>
+    <string name="wifi_unchanged">(өзгертілмеген)</string>
+    <string name="wifi_unspecified">(көрсетілмеген)</string>
+    <string name="wifi_remembered">Сақталды</string>
+    <string name="wifi_disabled_generic">Өшірулі</string>
+    <string name="wifi_disabled_network_failure">Нашар интернет қосылымын болдырмау</string>
+    <string name="wifi_disabled_password_failure">Аутентификация ақаулығы</string>
+    <string name="wifi_not_in_range">Ауқымнан тыс</string>
+    <string name="wifi_wps_available_first_item">WPS қолжетімді</string>
+    <string name="wifi_wps_available_second_item">\u0020(WPS қолжетімді)</string>
+    <string name="wifi_secured_first_item"><xliff:g id="wifi_security_short">%1$s</xliff:g> арқылы қорғалған</string>
+    <string name="wifi_secured_second_item">, <xliff:g id="wifi_security_short">%1$s</xliff:g> арқылы қорғалған</string>
+    <string name="wifi_security_short_wep">WEP</string>
+    <string name="wifi_security_short_wpa">WPA</string>
+    <string name="wifi_security_short_wpa2">WPA2</string>
+    <string name="wifi_security_short_wpa_wpa2">WPA/WPA2</string>
+    <string name="wifi_security_short_eap">802.1x</string>
+    <string name="wifi_security_none">Жоқ</string>
+    <string name="wifi_security_wep">WEP</string>
+    <string name="wifi_security_wpa">WPA PSK</string>
+    <string name="wifi_security_wpa2">WPA2 PSK</string>
+    <string name="wifi_security_wpa_wpa2">WPA/WPA2 PSK</string>
+    <string name="wifi_security_eap">802.1x EAP</string>
+    <string name="wifi_scan_always_turnon_message">Орналасқан жер дәлдігін жақсарту үшін және басқа да мақсаттар үшін, Wi-Fi желісі өшірулі болған кезде де, <xliff:g id="app_name">%1$s</xliff:g> желілік сканерлеуді іске қосуды талап етеді.\n\nСканерленуі қажет барлық бағдарламалар үшін осыған рұқсат ету қажет пе?</string>
+    <string name="wifi_scan_always_confirm_allow">Рұқсат ету</string>
+    <string name="wifi_scan_always_confirm_deny">Тыйым салу</string>
+    <string name="wifi_connect">Қосылу</string>
+    <string name="wifi_failed_connect_message">Желіге қосылу сәтсіз аяқталды</string>
+    <string name="wifi_forget">Жою</string>
+    <string name="wifi_failed_forget_message">Желіні жою сәтсіз аяқталды</string>
+    <string name="wifi_save">Сақтау</string>
+    <string name="wifi_failed_save_message">Желіні сақтау сәтсіз аяқталды</string>
+    <string name="wifi_cancel">Болдырмау</string>
+    <string name="wifi_skip_anyway">Сонда да өткізіп жіберу</string>
+    <string name="wifi_dont_skip">Өткізіп жібермеу</string>
+    <string name="wifi_skipped_message" product="tablet">ЕСКЕРТУ: Байланыс операторының қызметі үшін қосымша ақы алынуы мүмкін.\n\nПланшетті реттеу үшін айтарлықтай желі белсенділігін қажет болуы мүмкін.</string>
+    <string name="wifi_skipped_message" product="default">ЕСКЕРТУ: Байланыс операторының қызметі үшін қосымша ақы алынуы мүмкін.\n\nТелефонды реттеу үшін айтарлықтай желі белсенділігін қажет болуы мүмкін.</string>
+    <string name="wifi_and_mobile_skipped_message" product="tablet">ЕСКЕРТУ: Интернет байланысы болмайынша, планшет бағдарламалық жасақтаманың жарамды екендігін тексере алмайды. </string>
+    <string name="wifi_and_mobile_skipped_message" product="default">ЕСКЕРТУ: Интернет байланысы болмайынша, телефон бағдарламалық жасақтаманың жарамды екендігін тексере алмайды. </string>
+    <string name="wifi_connect_failed_message" product="tablet">Планшетті осы Wi\u2011Fi желісіне қосу мүмкін болмады.</string>
+    <string name="wifi_connect_failed_message" product="default">Телефонды осы Wi\u2011Fi желісіне қосу мүмкін болмады.</string>
+     <skip/>
+    <string name="wifi_advanced_titlebar">Кеңейтілген Wi\u2011Fi</string>
+    <string name="wifi_setting_frequency_band_title">Wi\u2011Fi жиілігінің ауқымы</string>
+    <string name="wifi_setting_frequency_band_summary">Жұмыстың жиіліктер диапозонын көрсетіңіз</string>
+    <string name="wifi_setting_frequency_band_error">Жиіліктер диапазонын орнатуда мәселе орын алды.</string>
+    <string name="wifi_advanced_mac_address_title">MAC мекенжайы</string>
+    <string name="wifi_advanced_ip_address_title">IP мекенжайы</string>
+    <string name="wifi_advanced_settings_label">IP параметрлері</string>
+    <string name="wifi_ip_settings_menu_save">Сақтау</string>
+    <string name="wifi_ip_settings_menu_cancel">Болдырмау</string>
+    <string name="wifi_ip_settings_invalid_ip_address">Жарамды IP мекенжайын теріңіз.</string>
+    <string name="wifi_ip_settings_invalid_gateway">Жарамды шлюз мекенжайын теріңіз.</string>
+    <string name="wifi_ip_settings_invalid_dns">Жарамды DNS мекенжайын теріңіз.</string>
+    <string name="wifi_ip_settings_invalid_network_prefix_length">0 және 32 аралығындағы желі префиксінің ұзындығын теріңіз.</string>
+    <string name="wifi_dns1">DNS 1</string>
+    <string name="wifi_dns2">DNS 2</string>
+    <string name="wifi_gateway">Шлюз</string>
+    <string name="wifi_network_prefix_length">Желі префиксінің ұзындығы</string>
+    <string name="wifi_p2p_settings_title">Wi\u2011Fi Direct</string>
+    <string name="wifi_p2p_device_info">Құрылғы туралы ақпарат</string>
+    <string name="wifi_p2p_persist_network">Бұл байланысты есте сақтау</string>
+    <string name="wifi_p2p_menu_search">Құрылғыларды іздеу</string>
+    <string name="wifi_p2p_menu_searching">Wi-Fi желілері ізделуде\u2026</string>
+    <string name="wifi_p2p_menu_rename">Құрылғының атын өзгерту</string>
+    <string name="wifi_p2p_peer_devices">Бір рангілі құрылғылар</string>
+    <string name="wifi_p2p_remembered_groups">Есте сақталған топтар</string>
+    <string name="wifi_p2p_failed_connect_message">Қосылу мүмкін болмады.</string>
+    <string name="wifi_p2p_failed_rename_message">Құрылғының атын өзгерту сәтсіз аяқталды.</string>
+    <string name="wifi_p2p_disconnect_title">Ажырату қажет пе?</string>
+    <string name="wifi_p2p_disconnect_message">Ажыратылсаңыз, <xliff:g id="peer_name">%1$s</xliff:g> байланысы аяқталады.</string>
+    <string name="wifi_p2p_disconnect_multiple_message">Ажыратылсаңыз, <xliff:g id="peer_name">%1$s</xliff:g> және <xliff:g id="peer_count">%2$s</xliff:g> басқа құрылғылармен байланыс аяқталады.</string>
+    <string name="wifi_p2p_cancel_connect_title">Шақыруды болдырмау қажет пе?</string>
+    <string name="wifi_p2p_cancel_connect_message"> <xliff:g id="peer_name">%1$s</xliff:g> байланысу үшін шақыруды болдырмау қажет пе?</string>
+    <string name="wifi_p2p_delete_group_message">Осы топты жою қажет пе?</string>
+    <string name="wifi_tether_checkbox_text">Тасымалы Wi\u2011Fi кіру орны</string>
+    <string name="wifi_tether_starting">Кіру орны қосылуда\u2026</string>
+    <string name="wifi_tether_stopping">Кіру орны өшірілуде\u2026</string>
+    <string name="wifi_tether_enabled_subtext">Тасымалы кіру орны <xliff:g id="network_ssid">%1$s</xliff:g> белсенді</string>
+    <string name="wifi_tether_failed_subtext">Тасымалы Wi\u2011Fi кіру орнының қатесі</string>
+    <string name="wifi_tether_configure_ap_text">Wi\u2011Fi кіру орнын орнату</string>
+    <string name="wifi_tether_configure_subtext"><xliff:g id="network_ssid">%1$s</xliff:g> <xliff:g id="network_security">%2$s</xliff:g> тасымалы Wi\u2011Fi кіру орны</string>
+    <string name="wifi_tether_configure_ssid_default">Android кіру орны</string>
+    <skip/>
+    <string name="home_settings">Басты экран</string>
+    <string name="display_settings_title">ДИСПЛЕЙ</string>
+    <string name="sound_settings">Дыбыс</string>
+    <string name="ringtone_title">Телефон рингтоны</string>
+    <string name="ringtone_summary">""</string>
+    <string name="all_volume_title">Дыбыс деңгейлері</string>
+    <string name="musicfx_title">Музыка әсерлері</string>
+    <string name="ring_volume_title">Дыбыс шығарғыш дауыс деңгейі</string>
+    <string name="vibrate_in_silent_title">Дыбыссыз діріл</string>
+    <string name="notification_sound_title">Әдепкі хабарландыру дыбысы</string>
+    <string name="notification_pulse_title">Оқиғалар индикаторы</string>
+    <string name="incoming_call_volume_title">Рингтон</string>
+    <string name="notification_volume_title">Хабарландыру</string>
+    <string name="checkbox_notification_same_as_incoming_call">Кіріс қоңыраудың дыбыс деңгейін хабарландырулар үшін пайдалану</string>
+    <string name="notification_sound_dialog_title">Әдепкі хабарландыру дыбысы</string>
+    <string name="media_volume_title">Мультимедиа</string>
+    <string name="media_volume_summary">Музыка және бейнелер үшін дыбыс деңгейін орнату</string>
+    <string name="alarm_volume_title">Дабыл</string>
+    <string name="dock_settings_summary">Тіркелген док-станцияға арналған аудио параметрлері</string>
+    <string name="dtmf_tone_enable_title">Пернетақта дыбыстары</string>
+    <string name="sound_effects_enable_title">Түрту </string>
+    <string name="lock_sounds_enable_title">Экранды құлыптау дыбысы</string>
+    <string name="haptic_feedback_enable_title">Түрту кезіндегі діріл</string>
+    <string name="audio_record_proc_title">Шуылды болдырмау</string>
+    <string name="volume_media_description">Музыка, бейне, ойындар және басқа мультимедиа </string>
+    <string name="volume_ring_description">Рингтон және хабарландырулар</string>
+    <string name="volume_notification_description">Хабарландырулар</string>
+    <string name="volume_alarm_description">ДАБЫЛДАР</string>
+    <string name="volume_ring_mute">Рингтон және хабарландырулардың дыбысын өшіру</string>
+    <string name="volume_media_mute">Музыка және басқа мультимедиа дыбысын өшіру</string>
+    <string name="volume_notification_mute">Хабарландырулардың дыбысын өшіру</string>
+    <string name="volume_alarm_mute">Дабылдардың дыбысын өшіру</string>
+    <string name="vibrate_when_ringing_title">Қоңырау шалу кезіндегі вибросигнал</string>
+    <string name="dock_settings">Док-станция</string>
+    <string name="dock_settings_title">Док-станция параметрлері</string>
+    <string name="dock_audio_settings_title">Аудио</string>
+    <string name="dock_audio_summary_desk">Тіркелген жұмыс үстелінің док-станциясына арналған параметрлер</string>
+    <string name="dock_audio_summary_car">Тіркелген көлік док-станциясының параметрлері</string>
+    <string name="dock_audio_summary_none" product="tablet">Планшет док-станцияға қосылмады</string>
+    <string name="dock_audio_summary_none" product="default">Телефон док-станцияға қосылмады</string>
+    <string name="dock_audio_summary_unknown">Тіркелген док-станцияға арналған параметрлер</string>
+    <string name="dock_not_found_title">Док-станция табылмады</string>
+    <string name="dock_not_found_text" product="tablet">Док-станция аудиосын орнату алдында планшетті док-станцияға қосу қажет.</string>
+    <string name="dock_not_found_text" product="default">Док-станция аудиосын орнату алдында телефонды док-станцияға қосу қажет.</string>
+    <string name="dock_sounds_enable_title">Док-станцияға орнату дыбысы</string>
+    <string name="dock_sounds_enable_summary_on" product="tablet">Планшетті док-станцияға енгізу немесе одан алу кезінде дыбысты ойнату</string>
+    <string name="dock_sounds_enable_summary_on" product="default">Телефонды док-станцияға енгізу немесе одан алу кезінде дыбысты ойнату</string>
+    <string name="dock_sounds_enable_summary_off" product="tablet">Планшетті док-станцияға енгізу немесе одан алу кезінде дыбысты ойнатпау</string>
+    <string name="dock_sounds_enable_summary_off" product="default">Телефонды док-станцияға енгізу немесе одан алу кезінде дыбысты ойнатпау</string>
+    <string name="account_settings">Тіркелгілер</string>
+    <string name="search_settings">Іздеу</string>
+    <string name="search_settings_summary">Іздеу параметрлері мен тарихын басқару</string>
+    <skip/>
+    <string name="display_settings">ДИСПЛЕЙ</string>
+    <string name="accelerometer_title">Автоматты түрде айналатын экран</string>
+    <string name="accelerometer_summary_on" product="tablet">Планшетті бұру кезінде бағдарды автоматты түрде ауыстыру</string>
+    <string name="accelerometer_summary_on" product="default">Телефонды бұру кезінде бағдарды автоматты түрде ауыстыру</string>
+    <string name="accelerometer_summary_off" product="tablet">Планшетті бұру кезінде бағдарды автоматты түрде ауыстыру</string>
+    <string name="accelerometer_summary_off" product="default">Телефонды бұру кезінде бағдарды автоматты түрде ауыстыру</string>
+    <string name="brightness">Жарықтық</string>
+    <string name="brightness_summary">Экранның жарықтығын реттеу</string>
+    <string name="screen_timeout">Ұйқы режимі</string>
+    <string name="screen_timeout_summary">Әрекетсіздіктің <xliff:g id="timeout_description">%1$s</xliff:g> кейін</string>
+    <string name="wallpaper_settings_title">Түсқағаз</string>
+    <string name="wallpaper_settings_fragment_title">Түсқағаз таңдау орны</string>
+    <string name="screensaver_settings_title">Экрандық сурет</string>
+    <string name="screensaver_settings_summary_either_long">Док-станцияға қосылғанда, ұйқы режимінде немесе зарядталғанда</string>
+    <string name="screensaver_settings_summary_either_short">Кез келгені</string>
+    <string name="screensaver_settings_summary_sleep">Зарядталу кезінде</string>
+    <string name="screensaver_settings_summary_dock">Док-станцияға қосылған кезде</string>
+    <string name="screensaver_settings_summary_off">Өшіру</string>
+    <string name="screensaver_settings_disabled_prompt">Телефон док-станцияға қосылған кезде және/немесе ұйқы режимінде болғанда әрекеттерді басқару үшін, экрандық суретті қосыңыз.</string>
+    <string name="screensaver_settings_when_to_dream">Экрандық суретті қосу уақыты</string>
+    <string name="screensaver_settings_dream_start">Іске қосу</string>
+    <string name="screensaver_settings_button">Параметрлер</string>
+    <string name="automatic_brightness">Автоматты жарықтық</string>
+    <string name="title_font_size">Қаріп өлшемі</string>
+    <string name="dialog_title_font_size">Қаріп өлшемі</string>
+    <string name="sim_lock_settings">SIM картаны құлыптау параметрлері</string>
+    <string name="sim_lock_settings_category">SIM карта құлпын орнату</string>
+    <string name="sim_lock_settings_title">SIM картаны құлыптау</string>
+    <string name="sim_pin_toggle">SIM картаны құлыптау</string>
+    <string name="sim_lock_on" product="tablet">Планшетті пайдалану үшін PIN талап ету</string>
+    <string name="sim_lock_on" product="default">Телефонды пайдалану үшін PIN талап ету</string>
+    <string name="sim_lock_off" product="tablet">Планшетті пайдалану үшін PIN талап ету</string>
+    <string name="sim_lock_off" product="default">Телефонды пайдалану үшін PIN талап ету</string>
+    <string name="sim_pin_change">SIM картаның PIN кодын өзгерту</string>
+    <string name="sim_enter_pin">SIM картаның PIN коды</string>
+    <string name="sim_enable_sim_lock">SIM картаны құлыптау</string>
+    <string name="sim_disable_sim_lock">SIM картаны құлыптан босату </string>
+    <string name="sim_enter_old">Ескі SIM картаның PIN коды</string>
+    <string name="sim_enter_new">Жаңа SIM картаның PIN коды</string>
+    <string name="sim_reenter_new">Жаңа PIN кодын қайта теріңіз</string>
+    <string name="sim_change_pin">SIM картаның PIN коды</string>
+    <string name="sim_bad_pin">Қате PIN коды</string>
+    <string name="sim_pins_dont_match">PIN кодтары сәйкес келмейді</string>
+    <string name="sim_change_failed">PIN кодын өзгерту мүмкін емес. \n PIN коды қате болуы мүмкін.</string>
+    <string name="sim_change_succeeded">SIM картаның PIN коды сәтті өзгертілді</string>
+    <string name="sim_lock_failed">SIM картаның құлыптау күйін өзгерту мүмкін емес. \n PIN коды қате болуы мүмкін. </string>
+    <string name="sim_enter_ok">OK</string>
+    <string name="sim_enter_cancel">Болдырмау</string>
+    <string name="wrong_pin_code_pukked">Дұрыс емес SIM PIN коды, құрылғыны құлыптан босату үшін, жеткізушіңізге хабарласуыңыз қажет.</string>
+    <plurals name="wrong_pin_code">
+        <item quantity="one">Дұрыс емес SIM PIN коды, құрылғыны құлыптан босату үшін, жеткізушіңізге хабарласу алдында сізде қалған <xliff:g id="number">%d</xliff:g> әрекет бар.</item>
+        <item quantity="other">Дұрыс емес SIM PIN коды, сізде қалған <xliff:g id="number">%d</xliff:g> әрекет бар.</item>
+    </plurals>
+    <string name="pin_failed">SIM PIN операциясы сәтсіз аяқталды!</string>
+    <string name="device_info_settings" product="tablet">Планшет күйі</string>
+    <string name="device_info_settings" product="default">Телефон күйі</string>
+    <string name="system_update_settings_list_item_title">Жүйені жаңарту</string>
+    <string name="system_update_settings_list_item_summary">""</string>
+    <string name="firmware_version">Android нұсқасы</string>
+    <string name="model_number">Үлгі нөмірі</string>
+    <string name="fcc_equipment_id">Жабдық идентификаторы</string>
+    <string name="baseband_version">Жиіліктер диапазонының нұсқасы</string>
+    <string name="kernel_version">Ядро нұсқасы</string>
+    <string name="build_number">Құрастыру нөмірі</string>
+    <string name="selinux_status">SELinux күйі</string>
+    <string name="device_info_not_available">Қолжетімсіз</string>
+    <string name="device_status_activity_title">Күй</string>
+    <string name="device_status">Күй</string>
+    <string name="device_status_summary" product="tablet">Бататеря, желі күйі және басқа ақпарат</string>
+    <string name="device_status_summary" product="default">Телефон нөмірі, сигнал, т.б.</string>
+    <string name="storage_settings">Жад</string>
+    <string name="storage_settings_title">жад параметрлері</string>
+    <string name="storage_settings_summary" product="nosdcard">USB жадын өшіру, қолжетімді жадты көру</string>
+    <string name="storage_settings_summary" product="default">SD картаны өшіру, қолжетімді жадты көру</string>
+    <string name="status_imei">IMEI</string>
+    <string name="status_imei_sv">IMEI SV</string>
+    <string name="status_number" product="tablet">MDN</string>
+    <string name="status_number" product="default">Менің телефон нөмірім</string>
+    <string name="status_min_number">MIN</string>
+    <string name="status_msid_number">MSID</string>
+    <string name="status_prl_version">PRL нұсқасы</string>
+    <string name="status_meid_number">MEID</string>
+    <string name="status_icc_id">ICCID</string>
+    <string name="status_network_type">Мобильді желі түрі</string>
+    <string name="status_latest_area_info">Оператор туралы ақпарат</string>
+    <string name="status_data_state">Мобильді желі күйі</string>
+    <string name="status_service_state">Қызмет күйі</string>
+    <string name="status_signal_strength">Сигнал күші</string>
+    <string name="status_roaming">Роуминг</string>
+    <string name="status_operator">Желі</string>
+    <string name="status_wifi_mac_address">Wi\u2011Fi MAC мекенжайы</string>
+    <string name="status_bt_address">Bluetooth мекенжайы</string>
+    <string name="status_serial_number">Сериялық нөмірі</string>
+    <string name="status_unavailable">Қолжетімсіз</string>
+    <string name="status_up_time">Қосылудан бергі уақыт</string>
+    <string name="status_awake_time">Жұмыс уақыты</string>
+    <string name="internal_memory">Ішкі жады</string>
+    <string name="sd_memory" product="nosdcard">USB жады</string>
+    <string name="sd_memory" product="default">SD карта</string>
+    <string name="memory_available">Қолжетімді</string>
+    <string name="memory_available_read_only">Қолжетімді (тек оқу үшін)</string>
+    <string name="memory_size">Жалпы орын</string>
+    <string name="memory_calculating_size">Есептелуде\u2026</string>
+    <string name="memory_apps_usage">Қолданбалар (қолданба деректері және мультимедиа)</string>
+    <string name="memory_media_usage">Мультимедиа</string>
+    <string name="memory_downloads_usage">Жүктеулер</string>
+    <string name="memory_dcim_usage">Суреттер, бейнелер</string>
+    <string name="memory_music_usage">Аудио (музыка, рингтондар, подкасттар, т.б.)</string>
+    <string name="memory_media_misc_usage">Әр түрлі </string>
+    <string name="memory_media_cache_usage">Кэштелген деректер</string>
+    <string name="sd_eject" product="nosdcard">Ортақ жадты өшіру</string>
+    <string name="sd_eject" product="default">SD картасын шығару</string>
+    <string name="sd_eject_summary" product="nosdcard">Ішкі USB жадын өшіру</string>
+    <string name="sd_eject_summary" product="default">SD картасын қауіпсіз түрде жоюға болатындай етіп өшіру</string>
+    <string name="sd_insert_summary" product="nosdcard"> Қосу үшін USB жадын енгізу</string>
+    <string name="sd_insert_summary" product="default">Қосу үшін SD картаны енгізіңіз</string>
+    <string name="sd_mount" product="nosdcard">USB жадын қосу</string>
+    <string name="sd_mount" product="default">SD картасын қосу</string>
+    <string name="sd_mount_summary" product="nosdcard"/>
+    <string name="sd_mount_summary" product="default"/>
+    <string name="sd_format" product="nosdcard">USB жадындағы деректерді жою</string>
+    <string name="sd_format" product="default">SD картасындағы деректі жою</string>
+    <string name="sd_format_summary" product="nosdcard">Ішкі USB жадынан музыка және фотосуреттер сияқты барлық деректерді өшіреді</string>
+    <string name="sd_format_summary" product="default">SD картасынан музыка және фотосуреттер сияқты барлық деректерді өшіреді</string>
+    <string name="memory_clear_cache_title">Кэштелген деректерді тазалау қажет пе? </string>
+    <string name="memory_clear_cache_message">Бұл барлық қолданбалар үшін кэштелген деректерді тазалайды.</string>
+    <string name="mtp_ptp_mode_summary">MTP немесе PTP функциясы белсенді</string>
+    <string name="dlg_confirm_unmount_title" product="nosdcard">USB жадын өшіру қажет пе?</string>
+    <string name="dlg_confirm_unmount_title" product="default">SD картасын өшіру қажет пе?</string>
+    <string name="dlg_confirm_unmount_text" product="nosdcard">USB жадын өшірсеңіз, кейбір пайдаланылатын қолданбалар тоқтайды және USB жадын қайта қоспағанша қолжетімді болмауы мүмкін.</string>
+    <string name="dlg_confirm_unmount_text" product="default">SD картасын өшірсеңіз,кейбір пайдаланылатын қолданбалар тоқтайды және SD картаны қайта қоспағанша қолжетімді болмауы мүмкін. </string>
+    <string name="dlg_error_unmount_title" product="nosdcard"/>
+    <string name="dlg_error_unmount_title" product="default"/>
+    <string name="dlg_error_unmount_text" product="nosdcard">USB жадын өшіру мүмкін болмады. Әрекетті кейінірек қайталаңыз.</string>
+    <string name="dlg_error_unmount_text" product="default">SD картасын өшіру мүмкін болмады. Әрекетті кейінірек қайталаңыз.</string>
+    <string name="unmount_inform_text" product="nosdcard">USB жады өшіріледі.</string>
+    <string name="unmount_inform_text" product="default">SD картасы өшіріледі.</string>
+    <string name="sd_ejecting_title">Өшіру</string>
+    <string name="sd_ejecting_summary">Өшіру орындалуда</string>
+    <string name="storage_low_title">Жадтағы бос орын бітуге жақын</string>
+    <string name="storage_low_summary">Синхрондау сияқты кейбір жүйе функциялары дұрыс жұмыс істемеуі мүмкін. Қолданбалар немесе мультимедиалық контент сияқты элементтерді жою немесе босату арқылы орынды босатып көріңіз.</string>
+    <string name="storage_menu_usb">Компьютерге USB арқылы қосылу</string>
+    <string name="storage_title_usb">Компьютерге USB арқылы қосылу</string>
+    <string name="usb_connection_category">Басқаша қосылу</string>
+    <string name="usb_mtp_title">Тасушы құрылғы (MTP)</string>
+    <string name="usb_mtp_summary">Windows жүйесіндегі мультимедиа файлдарын тасымалдауға немесе ол үшін Mac жүйесіндегі Android File Transfer пайдалануға мүмкіндік береді (www.android.com/filetransfer қараңыз)</string>
+    <string name="usb_ptp_title">Камера (PTP)</string>
+    <string name="usb_ptp_summary">Камера бағдарламалық жасақтамасы арқылы фотосуреттерді тасымалдауға және MTP қолдау көрсетпейтін компьютердегі кез келген файлдарды тасымалдауға мүмкіндік береді</string>
+    <string name="usb_label_installer_cd">"Файлдарды тасымалдау құралдарын орнату"</string>
+    <string name="storage_other_users">Басқа пайдаланушылар</string>
+    <string name="battery_status_title">Батарея күйі</string>
+    <string name="battery_level_title">Батарея деңгейі</string>
+    <string name="apn_settings">APN</string>
+    <string name="apn_edit">Қатынас орнын өңдеу</string>
+    <string name="apn_not_set">Орнатылмады</string>
+    <string name="apn_name">Аты</string>
+    <string name="apn_apn">APN</string>
+    <string name="apn_http_proxy">Прокси</string>
+    <string name="apn_http_port">Порт</string>
+    <string name="apn_user">Пайдаланушы аты</string>
+    <string name="apn_password">Құпия сөз</string>
+    <string name="apn_server">Сервер</string>
+    <string name="apn_mmsc">MMSC</string>
+    <string name="apn_mms_proxy">MMS прокси сервері</string>
+    <string name="apn_mms_port">MMS порты</string>
+    <string name="apn_mcc">MCC</string>
+    <string name="apn_mnc">MNC</string>
+    <string name="apn_auth_type">Аутентификация түрі</string>
+    <string name="apn_auth_type_none">Жоқ</string>
+    <string name="apn_auth_type_pap">PAP</string>
+    <string name="apn_auth_type_chap">CHAP</string>
+    <string name="apn_auth_type_pap_chap">PAP немесе CHAP</string>
+    <string name="apn_type">APN түрі</string>
+    <string name="apn_protocol">APN протоколы</string>
+    <string name="apn_roaming_protocol">APN роуминг протоколы</string>
+    <string name="carrier_enabled">APN қосу/өшіру</string>
+    <string name="carrier_enabled_summaryOn">APN қосылды</string>
+    <string name="carrier_enabled_summaryOff">APN өшірілді</string>
+    <string name="bearer">Деректерді тасушы</string>
+    <string name="mvno_type">MVNO түрі</string>
+    <string name="mvno_match_data">MVNO мәні</string>
+    <string name="menu_delete">APN жою</string>
+    <string name="menu_new">Жаңа APN</string>
+    <string name="menu_save">Сақтау</string>
+    <string name="menu_cancel">Жою</string>
+    <string name="error_title"/>
+    <string name="error_name_empty">Атау өрісінің бос болуы мүмкін емес.</string>
+    <string name="error_apn_empty">APN бос болуы мүмкін емес.</string>
+    <string name="error_mcc_not3">MCC өрісі 3 саннан тұруы тиіс.</string>
+    <string name="error_mnc_not23">MNC өрісі 2 немесе 3 саннан тұруы тиіс.</string>
+    <string name="restore_default_apn">Әдепкі APN параметрлерін қалпына келтіру.</string>
+    <string name="menu_restore">Әдепкі мәнге қайта орнату</string>
+    <string name="restore_default_apn_completed">APN параметрлерін қалпына келтіру аяқталды.</string>
+    <string name="master_clear_title">Зауыттық деректерді қалпына келтіру</string>
+    <string name="master_clear_summary" product="tablet">Планшеттегі барлық деректерді өшіреді</string>
+    <string name="master_clear_summary" product="default">Телефондағы барлық деректерді өшіреді</string>
+    <string name="master_clear_desc" product="tablet">"Бұл планшетіңіздің <b/>ішкі жадынан/b&gt; барлық деректерді, оның ішінде: \n\n<li>Google тіркелгіңіз</li>\n<li>Жүйе, қолданба деректері және параметрлер</li>\n<li>Жүктелген қолданбаларды</li> өшіреді"</string>
+    <string name="master_clear_desc" product="default">"Бұл телефоныңыздың <b/>ішкі жадынан/b&gt; барлық деректерді, оның ішінде: \n\n<li>Google тіркелгіңіз</li>\n<li>Жүйе, қолданба деректері және параметрлер</li>\n<li>Жүктелген қолданбаларды</li> өшіреді"</string>
+    <string name="master_clear_accounts" product="default">"\n\nКелесі тіркелгілерге жазылдыңыз:\n"</string>
+    <string name="master_clear_desc_also_erases_external">"<li>Музыка</li>\n<li>Фотосуреттер</li>\n<li>Басқа пайдаланушы деректері</li>"</string>
+    <string name="master_clear_desc_erase_external_storage" product="nosdcard">"\n\nМузыка, суреттер және басқа пайдаланушы деректерін тазалау үшін, <b>USB жадын</b> тазалау қажет."</string>
+    <string name="master_clear_desc_erase_external_storage" product="default">"\n\nМузыка, суреттер және басқа пайдаланушы деректерін тазалау үшін, <b>SD картаны</b> тазалау қажет."</string>
+    <string name="erase_external_storage" product="nosdcard">USB жадындағы деректерді жою</string>
+    <string name="erase_external_storage" product="default">SD картасындағы деректі жою</string>
+    <string name="erase_external_storage_description" product="nosdcard">Ішкі USB жадындағы музыка немесе фотосуреттер сияқты барлық деректерді өшіру</string>
+    <string name="erase_external_storage_description" product="default"> SD картасындағы музыка немесе фотосуреттер сияқты барлық деректерді өшіру</string>
+    <string name="master_clear_button_text" product="tablet">Планшет парамерлерін қалпына келтіру</string>
+    <string name="master_clear_button_text" product="default">Телефон параметрлерін қалпына келтіру</string>
+    <string name="master_clear_final_desc">Барлық жеке деректеріңіз бен жүктелген қолданбаларды өшіру қажет пе? Әрекетті қайтару мүмкін болмайды!</string>
+    <string name="master_clear_final_button_text">Барлығын өшіру</string>
+    <string name="master_clear_gesture_prompt">Құлыптан босату сызбасын сызыңыз</string>
+    <string name="master_clear_gesture_explanation">Зауыттық деректердің қалпына келтірілуін растау үшін, құлыптан босату сызбасын сызуыңыз қажет.</string>
+    <string name="master_clear_failed">Қалпына келтіру орындалмады, себебі, System Clear қызметі қолжетімді емес.</string>
+    <string name="master_clear_confirm_title">Қалпына келтіру қажет пе?</string>
+    <string name="media_format_title" product="nosdcard">USB жадындағы деректерді жою</string>
+    <string name="media_format_title" product="default">SD картасындағы деректі жою</string>
+    <string name="media_format_summary" product="nosdcard">USB жадындағы барлық деректерді өшіреді</string>
+    <string name="media_format_summary" product="default">SD картасындағы барлық деректерді өшіреді</string>
+    <string name="media_format_desc" product="nosdcard">Бүкіл USB жадын тазалау қажет пе? <b>Барлық</b> деректер жойылады!</string>
+    <string name="media_format_desc" product="default">SD картасын тазалау қажет пе? <b>Барлық</b> деректер жойылады!</string>
+    <string name="media_format_button_text" product="nosdcard">USB жадындағы деректерді жою</string>
+    <string name="media_format_button_text" product="default">SD картасындағы деректі жою</string>
+    <string name="media_format_final_desc" product="nosdcard">USB жадындағы барлық файлдарды жойып, оны тазарту керек пе? Файлдар қалпына келтірілмейді!</string>
+    <string name="media_format_final_desc" product="default">Осы жерде сақталған барлық файлдарды жоя отырып, SD картасын тазалау қажет пе? Бұл әрекетті қайтару мүмкін болмайды!</string>
+    <string name="media_format_final_button_text">Барлығын өшіру</string>
+    <string name="media_format_gesture_prompt">Құлыптан босату сызбасын сызыңыз</string>
+    <string name="media_format_gesture_explanation" product="nosdcard">USB жадын тазалау қажеттігін растау үшін, құлыптан босату үлгіңізді сызуыңыз қажет.</string>
+    <string name="media_format_gesture_explanation" product="default"> SD картасын USB жадын тазалау қажеттігін растау үшін, құлыптан босату үлгіңізді сызуыңыз қажет.</string>
+    <string name="call_settings_title">Қоңырау параметрлері</string>
+    <string name="call_settings_summary">Дауыстық пошта, қоңырау бағытын өзгерту, қоңырауды күту, қоңырау шалушы идентификаторын орнату</string>
+    <string name="tether_settings_title_usb">USB тетеринг</string>
+    <string name="tether_settings_title_wifi">Тасымалы Wi-Fi кіру орны</string>
+    <string name="tether_settings_title_bluetooth">Bluetooth тетеринг</string>
+    <string name="tether_settings_title_usb_bluetooth">Тетеринг</string>
+    <string name="tether_settings_title_all">Тетеринг және тасымалы Wi-Fi кіру орны</string>
+    <string name="usb_title">USB</string>
+    <string name="usb_tethering_button_text">USB тетеринг</string>
+    <string name="usb_tethering_available_subtext">USB қосылды, қосылу үшін, құсбелгі қойыңыз</string>
+    <string name="usb_tethering_active_subtext">Қосылды</string>
+    <string name="usb_tethering_storage_active_subtext">USB жады қолданыста болғанда қосылу мүмкін емес</string>
+    <string name="usb_tethering_unavailable_subtext">USB қосылмады</string>
+    <string name="usb_tethering_errored_subtext">USB тетеринг қатесі</string>
+    <string name="bluetooth_tether_checkbox_text">Bluetooth тетеринг</string>
+    <string name="bluetooth_tethering_available_subtext" product="tablet">Планшеттің интернет байланысы ортақ пайдаланылуда</string>
+    <string name="bluetooth_tethering_available_subtext" product="default">Телефонның интернет байланысы ортақ пайдаланылуда</string>
+    <string name="bluetooth_tethering_device_connected_subtext" product="tablet">Бұл планшеттің Интернет байланысын 1 құрылғы пайдалануда</string>
+    <string name="bluetooth_tethering_device_connected_subtext" product="default">Бұл телефонның Интернет байланысын 1 құрылғы пайдалануда</string>
+    <string name="bluetooth_tethering_devices_connected_subtext" product="tablet">Бұл планшеттің Интернет байланысын <xliff:g id="connectedDeviceCount">%1$d</xliff:g> құрылғы пайдалануда</string>
+    <string name="bluetooth_tethering_devices_connected_subtext" product="default">Бұл телефонның Интернет байланысын<xliff:g id="connectedDeviceCount">%1$d</xliff:g> құрылғы пайдалануда</string>
+    <string name="bluetooth_tethering_off_subtext" product="tablet">Бұл планшеттің Интернет байланысы өшірілді </string>
+    <string name="bluetooth_tethering_off_subtext" product="default">Бұл телефонның Интернет байланысы өшірілді </string>
+    <string name="bluetooth_tethering_errored_subtext">Байланыс жоқ</string>
+    <string name="bluetooth_tethering_overflow_error">Байланысатын құрылғылардың максималды саны: <xliff:g id="maxConnection">%1$d</xliff:g></string>
+    <string name="bluetooth_untether_blank"><xliff:g id="device_name">%1$s</xliff:g> байланысы тоқтатылады.</string>
+    <string name="tethering_help_button_text">Анықтама</string>
+    <string name="network_settings_title">Ұялы желілер</string>
+    <string name="manage_mobile_plan_title" translatable="true">Мобильді жоспар</string>
+    <string name="sms_application_title" translatable="true">Әдепкі SMS қолданбасы</string>
+    <string name="sms_change_default_dialog_title" translatable="true">SMS қолданбасын ауыстыру керек пе?</string>
+    <string name="sms_change_default_dialog_text" translatable="true">SMS бағдарламасы ретінде ағымдағы <xliff:g id="current_app">%s</xliff:g> бағдарламасының орнына <xliff:g id="new_app">%s</xliff:g> бағдарламасын пайдалану қажет пе?</string>
+    <string name="sms_change_default_no_previous_dialog_text" translatable="true"><xliff:g id="new_app">%s</xliff:g> SMS қолданбасы ретінде қолдану керек пе?</string>
+    <string name="mobile_unknown_sim_operator" translatable="true">Белгісіз SIM операторы</string>
+    <string name="mobile_no_provisioning_url" translatable="true">%1$s белгілі бір қамтамасыз етуші веб-сайтқа ие емес</string>
+    <string name="mobile_insert_sim_card" translatable="true">SIM картаны енгізіңіз және қайта іске қосыңыз</string>
+    <string name="mobile_connect_to_internet" translatable="true">Интернетке қосылыңыз</string>
+    <string name="location_title">Менің орналасқан жерім</string>
+    <string name="location_mode_title">Режим</string>
+    <string name="location_mode_high_accuracy_title">Жоғары дәлдік</string>
+    <string name="location_mode_battery_saving_title">Батареяны үнемдеу</string>
+    <string name="location_mode_sensors_only_title">Құрылғы ғана</string>
+    <string name="location_mode_location_off_title">Орын анықтау өшірулі</string>
+    <string name="location_category_recent_location_requests">Алдыңғы орын анықтау сұраулары</string>
+    <string name="location_no_recent_apps">Қолданбалар жақында орын анықтауға сұрау берген жоқ</string>
+    <string name="location_category_location_services">Орын анықтау қызметтері</string>
+    <string name="location_high_battery_use">Жоғары қуатты батареяны пайдалану</string>
+    <string name="location_low_battery_use">Төмен қуатты батареяны пайдалану</string>
+    <string name="location_mode_screen_title">Орын анықтау режимі</string>
+    <string name="location_mode_high_accuracy_description">Орналасқан жерді анықтау үшін, GPS, Wi\u2011Fi және мобильді желілерді пайдалану </string>
+    <string name="location_mode_battery_saving_description">Орналасқан жерді анықтау үшін, Wi\u2011Fi және мобильді желілерді пайдалану </string>
+    <string name="location_mode_sensors_only_description">Орналасқан жерді анықтау үшін, GPS мүмкіндігін пайдалану</string>
+    <string name="location_loading_injected_setting">Retrieving…</string>
+    <string name="location_network_based">Wi\u2011Fi және мобильді желі арқылы анықталған орналасқан жер</string>
+    <string name="location_neighborhood_level">Орналасқан жеріңізді жылдамырақ анықтау үшін қолданбаларға Google орналасу орны қызметін пайдалануға мүмкіндік береді. Анонимдік орналасу орны туралы дерек жиналып, Google-ға жіберіледі.</string>
+    <string name="location_neighborhood_level_wifi">Wi\u2011Fi желісі арқылы анықталған орналасқан жер</string>
+    <string name="location_gps">GPS спутниктері</string>
+    <string name="location_street_level" product="tablet">Орналасқан жеріңізді анықтау үшін қолданбаларға планшетіңіздегі GPS пайдалануға мүмкіндік беріңіз.</string>
+    <string name="location_street_level" product="default">Орналасқан жеріңізді анықтау үшін қолданбаларға телефоныңыздағы GPS пайдалануға мүмкіндік беріңіз.</string>
+    <string name="assisted_gps">A-GPS пайдалану</string>
+    <string name="assisted_gps_enabled"> A-GPS үшін серверді пайдалану (желінің қолданысын азайту үшін, құсбелгіні алыңыз)</string>
+    <string name="assisted_gps_disabled"> A-GPS үшін серверді пайдалану (GPS өнімділігін арттыру үшін құсбелгіні алыңыз)</string>
+    <string name="use_location_title">Орналасу орны және Google іздеуі </string>
+    <string name="use_location_summary">Іздеу нәтижелерін және басқа қызметтерді жақсарту үшін, Google жүейсіне орналасқан жеріңізді пайдалануға мүмкіндік беріңіз</string>
+    <string name="location_access_title">Менің орналасқан жеріме қатынасу</string>
+    <string name="location_access_summary">Рұқсатыңызды сұраған қолданбаларға орналасқан жеріңіз туралы ақпаратты пайдалануға мүмкіндік беру</string>
+    <string name="location_sources_heading">Орналасу орнының көздері</string>
+     <skip/>
+    <string name="about_settings" product="tablet">Планшет туралы</string>
+    <string name="about_settings" product="default">Телефон туралы</string>
+    <string name="about_settings_summary">Заңгерлік ақпаратын, күйін және бағдарламалық жасақтамасын көру</string>
+    <string name="legal_information">Заңгерлік ақпарат</string>
+    <string name="contributors_title">Қатысушылар</string>
+    <string name="regulatory_information">Нормативтік ақпарат</string>
+     <skip/>
+    <string name="copyright_title">Авторлық құқық</string>
+     <skip/>
+    <string name="license_title">Лицензия</string>
+     <skip/>
+    <string name="terms_title">Шарттар</string>
+     <skip/>
+    <string name="settings_license_activity_title">Ашық бастапқы коды бар лицензия</string>
+    <string name="settings_license_activity_unavailable">Лицензияларды жүктеу кезінде мәселе орын алды.</string>
+    <string name="settings_license_activity_loading">Жүктеу\u2026</string>
+    <string name="settings_safetylegal_title">Қауіпсіздік туралы ақпарат</string>
+    <string name="settings_safetylegal_activity_title">Қауіпсіздік туралы ақпарат</string>
+    <string name="settings_safetylegal_activity_unreachable">Дерек байланысы жоқ. Осы ақпаратты қазір көру үшін, Интернетке қосылған кез келген компьютерден %s бетіне өтіңіз.</string>
+    <string name="settings_safetylegal_activity_loading">Жүктеу\u2026</string>
+    <string name="lockpassword_choose_your_password_header">Құпия сөзіңізді таңдаңыз</string>
+    <string name="lockpassword_choose_your_pattern_header">Үлгіңізді таңдаңыз</string>
+    <string name="lockpassword_choose_your_pin_header">PIN кодыңызды таңдаңыз</string>
+    <string name="lockpassword_confirm_your_password_header">Құпия сөзіңізді растаңыз</string>
+    <string name="lockpassword_confirm_your_pattern_header">Сызбаңызды растаңыз</string>
+    <string name="lockpassword_confirm_your_pin_header">PIN кодыңызды растаңыз</string>
+    <string name="lockpassword_confirm_passwords_dont_match">Құпия сөздер сәйкес келмейді</string>
+    <string name="lockpassword_confirm_pins_dont_match">PIN кодтары сәйкес келмейді</string>
+    <string name="lockpassword_choose_lock_generic_header">Құлыптан босату әдісін таңдаңыз</string>
+    <string name="lockpassword_password_set_toast">Құпия сөз орнатылды</string>
+    <string name="lockpassword_pin_set_toast">PIN коды орнатылды</string>
+    <string name="lockpassword_pattern_set_toast">Сызба орнатылды</string>
+    <string name="lock_settings_title">Экран қауіпсіздігі</string>
+    <string name="lockpattern_change_lock_pattern_label">Құлыптан босату сызбасын өзгерту</string>
+    <string name="lockpattern_change_lock_pin_label">Құлыптан босату PIN кодын өзгерту</string>
+    <string name="lockpattern_need_to_unlock">Сақталған сызбаны растау</string>
+    <string name="lockpattern_need_to_unlock_footer"/>
+    <string name="lockpattern_need_to_unlock_wrong">Қайталап көріңз:</string>
+    <string name="lockpattern_need_to_unlock_wrong_footer"/>
+    <string name="lockpattern_recording_intro_header">Құлыптан босату үлгісін сызу</string>
+    <string name="lockpattern_recording_intro_footer">Анықтама алу үшін Мәзірді басыңыз.</string>
+    <string name="lockpattern_recording_inprogress">Жасап біткен кезде, саусағыңызды босатыңыз</string>
+    <string name="lockpattern_recording_incorrect_too_short">Кем дегенде <xliff:g id="number">%d</xliff:g> нүктеге қосылыңыз. Әрекетті қайталаңыз.</string>
+    <string name="lockpattern_pattern_entered_header">Үлгі жазылды</string>
+    <string name="lockpattern_need_to_confirm">Растау үшін үлгіні қайта сызыңыз</string>
+    <string name="lockpattern_pattern_confirmed_header">Сіздің жаңа құлыптан босату үлгіңіз</string>
+    <string name="lockpattern_confirm_button_text">Растаңыз</string>
+    <string name="lockpattern_restart_button_text">Қайта сызу</string>
+    <string name="lockpattern_retry_button_text">Қайталау</string>
+    <string name="lockpattern_continue_button_text">Жалғастыру</string>
+    <string name="lockpattern_settings_title">Құлыптан босату сызбасы</string>
+    <string name="lockpattern_settings_enable_title">Сызбаны сұрату</string>
+    <string name="lockpattern_settings_enable_summary">Экранды құлыптан босату үшін, сызба сызу қажет</string>
+    <string name="lockpattern_settings_enable_visible_pattern_title">Сызбаны көрсету</string>
+    <string name="lockpattern_settings_enable_tactile_feedback_title">Түрту кезіндегі діріл</string>
+    <string name="lockpattern_settings_enable_power_button_instantly_locks">Қуат түймесі дереу құлыпталады</string>
+    <string name="lockpattern_settings_choose_lock_pattern">Құлыптан босату сызбасын орнату</string>
+    <string name="lockpattern_settings_change_lock_pattern">Құлыптан босату сызбасын өзгерту</string>
+    <string name="lockpattern_settings_help_how_to_record">Құлыптан босату сызбасын сызу жолы</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts_header">Сәтсіз әрекеттер тым көп!</string>
+    <string name="lockpattern_too_many_failed_confirmation_attempts_footer"> <xliff:g id="number">%d</xliff:g> секундтан кейін қайта әрекеттеніңіз.</string>
+    <string name="activity_not_found">Қолданба телефоныңызға орнатылмады.</string>
+     <skip/>
+    <string name="manageapplications_settings_title">Бағдарламаларды басқару</string>
+    <string name="manageapplications_settings_summary">Орнатылған қолданбаларды басқару және жою</string>
+    <string name="applications_settings">Қолданбалар</string>
+    <string name="applications_settings_summary">Қолданбаларды басқару, жедел іске қосу пернелер тіркесімін орнату</string>
+    <string name="applications_settings_header">Қолданба параметрлері</string>
+    <string name="install_applications">Белгісіз көздер</string>
+    <string name="install_unknown_applications">Қолданбаларды белгісіз көздерден орнатуға рұқсат беру</string>
+    <string name="install_all_warning" product="tablet">Планшетіңіз бен жеке деректеріңізге белгісіз көздерден шыққан қолданбалар тарапынан қауіп төнуі мүмкін. Осы қолданбаларды пайдаланудан туындауы мүмкін планшетке тиетін зақым мен деректердің жоғалуына тек өзіңіз жауап беретініңізбен келісесіз.</string>
+    <string name="install_all_warning" product="default">Телефоныңыз бен жеке деректеріңізге белгісіз көздерден шыққан қолданбалар тарапынан қауіп төнуі мүмкін. Осы қолданбаларды пайдаланудан туындауы мүмкін планшетке тиетін зақым мен деректердің жоғалуына тек өзіңіз жауап беретініңізбен келісесіз.</string>
+    <string name="verify_applications">Қолданбаларды тексеру</string>
+    <string name="verify_applications_summary">Қауіп төндіруі мүмкін қолданбаларды рұқсат етпеу немесе оларды орнату алдында ескерту </string>
+    <string name="advanced_settings">Қосымша параметрлер</string>
+    <string name="advanced_settings_summary">Қосымша параметрлер опцияларын қосу</string>
+    <string name="application_info_label">қолданба туралы ақпарат</string>
+    <string name="storage_label">Жад</string>
+    <string name="auto_launch_label">Әдепкі бойынша іске қосу</string>
+    <string name="auto_launch_label_generic">Әдепкі мәндер</string>
+    <string name="screen_compatibility_label">Экран үйлесімділігі</string>
+    <string name="permissions_label">Рұқсаттар</string>
+    <string name="cache_header_label">Кэш</string>
+    <string name="clear_cache_btn_text">Кэшті тазалау</string>
+    <string name="cache_size_label">Кэш</string>
+    <string name="controls_label">Басқару элементтері</string>
+    <string name="force_stop">Мәжбүрлеп тоқтату </string>
+    <string name="total_size_label">Барлығы</string>
+    <string name="application_size_label">Қолданба</string>
+    <string name="external_code_size_label">USB жадының қолданбасы</string>
+    <string name="data_size_label">Дерек</string>
+    <string name="external_data_size_label" product="nosdcard">USB жадының деректері</string>
+    <string name="external_data_size_label" product="default">SD карта</string>
+    <string name="uninstall_text">Жою</string>
+    <string name="uninstall_all_users_text">Барлық пайдаланушылар үшін жою</string>
+    <string name="install_text">Орнату</string>
+    <string name="disable_text">Өшіру</string>
+    <string name="enable_text">Қосу</string>
+    <string name="clear_user_data_text">Деректерді жою</string>
+    <string name="app_factory_reset">Жаңартуларды жою</string>
+    <string name="auto_launch_enable_text">Бұл қолданбаны кейбір әрекеттер үшін әдепкі бойынша іске қосуды таңдадыңыз.</string>
+    <string name="always_allow_bind_appwidgets_text">Осы қолданбаға виджеттер жасап, олардың деректеріне қатынасуға рұқсат беруді таңдадыңыз.</string>
+    <string name="auto_launch_disable_text">Әдепкі мәндер орнатылмады.</string>
+    <string name="clear_activities">Әдепкі мәндерді жою</string>
+    <string name="screen_compatibility_text">Бұл қолданба экраныңыз үшін жасақталмауы мүмкін. Осы жерден оның экраныңызға қатысты реттелуін басқаруға болады.</string>
+    <string name="ask_compatibility">Іске қосу кезінде сұрау</string>
+    <string name="enable_compatibility">Қолданбаны масштабтау</string>
+    <string name="unknown">Белгісіз</string>
+    <string name="sort_order_alpha">Атауы бойынша сұрыптау</string>
+    <string name="sort_order_size">Өлшемі бойынша сұрыптау</string>
+    <string name="show_running_services">Белсенді қызметтерді көрсету</string>
+    <string name="show_background_processes">Кэштелген процестерді көрсету</string>
+    <string name="reset_app_preferences">Қолданба теңшелімдерін қалпына келтіру</string>
+    <string name="reset_app_preferences_title">Қолданба теңшелімдерін қалпына келтіру қажет пе?</string>
+    <string name="reset_app_preferences_desc">Бұл барлық параметрлерді қалпына келтіреді:\n\n <li>Өшірілген бағдарламалар</li>\n <li>Өшірілген бағдарлама хабарландырулары</li>\n <li>Операцияларға арналған әдепкі бағдарламалар</li>\n <li>Бағдарламаларға арналған фондық деректердің шектеулері</li>\n <li>Кез келген рұқсат шектеулері</li>\n\n Кез келген бағдарлама деректерін жоғалтпайсыз.</string>
+    <string name="reset_app_preferences_button">Қолданбаларды қалпына келтіру</string>
+    <string name="manage_space_text">Орынды басқару</string>
+    <string name="filter">Сүзгі</string>
+    <string name="filter_dlg_title">Сүзгі опцияларын таңдаңыз</string>
+    <string name="filter_apps_all">Барлығы</string>
+    <string name="filter_apps_disabled">Өшірулі</string>
+    <string name="filter_apps_third_party">Жүктелгендер</string>
+    <string name="filter_apps_running">Орындалып жатқандар</string>
+    <string name="filter_apps_onsdcard" product="nosdcard">USB жады</string>
+    <string name="filter_apps_onsdcard" product="default">SD картасында</string>
+    <string name="disabled">Өшірулі</string>
+    <string name="not_installed">Орнатылмады</string>
+    <string name="no_applications">Қолданбалар жоқ.</string>
+    <string name="internal_storage">Ішкі жады</string>
+    <string name="sd_card_storage" product="nosdcard">USB жады</string>
+    <string name="sd_card_storage" product="default">SD картасының жады</string>
+    <string name="recompute_size">Өлшемді қайта есептеу\u2026</string>
+    <string name="clear_data_dlg_title">Қолданба дерегін жою қажет пе?</string>
+    <string name="clear_data_dlg_text">Бұл қолданбаның барлық дерегктері біржола жойылады. Бұған барлық файлдар, параметрлер, тіркелгілер, дерекқорлар, т.б. кіреді.</string>
+    <string name="dlg_ok">OK</string>
+    <string name="dlg_cancel">Болдырмау</string>
+    <string name="app_not_found_dlg_title"/>
+    <string name="app_not_found_dlg_text">Қолданба орнатылған қолданбалар тізімінен табылмады.</string>
+    <string name="clear_data_failed">Қолданба деректерін жою мүмкін болмады.</string>
+    <string name="app_factory_reset_dlg_title">Жаңартуларды жою қажет пе?</string>
+    <string name="app_factory_reset_dlg_text">Android жүйесіндегі осы қолданбаның барлық жаңартулары жойылады.</string>
+    <string name="clear_failed_dlg_title">Деректерді жою</string>
+    <string name="clear_failed_dlg_text">Қолданба деректерін жою мүмкін болмады.</string>
+    <string name="security_settings_desc" product="tablet">Бұл қолданба планшетіңіздегі келесі ақпаратқа қатынаса алады:</string>
+    <string name="security_settings_desc" product="default">Бұл қолданба телефоныңыздағы келесі ақпаратқа қатынаса алады:</string>
+    <string name="security_settings_desc_multi" product="tablet">Бұл қолданба планшетіңіздегі келесі ақпаратқа қатынаса алады. Өнімділікті арттырып, жад қолданысын азайту үшін, осы рұқсаттардың кейбіреулері <xliff:g id="base_app_name">%1$s</xliff:g> үшін қолжетімді болады, себебі, ол <xliff:g id="additional_apps_list">%2$s</xliff:g> сияқты бірдей процесте орындалады:</string>
+    <string name="security_settings_desc_multi" product="default">Бұл қолданба телефоныңыздағы келесі ақпаратқа қатынаса алады. Өнімділікті арттырып, жад қолданысын азайту үшін, осы рұқсаттардың кейбіреулері <xliff:g id="base_app_name">%1$s</xliff:g> үшін қолжетімді болады, себебі, ол <xliff:g id="additional_apps_list">%2$s</xliff:g> сияқты бірдей процесте орындалады:</string>
+    <string name="join_two_items"><xliff:g id="first_item">%1$s</xliff:g> және <xliff:g id="second_item">%2$s</xliff:g></string>
+    <string name="join_many_items_last"><xliff:g id="all_but_last_item">%1$s</xliff:g> және <xliff:g id="last_item">%2$s</xliff:g></string>
+    <string name="join_many_items_first"><xliff:g id="first_item">%1$s</xliff:g>, <xliff:g id="all_but_first_and_last_item">%2$s</xliff:g></string>
+    <string name="join_many_items_middle"><xliff:g id="added_item">%1$s</xliff:g>, <xliff:g id="rest_of_items">%2$s</xliff:g></string>
+    <string name="security_settings_billing_desc">Бұл қолданба ақылы болуы мүмкін</string>
+    <string name="security_settings_premium_sms_desc">Премиум SMS жіберу</string>
+    <string name="computing_size">Есептеу\u2026</string>
+    <string name="invalid_size_value">Бума өлшемін есептеу мүмкін болмады.</string>
+    <string name="empty_list_msg">Үшінші тарап қолданбалары орнатылмады.</string>
+    <string name="version_text"><xliff:g id="version_num">%1$s</xliff:g> нұсқасы</string>
+    <string name="move_app">Орнын ауыстыру</string>
+    <string name="move_app_to_internal" product="tablet">Планшетке орнын ауыстыру</string>
+    <string name="move_app_to_internal" product="default">Телефонға орнын ауыстыру</string>
+    <string name="move_app_to_sdcard" product="nosdcard">USB жадына орнын ауыстыру</string>
+    <string name="move_app_to_sdcard" product="default">SD картасына орнын ауыстыру</string>
+    <string name="moving">Орны ауыстырылуда</string>
+    <string name="insufficient_storage">Бос орын жеткіліксіз.</string>
+    <string name="does_not_exist">Қолданба жоқ.</string>
+    <string name="app_forward_locked">Қолданба көшіруден қорғалған.</string>
+    <string name="invalid_location">Орнату орны жарамсыз.</string>
+    <string name="system_package">Жүйе жаңартуларын сыртқы мультимедияға орнату мүмкін емес.</string>
+    <string name="force_stop_dlg_title">Мәжбүрлеп тоқтату қажет пе?</string>
+    <string name="force_stop_dlg_text">Қолданбаны мәжбүрлеп тоқтатсаңыз, оның жұмысы бұзылуы мүмкін.</string>
+    <string name="move_app_failed_dlg_title"/>
+    <string name="move_app_failed_dlg_text">Қолданбаның орнын ауыстыру мүмкін болмады. <xliff:g id="reason">%1$s</xliff:g></string>
+    <string name="app_install_location_title">Ұсынылатын орнату орны</string>
+    <string name="app_install_location_summary">Жаңа қолданбалар үшін ұсынылатын орнату орнын өзгерту</string>
+    <string name="app_disable_dlg_title">Бекітілген қолданбаны өшіру қажет пе?</string>
+    <string name="app_disable_dlg_text">Бекітілген қолданбаны өшірсеңіз, басқа қолданбалардың жұмысы бұзылуы мүмкін.</string>
+    <string name="app_special_disable_dlg_title">Деректерді жойып, қолданбаны өшіру қажет пе?</string>
+    <string name="app_special_disable_dlg_text">Бекітілген қолданбаны өшірсеңіз, басқа қолданбалардың жұмысы бұзылуы мүмкін. Сондай-ақ, деректеріңіз жойылады.</string>
+    <string name="app_disable_notifications_dlg_title">Хабарландырулардыөшіру қажет пе?</string>
+    <string name="app_disable_notifications_dlg_text">Осы қолданбаға арналған хабарламаларды өшірсеңіз, маңызды ескертулер мен жаңартуларды өткізіп жіберуіңіз мүмкін. </string>
+     <skip/>
+    <string name="app_ops_settings">Бағдарлама операциялары</string>
+    <string name="app_ops_running">Орындалып жатқандар</string>
+    <string name="app_ops_never_used">(Ешқашан пайдаланылмаған)</string>
+    <string name="storageuse_settings_title">Жадты пайдалану</string>
+    <string name="storageuse_settings_summary">Қолданбалар пайдаланатын жад орнын көру</string>
+    <string name="runningservices_settings_title">Орындалып жатқан қызметтер</string>
+    <string name="runningservices_settings_summary">Ағымда орындалып жатқан қызметтерді көру және басқару</string>
+    <string name="service_restarting">Қайта іске қосу</string>
+    <string name="cached">Кэштелген фондық процесс</string>
+    <string name="no_running_services">Ешнәрсе орындалмады.</string>
+    <string name="service_started_by_app">Қолданба тарапынан іске қосылды.</string>
+    <string name="service_client_name"><xliff:g id="client_name">%1$s</xliff:g></string>
+    <string name="service_background_processes"><xliff:g id="memory">%1$s</xliff:g> бос</string>
+    <string name="service_foreground_processes"><xliff:g id="memory">%1$s</xliff:g>пайдаланылады</string>
+    <string name="memory">ЖЖҚ</string>
+    <string name="service_process_name">Өкінішке орай <xliff:g id="process">%1$s</xliff:g> процесі тоқтап қалды.</string>
+    <string name="running_process_item_user_label">Пайдаланушы: <xliff:g id="user_name">%1$s</xliff:g></string>
+    <string name="running_process_item_removed_user_label">Жойылған пайдаланушы</string>
+    <string name="running_processes_item_description_s_s"><xliff:g id="numprocess">%1$d</xliff:g> process and <xliff:g id="numservices">%2$d</xliff:g> service</string>
+    <string name="running_processes_item_description_s_p"><xliff:g id="numprocess">%1$d</xliff:g> процесс және <xliff:g id="numservices">%2$d</xliff:g> қызмет</string>
+    <string name="running_processes_item_description_p_s"><xliff:g id="numprocess">%1$d</xliff:g> процесс және <xliff:g id="numservices">%2$d</xliff:g> қызмет</string>
+    <string name="running_processes_item_description_p_p"><xliff:g id="numprocess">%1$d</xliff:g> процесс және <xliff:g id="numservices">%2$d</xliff:g> қызмет</string>
+    <string name="runningservicedetails_settings_title">Орындалып жатқан қолданба</string>
+    <string name="no_services">Белсенді емес</string>
+    <string name="runningservicedetails_services_title">Қызметтер</string>
+    <string name="runningservicedetails_processes_title">Процестер</string>
+    <string name="service_stop">Тоқтату</string>
+    <string name="service_manage">Параметрлер</string>
+    <string name="service_stop_description">Бұл қызмет оның қолданбасы тарапынан іске қосылды. Оны тоқтатсаңыз, ақаулыққа әкелуі мүмкін.</string>
+    <string name="heavy_weight_stop_description">Бұл қолданбаны қауіпсіз түрде тоқтату мүмкін емес. Оны тоқтатсаңыз, ағымдағы жұмыстың біразы жойылып кетуі мүмкін.</string>
+    <string name="background_process_stop_description">Бұл -тағы қажет болған жағдайда пайдалануға арналған, әлі орындалып жатқан ескі қолданба процесі. Әдетте, оны тоқтату қажет емес.</string>
+    <string name="service_manage_description"><xliff:g id="client_name">%1$s</xliff:g>: ағымда пайдаланылады. Оны басқару үшін Параметрлерді түртіңіз.</string>
+    <string name="main_running_process_description">Негізгі процесс пайдаланылуда.</string>
+    <string name="process_service_in_use_description"><xliff:g id="comp_name">%1$s</xliff:g> қызметі пайдаланылуда.</string>
+    <string name="process_provider_in_use_description"><xliff:g id="comp_name">%1$s</xliff:g> провайдері пайдаланылуда.</string>
+    <string name="runningservicedetails_stop_dlg_title">Жүйе қызметін тоқтату қажет пе?</string>
+    <string name="runningservicedetails_stop_dlg_text" product="tablet">Осы қызметті тоқтатсаңыз, планшетіңізді өшіріп, қайта қоспағанша, оның кейбір мүмкіндіктері дұрыс жұмыс істемеуі мүмкін.</string>
+    <string name="runningservicedetails_stop_dlg_text" product="default">Осы қызметті тоқтатсаңыз, телефоныңызды өшіріп, қайта қоспағанша, оның кейбір мүмкіндіктері дұрыс жұмыс істемеуі мүмкін.</string>
+     <skip/>
+    <string name="language_settings">Тіл және енгізілім</string>
+    <string name="language_keyboard_settings_title">Тіл және енгізілім</string>
+    <string name="language_settings_category">Тіл параметрлері</string>
+    <string name="keyboard_settings_category">Пернетақта және енгізу әдістері</string>
+    <string name="phone_language">Тіл</string>
+    <string name="phone_language_summary">""</string>
+    <string name="auto_replace">Автоматты түрде ауыстыру</string>
+    <string name="auto_replace_summary">Қате жазылған сөздерді түзету</string>
+    <string name="auto_caps">Автоматты түрде бас әріптерге түрлендіру</string>
+    <string name="auto_caps_summary">Сөйлемдердегі бірінші әріпті бас әріпке түрлендіру</string>
+    <string name="auto_punctuate">Автопунктуация</string>
+    <string name="hardkeyboard_category">Физикалық пернетақта параметрлері</string>
+    <string name="auto_punctuate_summary">\u0022.\u0022 енгізу үшін Бос орын пернесін екі рет басыңыз.</string>
+    <string name="show_password">Құпия сөздерді көрсету</string>
+    <string name="ime_security_warning">Бұл енгізу әдісі арқылы құпия сөздер және несиелік карта нөмірлері сияқты жеке деректерді қосқанда, барлық терілген мәтіндер жиналады. Бұл<xliff:g id="ime_application_name">%1$s</xliff:g> қолданбасы тарапынан сұралады. Осы енгізу әдісін пайдалану қажет пе?</string>
+    <string name="spellchecker_security_warning">Емлені тексеру үшін, <xliff:g id="spellchecker_application_name">%1$s</xliff:g>. қолданбасы тарапынан құпия сөздер және несиелік карта нөмірлері сияқты жеке деректерді қосқанда, барлық терілген мәтіндер жиналады. Емлені тексеру қажет пе?</string>
+    <string name="spellchecker_quick_settings">Параметрлер</string>
+    <string name="spellchecker_language">Тіл</string>
+    <string name="failed_to_open_app_settings_toast"> <xliff:g id="spell_application_name">%1$s</xliff:g> үшін параметрлерді ашу сәтсіз аяқталды</string>
+    <string name="pointer_settings_category">Тінтуір және сенсорлық аймақ</string>
+    <string name="pointer_speed">Меңзер жылдамдығы</string>
+    <string name="game_controller_settings_category">Ойын құрылғысы</string>
+    <string name="vibrate_input_devices">Дірілді пайдалану</string>
+    <string name="vibrate_input_devices_summary">Ойын құрылғысы қосылған кезде оған дірілді қайта бағыттау</string>
+     <skip/>
+    <string name="keyboard_layout_dialog_title">Пернетақта схемасын таңдау</string>
+    <string name="keyboard_layout_dialog_setup_button">Пернетақта схемаларын орнату</string>
+    <string name="keyboard_layout_dialog_switch_hint">Ауыстыру үшін, CTRL + Бос орын пернелерін басыңыз</string>
+    <string name="keyboard_layout_default_label">Әдепкі</string>
+     <skip/>
+    <string name="keyboard_layout_picker_title">Пернетақта схемалары</string>
+    <skip/>
+    <string name="user_dict_settings_title">Жеке сөздік</string>
+    <string name="user_dict_settings_summary">""</string>
+    <string name="user_dict_settings_add_menu_title">Қосу</string>
+    <string name="user_dict_settings_add_dialog_title">Сөздікке қосу</string>
+    <string name="user_dict_settings_add_screen_title">Фраза</string>
+    <string name="user_dict_settings_add_dialog_more_options">Қосымша</string>
+    <string name="user_dict_settings_add_dialog_less_options">Негізгі опциялар</string>
+    <string name="user_dict_settings_add_dialog_confirm">OK</string>
+    <string name="user_dict_settings_add_word_option_name">Сөз:</string>
+    <string name="user_dict_settings_add_shortcut_option_name">Пернелер тіркесімі:</string>
+    <string name="user_dict_settings_add_locale_option_name">Тіл:</string>
+    <string name="user_dict_settings_add_word_hint">Сөз енгізу</string>
+    <string name="user_dict_settings_add_shortcut_hint">Қосымша таңбаша</string>
+    <string name="user_dict_settings_edit_dialog_title">Сөзді өңдеу</string>
+    <string name="user_dict_settings_context_menu_edit_title">Өңдеу</string>
+    <string name="user_dict_settings_context_menu_delete_title">Жою</string>
+    <string name="user_dict_settings_empty_text">Пайдаланушы сөздігінде сөз жоқ. Қосу (+) түймесін түрту арқылы сөз қосыңыз.</string>
+    <string name="user_dict_settings_all_languages">Барлық тілдер үшін</string>
+    <string name="user_dict_settings_more_languages">More languages…</string>
+    <string name="testing">Тексеру</string>
+    <string name="testing_phone_info" product="tablet">Планшет туралы ақпарат</string>
+    <string name="testing_phone_info" product="default">Телефон туралы ақпарат</string>
+    <string name="testing_battery_info">Батарея туралы ақпарат</string>
+    <string name="testing_sim_toolkit">SIM toolkit</string>
+    <string name="quick_launch_title">Жедел іске қосу</string>
+    <string name="quick_launch_summary">Қолданбаларды іске қосу үшін, пернелер тіркесімдерін орнату</string>
+    <string name="quick_launch_assign_application">Қолданбаны тағайындау</string>
+    <string name="quick_launch_no_shortcut">Таңбаша жоқ</string>
+    <string name="quick_launch_shortcut">Іздеу + <xliff:g id="shortcut_letter">%1$s</xliff:g></string>
+    <string name="quick_launch_clear_dialog_title">Тазалау</string>
+    <string name="quick_launch_clear_dialog_message"><xliff:g id="shortcut_letter">%1$s</xliff:g> (<xliff:g id="application_name">%2$s</xliff:g>) арналған таңбаша жойылады.</string>
+    <string name="quick_launch_clear_ok_button">OK</string>
+    <string name="quick_launch_clear_cancel_button">Болдырмау</string>
+    <string name="quick_launch_display_mode_applications">Қолданбалар</string>
+    <string name="quick_launch_display_mode_shortcuts">Ярлыктар</string>
+    <string name="input_methods_settings_title">Мәтінді енгізу</string>
+    <string name="input_method">Енгізу әдісі</string>
+    <string name="current_input_method">Әдепкі</string>
+    <string name="input_method_selector">Енгізу әдісін таңдаушы</string>
+    <string name="input_method_selector_show_automatically_title">Автоматты</string>
+    <string name="input_method_selector_always_show_title">Әрдайым көрсету</string>
+    <string name="input_method_selector_always_hide_title">Әрқашан жасыру</string>
+    <string name="configure_input_method">Енгізу әдістерін баптау</string>
+    <string name="input_method_settings">Параметрлер</string>
+    <string name="input_method_settings_button">Параметрлер</string>
+    <string name="active_input_method_subtypes">Белсенді енгізу әдістері</string>
+    <string name="use_system_language_to_select_input_method_subtypes">Жүйе тілін пайдалану</string>
+    <string name="input_methods_settings_label_format"><xliff:g id="ime_name">%1$s</xliff:g> параметрлері</string>
+    <string name="input_methods_and_subtype_enabler_title">Белсенді енгізу әдістерін таңдаңыз</string>
+    <string name="onscreen_keyboard_settings_summary">Экрандық пернетақта параметрлері</string>
+    <string name="builtin_keyboard_settings_title">Физикалық пернетақта</string>
+    <string name="builtin_keyboard_settings_summary">Физикалық пернетақта параметрлері</string>
+    <string name="development_settings_title">Әзірлеуші опциялары</string>
+    <string name="development_settings_summary">Қолданбаны әзірлеуге арналған опцияларды орнату</string>
+    <string name="development_settings_not_available">Осы пайдаланушы үшін әзірлеуші опциялары қолжетімді емес</string>
+    <string name="enable_adb">USB бойынша түзету</string>
+    <string name="enable_adb_summary">USB қосылған кезде түзету режимін қосу</string>
+    <string name="clear_adb_keys">USB түзету өкілдіктерін жою</string>
+    <string name="bugreport_in_power">Қуат мәзірінің қате туралы есептері</string>
+    <string name="bugreport_in_power_summary">Қату туралы есепті жіберу үшін, опцияны қуат мәзіріне қосу</string>
+    <string name="keep_screen_on">Экранды өшірмеу</string>
+    <string name="keep_screen_on_summary">Зарядтау кезінде экран ешқашан ұйқы режимінде болмайды</string>
+    <string name="bt_hci_snoop_log">Bluetooth HCI қадағалау журналын қосу</string>
+    <string name="bt_hci_snoop_log_summary">Барлық Bluetooth HCI бумаларын файлға салу</string>
+    <string name="select_runtime_title">Жұмыс циклін таңдау </string>
+    <string name="select_runtime_dialog_title">Жұмыс циклін таңдау</string>
+    <string name="select_runtime_warning_message">Жұмыс циклін <xliff:g id="old" example="libdvm.so">%1$s</xliff:g> күйінен <xliff:g id="new" example="libart.so">%2$s</xliff:g> күйіне ауыстыру үшін қайта қосылу қажет пе?</string>
+    <string name="wifi_display_certification">Сымсыз дисплей сертификатталуы</string>
+    <string name="wifi_display_certification_summary">Сымсыз дисплей сертификатталуына арналған опцияларды көрсету</string>
+    <string name="allow_mock_location">Жалған орналасу орындарын пайдалануды рұқсат ету</string>
+    <string name="allow_mock_location_summary">Жалған орналасу орындарын пайдалануды рұқсат ету</string>
+    <string name="adb_warning_title">USB түзету керек пе?</string>
+    <string name="adb_warning_message">USB түзету тек әзірлеу мақсаттарына арналған. Оны компьютер мен құрылғыңыз арасында деректерді көшіру, құрылғыңызға хабарландырусыз қолданбалар орнату және журнал деректерін оқу үшін пайдаланыңыз.</string>
+    <string name="adb_keys_warning_message">Бұрыннан өкілеттігіңіз бар барлық компьютерлерден USB түзету әрекеті үшін кіру рұқсатын жою</string>
+    <string name="dev_settings_warning_title">Әзірлеу параметрлерін рұқсат ету қажет пе?</string>
+    <string name="dev_settings_warning_message">Бұл параметрлер тек әзірлеу мақсаттарына арналған. Олар құрылғыңыздың немесе ондағы қолданбалардың бұзылуына немесе дұрыс жұмыс істемеуіне алып келуі мүмкін.</string>
+    <string name="verify_apps_over_usb_title">USB бойынша орнатылған қолданбаларды тексеру</string>
+    <string name="verify_apps_over_usb_summary">ADB/ADT арқылы орнатылған бағдарламалардың қауіпті қасиетінің жоқтығын тексеріңіз.</string>
+    <string name="enforce_read_external_title" product="nosdcard">USB жадын қорғау</string>
+    <string name="enforce_read_external_summary" product="nosdcard">USB жадын оқу үшін, қолданбалар рұқсат сұрауы тиіс</string>
+    <string name="enforce_read_external_confirm_title" product="nosdcard"> USB жадын қорғау қажет пе?</string>
+    <string name="enforce_read_external_confirm_message" product="nosdcard">USB жады қорғалған кезде, сыртқы жадтан деректерді оқу үшін, қолданбалар рұқсат сұрауы тиіс.\n\nКейбір қолданбалар әзірлеушілері тарапынан жаңартылмайынша, жұмыс істемеуі мүмкін.</string>
+    <string name="enforce_read_external_title" product="default">SD картасы қорғалған кезде, қолданбалар сыртқы жадтан деректерді оқу үшін, рұқсат сұрауы тиіс. \n\nКейбір қолданбалар әзірлеушілері тарапынан жаңартылмайынша, жұмыс істемеуі мүмкін.</string>
+    <string name="enforce_read_external_summary" product="default">Apps must request permission to read SD card</string>
+    <string name="enforce_read_external_confirm_title" product="default">Protect SD card?</string>
+    <string name="enforce_read_external_confirm_message" product="default">When SD card is protected, apps must request permission to read data from external storage.\n\nSome apps may not work until updated by their developers.</string>
+    <string name="enable_terminal_title">Жергілікті терминал</string>
+    <string name="enable_terminal_summary">Жергілікті қоршамға қатынасуды ұсынатын терминал қолданбасын қосу</string>
+    <string name="gadget_picker_title">Гаджетті таңдау</string>
+    <string name="widget_picker_title">Виджетті таңдау</string>
+    <string name="allow_bind_app_widget_activity_allow_bind_title">Виджет жасап, рұқсат беру қажет пе?</string>
+    <string name="allow_bind_app_widget_activity_allow_bind">Виджетті жасағаннан кейін, <xliff:g id="widget_host_name">%1$s</xliff:g> көрсетілетін барлық деректерге қатынаса алады.</string>
+    <string name="allow_bind_app_widget_activity_always_allow_bind"> <xliff:g id="widget_host_name">%1$s</xliff:g> қолданбасына виджеттерді жасауға және олардың деректерін қабылдауға әрқашан рұқсат ету </string>
+    <string name="battery_history_days"><xliff:g id="days">%1$d</xliff:g>к. <xliff:g id="hours">%2$d</xliff:g>с. <xliff:g id="minutes">%3$d</xliff:g>м. <xliff:g id="seconds">%4$d</xliff:g>с.</string>
+    <string name="battery_history_hours"><xliff:g id="hours">%1$d</xliff:g>с. <xliff:g id="minutes">%2$d</xliff:g>м. <xliff:g id="seconds">%3$d</xliff:g>с.</string>
+    <string name="battery_history_minutes"><xliff:g id="minutes">%1$d</xliff:g>м. <xliff:g id="seconds">%2$d</xliff:g>с.</string>
+    <string name="battery_history_seconds"><xliff:g id="seconds">%1$d</xliff:g>с.</string>
+    <string name="battery_history_days_no_seconds"><xliff:g id="days">%1$d</xliff:g>к <xliff:g id="hours">%2$d</xliff:g>с <xliff:g id="minutes">%3$d</xliff:g>м</string>
+    <string name="battery_history_hours_no_seconds"><xliff:g id="hours">%1$d</xliff:g>с <xliff:g id="minutes">%2$d</xliff:g>м</string>
+    <string name="battery_history_minutes_no_seconds"><xliff:g id="minutes">%1$d</xliff:g>м</string>
+    <string name="usage_stats_label">Қолданыс статистикасы</string>
+    <string name="testing_usage_stats">Қолданыс статистикасы</string>
+    <string name="display_order_text">Келесі бойынша сұрыптау:</string>
+    <string name="app_name_label">Қолданба</string>
+    <string name="launch_count_label">Санау</string>
+    <string name="usage_time_label">Қолданыс уақыты</string>
+    <skip/>
+    <string name="accessibility_settings">Кіру мүмкіндігі</string>
+    <string name="accessibility_settings_title">Арнайы мүмкіндіктер параметрлері</string>
+    <string name="accessibility_services_title">Қызметтер</string>
+    <string name="accessibility_system_title">Жүйе</string>
+    <string name="accessibility_captioning_title">Тақырыптар</string>
+    <string name="accessibility_screen_magnification_title">Ұлғайту қимылдары</string>
+    <string name="accessibility_screen_magnification_summary">Бұл мүмкіндік іске қосылған кезде, экранды үш рет түрту арқылы ұлғайтуға және кішірейтуге болады.\n\nҰлғайтылған кезде келесілерді орындауға болады:\n<ul><li>Панорамалау:Екі немесе бірнеше саусақты экран бойынша сүйреңіз.</li>\n<li>Масштабтау деңгейін реттеу: Екі немесе брнеше саусақты бір-біріне жақындатыңыз немесе алшақтатыңыз.</li></ul>\n\nСондай-ақ, саусақ астындағы суретті түртіп, ұстау арқылы ұлғайтуға болады. Осы ұлғайтылған күйде, экранның басқа бөліктерін көру үшін, саусағыңызбен сүйрей аласыз.Алдыңғы күйге оралу үшін, саусағыңызды алыңыз. \n\nЕскертпе: ұлғайту үшін үш рет түрту пернетақта және навигация жолағынан басқа барлық жерлерде жұмыс істейді.</string>
+    <string name="accessibility_global_gesture_preference_title">Арнайы мүмкіндіктер таңбашасы</string>
+    <string name="accessibility_global_gesture_preference_summary_on">Қосу</string>
+    <string name="accessibility_global_gesture_preference_summary_off">Өшіру</string>
+    <string name="accessibility_global_gesture_preference_description">Осы мүмкіндік қосылған кезде, арнайы мүмкіндіктерді екі қадам бойынша оңай іске қосуға болады:\n\n1-қадам: Қуат түймесін дыбыс шыққанша немесе дірілді сезгенше басып, ұстап тұрыңыз.\n\n2-қадам: Аудио растауды естігенше, екі саусағыңызбен түртіп, ұстап тұрыңыз.\n\n Құрылғының бірнеше пайдаланушысы бар болса, құлыптау экранындағы осы таңбашаны пайдалану құрылғы құлыптан босатылғанша арнайы мүмкіндіктерді уақытша іске қосады.</string>
+    <string name="accessibility_toggle_large_text_preference_title">Үлкен мәтін</string>
+    <string name="accessibility_toggle_screen_magnification_preference_title">Экранды ұлғайту</string>
+    <string name="accessibility_toggle_screen_magnification_auto_update_preference_title">Экранның ұлғайтылуын автоматты түрде жаңарту</string>
+    <string name="accessibility_toggle_screen_magnification_auto_update_preference_summary">Қолданба арасында ауысу кезінде экранның ұлғайтылуын жаңарту</string>
+    <string name="accessibility_power_button_ends_call_prerefence_title">Қуат түймесі қоңырауды аяқтайды</string>
+    <string name="accessibility_toggle_speak_password_preference_title">Құпия сөздерді айту</string>
+    <string name="accessibility_long_press_timeout_preference_title">Түртіп ұстап тұру кезіндегі кідіріс</string>
+    <string name="accessibility_menu_item_settings">Параметрлер</string>
+    <string name="accessibility_feature_state_on">Қосу</string>
+    <string name="accessibility_feature_state_off">Өшіру</string>
+    <string name="captioning_preview_title">Алдын-ала көру</string>
+    <string name="captioning_standard_options_title">Стандартты опциялар</string>
+    <string name="captioning_locale">Тіл</string>
+    <string name="captioning_text_size">Мәтін өлшемі</string>
+    <string name="captioning_preset">Тақырып түрі</string>
+    <string name="captioning_custom_options_title">Реттелетін опциялар</string>
+    <string name="captioning_background_color">Фон түсі</string>
+    <string name="captioning_background_opacity">Фон бұлыңғырлығы</string>
+    <string name="captioning_foreground_color">Мәтін түсі</string>
+    <string name="captioning_edge_color">Жиек түсі</string>
+    <string name="captioning_edge_type">Жиек түрі</string>
+    <string name="captioning_typeface">Қаріп тобы</string>
+    <string name="captioning_preview_text">Тақырыптар келесідей көрінеді</string>
+    <string name="captioning_preview_characters">Aa</string>
+    <string name="locale_default">Әдепкі</string>
+    <string name="color_none">Жоқ</string>
+    <string name="color_white">Ақ</string>
+    <string name="color_gray">Сұр</string>
+    <string name="color_black">Қара</string>
+    <string name="color_red">Қызыл</string>
+    <string name="color_green">Жасыл</string>
+    <string name="color_blue">Көк</string>
+    <string name="color_cyan">Көгілдір</string>
+    <string name="color_yellow">Сары</string>
+    <string name="color_magenta">Күлгін</string>
+    <string name="enable_service_title">xliff:g id="service" example="TalkBack"&gt;%1$s&lt;/xliff:g&gt; пайдалану қажет пе? пайдалану қажет пе?</string>
+    <string name="capabilities_list_title"><xliff:g id="service" example="TalkBack">%1$s</xliff:g> келесілерді қажет етеді:</string>
+    <string name="capability_title_receiveAccessibilityEvents">Сіздің әрекеттеріңізді бақылау</string>
+    <string name="capability_desc_receiveAccessibilityEvents">Бағдарламамен өзара қатынасу кезінде, хабарландыруларды қабылдау</string>
+    <string name="disable_service_title"><xliff:g id="service" example="TalkBack">%1$s</xliff:g> тоқтату қажет пе?</string>
+    <string name="disable_service_message">ОК басу арқылы <xliff:g id="service" example="TalkBack">%1$s</xliff:g> тоқтатылады.</string>
+    <string name="accessibility_no_services_installed">Қызметтер орнатылмады</string>
+    <string name="accessibility_service_no_apps_title">Экраннан оқу бағдарламасы қажет пе?</string>
+    <string name="accessibility_service_no_apps_message">TalkBack қолданбасы зағип және көру қабілеті нашар пайдаланушыларға дауыстық кері байланыс мүмкіндігін қамтамасыз етеді. Оны Android Market ішінен тегін орнатқыңыз келе ме?</string>
+    <string name="accessibility_service_default_description">Сипаттама жоқ.</string>
+    <string name="settings_button">Параметрлер</string>
+    <skip/>
+    <string name="print_settings">Басып шығару</string>
+    <string name="print_settings_title">Басып шығару қызметтері</string>
+    <string name="print_service_security_warning_title"><xliff:g id="service" example="MyPrintService">%1$s</xliff:g> пайдалану қажет пе?</string>
+    <string name="print_service_security_warning_summary">Құжатыңыз принтерге жеткенше бір не бірнеше серверден өтуі мүмкін.</string>
+    <string name="print_no_services_installed">Қызметтер орнатылмады</string>
+    <string name="print_no_printers_found">Принтерлер табылмады</string>
+    <string name="print_menu_item_settings">Параметрлер</string>
+    <string name="print_menu_item_add_printers">Принтерлерді қосу</string>
+    <string name="print_feature_state_on">Қосу</string>
+    <string name="print_feature_state_off">Өшіру</string>
+    <string name="print_menu_item_add_service">Қызметті қосу</string>
+    <string name="print_menu_item_add_printer">Принтерді қосу</string>
+    <string name="print_menu_item_search">Іздеу</string>
+    <string name="print_searching_for_printers">Принтерлер ізделуде</string>
+    <string name="print_service_disabled">Қызмет өшірілді</string>
+    <string name="print_print_jobs">Басып шығару тапсырмалары</string>
+    <string name="print_print_job">Басып шығару тапсырмасы</string>
+    <string name="print_restart">Қайта іске қосу</string>
+    <string name="print_cancel">Болдырмау</string>
+    <string name="print_job_summary"><xliff:g id="printer">%1$s</xliff:g>\n<xliff:g id="time">%2$s</xliff:g></string>
+    <string name="print_printing_state_title_template">Басып шығару <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
+    <string name="print_cancelling_state_title_template"><xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g> болдырмау</string>
+    <string name="print_failed_state_title_template">Принтер қатесі <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
+    <string name="print_blocked_state_title_template">Принтер бұғатталды <xliff:g id="print_job_name" example="foo.jpg">%1$s</xliff:g></string>
+    <string name="print_search_box_shown_utterance">Іздеу терезесі көрсетілген</string>
+    <string name="print_search_box_hidden_utterance">Іздеу терезесі жасырылған</string>
+    <plurals name="print_search_result_count_utterance">
+        <item quantity="one"><xliff:g id="count" example="1">%1$s</xliff:g> принтер табылды</item>
+        <item quantity="other"><xliff:g id="count" example="2">%1$s</xliff:g> принтер табылды</item>
+    </plurals>
+    <skip/>
+    <string name="power_usage_summary_title">Батарея</string>
+    <string name="power_usage_summary">Батарея заряды не үшін тұтынылады</string>
+    <string name="power_usage_not_available">Батареяны пайдалану деректері қолжетімді емес.</string>
+    <string name="power_usage_level_and_status"><xliff:g id="level">%1$s</xliff:g> - <xliff:g id="status">%2$s</xliff:g></string>
+    <string name="battery_since_unplugged">Қуат желісінен ажыратудан бергі батарея зарядының тұтынылуы</string>
+    <string name="battery_since_reset">Қалпына келтіруден бергі батарея зарядының тұтынылуы</string>
+    <string name="battery_stats_on_battery">батареядан <xliff:g id="time">%1$s</xliff:g> </string>
+    <string name="battery_stats_duration">қуаттан ажыратылғаннан бері <xliff:g id="time">%1$s</xliff:g></string>
+    <string name="battery_stats_charging_label">Зарядталуда</string>
+    <string name="battery_stats_screen_on_label">Экран қосулы</string>
+    <string name="battery_stats_gps_on_label">GPS қосулы</string>
+    <string name="battery_stats_wifi_running_label">Wi\u2011Fi</string>
+    <string name="battery_stats_wake_lock_label">Қосулы</string>
+    <string name="battery_stats_phone_signal_label">Мобильді желі сигналы</string>
+    <string name="awake">Құрылғының қосулы уақыты</string>
+    <string name="wifi_on_time">Wi\u2011Fi уақыт бойынша</string>
+    <string name="bluetooth_on_time">Wi\u2011Fi уақыт бойынша</string>
+    <string name="usage_name_percent"><xliff:g id="name">%1$s</xliff:g>" - " <xliff:g id="number" example="30">%2$s</xliff:g><xliff:g id="percent" example="%">%%</xliff:g></string>
+    <string name="history_details_title">Тарих мәліметтері</string>
+    <string name="details_title">Тұтыну мәліметтері</string>
+    <string name="details_subtitle">Тұтыну мәліметтері</string>
+    <string name="controls_subtitle">Қуаттың қолданысын реттеу</string>
+    <string name="packages_subtitle">Қосылған бумалар</string>
+    <string name="power_screen">Экран</string>
+    <string name="power_wifi">Wi\u2011Fi</string>
+    <string name="power_bluetooth">Bluetooth</string>
+    <string name="power_cell">Ұялы байланыс желісінің күту режимі</string>
+    <string name="power_phone">Дауыстық қоңыраулар</string>
+    <string name="power_idle" product="tablet">Планшет әрекетсіздігі</string>
+    <string name="power_idle" product="default">Телефонның әрекетсіздігі</string>
+    <string name="usage_type_cpu">CPU барлығы</string>
+    <string name="usage_type_cpu_foreground">CPU негізгі беті</string>
+    <string name="usage_type_wake_lock">Қосулы түрде ұстау</string>
+    <string name="usage_type_gps">GPS</string>
+    <string name="usage_type_wifi_running">Wi\u2011Fi іске қосылуда</string>
+    <string name="usage_type_phone" product="tablet">Планшет</string>
+    <string name="usage_type_phone" product="default">Қоңырау шалу</string>
+    <string name="usage_type_data_send">Мобильді деректер жіберілді</string>
+    <string name="usage_type_data_recv">Мобильді деректер алынды</string>
+    <string name="usage_type_data_wifi_send">Wi\u2011Fi деректері жіберілді</string>
+    <string name="usage_type_data_wifi_recv">Wi\u2011Fi деректері алынды</string>
+    <string name="usage_type_audio">Аудио</string>
+    <string name="usage_type_video">Видео</string>
+    <string name="usage_type_on_time">Жұмыс уақыты</string>
+    <string name="usage_type_no_coverage">Сигналсыз уақыты</string>
+    <string name="battery_action_stop">Мәжбүрлеп тоқтату </string>
+    <string name="battery_action_app_details">қолданба туралы ақпарат</string>
+    <string name="battery_action_app_settings">Қолданба параметрлері</string>
+    <string name="battery_action_display">Экран параметрлері</string>
+    <string name="battery_action_wifi">Wi\u2011Fi параметрлері</string>
+    <string name="battery_action_bluetooth">Bluetooth параметрлері</string>
+    <string name="battery_desc_voice">Дауыстық қоңыраулар арқылы пайдаланылатын батарея</string>
+    <string name="battery_desc_standby" product="tablet">Планшет күту режимінде болғанда батареяның зарядының тұтынылуы</string>
+    <string name="battery_desc_standby" product="default">Телефон күту режимінде болғанда батареяның зарядының тұтынылуы</string>
+    <string name="battery_desc_radio">Ұялы желі байланысына кететін батарея заряды</string>
+    <string name="battery_sugg_radio">Ұялы желі қамтылмайтын аймақтарда қуатты үнемдеу үшін, ұшақ режиміне ауысу</string>
+    <string name="battery_desc_display">Дисплей және артқы жарық тарапынан пайдаланылған батарея заряды</string>
+    <string name="battery_sugg_display">Экран жарықтығын және/немесе экранның күту уақытын азайту</string>
+    <string name="battery_desc_wifi">Wi\u2011Fi арқылы қолданылатын батарея</string>
+    <string name="battery_sugg_wifi">Wi\u2011Fi желісін пайдаланбаған кезде немесе ол қолжетімсіз болғанда, оны өшіру</string>
+    <string name="battery_desc_bluetooth">Bluetooth тарапынан пайдаланылатын батарея заряды</string>
+    <string name="battery_sugg_bluetooth_basic">Bluetooth пайдаланылмағанда өшіру</string>
+    <string name="battery_sugg_bluetooth_headset">Басқа Bluetooth құрылғысына қосылып көріңіз</string>
+    <string name="battery_desc_apps">Қолданба тарапынан пайдаланылатын батарея заряды</string>
+    <string name="battery_sugg_apps_info">Қолданбаны тоқтатыңыз немесе жойыңыз</string>
+    <string name="battery_sugg_apps_gps">Батареяны үнемдеу режимін таңдау</string>
+    <string name="battery_sugg_apps_settings">Қолданба батареяның пайдаланылуын азайтуға арналған параметрлерді ұсынуы мүмкін</string>
+    <string name="battery_desc_users">Пайдаланушы тарапынан пайдаланылған батарея заряды</string>
+    <string name="menu_stats_unplugged">қуаттан ажыратылғаннан бер <xliff:g id="unplugged">%1$s</xliff:g> і</string>
+    <string name="menu_stats_last_unplugged">Соңғы рет ажыратылғаннан бері <xliff:g id="unplugged">%1$s</xliff:g></string>
+    <string name="menu_stats_total">Қолданыстың жалпы саны</string>
+    <string name="menu_stats_refresh">Жаңарту</string>
+    <string name="process_kernel_label">Android ОЖ</string>
+    <string name="process_mediaserver_label">Медиа сервер</string>
+    <skip/>
+    <string name="process_stats_summary_title">Процесс статистикасы</string>
+    <string name="process_stats_summary">Жұмыс істеп тұрған процестер бойынша арнайы статистика</string>
+    <string name="app_memory_use">Жадтың қолданылуы</string>
+    <string name="process_stats_total_duration"><xliff:g id="time">%2$s</xliff:g> ішінде <xliff:g id="type">%1$s</xliff:g> қолданба</string>
+    <string name="process_stats_type_background">ФОН</string>
+    <string name="process_stats_type_foreground">Негізгі</string>
+    <string name="process_stats_type_cached">Кэштелген</string>
+    <string name="process_stats_memory_status">Құрылғы жады ағымда <xliff:g id="memstate">%1$s</xliff:g></string>
+    <string name="process_stats_avg_ram_use">Орташа ЖЖҚ қолданылуы</string>
+    <string name="process_stats_max_ram_use">Максималды ЖЖҚ қолданылуы</string>
+    <string name="process_stats_run_time">Жұмыс циклі</string>
+    <string name="services_subtitle">Қызметтер</string>
+    <string name="menu_proc_stats_duration">Ұзақтығы</string>
+    <string name="menu_duration_3h">3 сағат</string>
+    <string name="menu_duration_6h">6 сағат</string>
+    <string name="menu_duration_12h">12 сағат</string>
+    <string name="menu_duration_1d">1 күн</string>
+    <string name="menu_show_system">Жүйені көрсету</string>
+    <string name="menu_use_uss">USS пайдалану</string>
+    <string name="menu_proc_stats_type">Статистика түрі</string>
+    <string name="menu_proc_stats_type_background">ФОН</string>
+    <string name="menu_proc_stats_type_foreground">Негізгі</string>
+    <string name="menu_proc_stats_type_cached">Кэштелген</string>
+    <skip/>
+    <string name="voice_input_output_settings">Дауыстық кіріс және шығыс</string>
+    <string name="voice_input_output_settings_title">Дауыстық кіріс және шығыс параметрлері</string>
+    <string name="voice_search_settings_title">Дыбыстық іздеу</string>
+    <string name="keyboard_settings_title">Android пернетақтасы</string>
+    <string name="voice_category">Сөйлесу</string>
+    <string name="recognizer_title">Дауыс танушы</string>
+    <string name="recognizer_settings_title">Дыбыстық іздеу</string>
+    <string name="recognizer_settings_summary">"'<xliff:g id="recognizer_name">%s</xliff:g>\ арналған параметрлер"</string>
+    <skip/>
+    <string name="tts_settings">Сөздегі мәтін параметрлері</string>
+    <string name="tts_settings_title">Сөздегі мәтін шығысы</string>
+    <string name="use_default_tts_settings_title">Әрқашан менің параметрлерімді пайдалану</string>
+    <string name="use_default_tts_settings_summary">Төмендегі әдепкі параметрлер қолданба параметрлерін қайта анықтайды</string>
+    <string name="tts_default_settings_section">Әдепкі параметрлер</string>
+    <string name="tts_default_synth_title">Әдепкі жүйе</string>
+    <string name="tts_default_synth_summary">Айтылған мәтін үшін пайдаланылатын Сөздеді синтездеу жүйесін орнатады</string>
+    <string name="tts_default_rate_title">Сөйлеу жылдамдығы</string>
+    <string name="tts_default_rate_summary">Мәтіннің айтылған жылдамдығы</string>
+    <string name="tts_default_pitch_title">Тон</string>
+    <string name="tts_default_pitch_summary">Айтылған мәтіннің тонына әсер етеді</string>
+    <string name="tts_default_lang_title">Тіл</string>
+    <string name="tts_lang_not_selected">Тіл таңдалмаған</string>
+    <string name="tts_default_lang_summary">Айтылған мәтін үшін тілге тән дауысты орнатады</string>
+    <string name="tts_play_example_title">Мысалды тыңдау</string>
+    <string name="tts_play_example_summary">Сөздер синтезінің қысқа көрсетілімін ойнату</string>
+    <string name="tts_install_data_title">Дауыстық деректерді орнату</string>
+    <string name="tts_install_data_summary">Сөздерді синтездеу үшін қажет дауыстық деректерді орнату</string>
+    <string name="tts_data_installed_summary">Сөздерді синтездеу үшін қажет дауыстар бұрыннан орнатылды</string>
+    <string name="tts_settings_changed_demo">Параметрлеріңіз өзгертілді. Бұл -олардың дыбысталу мысалы.</string>
+    <string name="tts_engine_error">Таңдалған жүйеңізді іске қосу мүмкін емес.</string>
+    <string name="tts_engine_error_config">Теңшеу</string>
+    <string name="tts_engine_error_reselect">Басқа жүйені таңдау</string>
+    <string name="tts_engine_security_warning">Бұл сөздерді синтездеу жүйесі құпия сөздер және несиелік карта нөмірлерін қосқанда, айтылатын барлық мәтін деректерін жинай алады. Оны <xliff:g id="tts_plugin_engine_name">%s</xliff:g> жүйесі іске асырады. Осы сөздерді синтездеу жүйесін іске қосу қажет пе?</string>
+    <string name="tts_engine_network_required">Бұл тіл мәтінді сөйлеу мәнеріне айналдыру үшін желі байланысына қосылуды талап етеді.</string>
+    <string name="tts_default_sample_string">Бұл - сөз синтезінің мысалы</string>
+    <string name="tts_status_title">Әдепкі тіл күйі</string>
+    <string name="tts_status_ok"><xliff:g id="locale" example="English(UnitedStates)">%1$s</xliff:g> толығымен қолдау көрсетіледі</string>
+    <string name="tts_status_requires_network"><xliff:g id="locale" example="English(UnitedStates)">%1$s</xliff:g> желіге қосылуды талап етеді</string>
+    <string name="tts_status_not_supported"><xliff:g id="locale" example="English(UnitedStates)">%1$s</xliff:g> қолдау көрсетілмейді</string>
+    <string name="tts_status_checking">Тексерілуде...</string>
+    <string name="tts_engines_section">Жүйелер</string>
+    <string name="tts_engine_name_settings"><xliff:g id="tts_plugin_engine_name">%s</xliff:g> параметрлері</string>
+    <string name="tts_engine_name_is_enabled_summary"/>
+    <string name="tts_engine_name_is_disabled_summary"><xliff:g id="tts_plugin_engine_name">%s</xliff:g> өшірілді</string>
+    <string name="tts_engine_settings_section">Жүйе параметрлері</string>
+    <string name="tts_engine_settings_title"><xliff:g id="tts_engine_name">%s</xliff:g> арналған параметрлер</string>
+    <string name="pico_languages_and_voices">Тілдер және дауыстар</string>
+    <string name="pico_installed">Орнатылды</string>
+    <string name="pico_not_installed">Орнатылмады</string>
+    <string name="pico_voice_summary_female">Әйел</string>
+    <string name="pico_voice_summary_male">Еркек</string>
+    <string name="tts_notif_engine_install_title">Сөздерді синтездеу жүйесі орнатылды</string>
+    <string name="tts_notif_engine_install_message">Пайдалану алдында жаңа жүйені іске қосыңыз.</string>
+    <string name="tts_engine_settings_button">Жүйе параметрлерін іске қосу</string>
+    <string name="tts_engine_preference_section_title">Ұсынылатын жүйе</string>
+    <string name="tts_general_section_title">Жалпы</string>
+    <string name="gadget_title">Қуатты басқару</string>
+    <string name="gadget_toggle_wifi">Wi\u2011Fi параметрін жаңарту</string>
+    <string name="gadget_toggle_bluetooth">Bluetooth параметрін жаңарту</string>
+    <string name="gadget_state_template"><xliff:g name="feature" example="Wi\u2011Fi">%1$s</xliff:g> <xliff:g name="state" example="off">%2$s</xliff:g></string>
+    <string name="gadget_state_on">Қосу</string>
+    <string name="gadget_state_off">Өшіру</string>
+    <string name="gadget_state_turning_on">қосу</string>
+    <string name="gadget_state_turning_off">өшіру</string>
+    <string name="gadget_wifi">Wi\u2011Fi</string>
+    <string name="gadget_bluetooth">Bluetooth</string>
+    <string name="gadget_location">Орналасқан жері</string>
+    <string name="gadget_sync">Синхрондау</string>
+    <string name="gadget_brightness_template">Жарықтық: <xliff:g name="state" example="half">%1$s</xliff:g></string>
+    <string name="gadget_brightness_state_auto">Авто</string>
+    <string name="gadget_brightness_state_full">ТОЛЫҚ</string>
+    <string name="gadget_brightness_state_half">жартылай</string>
+    <string name="gadget_brightness_state_off">Өшіру</string>
+    <string name="vpn_settings_title">VPN</string>
+    <string name="credentials_title">Тіркелгі деректерінің жады</string>
+    <string name="credentials_install" product="nosdcard">Жадтан орнату</string>
+    <string name="credentials_install" product="default">SD картасынан орнату</string>
+    <string name="credentials_install_summary" product="nosdcard">Жадтан сертификаттарды орнату</string>
+    <string name="credentials_install_summary" product="default">SD картасынан сертификаттарды орнату</string>
+    <string name="credentials_reset">Тіркелгі деректерін тазалау</string>
+    <string name="credentials_reset_summary">Барлық сертификаттарды жою</string>
+    <string name="trusted_credentials">Сенімді сертификаттар</string>
+    <string name="trusted_credentials_summary">Сенімді CA сертификаттарын көрсету</string>
+    <string name="credential_storage_type">Жад түрі</string>
+    <string name="credential_storage_type_hardware">Қолдау көрсетілетін жабдық</string>
+    <string name="credential_storage_type_software">Тек бағдарламалық жасақтама</string>
+    <string name="credentials_install_gesture_prompt">Құлыптан босату сызбасын сызыңыз</string>
+    <string name="credentials_install_gesture_explanation">Тіркелгі деректерінің орнатылуын растау үшін, құлыптан босату сызбасын сызу қажет.</string>
+    <string name="credentials_unlock"/>
+    <string name="credentials_unlock_hint">Тіркелгі мәліметтерінің жады үшін құпия сөзді теріңіз.</string>
+    <string name="credentials_old_password">Ағымдағы құпия сөз:</string>
+    <string name="credentials_reset_hint">Барлық контентті жою қажет пе?</string>
+    <string name="credentials_password_too_short">Құпия сөз кемінде 8 таңбадан тұруы тиіс.</string>
+    <string name="credentials_wrong_password">Қате құпия сөз.</string>
+    <string name="credentials_reset_warning">Құпия сөз қате. Тіркелгі деректері жойылғанша, бір мүмкіндігіңіз бар.</string>
+    <string name="credentials_reset_warning_plural">Құпия сөз қате. Тіркелгі деректері жойылғанша, <xliff:g id="number" example="5">%1$d</xliff:g> мүмкіндігіңіз бар.</string>
+    <string name="credentials_erased">Тіркелгі деректерінің жады жойылды.</string>
+    <string name="credentials_not_erased">Тіркелгі деректерінің жадын жою мүмкін емес.</string>
+    <string name="credentials_enabled">Тіркелгі деректерінің жады іске қосылды.</string>
+    <string name="credentials_configure_lock_screen_hint">Тіркелгі деректерінің жадын пайдаланбас бұрын, құлыптау экранының PIN кодын немесе құпия сөзді орнатуыңыз қажет.</string>
+    <string name="emergency_tone_title">Төтенше қоңыраудың үндестік сигналы</string>
+    <string name="emergency_tone_summary">Төтенше қоңырау кезінде жұмыс режимін орнату</string>
+    <skip/>
+    <string name="privacy_settings">Резервтік көшірме және қалпына келтіру</string>
+    <string name="privacy_settings_title">Резервтік көшірме және қалпына келтіру</string>
+    <string name="backup_section_title">Резервтік көшірме және қалпына келтіру</string>
+    <string name="personal_data_section_title">Жеке деректер</string>
+    <string name="backup_data_title">Деректердің сақтық көшірмесін жасау</string>
+    <string name="backup_data_summary">Google серверлеріне бағдарлама деректерінің, Wi\u2011Fi құпия сөздерінің және басқа параметрлердің резервтік көшірмесін жасау</string>
+    <string name="backup_configure_account_title">Резервтік көшірме тіркелгісі</string>
+    <string name="backup_configure_account_default_summary">Резервтік көшірме деректері бар тіркелгі табылмады</string>
+    <string name="auto_restore_title">Автоматты түрде қалпына келтіру</string>
+    <string name="auto_restore_summary">Қолданбан қайта орнату кезінде параметрлер мен деректердің резервтік көшірмелерін қалпына келтіру</string>
+    <string name="local_backup_password_title">Жұмыс үстеліндегі резервтік көшірме құпия сөзі</string>
+    <string name="local_backup_password_summary_none">Жұмыс үстеліндегі толық резервтік көшірмелер ағымдағы уақытта қорғалмаған</string>
+    <string name="local_backup_password_summary_change">Жұмыс үстеліндегі толық резервтік көшірмелер құпия сөзін өзгерту немесе жою үшін түртіңіз</string>
+    <string name="local_backup_password_toast_success">Жаңа резервтік көшірме құпия сөзі орнатылды</string>
+    <string name="local_backup_password_toast_confirmation_mismatch">Жаңа құпия сөз бен расталым сәйкес келмейді</string>
+    <string name="local_backup_password_toast_validation_failure">Резервтік көшірме құпия сөзін орнату сәтсіз аяқталды</string>
+    <string name="backup_erase_dialog_title"/>
+    <string name="backup_erase_dialog_message">Wi\u2011Fi құпия сөздерін, бетбелгілерді, басқа параметрлерді және бағдарлама деректерінің резервтік көшірмелеуін тоқтатып, сонымен қатар Google серверлеріндегі барлық көшірмелерді жою қажет пе?</string>
+    <skip/>
+    <string name="device_admin_settings_title">Құрылғы әкімшілігінің параметрлері</string>
+    <string name="active_device_admin_msg">Құрылғы әкімшісі</string>
+    <string name="remove_device_admin">Ажырату</string>
+    <string name="select_device_admin_msg">Құрылғы әкімшілері</string>
+    <string name="no_device_admins">Қолжетімді құрылғы әкімшілері жоқ</string>
+    <string name="add_device_admin_msg">Құрылғы әкімшісін белсендіру қажет пе?</string>
+    <string name="add_device_admin">Белсендіру</string>
+    <string name="device_admin_add_title">Құрылғы әкімшісі</string>
+    <string name="device_admin_warning">Осы әкімшіні белсендіру әрекеті <xliff:g id="app_name">%1$s</xliff:g> қолданбасына келесі әрекеттерді орындауға мүмкіндік береді:</string>
+    <string name="device_admin_status">Әкімші белсенді және <xliff:g id="app_name">%1$s</xliff:g> қолданбасына келесі әрекеттерді орындауға мүмкіндік береді:</string>
+    <string name="untitled_apn">Аталмаған</string>
+    <string name="sound_category_sound_title">Жалпы</string>
+    <string name="sound_category_notification_title">Хабарландырулар</string>
+    <string name="sound_category_call_ringtone_vibrate_title">Қоңырау рингтоны және діріл</string>
+    <string name="sound_category_system_title">Жүйе</string>
+    <string name="wifi_setup_title">Wi\u2011Fi орнату</string>
+    <string name="wifi_setup_title_editing_network">Wi\u2011Fi <xliff:g id="network_name" example="HappyMobile">%s</xliff:g> желісіне қосылу</string>
+    <string name="wifi_setup_title_connecting_network">Wi\u2011Fi <xliff:g id="network_name" example="HappyMobile">%s</xliff:g> желісіне қосылу\u2026</string>
+    <string name="wifi_setup_title_connected_network">Wi\u2011Fi <xliff:g id="network_name" example="HappyMobile">%s</xliff:g> желісіне қосылды</string>
+    <string name="wifi_setup_title_add_network">Желі қосыңыз</string>
+    <string name="wifi_setup_not_connected">Қосылмаған</string>
+    <string name="wifi_setup_add_network">Желі қосу</string>
+    <string name="wifi_setup_refresh_list">Тізімді жаңарту</string>
+    <string name="wifi_setup_skip">Өткізіп жіберу</string>
+    <string name="wifi_setup_next">Келесі</string>
+    <string name="wifi_setup_back">Артқа</string>
+    <string name="wifi_setup_detail">Желі туралы мәліметтер</string>
+    <string name="wifi_setup_connect">Қосылу</string>
+    <string name="wifi_setup_forget">Жою</string>
+    <string name="wifi_setup_save">Сақтау</string>
+    <string name="wifi_setup_cancel">Болдырмау</string>
+    <string name="wifi_setup_status_scanning">Желілер ізделуде\u2026</string>
+    <string name="wifi_setup_status_select_network">Қосылу үшін, желіні түртіңіз</string>
+    <string name="wifi_setup_status_existing_network">Ағымда бар желіге қосылу</string>
+    <string name="wifi_setup_status_unsecured_network">Қорғалмаған желіге қосылу</string>
+    <string name="wifi_setup_status_edit_network">Желі конфигурациясын көрсетіңіз</string>
+    <string name="wifi_setup_status_new_network">Жаңа желіге қосылу</string>
+    <string name="wifi_setup_status_connecting">Байланысу\u2026</string>
+    <string name="wifi_setup_status_proceed_to_next">Келесі қадамға өту</string>
+    <string name="wifi_setup_status_eap_not_supported">EAP үшін қолдау көрсетілмейді.</string>
+    <string name="wifi_setup_eap_not_supported">Орнату барысында EAP Wi\u2011Fi байланысын теңшеу мүмкін емес. Орнатқаннан кейін, оны Параметрлер &gt; Сымсыз және желілер тармағында орындай аласыз.</string>
+    <string name="wifi_setup_description_connecting">Қосылу үшін бірнеше минут кетуі мүмкін\u2026</string>
+    <string name="wifi_setup_description_connected">Орнатылымды жалғастыру үшін, <b>Келесі</b> түймесін түртіңіз.\n\nБасқа Wi\u2011Fi желісіне қосылу үшін <b>Артқа</b> түймесін түртіңіз</string>
+    <string name="accessibility_sync_enabled">Синхрондау іске қосылған</string>
+    <string name="accessibility_sync_disabled">Синхрондау ажыратылған</string>
+    <string name="accessibility_sync_error">Синхрондау қатесі.</string>
+    <string name="sync_failed">Синхрондау сәтсіз аяқталды</string>
+    <string name="sync_active">Синхрондау белсенді</string>
+    <string name="account_sync_settings_title">Синхрондау</string>
+    <string name="sync_is_failing">Синхрондау мәселесі орын алды. Жуырда қалпына келеді.</string>
+    <string name="add_account_label">Аккаунтты қосу</string>
+    <string name="background_data">Фондық деректер</string>
+    <string name="background_data_summary">Деректерді кез келген уақытта синхрондауға, жіберуге және алуға болады</string>
+    <string name="background_data_dialog_title">Фондық деректерді ажырату қажет пе?</string>
+    <string name="background_data_dialog_message">Фондық деректерді ажырату батарея зарядын үнемдеп, трафик көлемін азайтады. Кейбір қолданбалар фондық деректер қосылымын әлі де пайдалана алады.</string>
+    <string name="sync_automatically">Қолданба деректерін автоматты түрде синхрондау</string>
+    <skip/>
+    <string name="sync_enabled">Синхрондау қосылды</string>
+    <string name="sync_disabled">Синхрондау өшірілді</string>
+    <string name="sync_error">Синхрондау қатесі</string>
+    <string name="last_synced">Соңғы синхрондау: <xliff:g id="last_sync_time">%1$s</xliff:g></string>
+    <string name="sync_in_progress">Синхрондалуда\u2026</string>
+    <string name="settings_backup">Параметрлердің резервтік көшірмелерін жасау</string>
+    <string name="settings_backup_summary">Параметрлерімнің резервтік көшірмесін жасау</string>
+    <string name="sync_menu_sync_now">Синхрондау</string>
+    <string name="sync_menu_sync_cancel">Синхрондауды болдырмау</string>
+    <string name="sync_one_time_sync">Синхрондау үшін басыңыз<xliff:g id="last_sync_time">\n%1$s</xliff:g></string>
+    <string name="sync_gmail">Gmail</string>
+    <string name="sync_calendar">Күнтізбе</string>
+    <string name="sync_contacts">Контактілер</string>
+    <string name="sync_plug"><font fgcolor="#ffffffff">Google Sync синхрондауына қош келдіңіз!</font> \nGoogle синхрондау технологиясы, сіз қай жерде болсаңыз да контактілер, күнтізбедегі кездесулер және т.б. Деректерін алуға мүмкіндік береді.</string>
+    <string name="header_application_sync_settings">Қолданбаны синхрондау параметрлері</string>
+    <string name="header_data_and_synchronization">Деректер және синхрондау</string>
+    <string name="preference_change_password_title">Құпия сөзді өзгерту</string>
+    <string name="header_account_settings">Тіркелгі параметрлері</string>
+    <string name="remove_account_label">Тіркелгіні жою</string>
+    <string name="header_add_an_account">Тіркелгі қосыңыз</string>
+    <string name="finish_button_label">Аяқтау</string>
+    <string name="really_remove_account_title">Тіркелгіні жою қажет пе?</string>
+    <string name="really_remove_account_message" product="tablet">Осы тіркелгіні жою планшеттегі оған қатысты барлық хабарлар, контактілер және басқа да деректердің жойылуына әкеледі!</string>
+    <string name="really_remove_account_message" product="default">Осы тіркелгіні жою телефондағы оған қатысты барлық хабарлар, контактілер және басқа да деректердің жойылуына әкеледі!</string>
+    <string name="remove_account_failed" product="tablet">Осы тіркелгі, кейбір қолднбаларға өту үшін қажет. Оны жою үшін, планшеттегі әдепкі параметрлерді қалпына келтіру қажет. Оны мәзірдегі Параметрлер &gt; Резервтік көшірмелер және қалпына келтіру бойынша орындауға болады.</string>
+    <string name="remove_account_failed" product="default">Осы тіркелгі, кейбір қолднбаларға өту үшін қажет. Оны жою үшін, телефондағы әдепкі параметрлерді қалпына келтіру қажет. Оны мәзірдегі Параметрлер &gt; Резервтік көшірмелер және қалпына келтіру бойынша орындауға болады.</string>
+    <string name="provider_label">Жазылуды тапсыру</string>
+    <string name="sync_item_title"><xliff:g id="authority" example="Calendar">%s</xliff:g></string>
+    <string name="cant_sync_dialog_title">Қолмен синхрондау мүмкін емес</string>
+    <string name="cant_sync_dialog_message">Осы элементті синхрондау ағымда ажыратылған. Оны өзгерту үшін, уақыша фондық деректер мен автоматты синхрондауды қосыңыз.</string>
+    <string name="wimax_settings">4G</string>
+    <string name="status_wimax_mac_address">4G МАС мекенжайы</string>
+    <string name="enter_password">Жадыны шифрдан шығару үшін, құпия сөзді енгізіңіз</string>
+    <string name="try_again">Әрекетті қайталаңыз.</string>
+    <string name="delete">Жою</string>
+    <string name="misc_files">Әртүрлі файлдар</string>
+    <string name="misc_files_selected_count"><xliff:g id="total" example="15">%2$d</xliff:g> ішінен <xliff:g id="number" example="3">%1$d</xliff:g> таңдалған</string>
+    <string name="misc_files_selected_count_bytes"><xliff:g id="total" example="15.25MB">%2$s</xliff:g> ішінен <xliff:g id="number" example="3.25MB">%1$s</xliff:g> таңдалған</string>
+    <string name="select_all">Барлығын белгілеу</string>
+    <string name="hdcp_checking_title">HDCP тексеру</string>
+    <string name="hdcp_checking_dialog_title">HDCP тексеру реті</string>
+    <string name="debug_debugging_category">Түзету</string>
+    <string name="debug_app">Түзететін қолданбаны таңдаңыз</string>
+    <string name="debug_app_not_set">Түзететін қолданба орнатылмады</string>
+    <string name="debug_app_set">Қолданбаны түзету: <xliff:g id="app_name">%1$s</xliff:g></string>
+    <string name="select_application">Қолданбаны таңдау</string>
+    <string name="no_application">Ештеңе</string>
+    <string name="wait_for_debugger">Түзетушінің қосылуын күтіңіз</string>
+    <string name="wait_for_debugger_summary">Қолданба түзетушінің қосылуын күтуде</string>
+    <string name="debug_input_category">Енгізу</string>
+    <string name="debug_drawing_category">Сурет салу</string>
+    <string name="debug_hw_drawing_category">Жабдықтың жылдамдатылған көрінісі</string>
+    <string name="debug_monitoring_category">Мониторинг</string>
+    <string name="strict_mode">Қатал режимі іске қосылған</string>
+    <string name="strict_mode_summary">Ұзақ әрекеттер кезінде экранжарқылын қосу</string>
+    <string name="pointer_location">Меңзердің орналасқан жері</string>
+    <string name="pointer_location_summary">Түрту іздерін көрсету</string>
+    <string name="show_touches">Түрту іздерін көрсету</string>
+    <string name="show_touches_summary">Экранды түрту нүктелерін көрсету</string>
+    <string name="show_screen_updates">Бет жаңартуларын көрсету</string>
+    <string name="show_screen_updates_summary">Терезе беттерінің жаңартылуы кезінде жарықтандыру</string>
+    <string name="show_hw_screen_updates">GPU көрінісінің жаңартуларын көрсету</string>
+    <string name="show_hw_screen_updates_summary">GPU арқылы сурет салу кезінде терезелер ішіндегі көріністерді жарықтандыру</string>
+    <string name="show_hw_layers_updates">Жабдық жаңартуларын көрсету</string>
+    <string name="show_hw_layers_updates_summary">Жаңарту кезінде жабдық деңгейлерін жасыл түспен жарықтандыру</string>
+    <string name="debug_hw_overdraw">GPU артуын түзету</string>
+    <string name="disable_overlays">Жабдық қабаттарын ажырату</string>
+    <string name="disable_overlays_summary">Экранды құрастыру кезінде әрқашан GPU пайдалану</string>
+    <string name="enable_opengl_traces_title">OpenGL трассалауды қосу</string>
+    <string name="debug_layout">Қабат шекараларын көрсету</string>
+    <string name="debug_layout_summary">Клип шекараларын, шеттерін, т.б. Көрсету</string>
+    <string name="force_rtl_layout_all_locales">RTL пішім бағытын күшейту</string>
+    <string name="force_rtl_layout_all_locales_summary">Барлық тілдер үшін экран пішімінің RTL бағытын күшейту</string>
+    <string name="show_cpu_usage">CPU қолданысын қарап шығу</string>
+    <string name="show_cpu_usage_summary">CPU ағымдағы қолданысын көрсететін экран</string>
+    <string name="force_hw_ui">GPU көрсетілуін күшейту</string>
+    <string name="force_hw_ui_summary">GPU 2d сурет салуда қолданылуын күшейту</string>
+    <string name="force_msaa">4x MSAA күшейту</string>
+    <string name="force_msaa_summary">OpenGL ES 2.0 бағдарламаларында 4x MSAA қосу</string>
+    <string name="show_non_rect_clip">Тікбұрышты емес қию операцияларын түзету</string>
+    <string name="track_frame_time">Профильдің GPU көрсету</string>
+    <string name="window_animation_scale_title">Терезенің масштабы</string>
+    <string name="transition_animation_scale_title">Өту масштабы</string>
+    <string name="animator_duration_scale_title">Анимация масштабы</string>
+    <string name="overlay_display_devices_title">Қосымша экранды модельдеу</string>
+    <string name="debug_applications_category">Қолданбалар</string>
+    <string name="immediately_destroy_activities">Әрекеттерді сақтамау</string>
+    <string name="immediately_destroy_activities_summary">Бағдарлама жабылған соң әрекеттер журналын жою</string>
+    <string name="app_process_limit_title">Өңдік процестер шегі</string>
+    <string name="show_all_anrs">Барлық ANR көрсету</string>
+    <string name="show_all_anrs_summary">Бағдарламаның жауап бермеуі туралы хабарлау</string>
+    <string name="data_usage_summary_title">Деректер қолданысы</string>
+    <string name="data_usage_cycle">Деректерді қолдану циклі</string>
+    <string name="data_usage_menu_roaming">Деректер роумингісі</string>
+    <string name="data_usage_menu_restrict_background">Өңдік деректерді шектеу</string>
+    <string name="data_usage_menu_split_4g">Тек 4G қолданысы</string>
+    <string name="data_usage_menu_show_wifi">Wi\u2011Fi қолданысын көрсету</string>
+    <string name="data_usage_menu_show_ethernet">Ethernet қолданысын көру</string>
+    <string name="data_usage_menu_metered">Ұялы кіру орындары</string>
+    <string name="data_usage_menu_auto_sync">Деректерді автоматты түрде синхрондау</string>
+    <string name="data_usage_change_cycle">Циклді өзгерту\u2026</string>
+    <string name="data_usage_pick_cycle_day">Деректер қолданысының циклін ысыру мерзімі:</string>
+    <string name="data_usage_empty">Бұл аралықта бағдарламалар деректі қолданылмады.</string>
+    <string name="data_usage_label_foreground">Негізгі</string>
+    <string name="data_usage_label_background">ФОН</string>
+    <string name="data_usage_app_restricted">шектелген</string>
+    <string name="data_usage_disable_mobile">Ұялы деректерді өшіру қажет пе?</string>
+    <string name="data_usage_disable_mobile_limit">Ұялы дерек шектеуін орнату</string>
+    <string name="data_usage_disable_4g_limit">4G дерек шектеуін орнату</string>
+    <string name="data_usage_disable_3g_limit">2G-3G дерек шектеуін орнату</string>
+    <string name="data_usage_disable_wifi_limit">Wi\u2011Fi деректерінің шектеуін орнату</string>
+    <string name="data_usage_tab_wifi">Wi\u2011Fi</string>
+    <string name="data_usage_tab_ethernet">Ethernet</string>
+    <string name="data_usage_tab_mobile">Ұялы телефон</string>
+    <string name="data_usage_tab_4g">4G</string>
+    <string name="data_usage_tab_3g">2G-3G</string>
+    <string name="data_usage_list_mobile">Ұялы телефон</string>
+    <string name="data_usage_list_none">Жоқ</string>
+    <string name="data_usage_enable_mobile">Мобильді дерек</string>
+    <string name="data_usage_enable_3g">2G-3G деректері</string>
+    <string name="data_usage_enable_4g">4G деректері</string>
+    <string name="data_usage_app_settings">Бағдарлама параметрлерін көру</string>
+    <string name="data_usage_app_restrict_background">Өңдік деректерді шектеу</string>
+    <string name="data_usage_app_restrict_background_summary">Ұялы желілердің өңдік деректерін ажырату. Қолжетімді ұялы емес желілер пайдаланылады.</string>
+    <string name="data_usage_app_restrict_background_summary_disabled">Бағдарламаның өңдік деректерін шектеу үшін алдымен ұялы деректер шектеуін орнатыңыз.</string>
+    <string name="data_usage_app_restrict_dialog_title">Өңдік деректерді шектеу қажет пе?</string>
+    <string name="data_usage_app_restrict_dialog">Бұл функция өңдік деректерге тәуелді бағдарламаның жұмысын тек ұялы желі қолжетімді болғанда тоқтатуы мүмкін.\n\nБағдарламада қолжетімді параметрлер ішінен сәйкес деректер қолданысын табуға болады.</string>
+    <string name="data_usage_restrict_denied_dialog">Өңдік деректерді шектеу тек ұялы дерек шектеуі орнатылғанда ғана мүмкін.</string>
+    <string name="data_usage_auto_sync_on_dialog_title">Автоматты синхрондалуды қосу қажет пе?</string>
+    <string name="data_usage_auto_sync_on_dialog" product="tablet">Тіркелгілеріңізде жасалған кез келген өзгерістер автоматты түрде планшетке көшіріледі.\n\nКейбір тіркелгілер планшетте жасалған өзгерістерді автоматты түрде торап ішіне көшіруі мүмкін. Google тіркелгісі осылай жұмыс істейді.\n\nӘр тіркелгідегі ақпараттың қай түрін синхрондау қажет екендігін таңдау үшін Параметрлер &gt; Тіркелгілер пәрменін таңдаңыз.</string>
+    <string name="data_usage_auto_sync_on_dialog" product="default">Тіркелгілеріңізде жасалған кез келген өзгерістер автоматты түрде телефонға көшіріледі.\n\nКейбір тіркелгілер телефонда жасалған өзгерістерді автоматты түрде торап ішіне көшіруі мүмкін. Google тіркелгісі осылай жұмыс істейді.\n\nӘр тіркелгідегі ақпараттың қай түрін синхрондау қажет екендігін таңдау үшін Параметрлер &gt; Тіркелгілер пәрменін таңдаңыз.</string>
+    <string name="data_usage_auto_sync_off_dialog_title">Деректің автоматты синхрондалуын өшіру қажет пе?</string>
+    <string name="data_usage_auto_sync_off_dialog">Бұл дерек және батарея қолданысын үнемдейді, бірақ соңғы ақпаратты жинау үшін әр тіркелгіні қолмен синхрондау қажет. Сондай-ақ, жаңартулар болған кезде хабарландырулар қабылданбайды.</string>
+    <string name="data_usage_cycle_editor_title">Қолданыс циклінің деректерін ысыру</string>
+    <string name="data_usage_cycle_editor_subtitle">Әр айдың күні:</string>
+    <string name="data_usage_cycle_editor_positive">Орнату</string>
+    <string name="data_usage_warning_editor_title">Дерек қолданысының ескертуін орнату</string>
+    <string name="data_usage_limit_editor_title">Дерек қолданысының шегін орнату</string>
+    <string name="data_usage_limit_dialog_title">Дерек қолданысын шектеу</string>
+    <string name="data_usage_limit_dialog_mobile" product="tablet">Ұялы деректер байланысы көрсетілген шегіне жеткеннен кейін ажыратылады.\n\nПланшетіңіз және операторыңыз дерек қолданысын әр түрлі жолмен өлшеуіне байланысты үнемдеу шегін асырмауға тырысыңыз.</string>
+    <string name="data_usage_limit_dialog_mobile" product="default">Ұялы деректер байланысы көрсетілген шегіне жеткеннен кейін ажыратылады.\n\nТелефоныңыз және операторыңыз дерек қолданысын әр түрлі жолмен өлшеуіне байланысты үнемдеу шегін асырмауға тырысыңыз.</string>
+    <string name="data_usage_restrict_background_title">Өңдік деректерді шектеу қажет пе?</string>
+    <string name="data_usage_restrict_background">Егер фондық мобильді деректерді шектесеңіз, Wi\u2011Fi желісіне қосылмайынша кейбір бағдарламалар мен қызметтер жұмыс істемеуі мүмкін.</string>
+    <string name="data_usage_restrict_background_multiuser" product="tablet">Егер фондық мобильді деректерді шектесеңіз, Wi\u2011Fi желісіне қосылмайынша кейбір бағдарламалар мен қызметтер жұмыс істемеуі мүмкін.\n\nБұл параметр осы планшеттегі барлық пайдаланушыларға әсер етеді.</string>
+    <string name="data_usage_restrict_background_multiuser" product="default">Егер фондық мобильді деректерді шектесеңіз, Wi\u2011Fi желісіне қосылмайынша кейбір бағдарламалар мен қызметтер жұмыс істемеуі мүмкін.\n\nБұл параметр осы телефондағы барлық пайдаланушыларға әсер етеді.</string>
+    <string name="data_usage_sweep_warning"><font size="12">Ескерту</font>\n<font size="21"><xliff:g id="number" example="128">^1</xliff:g></font> <font size="9"><xliff:g id="unit" example="KB">^2</xliff:g></font></string>
+    <string name="data_usage_sweep_limit"><font size="12">Шектеу</font>\n<font size="21"><xliff:g id="number" example="128">^1</xliff:g></font> <font size="9"><xliff:g id="unit" example="KB">^2</xliff:g></font></string>
+    <string name="data_usage_uninstalled_apps">Жойылған бағдарламалар</string>
+    <string name="data_usage_uninstalled_apps_users">Жойылған бағдарламалар және пайдаланушылар</string>
+    <string name="data_usage_received_sent"><xliff:g id="received" example="128KB">%1$s</xliff:g> қабылданды, <xliff:g id="sent" example="1.3GB">%2$s</xliff:g> жіберілді</string>
+    <string name="data_usage_total_during_range"><xliff:g id="range" example="Jul1-Jul31">%2$s</xliff:g>: шамамен <xliff:g id="total" example="128KB">%1$s</xliff:g> пайдаланылды.</string>
+    <string name="data_usage_total_during_range_mobile" product="tablet"><xliff:g id="range" example="Jul1-Jul31">%2$s</xliff:g>: планшеттің өлшеуі бойынша шамамен <xliff:g id="total" example="128KB">%1$s</xliff:g> пайдаланылды. Операторыңыздың дерек қолданысын өлшеуі өзгешеленуі мүмкін.</string>
+    <string name="data_usage_total_during_range_mobile" product="default"><xliff:g id="range" example="Jul1-Jul31">%2$s</xliff:g>: телефонның өлшеуі бойынша шамамен <xliff:g id="total" example="128KB">%1$s</xliff:g> пайдаланылды. Операторыңыздың дерек қолданысын өлшеуі өзгешеленуі мүмкін.</string>
+    <string name="data_usage_metered_title">Ұялы кіру орындары</string>
+    <string name="data_usage_metered_body">Мобильді кіру орындары болып табылатын Wi\u2011Fi желілерін таңдаңыз. Фондық режимде болғанда осы желілердің көмегімен бағдарламаларды шектеуге болады. Сонымен қатар, үлкен жүктеулер үшін осы желілерді қолдану алдында бағдарламалар ескертуі мүмкін.</string>
+    <string name="data_usage_metered_mobile">Ұялы желілер</string>
+    <string name="data_usage_metered_wifi">Wi\u2011Fi желілері</string>
+    <string name="data_usage_metered_wifi_disabled">Мобильді кіру орындарын таңдау үшін, Wi\u2011Fi желісін қосыңыз.</string>
+    <string name="cryptkeeper_emergency_call">Төтенше жағдай қызметіне қоңырау шалу</string>
+    <string name="cryptkeeper_return_to_call">Қоңырауға қайта оралу</string>
+    <string name="vpn_name">Аты</string>
+    <string name="vpn_type">Түрі</string>
+    <string name="vpn_server">Сервер мекенжайы</string>
+    <string name="vpn_mppe">PPP шифрлауы (MPPE)</string>
+    <string name="vpn_l2tp_secret">L2TP құпия кілті</string>
+    <string name="vpn_ipsec_identifier">IPSec идентификаторы</string>
+    <string name="vpn_ipsec_secret">IPSec ортақ кілті</string>
+    <string name="vpn_ipsec_user_cert">IPSec пайдаланушы куәлігі</string>
+    <string name="vpn_ipsec_ca_cert">IPSec CA куәлігі</string>
+    <string name="vpn_ipsec_server_cert">IPSec сервер куәлігі</string>
+    <string name="vpn_show_options">Қосымша опцияларды көрсету</string>
+    <string name="vpn_search_domains">DNS іздеу домендері</string>
+    <string name="vpn_dns_servers">DNS серверлері (мыс. 8.8.8.8)</string>
+    <string name="vpn_routes">Қайта жіберу жол жоспарлары (мыс. 10.0.0.0/8)</string>
+    <string name="vpn_username">Пайдаланушы аты</string>
+    <string name="vpn_password">Құпия сөз</string>
+    <string name="vpn_save_login">Тіркелгі ақпаратын сақтау</string>
+    <string name="vpn_not_used">(пайдаланылмайды)</string>
+    <string name="vpn_no_ca_cert">(серверді тексермеу)</string>
+    <string name="vpn_no_server_cert">(серверден қабылданды)</string>
+    <string name="vpn_cancel">Болдырмау</string>
+    <string name="vpn_save">Сақтау</string>
+    <string name="vpn_connect">Қосылу</string>
+    <string name="vpn_edit">VPN профилін өңдеу</string>
+    <string name="vpn_connect_to"><xliff:g id="profile" example="School">%s</xliff:g> қосылу</string>
+    <string name="vpn_title">VPN</string>
+    <string name="vpn_create">VPN профилін қосу</string>
+    <string name="vpn_menu_edit">Профильді өңдеу</string>
+    <string name="vpn_menu_delete">Профильді жою</string>
+    <string name="vpn_menu_lockdown">Әрқашан қосулы VPN</string>
+    <string name="vpn_lockdown_summary">VPN профилінің әрқашан қосылулы күйін таңдаңыз. Осы VPN профиліне қосылған кезде ғана желілік трафик қолжетімді болады.</string>
+    <string name="vpn_lockdown_none">Жоқ</string>
+    <string name="vpn_lockdown_config_error">Әрқашан қосулы VPN сервер және DNS үшін IP мекенжайын талап етеді.</string>
+    <string name="vpn_no_network">Желілік қосылым жоқ. Әрекетті кейінірек қайталаңыз.</string>
+    <string name="vpn_missing_cert">Куәлік жоқ. Профильді өңдеу қажет.</string>
+    <string name="trusted_credentials_system_tab">Жүйе</string>
+    <string name="trusted_credentials_user_tab">Пайдаланушы</string>
+    <string name="trusted_credentials_disable_label">Өшіру</string>
+    <string name="trusted_credentials_enable_label">Қосу</string>
+    <string name="trusted_credentials_remove_label">Жою</string>
+    <string name="trusted_credentials_enable_confirmation">Жүйенің CA куәлігін қосу қажет пе?</string>
+    <string name="trusted_credentials_disable_confirmation">Жүйенің CA куәлігін ажырату қажет пе?</string>
+    <string name="trusted_credentials_remove_confirmation">Пайдаланушының CA куәлігін қалпына келтіру мүмкіндігінсіз жою қажет пе?</string>
+    <string name="spellcheckers_settings_title">Емлені тексеру</string>
+    <string name="current_backup_pw_prompt">Ағымдағы сақтық көшірме құпия сөзін мұнда енгізіңіз</string>
+    <string name="new_backup_pw_prompt">Жаңа сақтық көшірме құпия сөзін мұнда енгізіңіз</string>
+    <string name="confirm_new_backup_pw_prompt">Жаңа сақтық көшірме құпия сөзін мұнда қайта енгізіңіз</string>
+    <string name="backup_pw_set_button_text">Сақтық көшірме құпия сөзін орнату</string>
+    <string name="backup_pw_cancel_button_text">Болдырмау</string>
+    <string name="percentage"><xliff:g id="number" example="30">%d</xliff:g>%%</string>
+    <string name="additional_system_update_settings_list_item_title">Қосымша жүйе жаңартулары</string>
+    <string name="selinux_status_disabled">Өшірулі</string>
+    <string name="selinux_status_permissive">Рұқсат беріледі</string>
+    <string name="selinux_status_enforcing">Қамтамасыз ету</string>
+     <skip/>
+    <string name="ssl_ca_cert_warning">Желі қадағалануы мүмкін</string>
+    <string name="done_button">Дайын</string>
+    <string name="ssl_ca_cert_dialog_title">Желіні қадағалау</string>
+    <string name="ssl_ca_cert_info_message">Бұл құрылғыны басқарушы:\n<xliff:g id="managing_domain">%s</xliff:g>\n\nӘкімшіңіз желідегі әрекеттеріңізді, соның ішінде электрондық поштаны, қолданбаларды және қауіпсіз веб-сайттарды қадағалайды.\n\nТолық ақпарат алу үшін, әкімшіге хабарласыңыз.</string>
+    <string name="ssl_ca_cert_warning_message">Үшінші тарап желілік әрекетті, соның ішінде электрондық пошталар, бағдарламалар және қауіпсіз веб-сайттарды бақылай алады.\n\nОсыны сіздің құрылғыңызға орнатылған сенімді тіркелгі деректері қолжетімді етіп жасайды.</string>
+    <string name="ssl_ca_cert_settings_button">Сенімді тіркелгі деректерін тексеру</string>
+    <skip/>
+    <string name="user_settings_title">Пайдаланушылар</string>
+    <string name="user_list_title">Пайдаланушылар және профильдер</string>
+    <string name="user_add_user_menu">Пайдаланушыны немесе профильді қосу</string>
+    <string name="user_summary_restricted_profile">Шектелген профиль</string>
+    <string name="user_need_lock_message">Шектелген профильді жасау алдында, бағдарламалар мен жеке деректеріңізді қорғау үшін, экран құлпын орнату қажет болады.</string>
+    <string name="user_set_lock_button">Құлып орнату</string>
+    <string name="user_summary_not_set_up">Реттелмеген</string>
+    <string name="user_summary_restricted_not_set_up">Орнатпау - Шектелген профиль</string>
+    <string name="user_owner">Пайдаланушы</string>
+    <string name="user_you">Сіз (<xliff:g id="name" example="Name">%s</xliff:g>)</string>
+    <string name="user_nickname">Бүркеншік ат</string>
+    <string name="user_add_user_type_title">Қосу</string>
+    <string name="user_add_user_item_summary">Пайдаланушыларда өзінің жеке бағдарламалары мен мазмұны болады</string>
+    <string name="user_add_profile_item_summary">Өз тіркелгіңізден бағдарламаларға және мазмұнға кіруді шектей аласыз</string>
+    <string name="user_add_user_item_title">Пайдаланушы</string>
+    <string name="user_add_profile_item_title">Шектелген профиль</string>
+    <string name="user_add_user_title">Жаңа пайдаланушыны қосу</string>
+    <string name="user_add_user_message_long">Қосымша пайдаланушыларды жасау арқылы осы құрылғыны басқа адамдармен ортақ пайдалана аласыз. Әр пайдаланушының өз бос орны болады, ол жерде олар өздерінің жеке бағдарламаларын, тұсқағазын және басқаларын реттей алады. Сонымен қатар, пайдаланушылар кез келген адамға әсер ететін Wi\u2011Fi желісі сияқты планшет параметрлерін баптай алады.n\nЖаңа пайдаланушыны жасағаннан кейін, ол орнату процестерінен өтуі қажет.\n\nКез келген пайдаланушы басқа барлық пайдаланушылар атынан жаңартылған қосу рұқсаттарын қабылдай алады.</string>
+    <string name="user_add_user_message_short">Жаңа пайдаланушыны жасағаннан кейін, ол орнату процесін орындауы тиіс.\n\nКез келген пайдаланушы жаңартылған бағдарлама рұқсаттарын барлық басқа пайдаланушылар атынан қабылдай алады.</string>
+    <string name="user_setup_dialog_title">Пайдаланушыны қазір орнату қажет пе?</string>
+    <string name="user_setup_dialog_message">Пайдаланушының планшетті алып, өз кеңістігін теңшей алатынына көз жеткізіңіз</string>
+    <string name="user_setup_profile_dialog_message">Профильді қазір орнату қажет пе?</string>
+    <string name="user_setup_button_setup_now">Қазір теңшеу</string>
+    <string name="user_setup_button_setup_later">Қазір емес</string>
+    <string name="user_cannot_manage_message" product="tablet">Тек планшет иесі пайдаланушыларды теңшей алады.</string>
+    <string name="user_cannot_manage_message" product="default">Тек телефон иесі пайдаланушыларды теңшей алады.</string>
+    <string name="user_cannot_add_accounts_message">Шектелген профильдер тіркелгілерді қоса алмайды</string>
+    <string name="user_remove_user_menu"><xliff:g id="user_name">%1$s</xliff:g> бұл құрылғыдан жою</string>
+    <string name="user_new_user_name">Жаңа пайдаланушы</string>
+    <string name="user_new_profile_name">Жаңа профиль</string>
+    <string name="user_confirm_remove_self_title">Өзіңіздің тіркелгіңізді жою қажет пе?</string>
+    <string name="user_confirm_remove_title">Пайдаланушыны жою қажет пе?</string>
+    <string name="user_profile_confirm_remove_title">Профильді жою қажет пе?</string>
+    <string name="user_confirm_remove_self_message" product="tablet">Бұл планшеттегі кеңістік және деректер жойылады. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="user_confirm_remove_self_message" product="default">Бұл телефондағы кеңістік және деректер жойылады. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="user_confirm_remove_message" product="tablet">Бұл пайдаланушының кеңістігі және деректері осы планшеттен жойылады. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="user_confirm_remove_message" product="default">Бұл пайдаланушының кеңістігі және деректері осы телефоннан жойылады. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="user_profile_confirm_remove_message" product="tablet">Осы профильдегі бос орын мен деректер осы планшеттен көрінбейді. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="user_profile_confirm_remove_message" product="default">Осы профильдегі бос орын мен деректер осы телефоннан көрінбейді. Бұл әрекетті болдырмау мүмкін емес.</string>
+    <string name="user_adding_new_user">Жаңа пайдаланушыны қосу\u2026</string>
+    <string name="user_delete_user_description">Пайдаланушыны жою</string>
+    <string name="user_delete_button">Жою</string>
+    <string name="application_restrictions">Бағдарламалар мен мазмұнға рұқсат беру</string>
+    <string name="apps_with_restrictions_header">Шектеулері бар бағдарламалар</string>
+    <string name="apps_with_restrictions_settings_button">Бағдарламаға арналған параметрлерді кеңейту</string>
+    <string name="home_app_uninstall_button">Бұл қолданбаны өшіру</string>
+    <string name="only_one_home_message">Басқа басты қолданба орнатылмағанша басты параметрлер жасырулы болады.</string>
+    <string name="global_change_warning" product="tablet">Бұл параметр осы планшеттің барлық пайдаланушыларына әсер етеді.</string>
+    <string name="global_change_warning" product="default">Бұл параметр осы телефонның барлық пайдаланушыларына әсер етеді.</string>
+    <string name="global_locale_change_title">Тілді өзгерту</string>
+    <string name="global_font_change_title">Қаріп өлшемін өзгерту</string>
+    <skip/>
+    <string name="nfc_payment_settings_title">Түртіп төлеу</string>
+    <string name="nfc_payment_no_apps">Жай ғана түрту арқылы төлеу</string>
+    <string name="nfc_payment_learn_more">Қосымша ақпараттар</string>
+    <string name="nfc_payment_menu_item_add_service">Қолданбаларды табу</string>
+    <string name="nfc_payment_set_default_label">Қалауыңыз ретінде орнату қажет пе?</string>
+    <string name="nfc_payment_set_default">Түртіп төлеген кезде әрқашан <xliff:g id="app">%1$s</xliff:g> пайдалану қажет пе?</string>
+    <string name="nfc_payment_set_default_instead_of">Түртіп төлеген кезде әрқашан <xliff:g id="app">%2$s</xliff:g> орнына <xliff:g id="app">%1$s</xliff:g> пайдалану қажет пе?</string>
+    <skip/>
+    <string name="restriction_settings_title">Шектеулер</string>
+    <string name="restriction_menu_reset">Шектеулерді жою</string>
+    <string name="restriction_menu_change_pin">PIN кодын өзгерту</string>
+    <string name="app_notifications_switch_label">Ескертпелерді көрсету</string>
+    <skip/>
+    <string name="help_label">Анықтама</string>
+    <string name="user_account_title">Мазмұнның тіркелгісі</string>
+    <string name="user_picture_title">Фотосурет идентификаторы</string>
+    <string name="cell_broadcast_settings">Хабарларды кеңінен тарату торабы</string>
+    <string name="user_restrictions_title">Бағдарлама және мазмұн шектеулері</string>
+    <string name="user_rename">Атын өзгерту</string>
+    <string name="app_restrictions_custom_label">Шектеулерді орнату</string>
+    <string name="user_restrictions_controlled_by"> <xliff:g id="app">%1$s</xliff:g> арқылы басқарылады</string>
+    <string name="app_not_supported_in_limited">Бұл бағдарламаға шектелген профильдерде қолдау көрсетілмейді</string>
+    <string name="app_sees_restricted_accounts">Бұл бағдарлама сіздің тіркелгілеріңізге кіре алады</string>
+    <string name="restriction_wifi_config_title">Wi\u2011Fi және мобильді</string>
+    <string name="restriction_wifi_config_summary">Wi\u2011Fi және мобильді параметрлер өзгерісіне рұқсат беру</string>
+    <string name="restriction_bluetooth_config_title">Bluetooth</string>
+    <string name="restriction_bluetooth_config_summary">Bluetooth жұптастырулары мен параметрлерінің өзгерісіне рұқсат беру</string>
+    <string name="restriction_nfc_enable_title">NFC</string>
+    <string name="restriction_nfc_enable_summary" product="tablet">Планшет басқа құрылғымен жанасқанда деректердің алмасуына рұқсат ету</string>
+    <string name="restriction_nfc_enable_summary" product="default">Телефон басқа құрылғымен жанасқанда деректердің алмасуына рұқсат ету</string>
+    <string name="restriction_location_enable_title">Орналасқан жері</string>
+    <string name="restriction_location_enable_summary">Бағдарламаға сіздің орналасқан жеріңіз туралы ақпаратты қолдануға рұқсат беру</string>
+    <string name="wizard_back">Артқа</string>
+    <string name="wizard_next">Келесі</string>
+    <string name="wizard_finish">Аяқтау</string>
+    <string name="user_image_take_photo" msgid="7496128293167402354">Суретке түсіру</string>
+    <string name="user_image_choose_photo" msgid="3746334626214970837">Суретті галереядан таңдау</string>
+    <string name="regulatory_info_text"/>
+    <string name="screen_never_timeout">Ешқашан</string>
+</resources>

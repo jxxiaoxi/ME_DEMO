@@ -1,0 +1,107 @@
+ Android JNI
+
+1.JNI 是java Native Interface 即JAVA本地调用接口。这种技术的主要作用是：java通过JNI调用底层语言的实现，比如 java 和c，c++的通讯。
+
+2.JNI实现的步骤：
+    a.新建一个android工程（JNITest），在工程名下新建jni目录，用来放c或者c++文件。
+    b.在/src 包下新建一个类JNITest.java,里面新建方法，方法都为public static native 返回值 函数名 （参数1，参数2...）；如public static native String WriteFile(String oldPath,String newPath);
+
+    c.写好JNITest.java后，那么我们怎么去写我们jni目录下的文件呢？这里先在eclipse中，运行下我们的程序，运行完后，在 JNITest中会生成 bin/classes/..这个目录，在这个目录下，有一个我们将要用到的文件JNITest.class。然后我们用终端在 进入到classes目录下打开，然后执行命令： javah 包名.JNITest(如 com.example.jnitest.JNITest)。之后我们可以看到classes目录下多了com_example_jnitest_JNITest.h这个文件。这个文件就有我们需要在c或者c++中实现的函数。
+  
+    d.打开这个.h文件，我们可以看到里面有我们在java文件中定义的对应函数，如JNIEXPORT jstring JNICALL Java_com_example_jnitest_JNITest_WriteFile (JNIEnv *, jclass, jstring, jstring);
+    e.在建好的jni/目录下新建JNITest.c ，对 WriteFile 这个函数实现，其中.h这个文件中对函数的修饰 JNIEXPORT ， JNICALL 不需要，要去掉，否则编译报错。如：
+       jstring Java_com_example_jnitest_JNITest_WriteFile(JNIEnv *env, jobject thiz, jstring oldpath, jstring newpath) {//jstring 对应java中的string，这里每个类型都有个对应，要查看具体的可以网上查具体资料。
+       //....内容实现 ， 具体的实现见后面的c语言的读写文件实现。
+
+return (*env)->NewStringUTF(env, " opecccccccc!");//返回值的内容
+}
+
+    f.在jni目录下建立Android.mk.其内容：
+        LOCAL_PATH := $(call my-dir)
+        include $(CLEAR_VARS)
+        LOCAL_MODULE := libjnitest //这个是.so库文件的名字，一般比较规范的命名为：jnixxx。
+        LOCAL_SRC_FILES := JNITest.c
+        LOCAL_LDLIBS += -llog //如果需要打log，需要增加这个
+        include $(BUILD_SHARED_LIBRARY)
+
+    g.把工程放入已经编译过的项目下，编译jni,会生成out/target/product/e02_fake/system/lib/libjnitest.so 这个.so，文件。同时在项目下建立： lib/armeabi/ 目录。然后把生成的.so文件拷贝到这个目录下，编译整个项目
+
+    f.在.java文件中使用我们实现好的jni，在java文件中加入    
+    static {
+        System.loadLibrary("jnitest");//这是加载这个lib库，注意这个名字比我们  LOCAL_MODULE := libjnitest 中的名字前面少了lib
+    }
+
+    e.在需要的地方用JNITest. WriteFile（“”，“”）；可以输出返回值。在整个项目的android.mk中，加入LOCAL_JNI_SHARED_LIBRARIES := libjnitest；编译整个项目，最后install。
+这样一个简单的JNI就做好了。
+
+
+
+C 语言中读写文件：
+
+
+jstring Java_com_example_bootanim_FileOPT_WriteFile(JNIEnv *env, jobject thiz, jstring oldpath, jstring newpath) {//oldFile = "/system/build.prop"; 
+      int from_fd; 
+      int to_fd; 
+      long file_len=0; 
+      int ret=1; 
+      char buffer[BUFFER_SIZE]; 
+      char *ptr;
+
+     const char *oldfilea = (*env)->GetStringUTFChars(env, oldpath, 0); //这是把string转换成 const char * 型，在c语言中open file的函数是const char *
+     const char *newfilea = (*env)->GetStringUTFChars(env,newpath,0); 
+     ALOGI("jniooooffff:%s",oldfilea); 
+
+     ALOGI("jniooooxxx from_fd opentt"); 
+     if((from_fd=open(newfilea, O_RDONLY | O_NOFOLLOW))==-1) { 
+    	 ALOGI("jniooooxxx from_fd fail"); 
+    	 return "0"; 
+     } 
+
+     ALOGI("jniooooxxx to_fd open"); 
+     if((to_fd=open(oldfilea, O_WRONLY|O_NOFOLLOW))==-1) { 
+    	 ALOGI("jniooooxxx to_fd= fail"); 
+    	 return "0"; 
+     }
+
+     file_len= lseek(from_fd,0L,SEEK_END); 
+     lseek(from_fd,0L,SEEK_SET); 
+     ALOGI("jniooooxxx while");
+     while(ret) { 
+    	        ret= read(from_fd, buffer, BUFFER_SIZE); 
+    	        if(ret==-1){ 
+    	            ALOGI("jniooooxxx ret==-1"); 
+    	            return "0";		 
+    	        } 
+    	        write(to_fd, buffer, ret); 
+    	        file_len-=ret; 
+    	        bzero(buffer,BUFFER_SIZE); 
+
+    	    } 
+            ALOGI("jniooooxxx close"); 
+            close(from_fd); 
+    	    close(to_fd); 
+    	    //exit(0);
+
+
+    return (*env)->NewStringUTF(env, " opecccccccc!"); 
+} 
+
+
+
+ jni输出log
+
+1.在android.mk中加入 LOCAL_STATIC_LIBRARIES := libcutils liblog
+2.在.c文件中加入： 
+#include <utils/Log.h> 
+#include <stdlib.h>
+
+3.ALOGI("jniooooffff:%s",oldfilea);// jniooooffff为TAG， oldfilea是我们要输出的字符串。
+
+JDK,SDK,NDK
+1.JDK 是 Java 语言的软件开发工具包(SDK)
+2.SDK（Software Development Kit） 是软件开发工具包，所以 Android SDK 指的是Android专属的软件开发工具包
+3.Android NDK 是在SDK前面又加上了“原生”二字，即Native Development Kit，因此又被Google称为“NDK
+
+
+
+

@@ -1,0 +1,65 @@
+一、服务器地址：192.168.10.167  用户名和密码： wei.liu  wei.liu
+
+三部软件管理系统 ： http://192.168.11.8:8088/index.php
+
+mtk：在线学习 https://online.mediatek.com    luoqiaodong@hymost.com  luoqiaodong
+
+mtk:提问网站 https://eService.mediatek.com XIANG_RONG_HY  huiye-3
+
+二、注册软件服务器
+
+1.访问http://192.168.10.164/（用浏览器打开）
+2.输入用户名密码（姓名全拼/123456）
+3.注册公司邮箱，会提示收到一封认证邮件 （打开邮件中返回的网址）
+4.生成 ssh/id_rsa.pub   （ssh-keygen -t rsa）
+5.在浏览器打开网页提示框中 输入本机ssh信息，cat .ssh/id_rsa.pub
+
+三、获取代码的克隆地址
+1.登入http://192.168.10.164/
+2.进入projects点击下面的list点击对应的项目，如6582_KK1_tmp，git clone ssh://liuwei@192.168.10.164:29418/6582_KK1_tmp
+
+
+四、
+1.167服务器文件打开的密码：6015881617  
+
+五、编译源码（具体编译命令可以参照 /SW/3G/SmartPhone/StandardPackage/MT6582/Build/ALPS_Make_Build_Environment_and_Procedures_Design_document_4.1_4.2.pdf文档的第10页开始和Android_Build_System_for_customer_4.1.pdf的76页android快速编译） 
+1.mtk 有自己的编译方式，  ./mk listp查看所有可以用的mk
+2.编译命令 ./mk huiyue82_wet_kk new （编译eng版本）
+3.编译usr版本：./mk -opt=TARGET_BUILD_VARIANT=user 项目名 new
+4.单编模块：./mk -t mm 路径 （-t表示log输出在终端）
+
+
+六、新建一个项目（参照/SW/3G/SmartPhone/StandardPackage/MT6582/Build/Clone_Project_SOP.pdf）
+
+七、定制laucher指定的app顺序，在文件default_toppackage.xml中修改。具体参考laucher下资料CU_Launcher_Customization.pdf。
+
+八、git 使用
+1.保存本地的修改git stash save，取出本地缓存 git stash pop
+git fetch origin   git rebase origin/cp8017  git rebase --continue  git commit --amend
+
+
+九、编译user版本：./mk -o=USE_CCACHE=1,TARGET_BUILD_VARIANT=user xxx n  申请cahe  ./prebuilts/miscnux-x86/ccache/ccache -M 50G
+
+十、http://eportal.mediatek.com
+XIANG_RONG_HY
+huiye-3
+
+十一
+2. 开启android ccache
+(1). ccache是google默认就存放在codebase的工具，对于ccache的功能可以到网络搜寻资料。
+(2). 设置cache大小（这一步一定要做！！），一个codebase需要大约5G的空间，如果你的编译环境有5个codebase在使用，那么需要25G的空间。设置小了还会引起编译时间延长！！
+    [1].GB版本：prebuilt/linux-x86/ccache/ccache -M 25G
+    [2].JB版本：prebuilts/misc/linux-x86/ccache/ccache -M 25G
+(3). 开启的方法：
+    [1].命令行增加USE_CCACHE=1即可：./mk -o=USE_CCACHE=1 n。如果是user版本开启ccahce的话，可以这样：./mk -o=USE_CCACHE=1,TARGET_BUILD_VARIANT=user n。
+（4）.可以通过ccache -s查看cache信息，如果满了可以用ccache -C清除所有。
+
+（5）编译modem ./make.sh 'HUIYUE92_WE_KK_HSPA.mak' new
+
+
+VPN
+地址：us1.faxgood.com    jp  tw   uk  数字1-3
+用户名：xrseu
+密码：huiye-3
+
+

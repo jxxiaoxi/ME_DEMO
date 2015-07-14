@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="onscreenHangupAll">Прекини све</string>
+    <string name="onscreenHangupHolding">Прекини на чекању</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">Прекини активни позив, одговори на позив на чекању</string>
+    <string name="onscreenECT">Пренеси</string>
+    <string name="dm_lock">DM закључано</string>
+    <string name="dm_unlock">DM откључај</string>
+    <string name="start_record">Почни снимање</string>
+    <string name="stop_record">Заустави снимање</string>
+    <string name="str_db_playlist_name">"Моји снимци"</string>
+    <string name="alert_device_error">Дошло је до грешке на аудио уређају</string>
+    <string name="ext_media_badremoval_notification_title">"SD је неочекивано уклоњена"</string>
+    <string name="error_sdcard_access">Није могуће приступити SD картици</string>
+    <string name="confirm_device_info_full">Нема више простора на SD картици, снимак је сачуван.</string>
+    <string name="confirm_save_info_saved">Снимак је сачуван</string>
+    <string name="confirm_save_info_saved_to">Снимак је сачуван на</string>
+	<string name="sim_toolkit">"SIM пакет алатки"</string>
+    <string name="activity_not_found">"Апликација није инсталирана на телефону."</string>
+    <string name="no_sim_card_inserted" product="default">Убаците SIM картицу да бисте покренули SIM Toolkit.</string>
+    <string name="airplane_mode_on" product="default">Није могуће покренути SIM Toolkit пошто је укључен режим рада у авиону.</string>
+    <string name="lable_sim_not_ready" product="default">SIM Toolkit није спреман или није подржан</string>
+    <string name="gemini_3g_indic">"3G"</string>
+    <string name="callFailed_dsac_vt_incompatible_destination">Видео позив није могуће подесити. Видео телефон није подржан на телефону који позивате, позвати с говорним позивом?</string>
+    <string name="callFailed_dsac_vt_resource_unavailable">Видео позив није могуће подесити. Телефон који сте позвали се налази изван подручја покривености 3G сигналом, позвати с говорним позивом?</string>
+    <string name="callFailed_dsac_vt_bearer_not_avail">Видео позив није могуће подесити. Позвати с говорним позивом?</string>
+    <string name="callFailed_dsac_vt_out_of_3G_yourphone">Ваш телефон се налази изван подручја покривености 3G сигналом, позвати с говорним позивом?</string>
+    <string name="callFailed_dsac_vt_bear_not_authorized">Видео позив није могуће подесити. Услуга видео телефона није активирана на овој SIM картици, позвати с говорним позивом?</string>
+    <string name="notification_voicemail">"Говорна пошта"</string>
+    <string name="turn_on_3g_service_message">3G услуга је сада искључена, желите ли да је укључите?</string>
+    <string name="associate_sim_missing_message">"%1$s SIM картица није доступна. Желите ли да обавите позив преко %2$s"</string>
+    <string name="associate_sim_missing_other">"Друго"</string>
+    <string name="vt_incoming_call">Долазни видео позив</string>
+    <string name="vt_settings">Подешавања видеа</string>
+    <string name="vt_local_video_zoom">Зумирање локалног видеа</string>
+    <string name="vt_local_video_brightness">Светлина локалног видеа</string>
+    <string name="vt_local_video_effect">Ефекат локалног видеа</string>
+    <string name="vt_local_video_nightmode">Ноћни режим локалног видеа</string>
+    <string name="vt_peer_video_quality">Квалитет видеа равноправног уређаја</string>
+    <string name="vt_enable_back_camera">Укључи задњу камеру</string>
+    <string name="vt_enable_back_camera_description">Доступно за пребацивање камера ако је укључено</string>
+    <string name="vt_peer_video_bigger">Већи видео равноправног уређаја</string>
+    <string name="vt_peer_video_bigger_description">Укључите да би видео равноправног уређаја био већи од локалног видеа</string>
+    <string name="vt_outgoing_call">Одлазни видео позив</string>
+    <string name="vt_outgoing_call_description">Прикажи локални видео приликом видео позива</string>
+    <string name="vt_incoming_call_description">Прикажи локални видео приликом одговора на долазни видео позив</string>
+    <string name="vt_incoming_showme_always">"Увек"</string>
+    <string name="vt_incoming_showme_ask">"Питај"</string>
+    <string name="vt_incoming_showme_disable">"Онемогући"</string>
+    <string name="vt_pic_replace_local_default">Подразумевана слика</string>
+    <string name="vt_pic_replace_local_freezeme">Замрзни ме</string>
+    <string name="vt_pic_replace_local_mypic">Моја слика</string>
+    <string name="vt_local_video_display">Приказ локалног видеа</string>
+    <string name="vt_sd_null">SD картица је\nнедоступна</string>
+    <string name="vt_sd_not_enough">На SD картици понестаје\n простора</string>
+    <string name="vt_peer_video_quality_normal">"Нормална"</string>
+    <string name="vt_peer_video_quality_sharp">Оштро</string>
+    <string name="vt_ask_show_local">Приказати локални видео равноправном уређају?</string>
+    <string name="vt_ask_show_local_yes">"Да"</string>
+    <string name="vt_ask_show_local_no">"Не"</string>
+    <string name="vt_change_my_pic">Промени</string>
+    <string name="vt_pic_saved_to_sd">Снимак сачуван на SD картицу</string>
+    <string name="vt_pic_saved_to_sd_fail">Снимак није сачуван</string>
+    <string name="vt_error_network">Мрежа није доступна. Видео позив ће бити прекинут.</string>
+    <string name="vt_error_media">Видео није могуће правилно приказати. Видео позив ће бити прекинут.</string>
+    <string name="vt_swap_video">Замени видео</string>
+    <string name="vt_local_video_contrast">Контраст локалног видеа</string>
+    <string name="vt_menu_switch">"Пребаци камеру"</string>
+    <string name="vt_menu_hide_me">Сакриј локални видео</string>
+    <string name="vt_menu_show_me">Прикажи локални видео</string>
+    <string name="vt_menu_snapshot">Снимак равноправног уређаја</string>
+    <string name="vt_dis_peer_rep">Прикажи видео равноправног уређаја</string>
+    <string name="vt_dis_peer_rep_des">Прикажи слику као замену видеа равноправног уређаја када није доступан</string>
+    <string name="vt_peer_video_rep">Замена видеа равноправног уређаја</string>
+    <string name="vt_peer_video_rep_des">Постави слику за приказ када видео равноправног уређаја није доступан</string>
+    <string name="vt_vocie_answer">Одговор гласом</string>
+    <string name="vt_wait_voice">Чекање на повезивање говорног позива</string>
+    <string name="vt_voice_connecting">Повезивање говорног позива</string>
+    <string name="vt_auto_dropback">Аутоматско пребацивање</string>
+    <string name="vt_auto_dropback_des">Пребаци се аутоматски на повезивање говорног позива</string>
+    <string name="vt_cannot_support_setting">Тренутна камера не подржава ово подешавање</string>
+    <string name="vt_network_unreachable">Мрежа није доступна.</string>
+    <string name="vt_iot_error_01">Видео позив није могуће подесити</string>
+    <string name="vt_iot_error_02">Телефон је заузет</string>
+    <string name="vt_iot_error_03">Нема одговора</string>
+    <string name="vt_iot_error_04">Мрежа је заузета</string>
+    <string name="pref_camera_coloreffect_entry_none">"Ниједан"</string>
+    <string name="pref_camera_coloreffect_entry_mono">Моно</string>
+    <string name="pref_camera_coloreffect_entry_sepia">"Сепија"</string>
+    <string name="pref_camera_coloreffect_entry_negative">"Негатив"</string>
+    <string name="pref_camera_coloreffect_entry_solarize">Соларно</string>
+    <string name="pref_camera_coloreffect_entry_posterize">"Постеризуј"</string>
+    <string name="pref_camera_coloreffect_entry_whiteboard">Бела табла</string>
+    <string name="pref_camera_coloreffect_entry_blackboard">Црна табла</string>
+    <string name="pref_camera_coloreffect_entry_aqua">Аква</string>
+    <string name="pref_camera_coloreffect_entry_pastel">Пастелно</string>
+    <string name="pref_camera_coloreffect_entry_mosaic">Мозаик</string>
+    <string name="pref_camera_coloreffect_entry_redtint">Црвена нијанса</string>
+    <string name="pref_camera_coloreffect_entry_bluetint">Плава нијанса</string>
+    <string name="pref_camera_coloreffect_entry_greentint">Зелена нијанса</string>
+    <string name="pref_camera_coloreffect_entry_sepiablue">Сепија плава</string>
+    <string name="pref_camera_coloreffect_entry_sepiagreen">Сепија зелена</string>
+    <string name="vt_peer_camera_open">Удаљена камера је отворена</string>
+    <string name="vt_peer_camera_close">Удаљена камера је затворена</string>
+    <string name="vt_recorder_start">Почни снимање</string>
+    <string name="vt_recorder_voice_and_peer_video">Глас и видео равноправног уређаја</string>
+    <string name="vt_recorder_only_voice">Само глас</string>
+    <string name="vt_recorder_only_peer_video">Само видео равноправног уређаја</string>
+    <string name="vt_recording_saved">Снимак је сачуван.</string>
+    <string name="vt_recording_saved_sd_full">Нема више простора на SD картици, снимак је сачуван.</string>
+    <string name="vt_recording_error">Снимак је успешно сачуван.</string>
+    <string name="start_record_vt">Почни снимање</string>
+    <string name="stop_record_vt">Заустави снимање</string>
+    <string name="cannot_answered_Video_Call">На видео позив није могуће одговорити пошто је говорни позив већ у току</string>
+    <string name="cannot_answered_Voice_Call">На говорни позив није могуће одговорити пошто је видео позив већ у току</string>
+    <string name="callDurationFormat"><xliff:g id="minutes" example="42">%1$s</xliff:g> минута <xliff:g id="seconds" example="28">%2$s</xliff:g> секунди</string>
+    <string name="reminder">Подсетник</string>
+    <string name="vt_media_occupied">Пошто камера није доступна, видео позив није могуће повезати. Проверите да ли нека друга апликација користи камеру.</string>
+    <string name="vt_media_video_fail">Видео није могуће правилно приказати. Видео позив је прекинут</string>
+    <string name="incall_toast_unhold">Прекини чекање</string>
+    <string name="dualtalk_tip_accept_disconnect_current" tools:ignore="MissingTranslation">Прихватање овог позива ће прекинути тренутни позив.</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing" tools:ignore="MissingTranslation">Прихватање овог позива ће прекинути одлазни позив.</string>
+    <string name="dualtalk_tip_accept_disconnect_incoming" tools:ignore="MissingTranslation">Прихватање овог позива ће одбити други долазни позив.</string>
+    <string name="dualtalk_tip_accept_disconnect_voice">Прихватање овог позива ће прекинути говорни позив(е).</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing_reject_incoming">Прихватање овог позива ће прекинути одлазни позив и одбити други долазни позив.</string>
+    <string name="dualtalk_tip_accept_disconnect_current_reject_incoming">Прихватање овог позива ће прекинути тренутни позив и одбити други долазни позив.</string>
+    <string name="end_call_because_can_not_hold">Завршите тренутни позив јер не може\те да га ставите на чекање.</string>
+    <string name="ring_only_once_title">Звони само једном</string>
+    <string name="ring_only_once_summary">Звони само једном приликом избора прихватања видео позива у режиму видео позива</string>
+    <string name="fdn_contact_name_number_invalid">Име и број не могу бити истовремено празни.</string>
+    <string name="fdn_contact_number_invalid">Неважећи број контакта.</string>
+    <string name="fdn_phone_book_busy">Именик је тренутно заузет, покушајте поново касније.</string>
+    <string name="cdma_not_support">CDMA не\ подржава ову опцију</string>
+    <string name="cdma_cfu_title">China Telecom</string>
+    <string name="labelCFC">Откажи сва преусмеравања</string>
+    <string name="cdma_cfu_dialog_sum">"Увек користи овај број"</string>
+    <string name="dual_mic_title">Смањивање шума</string>
+    <string name="dual_mic_summary">Потискује позадинску буку током позива</string>
+    <string name="minutereminder_title">Минутни подсетник</string>
+    <string name="minutereminder_summary">Подсећа у 50 секунди сваке минута</string>
+    <string name="voice_call_settings">Подешавања говорног позива</string>
+    <string name="enable_sip_dialog_message">Интернет позив је онемогућен, желите ли да га омогућите?</string>
+    <string name="ip_prefix_setting">Број IP префикса </string>
+    <string name="ip_prefix_setting_sum">Подешавања броја IP префикса</string>
+    <string name="enter_ip_prefix_number">Унесите број префикса</string>
+    <string name="ip_dial_error_toast_for_no_ip_prefix_number">Унесите прво број IP префикса у подешавања говорног позива.</string>
+    <string name="ip_dial_error_toast_for_sip_call_selected">Функција IP позивања не важи за интернет позив.</string>
+    <string name="ip_prefix_edit_default_sum">Унесите број префикса за IP позивање</string>
+    <string name="vt_cf_call_description">Подешавања преусмеравања видео позива</string>
+    <string name="vt_cb_call_description">Подешавања ограничавања видео позива</string>
+    <string name="vt_addtional_call_description">Подешавања за телефонски број и позив на чекању</string>
+    <string name="others">Друга подешавања</string>
+    <string name="confirm_3g_switch">Желите ли сигурно да подесите 3G услугу за ову SIM картицу? Ово ће такође аутоматски подесити ову SIM картицу као подразумевану SIM картицу за видео позив.</string>
+    <string name="modem_switching">Промена SIM картице потрајаће око 10 секунди. Сачекајте…</string>
+    <string name="confirm_3g_switch_to_off">Желите ли сигурно да искључите 3G услугу? Ово ће такође аутоматски искључити услугу видео позива.</string>
+    <string name="service_3g_off">"искључено"</string>
+    <string name="enable_3G_service">Омогући 3G</string>
+    <string name="setting_for_3G_service">3G услуга</string>
+    <string name="network_forbidden">забрањено</string>
+    <string name="voice_mail_dialog_text">Имате нову говорну пошту од <xliff:g id="voicemail_sim_display_name">%s</xliff:g>. Желите ли сада да добијете?</string>
+    <string name="lable_call_barring">"Ограничавање позива"</string>
+    <string name="lable_all_outgoing">Сви одлазни позиви</string>
+    <string name="lable_all_outgoing_international">Међународни одлазни позиви</string>
+    <string name="lable_all_out_except">Међународни одлазни позиви изузев на матични PLMN</string>
+    <string name="lable_all_incoming">Сви долазни позиви</string>
+    <string name="lable_incoming_calls_except">Долазни позиви у ромингу</string>
+    <string name="deactivate_all">Откажи све</string>
+    <string name="change_password">Промени лозинку за ограничавање</string>
+    <string name="call_barring_sum">Подешавања ограничавања говорног позива</string>
+    <string name="lable_disable">Онемогућено</string>
+    <string name="lable_enable">"Омогућено"</string>
+    <string name="old_password_label">Стара лозинка (4 броја)</string>
+    <string name="new_password_label">Нова лозинка (4 броја)</string>
+    <string name="invalid_password">Унесите лозинку од 4 броја.</string>
+    <string name="confirm_password_label">Потврдите нову лозинку</string>
+    <string name="mismatch_password">Лозинке које сте унели се не подударају. Покушајте поново.</string>
+    <string name="password_changed">Лозинка успешно промењена</string>
+    <string name="enter_callbarring_password">Унесите лозинку за ограничавање позива (4 броја)</string>
+    <string name="wrong_password">Грешка лозинке</string>
+    <string name="error_title">"Грешка"</string>
+    <string name="cell_broadcast">Инфо сервис</string>
+    <string name="cell_broadcast_settings">Подешавања инфо сервиса</string>
+    <string name="cb_menu_language">"Језик"</string>
+    <string name="cb_menu_add_channel">Додај канал</string>
+    <string name="cb_menu_channel_list">Листа канала</string>
+    <string name="cb_dialog_title_language_choice">Изаберите језик</string>
+    <string name="cb_channel_dialog_channel_name">Име канала (0-10 знакова)</string>
+    <string name="cb_channel_dialog_channel_number">Број канала (0-65534)</string>
+    <string name="cb_channel_dialog_channel_state">Омогући канал</string>
+    <string name="cb_channel_dialog_edit_channel">Уреди канал</string>
+    <string name="cb_menu_edit">"Измени"</string>
+    <string name="cb_menu_delete">"Избриши"</string>
+    <string name="cb_error_channel_num">Унесите број канала (0-65534).</string>
+    <string name="cb_error_channel_name">Дужина имена канала није тачна (1-10 знакова).</string>
+    <string name="cb_error_language_select">Изаберите најмање један језик.</string>
+    <string name="cb_error_channel_id_exist">ИД канала постоји.</string>
+    <string name="cb_all_languages">"Сви језици"</string>
+    <string name="cb_default_new_channel_name">Нови канали</string>
+    <string name="fdn_errorcode_unknown_info">Није успело, непозната грешка, покушајте поново касније.</string>
+    <string name="fdn_errorcode_number_info">Није успело, дужина броја контакта је предуга.</string>
+    <string name="fdn_errorcode_name_info">Није успело, дужина имена контакта је предуга.</string>
+    <string name="fdn_errorcode_storage_info">Није успело, меморија је пуна.</string>
+    <string name="fdn_errorcode_phb_info">Није успело, именик није тренутно спреман, покушајте поново касније.</string>
+    <string name="fdn_errorcode_pin2_info">Није успело, неважећи PIN2.</string>
+    <string name="net_or_simcard_busy">Мрежа или SIM картица су заузети, покушајте поново касније.</string>
+    <string name="gsm_umts_network_preferences_title">"Режим мреже"</string>
+    <string name="gsm_umts_network_preferneces_summary">Још није имплементирано!</string>
+    <string name="gsm_umts_network_preferences_dialogtitle">"Режим мреже"</string>
+    <string name="umts_preferred_network_mode_dialogtitle">"Режим мреже"</string>
+    <string name="voice_call">Говорни позив</string>
+    <string name="video_call">"Видео поз."</string>
+    <string name="internet_call">"Интернет позив"</string>
+    <string name="sum_voice_call">Подешавања у вези говорног позива</string>
+    <string name="sum_video_call">Подешавања у вези видео позива</string>
+    <string name="sum_internet_call">Подешавања у вези интернет позива</string>
+    <string name="voice_mail">"Говорна пошта"</string>
+    <string name="sum_voice_mail">Услуга говорне поште и број</string>
+    <string name="sum_cell_broadcast_control_on">Активирај мобилну мрежу</string>
+    <string name="sum_cell_broadcast_control_off">Деактивирај мобилну мрежу</string>
+    <string name="sum_cell_broadcast_setting">Подешавање језика и канала за мобилну мрежу</string>
+    <string name="call_additional_sum">Подешавања за телефонски број и позив на чекању</string>
+    <string name="vt_call_settings">Подешавања за видео позив</string>
+    <string name="vt_local_video_rep">Замена локалног видео записа</string>
+    <string name="vt_pic_replace_local_description">Подесите слику за приказ када се камера не користи</string>
+    <string name="mo_code_unconditional_cf_active">Активирано прослеђивање позива\nбезусловно </string>
+    <string name="mo_code_some_cf_active">Прослеђивање позива\nусловно </string>
+    <string name="mo_code_call_forwarded">Позив преусмерен</string>
+    <string name="mo_code_call_is_waiting">Позив на чекању</string>
+    <string name="mo_code_cug_call">Затворена група корисника</string>
+    <string name="mo_code_outgoing_calls_barred">Ограничавање одлазног позива</string>
+    <string name="mo_code_incoming_calls_barred">Долазни позив ограничен на другој страни</string>
+    <string name="mo_code_clir_suppression_rejected">Провера услуге слања ИД-а позиваоца </string>
+    <string name="mo_code_call_deflected">позив пребачен</string>
+    <string name="mt_code_forwarded_call">Преусмерен позив</string>
+    <string name="mt_code_cug_call">Затворена група корисника</string>
+    <string name="mt_code_call_on_hold">Позив на чекању</string>
+    <string name="mt_code_call_retrieved">Позив преузет</string>
+    <string name="mt_code_multi_party_call">"Конференцијски позив"</string>
+    <string name="mt_code_on_hold_call_released">Позив на чекању отпуштен</string>
+    <string name="mt_code_forward_check_received">Провера преусмеравања SS порука примљена</string>
+    <string name="mt_code_call_connecting_ect">Пребацивање позива</string>
+    <string name="mt_code_call_connected_ect">Пребацивање позива активно</string>
+    <string name="mt_code_deflected_call">Одбијен позив</string>
+    <string name="mt_code_additional_call_forwarded">Додатни долазни позив преусмерен</string>
+    <string name="mt_code_forwarded_cf">Позив преусмерен</string>
+    <string name="mt_code_forwarded_cf_uncond">Позив преусмерен безусловно</string>
+    <string name="mt_code_forwarded_cf_cond">Позив преусмерен условно</string>
+    <string name="mt_code_forwarded_cf_busy">Позив заузет преусмерено</string>
+    <string name="mt_code_forwarded_cf_no_reply">Позив преусмерен у случају да нема одговора</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Позив преусмерен у случају недоступности</string>
+    <string name="sim_manage_sipcall">"Интернет позив"</string>
+    <string name="sim_manage_call_via">Позови преко</string>
+    <string name="manual_select_title">Ручно изабери</string>    
+	<string name="manual_select_dialog_msg">Мобилни телефон нећеодабрати друге операторе за вас у режиму ручног одабира. У случају губитка услуге одабраног оператора, некада ћете морати да поново обавите ручни одабир или ћете морати да се вратите на режим аутоматског одабира. Препоручујемо да користите опцију  \"Одабери аутоматски\". Да ли желите да ручно одаберете мрежу?</string>    
+	<string name="no_service_msg_gemini">Тренутно нема услуге од изабраног оператера за SIM картицу \"<xliff:g id="operator">%s</xliff:g>\".\nПрепоручујемо да користите \"Аутоматски изабери\" или да ручно изаберете другог оператера.</string>    
+	<string name="no_service_msg">Тренутно нема услуге од изабраног оператера\nПрепоручујемо да користите \"Аутоматски изабери\" или да ручно изаберете другог оператера.</string>    
+	<string name="show_always_title">Немој ме поново обавештавати</string>    
+	<string name="no_service_msg_title_gemini">Нема услуге за \"<xliff:g id="operator">%s</xliff:g>\"</string>    
+	<string name="no_service_msg_title">"Нема услуге"</string>    
+    <string name="gemini_data_connection">Веза за пренос података</string>
+    <string name="plmn_list_setting_title">Жељене мреже</string>
+    <string name="network_id">ИД мреже</string>
+    <string name="dialog_network_priority_title">Приоритет</string>
+    <string name="plmn_list_setting_add_plmn">Нови PLMN</string>
+    <string name="international_dialing_title">Помоћ при бирању међународног броја</string>
+    <string name="international_dialing_select_country">Детектовано\ је да\ позивате међународни број. Молимо одаберите своју дестинацију.</string>
+    <string name="international_dialing_add_country_code">Детектовано\је да\ позивате  број у држави <xliff:g id="country_name">%s</xliff:g>. Да ли желите да додате позивни за земљу (+<xliff:g id="country_code">%s</xliff:g>)?</string>
+    <string name="international_dialing_add_country_code_and_area_code">Детектовано\ је да позивате број у подручју <xliff:g id="area_name">%1$s</xliff:g>, <xliff:g id="country_name">%2$s</xliff:g>. Да ли желите да додате позивни за земљу и позивни за област (+<xliff:g id="prefix">%3$s</xliff:g>)?</string>
+    <string name="international_dialing_change_country_prefix">"Детектовано\ је да\ позивате из државе <xliff:g id="country_name">%s</xliff:g>. Промените префикс за међународне позиве на '+'?"</string>
+    <string name="international_dialing_add_country_code_input_area_code">Детектовано\ је да\ позивате број у држави <xliff:g id="country_name">%s</xliff:g>. Ако је то случај, унесите позивни за област.</string>
+    <string name="international_dialing_add_country_code_default_input_area_code">Детектовано\ је да\ позивате број у држави <xliff:g id="country_name">%s</xliff:g>. Уколико ваш жељени град није <xliff:g id="area_name">%s</xliff:g>, унесите позивни за област.</string>
+    <string name="international_dialing_need_area_code">За позив је потребан позивни број вашег одредишног града.</string>
+    <string name="international_dialing_input_area_code">Овде унесите позивни број</string>
+    <string name="international_dialing_dialed_number">Бирани број:</string>
+    <string name="international_dialing_confirm_area_code">Ако ваш одредишни град није<xliff:g id="area_name">%s</xliff:g>, унесите доле позивни број вашег одредишног града.</string>
+    <string name="international_dialing_click_below_button">Кликните на дугме доле да бисте променили позивни број за земљу.</string>
+    <string name="international_dialing_yes">Да. Користи број доле:</string>
+    <string name="international_dialing_no">Не. Користи оригинални број:</string>
+    <string name="international_dialing_call_button">"Позови"</string>
+    <string name="international_dialing_area_code">позивни број</string>
+    <string name="international_dialing_invalid_number">Број је неважећи. Желите ли ипак да наставите бирање?</string>
+    <string name="international_dialing_add_country_code_and_area_code_without_prefix">Желите ли да додате позивни број за земљу и позивни број?</string>
+    <string name="no_search_result">Нема резултата претраге</string>
+    <string name="which_call_to_activate">Који позив желите да активирате?</string>
+    <string name="gemini_3g_disable_warning_case0">"Прво морате да омогућите роминг података за ову SIM картицу што може довести до великих трошкова у ромингу! Желите ли сигурно да омогућите роминг података и изаберете ову SIM картицу?"</string>
+    <string name="gemini_3g_disable_warning_case1">"3G услуга није доступна за ову изабрану SIM картицу. Ово може спорије учитавати податке. Можете да промените подешавање 3G услуге у оквиру Подешавања &gt; Бежичне мреже &gt; Мобилне мреже. Желите ли сигурно да изаберете ову SIM картицу?"</string>
+    <string name="gemini_3g_disable_warning_case2">"Прво морате да омогућите роминг података за ову SIM картицу што може довести до великих трошкова у ромингу! Поред тога, 3G услуга није доступна за ову SIM картицу. Ово може спорије учитавати податке. Можете да промените у оквиру Подешавања &gt; Бежичне мреже &gt; Мобилне мреже. Желите ли сигурно да омогућите роминг података и изаберете ову SIM картицу?"</string>
+    <string name="disable_data_connection_msg">Тражење свих доступних мрежа ће прекинути везу за пренос података која се користи. Желите ли да наставите?</string>
+    <string name="voice_command_notification_ticker">Можете да кажете \"<xliff:g id="first_voice">%s</xliff:g>\" или \"<xliff:g id="second_voice">%s</xliff:g>\" да одговорите на или да одбијете долазећи позив.</string>
+    <string name="voice_command_notification_title">Гласовна контрола</string>
+    <string name="voice_command_notification_message">Гласовна контрола је омогућена за телефон</string>
+    <string name="callFailed_simError_cdma">Нема UIM/SIM или UIM/SIM има грешку</string>
+    <string name="callFailed_simError_slotNumber">Нема SIM картице или постоји UIM/SIM грешка у прорезу <xliff:g id="slotNumber">%s</xliff:g></string>
+    <string name="callFailed_cdma_notEmergency">"Могући си само хитни позиви"</string>
+    <string name="buttonTxtContinue">"Настави"</string>
+    <string name="fdn_only_error">"Операције су дозвољене само за фиксне бројеве."</string>
+    <string name="network_setting_all_forbidden_dialog">Нема доступних мрежа. Покушајте да пребаците 3G услугу или кликните на забрањену мрежу да бисте ручно регистровали.</string>
+    <string name="reset_data_usage">Поништи износ података</string>
+    <string name="simContacts_emptyLoading_ex">Читање контаката из %s\u2026</string>
+    <string name="one_retry_left">Преостао 1 покушај </string>
+    <string name="retries_left"><xliff:g id="number">%d</xliff:g> покушаја преостало</string>
+    <string name="pin2_unblocked">Одблокирање PIN2 кôда успело</string>
+    <string name="unblock_pin2">Одблокирај PIN2 кôд</string>
+    <string name="sim_permanently_locked">Уносом нетачног PUK2 кôда више од 10 пута, SIM картица је трајно закључана</string>
+    <string name="pin_length_indicate">(4-8 цифара)</string>
+    <string name="puk_length_indicate">(8 цифара)</string>
+    <string name="caller_manage_manage_done_text">"Назад на позив"</string>
+    <string name="card_title_incoming_vt_call">Долазни видео позив</string>
+    <string name="voicemail_settings_for">Подешавања за <xliff:g id="provider_name">%s</xliff:g></string>
+    <string name="sip_call_options_title_single_sim">Опције интернет позива</string>
+    <string name="description_search_button">"Претражи"</string>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item>2G/3G (аутоматски)</item>
+        <item>Само 3G</item>
+        <item>Само 2G</item>
+    </string-array>
+    <string-array name="umts_network_preferences_choices">
+        <item>2G/3G (аутоматски)</item>
+        <item>Само 3G</item>
+    </string-array>
+    <string-array name="lte_usim_prefer_network_mode_choices">
+        <item>4G/3G/2G (аутоматски)</item>
+        <item>3G/2G (аутоматски)</item>
+        <item>Само 2G</item>
+    </string-array>
+    <string-array name="lte_sim_prefer_network_mode_choices">
+        <item>3G/2G (аутоматски)</item>
+        <item>Само 2G</item>
+    </string-array>
+    <string name="cipher_indication_notification_title">Нема гласовне енкрипције</string>
+    <string name="cipher_indication_notification_message">Гласовну енкрипцију је искључила мрежа</string>
+    <string name="network_type">Врста мреже</string>
+    <string name="cancel">"Откажи"</string>
+    <string name="volte_add_conference_member_title">Додај конференцијском позиву</string>
+    <string name="add_member_msg">Укуцајте број или име</string>
+    <string name="card_title_incoming_conference">Позивница за конференцијски позив</string>
+    <string name="addConferenceMemeberText">Додај члана</string>
+    <string name="add_conference_member_limit">Може се додати само један по један број.</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g> се придружио/ла конференцијском позиву.</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g> је напустио/ла конференцијски позив.</string>
+    <string name="conference_member_adding">Додавање <xliff:g id="member_name">%s</xliff:g> ...</string>
+    <string name="conference_member_add_fail">Није успело додавање <xliff:g id="member_name">%s</xliff:g> .</string>
+    <string name="removeMember">"Уклони"</string>
+    <string name="memberStatus">"Статус"</string>
+    <string name="volte_call_waiting_indication_text">Друга страна има позив, сачекајте…</string>
+    <string name="alert_dialog_yes">"Да"</string>
+    <string name="alert_dialog_no">"Не"</string>
+</resources>

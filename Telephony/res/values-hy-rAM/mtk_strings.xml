@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+--><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+
+    
+    <string name="onscreenHangupAll">Խզել բոլորը</string>
+    <string name="onscreenHangupHolding">Խզումը սպասեցվում է</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">Խզումը գործուն է, պատասխանը գտնվում է սպասման ռեժիմում</string>
+    <string name="onscreenECT">Փոխանցել</string>
+    
+    <string name="dm_lock">DM-ը կողպված է</string>
+    <string name="dm_unlock">DM-ի ապակողպում</string>
+    
+    <string name="start_record">Մեկնարկել ձայնագրումը</string>
+    <string name="stop_record">Դադարեցնել տեսաձայնագրումը</string>
+    <string name="str_db_playlist_name">Իմ ձայնագրումները</string>
+    <string name="alert_device_error">Ձայնասարքի վրա սխալ տեղի ունեցավ</string>
+    <string name="ext_media_badremoval_notification_title">SD քարտն անսպասելիորեն հեռացվեց</string>
+    <string name="error_sdcard_access">Անհնար է մատչել SD քարտին</string>
+    <string name="confirm_device_info_full">SD քարտի վրայի ազատ տարածքը սպառվել է, տեսաձայնագրումը պահվեց:</string>
+    <string name="confirm_save_info_saved">Ձայնագրումը պահվել է</string>
+    <string name="confirm_save_info_saved_to">Ձայնագրությունը պահվեց առ</string>
+    
+	<string name="sim_toolkit">"SIM քարտի գործիքների հավաքածու"</string>
+    <string name="activity_not_found">Ծրագիրը տեղադրված չէ ձեր հեռախոսի վրա:</string>
+    <string name="no_sim_card_inserted" product="default">Խնդրում ենք զետեղել SIM քարտը SIM քարտի գործիքների հավաքածուն թողարկելու համար:</string>
+    <string name="airplane_mode_on" product="default">Անհնար է թողարկել SIM քարտի գործիքների հավաքածուն, քանի որ միացված է ինքնաթիռի ռեժիմը:</string>
+    <string name="lable_sim_not_ready" product="default">SIM քարտի գործիքների հավաքածուն պատրաստ չէ կամ չի աջակցվում</string>
+    <string name="gemini_3g_indic">3G</string>
+    
+    
+    <string name="callFailed_dsac_vt_incompatible_destination">Տեսականչը հնարավոր չէ կատարել: Այն հեռախոսը, որին դուք կանչ եք տալիս, չի աջակցում տեսականչ, զանգահարե՞լ ձայնականչով:</string>
+    <string name="callFailed_dsac_vt_resource_unavailable">Տեսականչը հնարավոր չէ տեղակայել: Հեռախոսը, որին դուք զանգահարել եք, գտնվում է 3G ծառայության ծածկույթից դուրս, զանգահարե՞լ ձայնականչով:</string>
+    <string name="callFailed_dsac_vt_bearer_not_avail">Տեսականչը հնարավոր չէ տեղակայել: Զանգահարե՞լ ձայնականչով:</string>
+    <string name="callFailed_dsac_vt_out_of_3G_yourphone">Ձեր հեռախոսը գտնվում է 3G ծառայության ծածկույթից դուրս, զանգահարե՞լ ձայնականչով:</string>
+    <string name="callFailed_dsac_vt_bear_not_authorized">Տեսականչը հնարավոր չէ տեղակայել: Այս SIM քարտի վրա գործունացված չէ տեսահեռախոսակապի ծառայությունը, զանգահարե՞լ ձայնականչով:</string>
+    
+    <string name="notification_voicemail">Ձայնափոստ</string>
+    <string name="turn_on_3g_service_message">3G ծառայությունն այժմ անջատված է, դուք ցանկանու՞մ եք այն միացնել:</string>
+    <string name="associate_sim_missing_message">"%1$s SIM-ն անմատչելի է: Դուք ցանկանու՞մ եք կանչ կատարել %2$s-ի միջոցով:"</string>
+    <string name="associate_sim_missing_other">Այլ</string>
+    
+    <string name="vt_incoming_call">Մտից տեսականչ</string>
+    <string name="vt_settings">Տեսանյութի կարգավորումներ</string>
+    <string name="vt_local_video_zoom">Տեսանյութի տեղային դիտափոխում</string>
+    <string name="vt_local_video_brightness">Տեսանյութի տեղային պայծառություն</string>
+    <string name="vt_local_video_effect">Տեսանյութի տեղային էֆեկտ</string>
+    <string name="vt_local_video_nightmode">Տեսանյութի տեղային գիշերայի ռեժիմ</string>
+    <string name="vt_peer_video_quality">Հավասարազոր սարքի տեսանյութի որակ</string>
+    <string name="vt_enable_back_camera">Միացնել հետևի խցիկը</string>
+    <string name="vt_enable_back_camera_description">Խցիկների փոխարկումը մատչելի միացնելու դեպքում</string>
+    <string name="vt_peer_video_bigger">Հավասարազոր սարքի ավելի մեծ տեսանյութ</string>
+    <string name="vt_peer_video_bigger_description">Միացրեք՝ դարձնելու հավասարազոր սարքի տեսանյութն ավելի մեծ, քան տեղային տեսանյութը</string>
+    <string name="vt_outgoing_call">Ելից տեսականչ</string>
+    <string name="vt_outgoing_call_description">Ցուցադրել տեղային տեսանյութը՝ տեսականչ կատարելիս</string>
+    <string name="vt_incoming_call_description">Ցուցադրել տեղային տեսանյութը՝ մտից տեսականչ ընդունելիս</string>
+    <string name="vt_incoming_showme_always">Միշտ</string>
+    <string name="vt_incoming_showme_ask">Հարցնել</string>
+    <string name="vt_incoming_showme_disable">Անջատել</string>
+    <string name="vt_pic_replace_local_default">Սկզբնադիր նկար</string>
+    <string name="vt_pic_replace_local_freezeme">Սառեցնել ինձ</string>
+    <string name="vt_pic_replace_local_mypic">Իմ նկարը</string>
+    <string name="vt_local_video_display">Տեղային տեսանյութի ցուցադրիչ</string>
+    <string name="vt_sd_null">SD քարտն\nառկա չէ</string>
+    <string name="vt_sd_not_enough">SD քարտի տարողությունն\n սպառվում է:</string>
+    <string name="vt_peer_video_quality_normal">Նորմալ</string>
+    <string name="vt_peer_video_quality_sharp">Հստակ</string>
+    <string name="vt_ask_show_local">Ցուցադրե՞լ տեղային տեսանյութը հավասարազոր սարքին:</string>
+    <string name="vt_ask_show_local_yes">Այո</string>
+    <string name="vt_ask_show_local_no">Ոչ</string>
+    <string name="vt_change_my_pic">Փոխել</string>
+    <string name="vt_pic_saved_to_sd">Ճեպապատկերը պահվեց SD քարտի վրա</string>
+    <string name="vt_pic_saved_to_sd_fail">Ճեպապատկերի պահումը ձախողվեց</string>
+    <string name="vt_error_network">Ցանցն անհասանելի է: Տեսականչը կանջատվի:</string>
+    <string name="vt_error_media">Տեսանյութը հնարավոր չէ ցուցադրել պատշաճ: Տեսականչը կանջատվի:</string>
+    <string name="vt_swap_video">Փոխանակել տեսանյութերը</string>
+    <string name="vt_local_video_contrast">Տեսանյութի տեղային ցայտունություն </string>
+    <string name="vt_menu_switch">Փոխարկել խցիկները</string>
+    <string name="vt_menu_hide_me">Թաքցնել տեղային տեսանյութը</string>
+    <string name="vt_menu_show_me">Ցուցադրել տեղային տեսանյութը</string>
+    <string name="vt_menu_snapshot">Հավասարազոր սարքի ճեպապատկեր</string>
+    <string name="vt_dis_peer_rep">Ցուցադրել հավասարազոր սարքի տեսանյութը</string>
+    <string name="vt_dis_peer_rep_des">Ցուցադրել նկարը հավասարազոր սարքի տեսանյութը փոխարինելու համար, երբ այն անմատչելի է</string>
+    <string name="vt_peer_video_rep">Հավասարազոր սարքի տեսանյութի փոխարինում</string>
+    <string name="vt_peer_video_rep_des">Կայել նկարը ցուցադրման, երբ հավասարազոր սարքի տեսանյութն անմատչելի է</string>
+    <string name="vt_vocie_answer">Ձայնային պատասխան</string>
+    <string name="vt_wait_voice">Սպասում է ձայնականչի կապակցմանը</string>
+    <string name="vt_voice_connecting">Ձայնականչի կապակցում</string>
+    <string name="vt_auto_dropback">Ինքնահետդարձ</string>
+    <string name="vt_auto_dropback_des">Հետդարձ ձայնականչի ինքնաշխատ կապակցմանը</string>
+    <string name="vt_cannot_support_setting">Ընթացիկ խցիկը չի կարող աջակցել այս կարգավորումը</string>
+    <string name="vt_network_unreachable">Ցանցն անհասանելի է:</string>
+    <string name="vt_iot_error_01">Տեսականչը հնարավոր չէ տեղակայել</string>
+    <string name="vt_iot_error_02">Հեռախոսը զբաղված է</string>
+    <string name="vt_iot_error_03">Պատասխան չկա</string>
+    <string name="vt_iot_error_04">Ցանցը միացվում է</string>
+    <string name="pref_camera_coloreffect_entry_none">Չկա</string>
+    <string name="pref_camera_coloreffect_entry_mono">Մոնո</string>
+    <string name="pref_camera_coloreffect_entry_sepia">Դարչնագույն</string>
+    <string name="pref_camera_coloreffect_entry_negative">Նեգատիվ</string>
+    <string name="pref_camera_coloreffect_entry_solarize">Արևակայել</string>
+    <string name="pref_camera_coloreffect_entry_posterize">Պաստառացում</string>
+    <string name="pref_camera_coloreffect_entry_whiteboard">Սպիտակ տախտակ</string>
+    <string name="pref_camera_coloreffect_entry_blackboard">Սև տախտակ</string>
+    <string name="pref_camera_coloreffect_entry_aqua">Ծովագույն</string>
+    <string name="pref_camera_coloreffect_entry_pastel">Գունատ</string>
+    <string name="pref_camera_coloreffect_entry_mosaic">Խճանկարային</string>
+    <string name="pref_camera_coloreffect_entry_redtint">Կարմիր երանգ</string>
+    <string name="pref_camera_coloreffect_entry_bluetint">Կապույտ երանգ</string>
+    <string name="pref_camera_coloreffect_entry_greentint">Կանաչ երանգ</string>
+    <string name="pref_camera_coloreffect_entry_sepiablue">Դարչնագույն երանգ</string>
+    <string name="pref_camera_coloreffect_entry_sepiagreen">Դարչնագույն կանաչ</string>
+    
+    
+    <string name="vt_peer_camera_open">Հեռակա խցիկը բաց է</string>
+    <string name="vt_peer_camera_close">Հեռակա խցիկը փակ է</string>
+    <string name="vt_recorder_start">Մեկնարկել տեսաձայնագրումը</string>
+    <string name="vt_recorder_voice_and_peer_video">Ձայն և հավասարազոր սարքի տեսանյութ</string>
+    <string name="vt_recorder_only_voice">Միայն ձայն</string>
+    <string name="vt_recorder_only_peer_video">Միայն հավասարազոր սարքի տեսանյութ</string>
+    <string name="vt_recording_saved">Տեսաձայնագրումը պահվեց:</string>
+    <string name="vt_recording_saved_sd_full">SD քարտի վրայի ազատ տարածքը սպառվել է, տեսաձայնագրումը պահվեց:</string>
+    <string name="vt_recording_error">Տեսաձայնագրումը հաջող պահվեց:</string>
+    <string name="start_record_vt">Մեկնարկել տեսաձայնագրումը</string>
+    <string name="stop_record_vt">Դադարեցնել տեսաձայնագրումը</string>
+    
+    
+    <string name="cannot_answered_Video_Call">Տեսականչին հնարավոր չէ պատասխանել, քանի որ արդեն միացված է ձայնականչը</string>
+    <string name="cannot_answered_Voice_Call">Ձայնականչին հնարավոր չէ պատասխանել, քանի որ արդեն միացված է տեսականչը</string>
+    <string name="callDurationFormat"><xliff:g id="minutes" example="42">%1$s</xliff:g> րոպ <xliff:g id="seconds" example="28">%2$s</xliff:g> վրկ</string>
+    <string name="reminder">Հիշեցում</string>
+    <string name="vt_media_occupied">Քանի որ խցիկը մատչելի չէ, տեսականչը հնարավոր չէ միացնել: Խնդրում ենք ստուգել, արդյո՞ք խցիկն օգտագործվում է որևէ այլ ծրագրի կողմից:</string>
+    <string name="vt_media_video_fail">Տեսանյութը հնարավոր չէ ցուցադրել պատշաճ: Տեսականչն անջատված է:</string>
+    <string name="incall_toast_unhold">Ապասպասեցնել</string>
+    
+    <string name="dualtalk_tip_accept_disconnect_current" tools:ignore="MissingTranslation">Այս կանչի ընդունումը կավարտի ընթացիկ կանչը:</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing" tools:ignore="MissingTranslation">Այս կանչի ընդունումը կավարտի ելից կանչը:</string>
+    <string name="dualtalk_tip_accept_disconnect_incoming" tools:ignore="MissingTranslation">Այս կանչի ընդունումը կմերժի այլ մտից կանչերը:</string>
+    <string name="dualtalk_tip_accept_disconnect_voice">Այս կանչի ընդունումը կավարտի ձայնականչը(երը):</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing_reject_incoming">Այս կանչի ընդունումը կավարտի ելից կանչը և կմերժի այլ մտից կանչը:</string>
+    <string name="dualtalk_tip_accept_disconnect_current_reject_incoming">Այս կանչի ընդունումը կավարտի ընթացիկ կանչը և կմերժի այլ մտից կանը:</string>
+    
+    <string name="end_call_because_can_not_hold">Ավարտել ընթացքի մեջ գտնվող զանգը, քանի որ այն հնարավոր չ\է սպասման մեջ դնել:</string>
+    <string name="ring_only_once_title">Զանգել միայն մեկ անգամ</string>
+    <string name="ring_only_once_summary">Զանգել միայն մեկ անգամ, երբ ընտրում եք ընդունել տեսականչը ձայնականչի ռեժիմում:</string>
+    
+    
+    <string name="fdn_contact_name_number_invalid">Անունը և համարը չեն կարող լինել դատարկ միաժամանակ:</string>
+    
+    <string name="fdn_contact_number_invalid">Անվավեր կոնտակտային համար:</string>
+    <string name="fdn_phone_book_busy">Հեռախոսագիրքն այժմ զբաղված է, խնդրում ենք փորձել ավելի ուշ:</string>
+    
+    <string name="cdma_not_support">CDMA-ը չի աջակցում այս յուրահատկությունը</string>
+    <string name="cdma_cfu_title">China Telecom</string>
+    <string name="labelCFC">Չեղարկել բոլոր փոխանցումները</string>
+    <string name="cdma_cfu_dialog_sum">Միշտ օգտագործել այս համարը</string>
+        
+    <string name="dual_mic_title">Աղմուկի վերացում</string>
+    <string name="dual_mic_summary">Ճնշել ետին պլանի աղմուկը զանգերի ժամանակ</string>
+    
+    <string name="minutereminder_title">Րոպեական հիշեցում</string>
+    <string name="minutereminder_summary">Հիշեցնել ամեն րոպեի 50-րդ վարյկյանում</string>
+    <string name="voice_call_settings">Ձայնականչի կարգավորումներ</string>
+    
+    <string name="enable_sip_dialog_message">Համացանցի կանչն անջատված է, ցանկանու՞մ եք միացնել այն:</string>
+    
+    <string name="ip_prefix_setting">IP նախածանց համար</string>
+    <string name="ip_prefix_setting_sum">IP նախածանց համարի կարգավորումներ</string>
+    <string name="enter_ip_prefix_number">Մուտքագրել նախածանց համարը</string>
+    <string name="ip_dial_error_toast_for_no_ip_prefix_number">Խնդրում ենք մուտքագրել IP նախածանցի համարը առաջին հերթին ձայնականչի կարգավորումներում:</string>
+    <string name="ip_dial_error_toast_for_sip_call_selected">IP համարհավաքման գործառույթը կիրառելի չէ համացանցային կանչի համար:</string>
+    <string name="ip_prefix_edit_default_sum">Մուտքագրել նախածանց համարը IP համարհավաքման համար</string>
+    
+    <string name="vt_cf_call_description">Տեսականչի փոխանցման կարգավորումներ</string>
+    <string name="vt_cb_call_description">Տեսականչի արգելափակման կարգավորումներ</string>
+    <string name="vt_addtional_call_description">Հեռախոսահամարի և կանչի սպասման կարգավորումներ</string>
+    <string name="others">Այլ կարգավորումներ</string>
+    
+    <string name="confirm_3g_switch">Դուք վստա՞հ  եք, որ ցանկանում եք կայել 3G ծառայությունն այս SIM քարտի վրա: Դրա արդյունքում նաև այս SIM քարտը ինքնաշխատ կերպով կկայվի որպես սկզբնադիր SIM քարտ տեսականչերի համար:</string>
+    <string name="modem_switching">SIM-ի փոխարկումը կտևի մոտավորապես 10 վայրկյան: Խնդրում ենք սպասել...</string>
+    <string name="confirm_3g_switch_to_off">Դուք վստա՞հ եք, որ ցանկանում եք անջատել 3G ծառայությունը: Դա նաև ինքնաշխատ կանջատի տեսականչի ծառայությունը:</string>
+    <string name="service_3g_off">Անջատել</string>
+    <string name="enable_3G_service">Միացնել 3G</string>
+    <string name="setting_for_3G_service">3G ծառայություն</string>
+    
+    
+    <string name="network_forbidden">արգելված է</string>
+    <string name="voice_mail_dialog_text">Դուք ստացել եք նոր ձայնափոստ <xliff:g id="voicemail_sim_display_name">%s</xliff:g>-ից: Դուք ցանկանու՞մ եք դրանք ստանալ այժմ:</string>
+    <string name="lable_call_barring">Կանչերի արգելափակում</string>
+    <string name="lable_all_outgoing">Բոլոր ելից կանչերը</string>
+    <string name="lable_all_outgoing_international">Միջազգային ելից կանչերը</string>
+    <string name="lable_all_out_except">Միջազգային ելից կանչերը՝  բացառությամբ դեպի տեղական PLMN ցանց կատարվողները</string>
+    <string name="lable_all_incoming">Բոլոր մտից կանչերը</string>
+    <string name="lable_incoming_calls_except">Մտից կանչերը ռոումինգում գտնվելիս</string>
+    <string name="deactivate_all">Չեղարկել բոլորը</string>
+    <string name="change_password">Փոխել արգելափակման գաղտնաբառը</string>
+    <string name="call_barring_sum">Ձայնականչի արգելափակման կարգավորումները</string>
+    
+    <string name="lable_disable">Անջատված է</string>
+    <string name="lable_enable">Միացնել</string>
+    <string name="old_password_label">Հին գաղտնաբառ(4 թիվ)</string>
+    <string name="new_password_label">Նոր գաղտնաբառ(4 թիվ)</string>
+    <string name="invalid_password">Տպեք գաղտնաբառը, որ բաղկացած է 4 թվերից:</string>
+    <string name="confirm_password_label">Հաստատել նոր գաղտնաբառը</string>
+    <string name="mismatch_password">Ձեր մուտքագրած գաղտնաբառը չի համընկնում: Խնդրում ենք կրկին փորձել:</string>
+    <string name="password_changed">Գաղտնաբառը հաջող փոխվեց</string>
+    <string name="enter_callbarring_password">Մուտքագրել կանչերի արգելափակման գաղտնաբառը(4 թիվ)</string>
+    <string name="wrong_password">Գաղտնաբառի սխալ</string>
+    <string name="error_title">Սխալ</string>
+    <string name="cell_broadcast">Բջջային հեռարձակում</string>
+    <string name="cell_broadcast_settings">Բջջային հեռարձակման կարգավորումներ</string>
+    <string name="cb_menu_language">Լեզու</string>
+    <string name="cb_menu_add_channel">Հավելել ալիք</string>
+    <string name="cb_menu_channel_list">Կապուղիների ցուցակ</string>
+    <string name="cb_dialog_title_language_choice">Ընտրել լեզուն</string>
+    <string name="cb_channel_dialog_channel_name">Կապուղու անուն (0-10 գրանիշեր)</string>
+    <string name="cb_channel_dialog_channel_number">Կապուղու համար (0-65534)</string>
+    <string name="cb_channel_dialog_channel_state">Միացնել կապուղին</string>
+    <string name="cb_channel_dialog_edit_channel">Խմբագրել կապուղին</string>
+    <string name="cb_menu_edit">Խմբագրել</string>
+    <string name="cb_menu_delete">Ջնջել</string>
+    <string name="cb_error_channel_num">Խնդրում ենք ներածել կապուղու համարը(0-65534)</string>
+    <string name="cb_error_channel_name">Կապուղու անվան երկարությունը ճիշտ չէ(1-10գրանշան):</string>
+    <string name="cb_error_language_select">Խնդրում ենք ընտրել առնվազն մեկ լեզու:</string>
+    <string name="cb_error_channel_id_exist">Կապուղու id-ն առկա չէ:</string>
+    <string name="cb_all_languages">Բոլոր լեզուները</string>
+    <string name="cb_default_new_channel_name">Նոր կապուղի</string>
+    <string name="fdn_errorcode_unknown_info">Ձախողվեց, տեղի է ունեցել անհայտ սխալ, խնդրում ենք փորձել ավելի ուշ:</string>
+    <string name="fdn_errorcode_number_info">Ձախողվեց, կոնտակտային համարի երկարությունը չափազանց երկար է:</string>
+    <string name="fdn_errorcode_name_info">Ձախողվեց, կոնտակտային անվան երկարությունը չափազանց երկար է:</string>
+    <string name="fdn_errorcode_storage_info">Ձախողվեց, հիշողությունը լցված է:</string>
+    <string name="fdn_errorcode_phb_info">Ձախողվեց, հեռախոսագիրքը այժմ պատրաստ չէ, խնդրում ենք փորձել ավելի ուշ:</string>
+    <string name="fdn_errorcode_pin2_info">Ձախողվեց, անվավեր PIN2:</string>
+    <string name="net_or_simcard_busy">Ցանցը կամ SIM քարտը զբաղված են, խնդրում ենք փորձել ավելի ուշ:</string>
+    
+    <string name="gsm_umts_network_preferences_title">Ցանցի ռեժիմ</string>
+    <string name="gsm_umts_network_preferneces_summary">Դեռևս իրականացված չէ՛:</string>
+    <string name="gsm_umts_network_preferences_dialogtitle">Ցանցի ռեժիմ</string>
+    <string name="umts_preferred_network_mode_dialogtitle">Ցանցի ռեժիմ</string>
+    
+    <string name="voice_call">Ձայնականչ</string>
+    <string name="video_call">Տեսականչ</string>
+    <string name="internet_call">Համացանցային կանչ</string>
+    <string name="sum_voice_call">Ձայնականչին վերաբերող կարգավորումներ</string>
+    <string name="sum_video_call">Տեսականչին վերաբերվող կարգավորումներ</string>
+    <string name="sum_internet_call">Համացանցի զանգի կարգավորումներ</string>
+    <string name="voice_mail">Ձայնային փոստ</string>
+    <string name="sum_voice_mail">Ձայնային փոստի ծառայություն և համար</string>
+    <string name="sum_cell_broadcast_control_on">Միացնել բջջային հեռարձակումը</string>
+    <string name="sum_cell_broadcast_control_off">Անջատել բջջային հեռարձակումը</string>
+    <string name="sum_cell_broadcast_setting">Լեզվի և կապուղու կարգավորումները բջջային հեռարձակման համար</string>
+    <string name="call_additional_sum">Հեռախոսահամարի և զանգի սպասման կարգավորումներ</string>
+    <string name="vt_call_settings">Տեսազանգի կարգավորումներ</string>
+    <string name="vt_local_video_rep">Տեղային վիդեոյի փոխարինում</string>
+    <string name="vt_pic_replace_local_description">Տեղադրել ցուցադրվելիք նկար, երբ խցիկն անջատված է</string>
+
+    
+    <string name="mo_code_unconditional_cf_active">Զանգի վերահասցեավորում\nակտիվացած է ոչ պայմանականը</string>
+    <string name="mo_code_some_cf_active">Զանգի վերահասցեավորում\nՊայմանական</string>
+    <string name="mo_code_call_forwarded">Զանգը վերահասցեավորվեց</string>
+    <string name="mo_code_call_is_waiting">Սպասող զանգ</string>
+    <string name="mo_code_cug_call">Օգտվողների փակ խումբ</string>
+    <string name="mo_code_outgoing_calls_barred">Ելից կանչն արգելափակված է</string>
+    <string name="mo_code_incoming_calls_barred">Մտից կանչն արգելափակված է մյուս կողմում</string>
+    <string name="mo_code_clir_suppression_rejected">Ստուգել զանգողի ID-ն ուղարկելու ծառայությունը</string>
+    <string name="mo_code_call_deflected">Կանչել "Կանչը փոխանցվեց"</string>
+    
+    <string name="mt_code_forwarded_call">Սա փոխանցված կանչ է</string>
+    <string name="mt_code_cug_call">Օգտվողների փակ խումբ</string>
+    <string name="mt_code_call_on_hold">Կանչը սպասեցվեց</string>
+    <string name="mt_code_call_retrieved">Կանչն առբերվեց</string>
+    <string name="mt_code_multi_party_call">Հեռախոսային խորհրդաժողով</string>
+    <string name="mt_code_on_hold_call_released">Սպասեցված կանչը թողարկվեց</string>
+    <string name="mt_code_forward_check_received">Ստացվեց ստուգման SS հաղորդագրություն</string>
+    <string name="mt_code_call_connecting_ect">Կանչի փոխանցում</string>
+    <string name="mt_code_call_connected_ect">Կանչի փոխանցումը գործուն է</string>
+    <string name="mt_code_deflected_call">Դա վերահասցեավորված կանչ է</string>
+    <string name="mt_code_additional_call_forwarded">Լրացուցիչ մտից կանչը փոխանցվեց</string>
+    <string name="mt_code_forwarded_cf">Կանչը փոխանցվեց</string>
+    <string name="mt_code_forwarded_cf_uncond">Կանչի փոխանցումը գտնվում է "անպայմանական" ռեժիմում</string>
+    <string name="mt_code_forwarded_cf_cond">Կանչի փոխանցումը գտնվում է "պայմանական" ռեժիմում</string>
+    <string name="mt_code_forwarded_cf_busy">Կանչը փոխանցվեց զբաղվածության դեպքում</string>
+    <string name="mt_code_forwarded_cf_no_reply">Կանչը փոխանցվեց չպատասխանելու դեպքում</string>
+    <string name="mt_code_forwarded_cf_not_reachable">Կանչը փոխանցվեց անհասանելիության դեպքում</string>
+    <string name="sim_manage_sipcall">Համացանցային կանչ</string>
+    <string name="sim_manage_call_via">Կանչել հետևյալ միջոցով՝</string>
+    
+    
+	
+    <string name="manual_select_title">Ընտրել ձեռքով</string>    
+	<string name="manual_select_dialog_msg">Բջջային հեռախոսը ձեզ համար չի ընտրի այլ օպերատորներ ձեռքով ընտրության ռեժիմում: Երբեմն հարկ է լինում կրկին կատարել ձեռքով ընտրություն կամ ետ փոխել ավտոմատ ընտրության ռեժիմին, երբ կորցնում եք ընտրված օպերատորի կողմից մատուցվող ծառայությունը: Մենք խորհուրդ ենք տալիս օգտագործել \"Ընտրել ավտոմատ կերպով\": Ցանկանու՞մ եք ձեռքով ընտրել ցանցը:</string>    
+	<string name="no_service_msg_gemini">Այժմ առկա չ\է ծառայություն ընտրված օպերատորի կողմից \"<xliff:g id="operator">%s</xliff:g>\" SIM քարտի համար:\nՄենք առաջարկում ենք օգտագործել \"Ընտրել ավտոմատ կերպով\" կամ կարող եք ձեռքով ընտրել այլ օպերատոր:</string>    
+	<string name="no_service_msg">Այժմ առկա չ\է ծառայություն ընտրված օպերատորի կողմից:\nՄենք առաջարկում ենք օգտագործել \"Ընտրել ավտոմատ կերպով\" կամ կարող եք ձեռքով ընտրել այլ օպերատոր:</string>    
+	<string name="show_always_title">Ինձ կրկին չզգուշացնել</string>    
+	<string name="no_service_msg_title_gemini">Ծառայություն չկա \"<xliff:g id="operator">%s</xliff:g>\"-ի համար</string>    
+	<string name="no_service_msg_title">Ծառայությունը առկա չէ</string>    
+    <string name="gemini_data_connection">Տվյալների կապակցում</string>
+	
+    <string name="plmn_list_setting_title">Նախընտրելի ցանցեր</string>
+    <string name="network_id">Ցանցի ID</string>
+    <string name="dialog_network_priority_title">Առաջնահերթություն</string>
+    <string name="plmn_list_setting_add_plmn">Նոր PLMN ցանց</string>
+    
+    <string name="international_dialing_title">Միջազգային համարհավաքման աջակցում</string>
+    <string name="international_dialing_select_country">Պարզվել \է, որ դուք միջազգային զանգ եք կատարում: Խնդրում ենք ընտրել ձեր նպատակակետը:</string>
+    <string name="international_dialing_add_country_code">Պարզվել \է, որ դուք հավաքում եք <xliff:g id="country_name">%s</xliff:g>  -ի համար: Ցանկանու՞մ եք ավելացնել երկրի կոդը (+<xliff:g id="country_code">%s</xliff:g>):</string>
+    <string name="international_dialing_add_country_code_and_area_code">Պարզվել \է, որ դուք հավաքում եք համար <xliff:g id="area_name">%1$s</xliff:g>, <xliff:g id="country_name">%2$s</xliff:g>-ում: Ցանկանու՞մ եք ավելացնել երկրի կոդը և տարածքային կոդը (+<xliff:g id="prefix">%3$s</xliff:g>):</string>
+    <string name="international_dialing_change_country_prefix">Պարզվել \է, որ դուք համար եք հավաքում <xliff:g id="country_name">%s</xliff:g>-ից: Փոխե՞լ միջազգային զանգի պրեֆիքսը \'+\'-ի:</string>
+    <string name="international_dialing_add_country_code_input_area_code">Պարզվել \է, որ դուք համար եք հավաքում <xliff:g id="country_name">%s</xliff:g>-ում: Եթե այդպես է, խնդրում ենք ներմուծել տարածքային կոդը:</string>
+    <string name="international_dialing_add_country_code_default_input_area_code">Պարզվել \է, որ դուք համար եք հավաքում <xliff:g id="country_name">%s</xliff:g>-ում: Եթե ձեր նպատակակետի քաղաքը <xliff:g id="area_name">%s</xliff:g> չէ, ապա ներմուծեք տարածքային կոդը: </string>
+    <string name="international_dialing_need_area_code">Կանչի համար պահանջվում է ձեր նպատակակետային քաղաքի տարածքային կոդը:</string>
+    <string name="international_dialing_input_area_code">Ներածեք տարածքային կոդն այստեղ</string>
+    <string name="international_dialing_dialed_number">Համարհավաքում՝</string>
+    <string name="international_dialing_confirm_area_code">Եթե ձեր նպատակակետային քաղաքը <xliff:g id="area_name">%s</xliff:g> չէ, խնդրում ենք ներածել ձեր նպատակակետային քաղաքի տարածքային կոդը ստորև:</string>
+    <string name="international_dialing_click_below_button">Կտտացրեք կոճակը ստորև՝ փոխելու համար երկրի կոդի համարը:</string>
+    <string name="international_dialing_yes">Այո: Օգտագործեք ստորև նշված համարը՝</string>
+    <string name="international_dialing_no">Ոչ: Օգտագործեք բնօրինակ համարը՝</string>
+    <string name="international_dialing_call_button">Կանչել</string>
+    <string name="international_dialing_area_code">տարածքային կոդ</string>
+    <string name="international_dialing_invalid_number">Համարն անվավեր է: Դուք, այնուամենայնիվ, ցանկանու՞մ եք զանգահարել:</string>
+    <string name="international_dialing_add_country_code_and_area_code_without_prefix">Դուք ցանկանու՞մ եք հավելել երկրի կոդը և տարածքային կոդը:</string>
+    <string name="no_search_result">Որոնումն արդյունք չի տվել</string>
+    <string name="which_call_to_activate">Ո՞ր կանչը գործունացնել:</string>
+    <string name="gemini_3g_disable_warning_case0">"Դուք պետք է սկզբում միացնեք տվյալների ռոումինգն այս SIM-ի համար, որը կարող է հանգեցնել ռոումինգի համար զգալի ծախսերի: Դուք վստա՞հ եք, որ ցանկանում եք միացնել տվյալների ռոումինգը և ընտրել այս SIM-ը:"</string>
+    <string name="gemini_3g_disable_warning_case1">"3G ծառայությունը մատչելի չէ այս ընտրված SIM-ի համար: Տվյալները հնարավոր է բեռնվեն ավելի դանդաղ: Դուք կարող եք փոխել 3G ծառայության կարգավորումը "Կարգավորումների" մեջ &gt; Անլար և ցանցեր &gt; Շարժական ցանցեր: Դուք վստա՞հ եք, որ ցանկանում եք ընտրել այս SIM-ը:"</string>
+    <string name="gemini_3g_disable_warning_case2">"Դուք սկզբում պետք է միացնեք տվյալների ռոումինգն այս SIM քարտի համար, որի համար հնարավոր է հանգեցնի զգալի ծախսերի ռոումինգի համար: Դրանցի բացի, 3G ծառայությունը մատչելի չէ այս SIM քարտի համար: Դա կարող է բեռնել տվյալներն ավելի դանդաղ: Դուք կարող եք փոխել դա Կարգավորումների մեջ &gt; Անլար և ցանցեր &gt; Շարժական ցանցեր: Դուք վստա՞հ եք, որ ցանկանում եք միացնել տվյալների ռոումինգը և ընտրել այս SIM քարտը:"</string>
+    <string name="disable_data_connection_msg">Searching for all available networks will disconnect the data connection which is in use. Do you want to continue?</string>
+    
+    <string name="voice_command_notification_ticker">Կարող եք արտասանել \"<xliff:g id="first_voice">%s</xliff:g>\" կամ \"<xliff:g id="second_voice">%s</xliff:g>\" մտից զանգին պատասխանելու կամ այն անտեսելու համար</string>
+    <string name="voice_command_notification_title">Ձայնային կառավարում</string>
+    <string name="voice_command_notification_message">Ձայնային կառավարումը միացված է հեռախոսի համար</string>
+
+    <string name="callFailed_simError">SIM չկա կամ SIM-ի սխալ</string>
+    <string name="callFailed_simError_cdma">UIM/SIM չկա կամ UIM/SIM-ի սխալ</string>
+
+    
+    <string name="callFailed_simError_slotNumber">SIM չկա կամ SIM-ի սխալ <xliff:g id="slotNumber">%s</xliff:g> փորակում</string>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <string name="callFailed_cdma_notEmergency">Հնարավոր է կատարել միայն արտակարգ իրավիճակների կանչեր:</string>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <string name="buttonTxtContinue">Շարունակել</string>
+
+    <string name="fdn_only_error">Գործողությունները միայն թույլատրվում են փակ բաժանորդային խմբերի ներսում:</string>
+
+
+    
+    <string name="reset_data_usage">Վերակայել տվյալների գումարը</string>
+
+    
+    <string name="simContacts_emptyLoading_ex">Կարդացվում են կոնտակտներ %s\u2026 -ից</string>
+
+    <string name="one_retry_left">մնացել է 1 փորձ</string>
+    <string name="retries_left"><xliff:g id="number">%d</xliff:g> վերափորձում է դեպի ձախ</string>
+    <string name="pin2_unblocked">PIN2-ի արգելաբացումը հաջողվեց</string>
+    <string name="unblock_pin2">Արգելաբացել PIN2-ը</string>
+    <string name="sim_permanently_locked">PUK2 կոդը սխալ է մուտքագրվել 10 անգամից ավել: SIM քարտը մշտապես կողպվել է</string>
+    <string name="pin_length_indicate">(4-8 թիվ)</string>
+    <string name="puk_length_indicate">(8 թիվ)</string>
+
+    
+    <string name="caller_manage_manage_done_text">Հետդարձ կանչին</string>
+
+    
+    <string name="card_title_incoming_vt_call">Մտից տեսականչ</string>
+
+    
+    <string name="voicemail_settings_for">Կարգավորումներ <xliff:g id="provider_name">%s</xliff:g>-ի համար</string>
+
+    
+    <string name="sip_call_options_title_single_sim">Համացանցի միջոցով կանչերի ընտրանքներ</string>
+
+    
+    <string name="description_search_button">որոնում</string>
+
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item>2G/3G (ավտոմատ)</item>
+        <item>միայն 3G</item>
+        <item>միայն 2G</item>
+    </string-array>
+    
+
+    <string-array name="umts_network_preferences_choices">
+        <item>2G/3G (ավտոմատ)</item>
+        <item>միայն 3G</item>
+    </string-array>
+
+    
+
+    
+    
+    
+    
+    <string-array name="lte_prefer_network_mode_choices">
+        <item>4G/3G/2G(ավտոմատ)</item>
+        <item>3G/2G(ավտոմատ)</item>
+        <item>միայն 3G</item>
+        <item>միայն 2G</item>
+    </string-array>
+        
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <string name="cipher_indication_notification_title">Չկա ձայնային գաղտնագրում</string>
+    <string name="cipher_indication_notification_message">Ձայնային գաղտնագրումն անջատված է ցանցի կողմից</string>
+
+    
+    <string name="network_type">Ցանցի տեսակ</string>
+    <string name="network_type_2g">2G</string>
+    <string name="network_type_3g">3G</string>
+    <string name="network_type_4g">4G</string>
+    
+    
+    
+    <string name="femtocell_point_list_title">Femtocells</string>
+    <string name="in_search_femtocell_networks_wait_tip">Որոնում...</string>
+    <string name="sum_search_femtocell_networks">Ընտրել femtocell ձեռքով</string>
+    <string name="register_femtocell_point_wait_tip">Գրանցվում է <xliff:g id="femto_cell_info">%s</xliff:g> ...</string>
+    <string name="register_femtocell_point_result_fail_tip">Հնարավոր չ\է կապակցվել այս ցանցին հիմա: Կրկին փորձեք մի փոքր ուշ:</string>
+    <string name="anc_title">Ընթացիկ աղմուկի նվազեցում</string>
+    <string name="anc_on">ANC-ն միացված է</string>
+    <string name="anc_off">ANC-ն անջատված է</string>
+    <string name="confirm_4g_3g_switch">Համոզվա՞ծ եք, որ ցանկանում եք նախադրել 4G/3G ծառայություն այս SIM-ում:
+Դրանով նաև այս SIM-ն ավտոմատ կերպով կնախադրվի որպես սկզբնադիր SIM` տեսազանգի համար:</string>
+    <string name="confirm_4g_3g_switch_to_off">Are you sure you want to turn off 4G/3G service? This will also turn off Video call service automatically.</string>
+    <string name="enable_4g_3g_service">Միացնել 4G/3G</string>
+    <string name="setting_for_4g_3g_service">4G/3G ծառայություն</string>
+    <string name="gemini_4g_3g_disable_warning_case1">"4G/3G ծառայությունը մատչելի չէ կոնկրետ ընտրված SIM քարտում: Այն կարող է դանդաղեցնել տվյալների բեռնումը: Կարող եք փոխել 4G/3G ծառայության կարգավորումները այստեղ` Կարգավորումներ &gt; Անլար և ցանցեր &gt; Բջջային ցանցեր: Համոզվա՞ծ եք, որ ցանկանում եք ընտրել այս SIM-ը":</string>
+    <string name="gemini_4g_3g_disable_warning_case2">"Նախ պետք է ակտիվացնեք տվյալների ռոումինգ այս SIM-ի համար, որը կարող է հանգեցնել զգալի ծախսերի: Բացի այդ, 4G/3G ծառայությունը մատչելի չէ այս SIM քարտում: Այն կարող է դանդաղեցնել տվյալների բեռնումը: Կարող եք փոխել այն այստեղ` Կարգավորումներ &gt; Անլար և ցանցեր &gt; Բջջային ցանցեր: Համոզվա՞ծ եք, որ ցանկանում եք ակտիվացնել տվյալների ռոումինգը և ընտրել այս SIM-ը":</string>
+    <string name="callFailed_dsac_vt_resource_unavailable_4g_3g">Տեսազանգը հնարավոր չէ նախադրել: Հեռախոսահամարը, որին զանգահարել եք, գտնվում է 4G/3G սպասարկման տարածքից դուրս, կատարե՞լ ձայնային զանգ:</string>
+    <string name="callFailed_dsac_vt_out_of_4g_3g_yourphone">Ձեր հեռախոսը գտնվում է 4G/3G սպասարկման տարածքից դուրս, կատարե՞լ ձայնային զանգ:</string>
+    <string name="turn_on_4g_3g_service_message">4G/3G ծառայությունն այժմ անջատված է, կցանկանա՞ք միացնել այն:</string>
+
+    <string name="network_setting_all_forbidden_dialog">Չկան մատչելի ցանցեր:</string>
+    <string-array name="sglte_network_mode_choices">
+        <item>4G/3G/2G(ավտոմատ)</item>
+        <item>3G/2G(ավտոմատ)</item>
+    </string-array>
+    <string name="cdma_cnir_turnoff">Անջատել զանգողի համարի նույնականացման սահմանափակումը</string> 
+    <string name="cdma_cnir_turnon">Միացնել զանգողի համարի նույնականացման սահմանափակումը</string>
+    <string name="enable_ims_dialog_message">IMS կանչը կասեցվել է: Ցանկանո՞ւմ եք թույլատրել այն:</string>
+    <string name="magi_conference_title">«Magic» Կոնֆերանս զանգ</string>
+    <string name="magi_conference_summary">Բարելավում է ձայնի որակն այն ժամանակ, երբ հեռախոսից օգտվում են մի քանի անձինք` մյուս կողմի հետ խոսելու համար:</string>
+</resources>

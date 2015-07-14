@@ -1,0 +1,4 @@
+HyThreeDigitalClock.java放在frameworks/base/core/java/android/widget/ 下面
+hy_threedigitalclock 放在 frameworks/base/core/res/res/layout/ 下面
+attrs.xml，public.xml，symbols.xml 放在frameworks/base/core/res/res/alues下面
+

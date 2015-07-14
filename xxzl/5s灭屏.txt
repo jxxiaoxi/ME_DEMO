@@ -1,0 +1,15 @@
+InCallActivity.java 文件加入：
+
+final WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.flags |= flags;
+        lp.userActivityTimeout = 5000;
+
+
+ PowerManagerService.java 文件加入：
+private int getScreenDimDurationLocked(int screenOffTimeout) {
+        if ((!mContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_SENSOR_PROXIMITY)) && (mUserActivityTimeoutOverrideFromWindowManager >= 0)) {
+            return 0; 
+        } else
+        return Math.min(mMaximumScreenDimDurationConfig,
+                (int)(screenOffTimeout * mMaximumScreenDimRatioConfig));
+    }

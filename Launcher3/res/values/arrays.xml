@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sysicons" translatable="false">
+    </string-array>
+    <string-array name="mobile_operator_icons" translatable="false">
+    </string-array>
+</resources>

@@ -1,0 +1,33 @@
+安装ubunto 
+1.制作好系统盘（u盘）
+2.重启电脑-->进入BIOS（一般按del键，具体主板有具体的方式）--> 选择u盘制作好的系统-->根据自己的需要选择安装（安装的是桌面版本，都有界面文字提示。注意断网，不然速度会很慢）。
+
+
+配置网络
+1.选择有线-->编辑-->ipv4配置-->地址 192.168.11.251 ； 子网掩码 255.255.255.0 ； 网关 192.168.11.1--> dns服务器 202.96.209.5-->保存
+
+
+
+
+装虚拟机报错：
+
+1.dpkg：依赖关系问题使得 virtualbox-4.3 的配置工作不能继续：
+ virtualbox-4.3 依赖于 libvpx1 (>= 1.0.0)；然而：
+  未安装软件包 libvpx1。
+dpkg：处理 virtualbox-4.3 (--install)时出错：
+ 依赖关系问题 - 仍未被配置
+
+解决方案：  sudo apt-get install libvpx1
+
+2.Makefile:183: *** Error: unable to find the sources of your current Linux kernel. Specify KERN_DIR=<directory> and run Make again。 停止。
+
+解决方案： sudo apt-get install linux-headers-$(uname -r)
+
+3.报错 ： VT-x is disabled in the BIOS. (VERR_VMX_MSR_VMXON_DISABLED).
+
+ 解决方案： BIOS里把virtualiation 启动 enable 
+
+英文状态下，配置中文输入法：
+1.终端输入： ibus-setup
+2.选择input method  --->select an input method -->选chinese 拼音-->add
+

@@ -1,0 +1,154 @@
+1.首先要特别要注意几个包的引人，否则已一直报错，正确的组合使用如下：
+import android.support.v13.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
+
+2.建一个viewpager，xml文件代码如下：
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+</FrameLayout>
+
+3.在activity的oncreate方法中获取viewPager，并且增加Adapter，PageChangeListener：
+
+    ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+    viewPager.setAdapter(new ViewPagerAdapter(getFragmentManager()));
+    viewPager.setOnPageChangeListener(mPageChangeListener);
+    mViewPager = viewPager;
+
+4.实现ViewPagerAdapter
+    public class ViewPagerAdapter extends FragmentPagerAdapter {
+	public ViewPagerAdapter(FragmentManager fm) {
+	     super(fm);
+	}
+
+	@Override
+	public Fragment getItem(int position) {
+		switch (position) {
+		    case 0:
+		        return mNetWorkFragment;//这是滑到第几就显示对应的Fragment
+		    case 1:
+		        return mDeviceFragment;
+		        case 2:
+		    return mPersonFragment;
+		        case 3:
+		    return mMoreFragment;
+		}
+		     return null;
+		}
+
+		@Override
+		public int getCount() {
+		    return 4; //这是 Fragment的数量
+		}
+
+
+5.OnPageChangeListener 的实现
+
+    private OnPageChangeListener mPageChangeListener = new OnPageChangeListener() {
+	@Override
+	public void onPageScrollStateChanged(int state) {
+	}
+
+	@Override
+	public void onPageScrolled(int position, float positionOffset,
+		int positionOffsetPixels) {
+	}
+
+	@Override
+	public void onPageSelected(int position) {
+		mActionBar.setSelectedNavigationItem(position);//这是当viewpager滑到不同的fragment时，actionbar要显示对应的tab
+	}
+
+    };
+
+6.actionbar的实例话：
+
+        mActionBar = getActionBar();
+	mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+	final Tab tab = mActionBar.newTab();
+	LayoutInflater inflater = getLayoutInflater();
+	View view = inflater.inflate(R.layout.setting_tab_new_ui, null);//setting_tab_new_ui 自定义的tab样式上面是图，下面是字
+	ImageView dialView = (ImageView) view.findViewById(R.id.tab_icon);
+	if (dialView != null) {
+		dialView.setImageResource(R.drawable.tab_network);
+	}
+	TextView dialText = (TextView) view.findViewById(R.id.tab_text);
+	if (dialText != null) {
+		dialText.setText(R.string.status_operator);
+	}
+	tab.setCustomView(view);
+	tab.setTabListener(mTabListener);
+	mActionBar.addTab(tab);
+
+7.setting_tab_new_ui 如下：
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dip"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ImageView android:id="@+id/tab_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerInside"
+                    android:focusable="true"
+                />
+     <TextView
+            android:id="@+id/tab_text"
+            android:layout_width="48dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="9sp"
+            android:textColor="@color/tab_text_color_normal_newui"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+        />
+
+</LinearLayout>
+
+8.actionbar的监听，TabListener 实现：
+	private final TabListener mTabListener = new TabListener() {
+		@Override
+		public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+		}
+
+		@Override
+		public void onTabSelected(Tab tab, FragmentTransaction ft) {
+			mCurrentTabIndex = tab.getPosition();
+			mViewPager.setCurrentItem(mCurrentTabIndex);//获取被选中的TabIndex，ViewPager显示对应的Fragment
+		}
+
+		@Override
+		public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		}
+	};
+
+
+    public void setCurrentTab(int position) { //设置当时的 SelectedNavigationItem
+        mCurrentTabIndex = position;
+        if ((mActionBar.getNavigationMode() == ActionBar.NAVIGATION_MODE_TABS)
+                && (mCurrentTabIndex != mActionBar.getSelectedNavigationIndex())) {
+            mActionBar.setSelectedNavigationItem(mCurrentTabIndex);
+        }
+    }
+
+
+
+
+
+
+
+
+
+

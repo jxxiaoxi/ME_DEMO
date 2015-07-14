@@ -1,0 +1,68 @@
+测试163邮箱 hywei2014@163.com
+
+liu2012wei 
+qq  	1955672438
+
+公司邮箱密码 liu1111
+
+展讯 http://222.66.158.139:2008/cqweb/login?/cqweb/main?command=GenerateMainFrame&&rmsessionid2b0835e0-9c31-4b23-a985-0a00060342c2
+帐号和密码 hyms hyms
+
+192.168.10.166
+git@192.168.10.165:repositories/6820_w120911.git
+
+虚拟机添加到组  sudo adduser 用户名 vboxusers 
+
+jobs=8 ./mk -o=usr:2sim sp6820a n 编译user版本
+在64位ubunto下，安装编译环境，遇到的问题：
+
+从安装了一个64位系统开始，
+
+
+访问服务器帐号：
+wei.liu    123
+
+
+ ./mk sp6820a pac system 重新打包systemimg
+
+加pacth git apply --reject recorddiff
+git reset --hard master  清除多余节点  
+
+git push origin :branchname  删除服务器分支
+
+ubunto 64位搭建环境 http://source.android.com/source/initializing.html（source.android)
+
+阿拉伯语下的format要用format(new Locale("en"),"%02d:%02d:%02d", hour, minute, second)，否则可能出现显示问题  (new Locale("en")
+
+服务器pacth git format-patch -1 0b6f27dabaa84f3    0b6f27dabaa84f3为id号
+
+客户apk ：  user_vector/user_C910_JN/6820_w120911/packages/apps/Prebuilt_apps/hyapk
+
+/home/liuwei/user_vector/user_TD10_Android_2.3.6_five_DN/6820_w120911/vendor/ts //开机动画
+
+/home/liuwei/桌面/liuwei/user_vector/user_TD10_Android_2.3.6_android/6820_w120911/build/tools/buildinfo.sh 改系统默认语言 
+/home/liuwei/桌面/liuwei/user_vector/user_TD10_Android_2.3.6_android/6820_w120911/vendor/sprd/product/sprdroid_base.mk 修改系统语言的种类  
+如：PRODUCT_LOCALES := mdpi zh_CN en_US hi_IN ru_RU fr_FR ar_IL
+
+内核升级后易赛通不能用  sudo gedit /boot/grub/grub.cfg   set default="6"
+
+
+百度地图开发：http://developer.baidu.com/map/sdk-android.htm 
+
+
+git 重命名git mv customize/make/c905_blf_lm105_lc107a.mak customize/make/c905_blf_lc107c.mak
+git 对已提交的节点打pacth    git format-patch -1
+meger节点 git cherry-pick xxxxx
+
+直接用命令不用下载工具下载booting systeming 到手机 sudo fastboot flash boot out/target/product/c913w_jhm/boot.img
+
+ubunto 下安装adb
+1、将编译生成的adb(out/host/linux-x86/bin)拷贝到/usr/bin目录下 命令如：cp /root/hunter/6820_code/out/host/linux-x86/bin/adb /usr/bin  
+2、使用如下命令更改权限：chmod a+x /usr/bin/adb
+
+一般来说"internal error"是Email client 端没有特殊处理的server error的统一提示，出现该提示多为发生了server error。
+
+百度网盘名称：xiao2014xi 邮箱xiao2014xi@163.com
+
+VPN  : 108.177.181.101 frml22    frml6641265g96
+

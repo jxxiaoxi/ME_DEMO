@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- below are added by mediatek .inc-->
+    <string name="sim_manage_sipcall">網路通話</string>
+    <string name="sim_manage_call_via">"透過撥號"</string>
+    <!--Video call or voice call cannot be answered -->
+    <string name="cannot_answered_Video_Call">視訊通話因已有語音通話而無法接聽</string>
+    <string name="cannot_answered_Voice_Call">語音通話因已有視訊通話而無法接聽</string>
+    <!-- For CMCC phase 2 of VT -->
+    <string name="start_record_vt">開始錄製</string>
+    <string name="stop_record_vt">停止錄製</string>
+    <string name="vt_peer_camera_open">遠端攝影機已開啟</string>
+    <string name="vt_peer_camera_close">遠端攝影機關閉</string>
+    <string name="vt_recorder_start">開始錄製</string>
+    <string name="vt_recorder_voice_and_peer_video">語音及對等視訊</string>
+    <string name="vt_recorder_only_voice">僅限語音</string>
+    <string name="vt_recorder_only_peer_video">限對等視訊</string>
+    <string name="vt_recording_saved">錄製內容已儲存。</string>
+    <string name="vt_recording_saved_sd_full">SD 卡空間不足，錄製內容已儲存。</string>
+    <string name="vt_recording_error">錄製出錯</string>
+
+    <!-- 3G switch -->
+    <string name="confirm_3g_switch">確定要將 3G 服務設定至此 SIM 卡？這會同時將視訊通話的預設 SIM 卡自動設至此 SIM 卡。</string>
+    <string name="modem_switching">切換 SIM 卡約需 10 秒。請稍候…</string>
+    <string name="confirm_3g_switch_to_off">您確定要關閉3G 服務？此舉也將自動關閉視訊通話服務。</string>
+    <string name="service_3g_off">關閉</string>
+    <string name="enable_3G_service">啟用 3G 服務</string>
+    <string name="setting_for_3G_service">3G 服務</string>
+    <!-- video call settings part -->
+    <string name="voice_call">語音通話</string>
+    <string name="video_call">視訊通話</string>
+    <string name="internet_call">網路通話</string>
+    <string name="others">其他設定</string>
+    <string name="sum_voice_call">語音通話相關設定</string>
+    <string name="sum_video_call">視訊通話相關設定</string>
+    <string name="sum_internet_call">網際網路通話相關設定</string>
+    <string name="voice_call_settings">語音通話設定</string>
+    <string name="voice_mail">語音信箱</string>
+    <string name="sum_voice_mail">語音信箱服務及號碼</string>
+    <!-- Minute Reminder strings -->
+    <string name="minutereminder_title">通話時間提醒</string>
+    <string name="minutereminder_summary">在每分鐘的 50 秒提醒</string>
+    <string name="dual_mic_title">減少雜訊</string>
+    <string name="dual_mic_summary">降低通話中的背景雜音</string>
+    <!-- IP dial -->
+    <string name="ip_prefix_setting">IP 前置碼</string>
+    <string name="ip_prefix_setting_sum">IP 前置碼設定</string>
+    <string name="enter_ip_prefix_number">輸入前置碼</string>
+    <string name="ip_dial_error_toast_for_no_ip_prefix_number">請先輸入 IP 前置碼於語音通話設定。</string>
+    <string name="ip_prefix_edit_default_sum">輸入 IP 撥號的前置碼</string>
+    <!-- call barring setting -->
+    <string name="lable_call_barring">通話禁止</string>
+    <string name="call_additional_sum">電話號碼及通話等候設定</string>
+    <string name="call_barring_sum">語音通話禁止設定</string>
+    <string name="vt_cf_call_description">視訊通話轉接設定</string>
+    <string name="vt_cb_call_description">視訊通話禁止設定</string>
+    <string name="lable_all_outgoing">禁撥所有電話</string>
+    <string name="lable_all_outgoing_international">國際去電</string>
+    <string name="lable_all_out_except">除打回本國 PLMN 的國際去電</string>
+    <string name="lable_all_incoming">全部來電</string>
+    <string name="lable_incoming_calls_except">漫遊中來電 </string>
+    <string name="deactivate_all">取消全部</string>
+    <string name="change_password">變更禁止密碼</string>
+    <string name="lable_disable">已停用</string>
+    <string name="lable_enable">已啟用</string>
+    <string name="old_password_label">舊密碼 (4 位數字)</string>
+    <string name="new_password_label">新密碼 (4 位數字)</string>
+    <string name="invalid_password">輸入 4 位數字的密碼。</string>
+    <string name="confirm_password_label">確認新密碼</string>
+    <string name="mismatch_password">前後兩次密碼不相符，請再試一次。</string>
+    <string name="password_changed">密碼變更完成</string>
+    <string name="enter_callbarring_password">輸入通話禁止密碼 （4 位數字）</string>
+    <string name="wrong_password">密碼錯誤。</string>
+    <!-- video call settings -->
+    <string name="vt_local_video_rep">己方視訊替換</string>
+    <string name="vt_dis_peer_rep">顯示對等視訊</string>
+    <string name="vt_dis_peer_rep_des">對等視訊不可用時顯示圖片</string>
+    <string name="vt_peer_video_rep">對等視訊替代</string>
+    <string name="vt_peer_video_rep_des">設定對等視訊不可用時顯示的圖片</string>
+    <string name="vt_pic_replace_local_description">設定攝影機關機時顯示的圖片</string>
+    <string name="vt_enable_back_camera">啟用背面攝影機</string>
+    <string name="vt_enable_back_camera_description">開啟時可用於切換攝影機 </string>
+    <string name="vt_peer_video_bigger">對等端較大的視訊通話</string>
+    <string name="vt_peer_video_bigger_description">開啟以獲得大於己方視訊的對等視訊 </string>
+    <string name="vt_outgoing_call">傳出的視訊撥號</string>
+    <string name="vt_outgoing_call_description">撥打視訊通話時顯示己方視訊</string>
+    <string name="vt_incoming_call">視訊來電</string>
+    <string name="vt_incoming_call_description">接受視訊通話來電時顯示己方視訊</string>
+    <string name="vt_auto_dropback">自動轉換</string>
+    <string name="vt_auto_dropback_des">自動回落到語音通話連接</string>
+    <string name="vt_local_video_display">己方視訊顯示</string>
+    <string name="fdn_phone_book_busy">電話簿繁忙中，請稍候再試。</string>
+    <string name="cell_broadcast">區域廣播</string>
+    <string name="cb_menu_edit">編輯</string>
+    <string name="cb_menu_delete">"刪除"</string>
+    <string name="cb_all_languages">全部語言</string>
+    <string name="sim_toolkit">	"SIM 卡工具組"</string>
+    <string name="vt_incoming_showme_always">顯示</string>
+    <string name="vt_incoming_showme_disable">不顯示</string>
+    <string name="vt_peer_video_quality_sharp">銳利</string>
+    <string name="vt_ask_show_local_yes">顯示</string>
+    <string name="vt_ask_show_local_no">不顯示</string>
+    <string name="pref_camera_coloreffect_entry_none">"無"</string>
+    <string name="pref_camera_coloreffect_entry_mono">"單色效果"</string>
+    <string name="pref_camera_coloreffect_entry_sepia">"懷舊色調"</string>
+    <string name="pref_camera_coloreffect_entry_negative">"負片效果"</string>
+    <string name="pref_camera_coloreffect_entry_posterize">"色調分離"</string>
+    <string name="pref_camera_coloreffect_entry_pastel">"粉蠟筆效果"</string>
+    <string name="pref_camera_coloreffect_entry_mosaic">"馬賽克效果"</string>
+    <string name="pref_camera_coloreffect_entry_redtint">紅色色調</string>
+    <string name="pref_camera_coloreffect_entry_bluetint">藍色色調</string>
+    <string name="pref_camera_coloreffect_entry_greentint">綠色色調</string>
+    <string name="fdn_contact_name_number_invalid">名稱及號碼不得同時為空。</string>
+    <string name="fdn_contact_number_invalid">聯絡人號碼有誤。</string>
+    <string name="sum_cell_broadcast_control_on">啟用區域廣播</string>
+    <string name="sum_cell_broadcast_control_off">停用區域廣播</string>
+    <string name="sum_cell_broadcast_setting">區域廣播的語言及頻道設定</string>
+    <string name="umts_preferred_network_mode_dialogtitle">網路模式</string>
+    <string name="voice_mail_dialog_text">你有來自 <xliff:g id="voicemail_sim_display_name">%s</xliff:g>的新語音郵件，是否要現在取得？</string>
+    <string name="error_title">錯誤</string>
+    <string name="cell_broadcast_settings">區域廣播設定</string>
+    <string name="cb_menu_language">語言</string>
+    <string name="cb_menu_add_channel">新增頻道</string>
+    <string name="cb_menu_channel_list">頻道清單</string>
+    <string name="cb_dialog_title_language_choice">選擇語言</string>
+    <string name="cb_channel_dialog_channel_name">頻道名稱 （0-10 個字符）</string>
+    <string name="cb_channel_dialog_channel_number">頻道號碼（0-65534）</string>
+    <string name="cb_channel_dialog_channel_state">啟用此頻道</string>
+    <string name="cb_channel_dialog_edit_channel">編輯頻道</string>
+    <string name="cb_error_channel_num">請輸入頻道號碼 （0-65534）。</string>
+    <string name="cb_error_channel_name">頻道名稱長度錯誤（1-10 個字符）。</string>
+    <string name="cb_error_language_select">請至少選擇一種語言。</string>
+    <string name="cb_error_channel_id_exist">頻道已存在。</string>
+    <string name="cb_default_new_channel_name">新頻道</string>
+    <string name="fdn_errorcode_unknown_info">失敗，發生不明錯誤，請稍候再試。</string>
+    <string name="fdn_errorcode_number_info">失敗，聯絡人號碼太長。</string>
+    <string name="fdn_errorcode_name_info">失敗，聯絡人名稱太長。</string>
+    <string name="fdn_errorcode_storage_info">失敗，儲存空間已滿。</string>
+    <string name="fdn_errorcode_phb_info">失敗，電話簿現在無法使用，請稍候再試。</string>
+    <string name="fdn_errorcode_pin2_info">失敗，PIN2 碼有誤。</string>
+    <string name="net_or_simcard_busy">網路或 SIM 卡繁忙，請稍候再試。</string>
+    <string name="onscreenHangupAll">掛斷全部</string>
+    <string name="onscreenHangupHolding">結束保留中的通話</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">掛斷進行中的通話，接聽等候中的通話</string>
+    <string name="onscreenECT">轉接</string>
+    <string name="dm_lock">DM 已上鎖</string>
+    <string name="dm_unlock">DM 解鎖</string>
+    <string name="mo_code_unconditional_cf_active">已啟動無條件通話轉接</string>
+    <string name="mo_code_some_cf_active">通話按條件轉接</string>
+    <string name="mo_code_call_forwarded">通話轉接</string>
+    <string name="mo_code_call_is_waiting">等待中</string>
+    <string name="mo_code_cug_call">關閉的使用者群組</string>
+    <string name="mo_code_outgoing_calls_barred">撥出通話遭禁止</string>
+    <string name="mo_code_incoming_calls_barred">來電被對方禁止通話 </string>
+    <string name="mo_code_clir_suppression_rejected">檢查來電顯示傳送服務</string>
+    <string name="mo_code_call_deflected">通話已轉接</string>
+    <string name="mt_code_forwarded_call">此為轉接的通話</string>
+    <string name="mt_code_cug_call">關閉的使用者群組</string>
+    <string name="mt_code_call_on_hold">通話保留</string>
+    <string name="mt_code_call_retrieved">回到最先通話 </string>
+    <string name="mt_code_multi_party_call">會議通話</string>
+    <string name="mt_code_on_hold_call_released">結束保留的通話 </string>
+    <string name="mt_code_forward_check_received">轉寄檢查 SS訊息已收到</string>
+    <string name="mt_code_call_connecting_ect">通話轉接中</string>
+    <string name="mt_code_call_connected_ect">通話轉接使用中</string>
+    <string name="mt_code_deflected_call">此為轉接電話</string>
+    <string name="mt_code_additional_call_forwarded">轉接所有新來電</string>
+    <string name="mt_code_forwarded_cf">通話轉接</string>
+    <string name="mt_code_forwarded_cf_uncond">通話已無條件轉接</string>
+    <string name="mt_code_forwarded_cf_cond">通話已按條件轉接</string>
+    <string name="mt_code_forwarded_cf_busy">忙線時轉接</string>
+    <string name="mt_code_forwarded_cf_no_reply">通話因無回應轉接</string>
+    <string name="mt_code_forwarded_cf_not_reachable">通話因無法接通而轉接</string>
+    <string name="start_record">開始錄音</string>
+    <string name="stop_record">"停止錄音"</string>
+    <string name="str_db_playlist_name">我的錄音</string>
+    <string name="alert_device_error">音訊裝置發生錯誤</string>
+    <string name="ext_media_badremoval_notification_title">SD 卡被意外移除</string>
+    <string name="error_sdcard_access">無法使用 SD 卡</string>
+    <string name="confirm_device_info_full">SD 卡空間已用盡，錄音已儲存。</string>
+    <string name="confirm_save_info_saved">錄音已儲存</string>
+    <string name="confirm_save_info_saved_to">錄音已存儲到</string>
+    <string name="activity_not_found">應用程式未安裝在手機。</string>
+    <string name="no_sim_card_inserted" product="default">請插入SIM卡以啟動SIM卡應用</string>
+    <string name="airplane_mode_on" product="default">飛行模式開啟狀態下無法啟動SIM卡應用</string>
+    <string name="lable_sim_not_ready" product="default">SIM卡應用未就緒或不支援</string>
+    <string name="network_forbidden">禁止</string>
+    <string name="callFailed_dsac_vt_incompatible_destination">視訊通話無法建立，您所用的手機不支援視訊通話，改撥語音通話？ </string>
+    <string name="callFailed_dsac_vt_resource_unavailable">視訊通話無法連接，通話對方已超出 3G 服務範圍，改撥語音通話？</string>
+    <string name="callFailed_dsac_vt_bearer_not_avail">視訊通話無法建立，改撥語音通話？</string>
+    <string name="callFailed_dsac_vt_out_of_3G_yourphone">手機已超出 3G 服務範圍，改撥語音通話？</string>
+    <string name="notification_voicemail">語音信箱</string>
+    <string name="turn_on_3g_service_message">3G 已關閉，是否要開啟？</string>
+    <string name="associate_sim_missing_message">"%1$s SIM卡不可用，是否全部改用 %2$s 通話？"</string>
+    <string name="associate_sim_missing_other">其他</string>
+    <string name="vt_settings">視訊設定</string>
+    <string name="vt_local_video_zoom">己方視訊縮放</string>
+    <string name="vt_local_video_brightness">己方視訊亮度</string>
+    <string name="vt_local_video_effect">己方視訊效果</string>
+    <string name="vt_local_video_nightmode">己方視訊夜間模式</string>
+    <string name="vt_peer_video_quality">P2P視訊品質</string>
+    <string name="vt_incoming_showme_ask">詢問</string>
+    <string name="vt_call_settings">視訊通話設定</string>
+    <string name="vt_pic_replace_local_default">預設圖片</string>
+    <string name="vt_pic_replace_local_freezeme">定格</string>
+    <string name="vt_pic_replace_local_mypic">我的圖片</string>
+    <string name="vt_sd_null">無法使用 SD 卡</string>
+    <string name="vt_sd_not_enough">SD卡已無空間</string>
+    <string name="vt_peer_video_quality_normal">普通</string>
+    <string name="vt_ask_show_local">是否讓對方看見自己的影像?</string>
+    <string name="vt_change_my_pic">變更</string>
+    <string name="vt_pic_saved_to_sd">快照已儲存至 SD 卡</string>
+    <string name="vt_pic_saved_to_sd_fail">無法儲存快照</string>
+    <string name="vt_error_network">網路無法連線，視訊通話中斷。</string>
+    <string name="vt_error_media">視訊無法正常顯示，視訊通話將中斷。</string>
+    <string name="vt_swap_video">切換視訊</string>
+    <string name="vt_local_video_contrast">己方視訊對比</string>
+    <string name="vt_menu_switch">切換攝影機</string>
+    <string name="vt_menu_hide_me">隱藏己方視訊</string>
+    <string name="vt_menu_show_me">顯示己方視訊</string>
+    <string name="vt_menu_snapshot">遠端快照</string>
+    <string name="vt_vocie_answer">語音接聽</string>
+    <string name="vt_wait_voice">等候語音通話連接</string>
+    <string name="vt_voice_connecting">語音通話連接中</string>
+    <string name="vt_cannot_support_setting">目前的攝影機不支援此一設定</string>
+    <string name="vt_network_unreachable">網路無法連線。</string>
+    <string name="vt_iot_error_01">視訊通話無法設定</string>
+    <string name="vt_iot_error_02">電話忙線</string>
+    <string name="vt_iot_error_03">無人接聽</string>
+    <string name="vt_iot_error_04">網路繁忙。</string>
+    <string name="pref_camera_coloreffect_entry_solarize">"曝光"</string>
+    <string name="pref_camera_coloreffect_entry_whiteboard">"白板效果"</string>
+    <string name="pref_camera_coloreffect_entry_blackboard">"黑板效果"</string>
+    <string name="pref_camera_coloreffect_entry_aqua">"水底效果"</string>
+    <string name="pref_camera_coloreffect_entry_sepiablue">復古藍</string>
+    <string name="pref_camera_coloreffect_entry_sepiagreen">復古綠</string>
+    <string name="enable_sip_dialog_message">網際網路通話已停用，是否要啟用？</string>
+    <!-- volte ims -->
+    <string name="enable_ims_dialog_message">IMS通話已停用，是否要啟用？</string>
+    <string name="ip_dial_error_toast_for_sip_call_selected">IP 撥號功能不適用於網際網路通話。</string>
+    <string name="vt_addtional_call_description">電話號碼及通話等候設定</string>
+    <string name="callDurationFormat"><xliff:g id="minutes" example="42">%1$s</xliff:g> 分 <xliff:g id="seconds" example="28">%2$s</xliff:g> 秒</string>
+    <string name="reminder">提醒</string>
+    <string name="vt_media_occupied">因攝影機不可使用，視訊通話無法連接。請檢查是否有其他應用程式在使用攝影機。</string>
+    <string name="vt_media_video_fail">視訊無法正常顯示，視訊通話已中斷</string>
+    <!-- support for evdo call settings -->
+    <string name="cdma_not_support">"CDMA 不支援此功能。"</string>
+    <string name="cdma_cfu_title">中國電信</string>
+    <string name="labelCFC">取消全部轉接</string>
+    <string name="cdma_cfu_dialog_sum">總是使用本號碼</string>
+    <string name="incall_toast_unhold">繼續</string>
+    <string name="ring_only_once_title">只響鈴一次</string>
+    <string name="ring_only_once_summary">選擇以語音通話模式接聽視訊通話時，只響鈴一次。</string>
+    <string name="cdma_cnir_title">主叫號碼識別限制</string> 
+    <string name="cdma_cnir_turnoff">關閉主叫號碼識別限制</string> 
+    <string name="cdma_cnir_turnon">開啟主叫號碼識別限制</string>
+    <!-- for network setting reminder feature -->
+    <string name="manual_select_title">手動選擇</string>    
+    <string name="manual_select_dialog_msg">	在手動選擇模式下，手機不會另選別的電信業者。若遺失所選電信業者的服務，您可能必須手動再選一次，或改為自動選擇模式重新選擇服務。請改用"自動選擇"選項或仍用手動選擇網路？ </string>
+    <string name="no_service_msg_gemini">在 \"<xliff:g id="operator">%s</xliff:g>\" 卡上註冊網絡失敗，請用“自動選擇”或手動選擇其它網絡。</string>
+    <string name="no_service_msg">註冊網絡失敗，請用“自動選擇”或手動選擇其它網絡。</string>
+    <string name="show_always_title">不需要提示</string>
+    <string name="no_service_msg_title_gemini">"<xliff:g id="operator">%s</xliff:g>" 無服務</string>
+    <string name="no_service_msg_title">找不到網絡</string>
+    <string name="gemini_data_connection">數據連接</string>
+    <!-- PLMN Prefer -->
+    <string name="plmn_list_setting_title">偏好設定</string>
+    <string name="network_id">網路 ID</string>
+    <string name="dialog_network_priority_title">優先順序</string>
+    <string name="plmn_list_setting_add_plmn">新增 PLMN</string>
+    <string name="which_call_to_activate">啟動哪一個通話？</string>
+    <string name="international_dialing_title">國際撥號協助</string>
+    <string name="international_dialing_select_country">您要撥打的是國際電話，請選擇受話方</string>
+    <string name="international_dialing_add_country_code">您要撥打的是<xliff:g id="country_name">%s</xliff:g>的電話號碼，是否加上國碼(+<xliff:g id="country_code">%s</xliff:g>)？</string>
+    <string name="international_dialing_add_country_code_and_area_code">您要撥打在<xliff:g id="area_name">%1$s</xliff:g>, <xliff:g id="country_name">%2$s</xliff:g>內的電話號碼，是否加上國碼及區碼(+<xliff:g id="prefix">%3$s</xliff:g>)？</string> 
+    <string name="international_dialing_change_country_prefix">您要從<xliff:g id="country_name">%s</xliff:g>撥打電話，是否更改國際電話前置碼為\'+\'？</string>
+    <string name="international_dialing_add_country_code_input_area_code">您要在<xliff:g id="country_name">%s</xliff:g>撥打電話的話，請輸入區碼。</string>   
+    <string name="international_dialing_add_country_code_default_input_area_code">您要在<xliff:g id="country_name">%s</xliff:g>撥打電話，且受話城市不是<xliff:g id="area_name">%s</xliff:g>時，請輸入區碼。</string>
+    <string name="international_dialing_need_area_code">撥號至對方城市須加區碼。</string>
+    <string name="international_dialing_input_area_code">輸入區碼於此</string>
+    <string name="international_dialing_dialed_number">撥打號碼：</string>
+    <string name="international_dialing_confirm_area_code">目的城市如非 <xliff:g id="area_name">%s</xliff:g>，請輸入下列城市的區碼。 </string>
+    <string name="international_dialing_click_below_button">點選下方按鈕變更國碼。</string>
+    <string name="international_dialing_yes">是，使用下列號碼：</string>
+    <string name="international_dialing_no">否，請使用原始號碼： </string>
+    <string name="international_dialing_call_button">通話</string>
+    <string name="international_dialing_area_code">區碼</string>
+    <string name="international_dialing_invalid_number">號碼有誤，是否要繼續？</string>
+    <string name="international_dialing_add_country_code_and_area_code_without_prefix">是否要新增國碼及區碼？</string>
+    <string name="no_search_result">無搜尋結果</string>
+    <string name="callFailed_dsac_vt_bear_not_authorized">視訊通話無法設定，本 SIM 卡的視訊通話功能尚未啟動，改撥語音通話？</string>
+    <string name="gemini_3g_disable_warning_case0">"請先啟用本 SIM 卡的數據漫遊，可能發生可觀的漫遊費用！確定要啟用數據漫遊並選擇本 SIM 卡？"</string>
+    <string name="gemini_3g_disable_warning_case1">"所選的 SIM卡無法使用 3G 服務，數據載入時間可能較長。您可在無線及[設定] &gt; [無線與網路] &gt; [行動網路]頁面改用 3G 服務。確定要選用本 SIM 卡？"  </string>
+    <string name="gemini_3g_disable_warning_case2">"請先啟用本 SIM 卡的數據漫遊，可能發生可觀的漫遊費用！此外，本卡無 3G 服務，資料載入可能較緩慢，您可在[設定] &gt; [無線及網路] &gt; [行動網路]修改設定。確定要啟用數據漫遊並選擇本 SIM 卡？"</string>
+    <string name="disable_data_connection_msg">搜尋全部可用的網路會中斷正在使用的數據連接，是否要繼續？ </string>
+    <!-- Add for voice command -->
+    <string name="voice_command_notification_ticker">您可用說出\"<xliff:g id="first_voice">%s</xliff:g>\"或\"<xliff:g id="second_voice">%s</xliff:g>\"的方式，接聽或不接來電。</string>
+    <string name="voice_command_notification_title">語音控制</string>
+    <string name="voice_command_notification_message">手機已啟動語音控制</string>
+    <string name="dualtalk_tip_accept_disconnect_current">接聽此來電將結束當前通話。</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing">接受本通話將結束全部撥出的通話。</string>
+    <string name="dualtalk_tip_accept_disconnect_incoming">接受本通話將拒接其他來電。</string>
+    <string name="dualtalk_tip_accept_disconnect_voice">接受結束本語音通話。</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing_reject_incoming">接受本通話將結束播出電話的通話，並拒接其他來電。</string>
+    <string name="dualtalk_tip_accept_disconnect_current_reject_incoming">接受本通話將結束全部目前的通話，並拒接其他來電。</string>
+    <string name="gemini_3g_indic">3G</string>
+    <string name="end_call_because_can_not_hold">無法保留，結束目前通話。</string>
+    <string name="gsm_umts_network_preferences_title">"GSM/UMTS 網路偏好設定"</string>
+    <string name="gsm_umts_network_preferneces_summary">尚未安裝！</string>
+    <string name="gsm_umts_network_preferences_dialogtitle">"GSM/UMTS 網路偏好設定"</string>
+    <!-- For CDMA -->
+    <string name="network_setting_all_forbidden_dialog">沒有可用的網絡。請嘗試切換3G卡槽，或點擊某個禁用網絡進行手動註冊。</string>
+    <string name="callFailed_simError_cdma">無 UIM/SIM，或 UIM/SIM 錯誤</string>
+    <string name="callFailed_simError">"沒有 SIM 卡或 SIM 卡發生錯誤"</string>
+    <string name="callFailed_simError_slotNumber">插槽 <xliff:g id="slotNumber">%s</xliff:g> 無 SIM 卡或 SIM 卡錯誤</string>
+    <string name="callFailed_cdma_notEmergency" msgid="2347377816822720761">"僅能撥打緊急電話。"</string>
+    <string name="buttonTxtContinue" msgid="863271214384739936">"繼續"</string>
+    <string name="throttle_status_subtext" msgid="1657318943142085170">"<xliff:g id="USED_0">%1$s</xliff:g> (<xliff:g id="USED_1">%2$d</xliff:g> ％)，週期上限為 <xliff:g id="USED_2">%3$s</xliff:g>"\n"下一週期會在 <xliff:g id="USED_3">%4$d</xliff:g> 天內開始 (<xliff:g id="USED_4">%5$s</xliff:g>)"</string>
+    <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"返回通話"</string>
+    <string name="voicemail_settings_for" msgid="9018656268027893088">"<xliff:g id="PROVIDER_NAME">%s</xliff:g>的設定"</string>
+    <string name="description_search_button" msgid="239929880630534731">"搜尋"</string>
+    <string name="fdn_only_error" msgid="7079583506377602000">"僅限對固定撥號號碼執行此作業。"</string>
+    <string name="reset_data_usage">數據量歸零</string>
+    <string name="throttle_data_usage_subtext">"<xliff:g id="USED_0">%1$s</xliff:g> (<xliff:g id="USED_1">%2$d</xliff:g> %)，週期上限為 <xliff:g id="USED_2">%3$s</xliff:g>"</string>
+    <string name="throttle_time_frame_subtext">"已經過 <xliff:g id="USED_0">%1$d</xliff:g> % 的循環週期"\n"下一週期會在 <xliff:g id="USED_1">%2$d</xliff:g> 天內開始 (<xliff:g id="USED_2">%3$s</xliff:g>)"</string>
+    <string name="simContacts_emptyLoading_ex">自 SIM1 卡匯入聯絡人\u2026</string>
+    <string name="one_retry_left">還可重試 1次</string>
+    <string name="retries_left">還可重試<xliff:g id="number">%d</xliff:g> 次</string>
+    <string name="pin2_unblocked">PIN2 碼解鎖成功</string>
+    <string name="unblock_pin2">解鎖 PIN2</string>
+    <string name="sim_permanently_locked">輸入錯誤的 PUK2 超過 10 次，SIM 卡已永遠被封鎖。</string>
+    <string name="pin_length_indicate">"(4-8 位數字)"</string>
+    <string name="puk_length_indicate">"(8 位數字)"</string>
+    <string name="card_title_incoming_vt_call">撥入的視訊通話</string>
+    <string name="sip_call_options_title_single_sim">網際網路通話選項</string>
+
+    <string-array name="language_list_values" translatable="false">
+        <item>所有語言</item>
+        <item>德文</item>
+        <item>英文</item>
+        <item>義大利文</item>
+        <item>法文</item>
+        <item>西班牙文</item>
+        <item>荷蘭文</item>
+        <item>瑞典文</item>
+        <item>丹麥文</item>
+        <item>葡萄牙文</item>
+        <item>芬蘭文</item>
+        <item>挪威文</item>
+        <item>希臘文</item>
+        <item>土耳其文</item>
+        <item>匈牙利文</item>
+        <item>波蘭文</item>
+        <item>其他</item>
+        <item>捷克文</item>
+        <item>希伯來文</item>
+        <item>阿拉伯文</item>
+        <item>俄文</item>
+        <item>冰島文</item>
+    </string-array>
+
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item msgid="935612021902787683">"2G/3G(自動)"</item>
+        <item msgid="8912042051809329533">"僅限3G"</item>
+        <item msgid="8776934131146642662">"僅限2G"</item>
+    </string-array>
+
+    <string-array name="umts_network_preferences_choices">
+        <item>"2G/3G(自動)"</item>
+        <item>"僅限3G"</item>
+    </string-array>
+
+    <!-- Add for LTE FDD Begin -->
+    <string-array name="lte_prefer_network_mode_choices">
+        <item>4G/3G/2G(自動)</item>
+        <item>3G/2G(自動)</item>
+        <item>僅限3G</item>
+        <item>僅限2G</item>
+    </string-array>
+    <!-- Add for LTE FDD End -->
+
+    <!-- Add for LTE TDD SGLTE Begin-->
+    <string-array name="sglte_network_mode_choices">
+        <item>4G/3G/2G(自動)</item>
+        <item>3G/2G(自動)</item>
+    </string-array>
+    <!-- Add for LTE TDD SGLTE End-->
+
+    <!-- Cipher Indication -->
+    <string name="cipher_indication_notification_title">無語音加密</string>
+    <string name="cipher_indication_notification_message">語音加密遭網路關閉</string>
+
+    <!-- LTE Prefered Network begin -->
+    <string name="network_type">網路類型</string>
+    <!-- LTE Prefered Network end -->
+    <!-- Add for CSG -->
+    <string name="femtocell_point_list_title">Femtocells</string>
+    <string name="in_search_femtocell_networks_wait_tip">正在搜尋...</string>
+    <string name="sum_search_femtocell_networks">手動選擇 femtocell </string>
+    <string name="register_femtocell_point_wait_tip">註冊 <xliff:g id="femto_cell_info">%s</xliff:g> ...</string>
+    <string name="register_femtocell_point_result_fail_tip">目前無法連上本網路，請稍後再試。</string>
+    <!-- Add for [ANC] -->
+    <string name="anc_title">主動減少雜訊</string>
+    <string name="anc_on">ANC 開啟</string>
+    <string name="anc_off">ANC關閉</string>
+    <string name="confirm_4g_3g_switch">您確定要啟用本 SIM 卡的 4G/3G 服務？此舉將自動設定本卡的預設通話為視訊通話。</string>
+    <string name="confirm_4g_3g_switch_to_off">您確定要關閉4G/3G 服務？此舉也將自動關閉視訊通話服務。</string>
+    <string name="enable_4g_3g_service">啟用 4G/3G</string>
+    <string name="setting_for_4g_3g_service">4G/3G 服務</string>
+    <string name="gemini_4g_3g_disable_warning_case1">"所選的 SIM 卡無法使用4G/3G 服務，數據載入時間可能較長。您可在設定 > 無線及網路 > 行動網路頁面改用 4G/3G 服務。確定要選用本 SIM 卡？" </string>
+    <string name="gemini_4g_3g_disable_warning_case2">"請先啟用本 SIM 卡的數據漫遊，可能發生可觀的漫遊費用！此外，本SIM卡無 4G/3G 服務，資料載入可能較緩您可在[設定] &gt; [無線及網路] &gt; [行動網路]修改設定。確定要啟用數據漫遊並選擇本 SIM 卡？"</string>
+    <string name="callFailed_dsac_vt_resource_unavailable_4g_3g">視訊通話無法連接，通話對方已超出 4G/3G 服務範圍，改撥語音通話？</string>
+    <string name="callFailed_dsac_vt_out_of_4g_3g_yourphone">手機已超出 4G/3G 服務範圍，改撥語音通話？ </string>
+    <string name="turn_on_4g_3g_service_message">4G/3G 已關閉，是否要開啟？</string>
+    <string name="enable_ims_dialog_message">IMS 通話已停用，是否啟用？</string>
+    <string name="magi_conference_title">多方通話增強</string>
+    <string name="magi_conference_summary">改善多方通話時的語音品質。</string>
+</resources>

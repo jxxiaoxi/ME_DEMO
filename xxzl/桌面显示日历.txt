@@ -1,0 +1,457 @@
+.../res/drawable-hdpi/ic_launcher_calendar.png     | Bin 0 -> 4576 bytes
+ .../res/drawable-mdpi/ic_launcher_calendar.png     | Bin 0 -> 3929 bytes
+ .../settings/applications/InstalledAppDetails.java |  12 ++-
+ .../settings/applications/ManageApplications.java  |  13 ++-
+ .../android/settings/drawable/CalendarIcon.java    |  84 ++++++++++++++++++
+ .../res/drawable-hdpi/ic_launcher_calendar.png     | Bin 0 -> 4576 bytes
+ .../res/drawable-mdpi/ic_launcher_calendar.png     | Bin 0 -> 3929 bytes
+ .../com/android/sprdlauncher2/CalendarIcon.java    |  95 +++++++++++++++++++++
+ .../src/com/android/sprdlauncher2/IconCache.java   |  29 +++++--
+ .../android/sprdlauncher2/LauncherAppState.java    |   6 ++
+ .../com/android/sprdlauncher2/LauncherModel.java   |  34 +++++++-
+ 11 files changed, 263 insertions(+), 10 deletions(-)
+ create mode 100755 packages/apps/Settings/res/drawable-hdpi/ic_launcher_calendar.png
+ create mode 100755 packages/apps/Settings/res/drawable-mdpi/ic_launcher_calendar.png
+ create mode 100644 packages/apps/Settings/src/com/android/settings/drawable/CalendarIcon.java
+ create mode 100755 vendor/sprd/UniverseUI/SprdLauncher2/res/drawable-hdpi/ic_launcher_calendar.png
+ create mode 100755 vendor/sprd/UniverseUI/SprdLauncher2/res/drawable-mdpi/ic_launcher_calendar.png
+ create mode 100644 vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/CalendarIcon.java
+
+diff --git a/packages/apps/Settings/res/drawable-hdpi/ic_launcher_calendar.png b/packages/apps/Settings/res/drawable-hdpi/ic_launcher_calendar.png
+new file mode 100755
+
+diff --git a/packages/apps/Settings/res/drawable-mdpi/ic_launcher_calendar.png b/packages/apps/Settings/res/drawable-mdpi/ic_launcher_calendar.png
+new file mode 100755
+diff --git a/packages/apps/Settings/src/com/android/settings/applications/InstalledAppDetails.java b/packages/apps/Settings/src/com/android/settings/applications/InstalledAppDetails.java
+index 66269a3..9b66500 100644
+--- a/packages/apps/Settings/src/com/android/settings/applications/InstalledAppDetails.java
++++ b/packages/apps/Settings/src/com/android/settings/applications/InstalledAppDetails.java
+@@ -21,6 +21,7 @@ import com.android.internal.telephony.SmsUsageMonitor;
+ import com.android.settings.R;
+ import com.android.settings.Utils;
+ import com.android.settings.applications.ApplicationsState.AppEntry;
++import com.android.settings.drawable.CalendarIcon;
+ 
+ import android.app.Activity;
+ import android.app.ActivityManager;
+@@ -45,6 +46,7 @@ import android.content.pm.PackageManager;
+ import android.content.pm.ResolveInfo;
+ import android.content.pm.PackageManager.NameNotFoundException;
+ import android.content.res.Resources;
++import android.graphics.drawable.BitmapDrawable;
+ import android.hardware.usb.IUsbManager;
+ import android.net.Uri;
+ import android.os.AsyncTask;
+@@ -55,6 +57,7 @@ import android.os.IBinder;
+ import android.os.Message;
+ import android.os.RemoteException;
+ import android.os.ServiceManager;
++import android.os.SystemProperties;
+ import android.os.UserHandle;
+ import android.os.UserManager;
+ import android.preference.PreferenceActivity;
+@@ -564,10 +567,15 @@ public class InstalledAppDetails extends Fragment
+     private void setAppLabelAndIcon(PackageInfo pkgInfo) {
+         final View appSnippet = mRootView.findViewById(R.id.app_snippet);
+         appSnippet.setPaddingRelative(0, appSnippet.getPaddingTop(), 0, appSnippet.getPaddingBottom());
+-
+         ImageView icon = (ImageView) appSnippet.findViewById(R.id.app_icon);
+         mState.ensureIcon(mAppEntry);
+-        icon.setImageDrawable(mAppEntry.icon);
++		if (SystemProperties.getBoolean("ro.calendar.dateicon", false)
++				&& "com.android.calendar".equals(mAppEntry.info.packageName)) {
++			icon.setImageDrawable(new BitmapDrawable(new CalendarIcon(
++					getActivity()).getDrable()));
++		} else {
++			icon.setImageDrawable(mAppEntry.icon);
++		}
+         // Set application name.
+         TextView label = (TextView) appSnippet.findViewById(R.id.app_name);
+         label.setText(mAppEntry.label);
+diff --git a/packages/apps/Settings/src/com/android/settings/applications/ManageApplications.java b/packages/apps/Settings/src/com/android/settings/applications/ManageApplications.java
+index d7e3432..43ba433 100644
+--- a/packages/apps/Settings/src/com/android/settings/applications/ManageApplications.java
++++ b/packages/apps/Settings/src/com/android/settings/applications/ManageApplications.java
+@@ -45,6 +45,7 @@ import android.os.Handler;
+ import android.os.IBinder;
+ import android.os.RemoteException;
+ import android.os.ServiceManager;
++import android.os.SystemProperties;
+ import android.os.UserHandle;
+ import android.preference.PreferenceActivity;
+ import android.preference.PreferenceFrameLayout;
+@@ -81,6 +82,7 @@ import com.android.settings.Settings.RunningServicesActivity;
+ import com.android.settings.Settings.StorageUseActivity;
+ import com.android.settings.applications.ApplicationsState.AppEntry;
+ import com.android.settings.deviceinfo.StorageMeasurement;
++import com.android.settings.drawable.CalendarIcon;
+ import com.android.settings.Utils;
+ import com.sprd.settings.applications.KillApps;
+ 
+@@ -823,7 +825,16 @@ public class ManageApplications extends Fragment implements
+                 }
+                 mState.ensureIcon(entry);
+                 if (entry.icon != null) {
+-                    holder.appIcon.setImageDrawable(entry.icon);
++					if (SystemProperties.getBoolean("ro.calendar.dateicon",
++							false)
++							&& "com.android.calendar"
++									.equals(entry.info.packageName)) {
++						holder.appIcon
++								.setImageBitmap(new CalendarIcon(mContext)
++										.getDrable());
++					} else {
++						holder.appIcon.setImageDrawable(entry.icon);
++					}
+                 }
+                 holder.updateSizeText(mTab.mInvalidSizeStr, mWhichSize);
+                 if ((entry.info.flags&ApplicationInfo.FLAG_INSTALLED) == 0) {
+diff --git a/packages/apps/Settings/src/com/android/settings/drawable/CalendarIcon.java b/packages/apps/Settings/src/com/android/settings/drawable/CalendarIcon.java
+new file mode 100644
+index 0000000..486f1c0
+--- /dev/null
++++ b/packages/apps/Settings/src/com/android/settings/drawable/CalendarIcon.java
+@@ -0,0 +1,84 @@
++
++package com.android.settings.drawable;
++
++import android.content.Context;
++import android.graphics.Bitmap;
++import android.graphics.Canvas;
++import android.graphics.Color;
++import android.graphics.Paint;
++import android.graphics.Bitmap.Config;
++import android.graphics.drawable.BitmapDrawable;
++import android.os.SystemProperties;
++import android.util.Log;
++
++import com.android.settings.R;
++
++
++import java.util.Calendar;
++
++public class CalendarIcon {
++    private Context mContext;
++
++    public CalendarIcon(Context context) {
++        mContext = context;
++    }
++    //得到日期，合成新图标
++    private Bitmap createCalendarBitmap1(Bitmap src)
++    {
++        String tag = "createBitmap";
++        Log.d(tag, "create a new bitmap");
++        if (src == null)
++        {
++            return null;
++        }
++
++        final Calendar c = Calendar.getInstance();
++        int day = c.get(Calendar.DAY_OF_MONTH);
++        int x = 0;
++        int y = 0;
++
++        int w = src.getWidth();
++        int h = src.getHeight();
++
++        Bitmap newb = Bitmap.createBitmap(w, h, Config.ARGB_8888);
++        Canvas cv = new Canvas(newb);
++        cv.drawBitmap(src, 0, 0, null);
++
++        Paint paint = new Paint();
++        paint.setColor(Color.BLACK);
++        paint.setAntiAlias(true);
++        paint.setSubpixelText(true);
++
++        if(SystemProperties.getInt("ro.sf.lcd_density", 240) == 160){
++            paint.setTextSize(30);
++            if (day > 9) {
++                x = 7;
++                y = 33;
++            } else {
++                x = 16;
++                y = 33;
++            }
++        }else{
++            paint.setTextSize(48);
++            if (day > 9) {
++                x = 9;
++                y = 53;
++            } else {
++                x = 22;
++                y = 53;
++            }
++        }
++
++        cv.drawText(day + "", x, y, paint);
++        cv.save(Canvas.ALL_SAVE_FLAG);
++        cv.restore();
++        return newb;
++    }
++
++    public Bitmap getDrable() {
++        BitmapDrawable background = (BitmapDrawable) mContext.getResources().getDrawable(
++                R.drawable.ic_launcher_calendar);
++        Bitmap icon = createCalendarBitmap1(background.getBitmap());
++        return icon;
++    }
++}
+diff --git a/vendor/sprd/UniverseUI/SprdLauncher2/res/drawable-hdpi/ic_launcher_calendar.png b/vendor/sprd/UniverseUI/SprdLauncher2/res/drawable-hdpi/ic_launcher_calendar.png
+diff --git a/vendor/sprd/UniverseUI/SprdLauncher2/res/drawable-mdpi/ic_launcher_calendar.png b/vendor/sprd/UniverseUI/SprdLauncher2/res/drawable-mdpi/ic_launcher_calendar.png
+diff --git a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/CalendarIcon.java b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/CalendarIcon.java
+new file mode 100644
+index 0000000..14e2b8a
+--- /dev/null
++++ b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/CalendarIcon.java
+@@ -0,0 +1,95 @@
++
++package com.android.sprdlauncher2;
++
++import android.content.Context;
++import android.graphics.Bitmap;
++import android.graphics.Canvas;
++import android.graphics.Color;
++import android.graphics.Paint;
++import android.graphics.Bitmap.Config;
++import android.graphics.drawable.BitmapDrawable;
++import android.graphics.drawable.Drawable;
++import android.os.SystemProperties;
++import android.util.Log;
++import android.view.View;
++
++import java.util.Calendar;
++
++public class CalendarIcon {
++    private Context mContext;
++
++    public CalendarIcon(Context context) {
++        mContext = context;
++    }
++
++    //得到日期，合成新图标
++    private Bitmap createCalendarBitmap1(Bitmap src)
++    {
++        String tag = "createBitmap";
++        Log.d(tag, "create a new bitmap");
++        if (src == null)
++        {
++            return null;
++        }
++
++        final Calendar c = Calendar.getInstance();
++        int day = c.get(Calendar.DAY_OF_MONTH);
++        int x = 0;
++        int y = 0;
++
++        int w = src.getWidth();
++        int h = src.getHeight();
++
++        Bitmap newb = Bitmap.createBitmap(w, h, Config.ARGB_8888);
++        Canvas cv = new Canvas(newb);
++        cv.drawBitmap(src, 0, 0, null);
++
++        Paint paint = new Paint();
++        paint.setColor(Color.BLACK);
++        paint.setAntiAlias(true);
++        paint.setSubpixelText(true);
++
++        if(SystemProperties.getInt("ro.sf.lcd_density", 240) == 160){
++            paint.setTextSize(30);
++            if (day > 9) {
++                x = 7;
++                y = 33;
++            } else {
++                x = 16;
++                y = 33;
++            }
++        }else{
++            paint.setTextSize(48);
++            if (day > 9) {
++                x = 9;
++                y = 53;
++            } else {
++                x = 22;
++                y = 53;
++            }
++        }
++        cv.drawText(day + "", x, y, paint);
++        cv.save(Canvas.ALL_SAVE_FLAG);
++        cv.restore();
++        return newb;
++    }
++
++    public Bitmap getDrable() {
++        BitmapDrawable background = (BitmapDrawable) mContext.getResources().getDrawable(
++                R.drawable.ic_launcher_calendar);
++        // BitmapDrawable bd = (BitmapDrawable) d;
++        Bitmap icon = createCalendarBitmap1(background.getBitmap());
++        // Bitmap icon = createCalendarBitmap(background.getBitmap(),
++        // getDateIcon().getBitmap());
++        return icon;
++    }
++
++    /*
++     * public BitmapDrawable getDateIcon() { // get system date final Calendar c
++     * = Calendar.getInstance(); BitmapDrawable dateicon = null; int day =
++     * c.get(Calendar.DAY_OF_MONTH); if (day < 31) { dateicon = (BitmapDrawable)
++     * mContext.getResources().getDrawable( drawableId[day - 1]); } else {
++     * dateicon = (BitmapDrawable) mContext.getResources().getDrawable(
++     * R.drawable.ic_launcher_calendar); } return dateicon; }
++     */
++}
+diff --git a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/IconCache.java b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/IconCache.java
+index ccf7c84..f64cb40 100644
+--- a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/IconCache.java
++++ b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/IconCache.java
+@@ -27,6 +27,8 @@ import android.content.res.Resources;
+ import android.graphics.Bitmap;
+ import android.graphics.Canvas;
+ import android.graphics.drawable.Drawable;
++import android.os.SystemProperties;
++import android.util.Log;
+ 
+ import java.util.HashMap;
+ import java.util.Iterator;
+@@ -217,7 +219,6 @@ public class IconCache {
+         CacheEntry entry = mCache.get(componentName);
+         if (entry == null) {
+             entry = new CacheEntry();
+-
+             mCache.put(componentName, entry);
+ 
+             ComponentName key = LauncherModel.getComponentNameFromResolveInfo(info);
+@@ -238,9 +239,20 @@ public class IconCache {
+             int index = sysIndexOf(componentName.getClassName());
+             /* SPRD: Fix bug 278545, for performance,there is no need to handle sysicon**.png @{ */
+             if (index >= 0) {
+-                icon = mContext.getResources().getDrawable(R.drawable.sysicon0 + index);
+-                entry.icon = Utilities.createIconBitmap(icon, mContext);
+-            } else {
++				if ("com.android.calendar"
++						.equals(info.activityInfo.packageName)) {
++					entry.icon = Utilities.createIconBitmap(new CalendarIcon(
++							mContext).getDrable(), mContext);
++				} else {
++					icon = mContext.getResources().getDrawable(
++							R.drawable.sysicon0 + index);
++					entry.icon = Utilities.createIconBitmap(icon, mContext);
++				}
++            } else if (SystemProperties.getBoolean("ro.calendar.dateicon", false)
++                    && "com.android.calendar".equals(info.activityInfo.packageName)) {
++                entry.icon = Utilities.createIconBitmap(
++                        new CalendarIcon(mContext).getDrable(), mContext);
++            }else {
+                 icon = getFullResIcon(info);
+                 entry.icon = Utilities.createIconBitmap(
+                         /* SPRD: Feature 253522, Remove the application drawer view @{ */
+@@ -251,7 +263,14 @@ public class IconCache {
+             /* @} */
+             /* @} */
+ 
+-        }
++		} else {
++			if (SystemProperties.getBoolean("ro.calendar.dateicon", false)
++					&& "com.android.calendar"
++							.equals(info.activityInfo.packageName)) {
++				entry.icon = Utilities.createIconBitmap(new CalendarIcon(
++						mContext).getDrable(), mContext);
++			}
++		}
+         return entry;
+     }
+ 
+diff --git a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherAppState.java b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherAppState.java
+index aa3c084..5061ff7 100644
+--- a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherAppState.java
++++ b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherAppState.java
+@@ -27,6 +27,7 @@ import android.util.Log;
+ import android.view.Display;
+ 
+ import java.lang.ref.WeakReference;
++import android.os.SystemProperties;
+ 
+ public class LauncherAppState {
+     private static final String TAG = "LauncherAppState";
+@@ -111,6 +112,11 @@ public class LauncherAppState {
+         sContext.registerReceiver(mModel, filter);
+         filter = new IntentFilter();
+         filter.addAction(SearchManager.INTENT_ACTION_SEARCHABLES_CHANGED);
++		if (SystemProperties.getBoolean("ro.calendar.dateicon", false)) {
++			filter.addAction(Intent.ACTION_TIME_CHANGED);
++			filter.addAction(Intent.ACTION_DATE_CHANGED);
++			filter.addAction(Intent.ACTION_TIME_TICK);
++		}
+         sContext.registerReceiver(mModel, filter);
+ 
+         // SPRD: Feature 259193, porting from Android.4.1 start @{
+diff --git a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherModel.java b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherModel.java
+index 805fdac..90863b0 100644
+--- a/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherModel.java
++++ b/vendor/sprd/UniverseUI/SprdLauncher2/src/com/android/sprdlauncher2/LauncherModel.java
+@@ -42,6 +42,7 @@ import android.os.Parcelable;
+ import android.os.Process;
+ import android.os.RemoteException;
+ import android.os.SystemClock;
++import android.os.SystemProperties;
+ import android.provider.BaseColumns;
+ import android.util.Log;
+ import android.util.Pair;
+@@ -64,11 +65,12 @@ import java.util.List;
+ import java.util.Set;
+ import java.util.TreeMap;
+ import java.util.concurrent.atomic.AtomicBoolean;
+-import com.android.sprdlauncher2.R;
+ import android.content.res.XmlResourceParser;
+ import org.xmlpull.v1.XmlPullParserException;
+ import com.sprd.sprdlauncher2.OwnerWidgetFactory;
+ import com.sprd.sprdlauncher2.OwnerWidgetInfo;
++import android.content.SharedPreferences;
++import java.util.Calendar;
+ 
+ /**
+  * Maintains in-memory state of the Launcher. It is expected that there should be only one
+@@ -1147,7 +1149,20 @@ public class LauncherModel extends BroadcastReceiver {
+                     callbacks.bindSearchablesChanged();
+                 }
+             }
+-        }
++		} else if (SystemProperties.getBoolean("ro.calendar.dateicon", false)
++				&& (Intent.ACTION_DATE_CHANGED.equals(action)
++						|| Intent.ACTION_TIME_CHANGED.equals(action) || Intent.ACTION_TIME_TICK
++							.equals(action))) {
++			final Calendar c = Calendar.getInstance();
++			int day = c.get(Calendar.DAY_OF_MONTH);
++			if (mCallbacks != null && (getDate(context) != day)) {
++				Callbacks callbacks = mCallbacks.get();
++				if (callbacks != null) {
++					saveDate(context, day);
++					forceReload();
++				}
++			}
++		}
+     }
+ 
+     private void forceReload() {
+@@ -3795,4 +3810,19 @@ public class LauncherModel extends BroadcastReceiver {
+         }
+     }
+     /* @} */
++
++	private void saveDate(Context context, int date) {
++		SharedPreferences sp = context.getSharedPreferences("now_date",
++				Context.MODE_PRIVATE);
++		SharedPreferences.Editor editor = sp.edit();
++		editor.putInt("nowdate", date);
++		editor.commit();
++	}
++
++	private int getDate(Context context) {
++		SharedPreferences sp = context.getSharedPreferences("now_date",
++				Context.MODE_PRIVATE);
++		int date = sp.getInt("nowdate", 1);
++		return date;
++	}
+ }
+-- 
+1.9.0
+

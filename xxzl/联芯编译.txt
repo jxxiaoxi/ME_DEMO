@@ -1,0 +1,22 @@
+cr地址：http://cqweb.leadcoretech.com/cqweb/login
+
+
+1.完整版本编译
+$ cd /home/worker/LeaDroid
+$. build/envsetup.sh
+$lunch full_lc1813evb-userdebug
+$ make update-api
+$ make -j8
+
+
+2.CLEAN 完整版本
+$ make clean
+
+
+3.编译单个模块
+$ make Settings
+
+
+4.CLEAN 单个模块
+$ make clean-Settings
+

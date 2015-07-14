@@ -1,0 +1,5 @@
+1。android 浏览器中几个概念
+  a.webkit  是一个开源项目，源于KDE的KHTML和KJS。是专注网页内容展示的网页渲染引擎
+  b.Chromium 是建立在webkit之上的浏览器开源项目
+  c.chrome是google公司基于chromium开源项目开发出的浏览器产品。
+Chrome和Chromium 的区别在于：（1）chromium是一个开源的实验的项目，在里面会实验很多新功能。当其验证性能等各方面稳定正常后，才会导入chromium。（2）.chrome不是完全等于某个稳定版本的chromium，chrome会在chromium中加入器特有的一些属性。（3）.chrome还会整合Google的很多服务， 最后chrome还会有自动更新的功能，这也是chromium所没有的。

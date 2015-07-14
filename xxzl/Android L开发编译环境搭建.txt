@@ -1,0 +1,51 @@
+MTK平台后续基于Android L开发，编译环境搭建，请务必按如下步骤进行：
+
+
+以下所需要的安装文件可访问服务器：\\192.168.10.167\软件部门文档\tools
+
+1.安装Ubuntu 12.04 LTS 64 bit操作系统，不再支持Ubuntu 10.04；
+向荣有安装U盘可借用；
+安装时请拔掉网线；
+安装英文版本
+
+2.降内核以支持加密策略；
+参考文档<LInux客户端安装及使用培训文档 V2.0.ppt>降内核
+
+3.安装加密客户端并登陆；
+$ sudo chmod a+x ./ultrasec-2.3-18.ubuntu.all2.bin
+$ ./ultrasec-2.3-18.ubuntu.all2.bin
+server:192.168.10.10
+prot:80
+user:姓名全拼
+password:12345678
+
+4.修改使用root用户登录方法；
+$ sudo gedit /etc/lightdm/lightdm.conf
+在打开的文件中增加如下内容
+greeter-show-manual-login=true
+allow-guest=false
+$ sudo passwd root
+重启Ubuntu，登录窗口会有“登录”选项，这时候我们就可以通过root登录了。
+
+5.安装必要的packages；
+$ sudo apt-get install git gnupg flex bison gperf build-essential \
+zip curl libc6-dev libncurses5-dev:i386 x11proto-core-dev \
+libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
+libgl1-mesa-dev g++-multilib mingw32 tofrodos \
+python-markdown libxml2-utils xsltproc zlib1g-dev:i386
+
+$ sudo ln -s /usr/lib/i386-linux-gnu/mesa/libGL.so.1 /usr/lib/i386-linux-gnu/libGL.so
+
+6.安装java；
+$ sudo apt-get -y install openjdk-7-jdk
+终端运行java -version查看当前版本信息，如果为1.7.0_65表示成功。
+
+Android L需要使用jdk7编译。
+Android KK需要使用jdk6编译。
+为了兼容Android KK，需要做如下动作：
+$ mkdir /opt/java
+$ cp ./jdk-6u45-linux-x64.bin /opt/java/
+$ cd /opt/java
+$ sudo chmod a+x ./jdk-6u45-linux-x64.bin
+$ ./jdk-6u45-linux-x64.bin
+不要再尝试修改任何系统path路径，mtk平台会在KK代码的根目录文件mbldenv.sh去编译时动态配置，目前几个平台都已经修改。

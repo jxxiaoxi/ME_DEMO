@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+    <string name="onscreenHangupAll">全て通話終了</string>
+    <string name="onscreenHangupHolding">通話終了待機中</string>
+    <string name="onscreenHangupActiveAndAnswerWaiting">通話終了有効、着信待ち</string>
+    <string name="onscreenECT">転送</string>
+    <string name="dm_lock">DMがロックされています</string>
+    <string name="dm_unlock">DMロックが解除されています</string>
+    <string name="start_record">録音開始</string>
+    <string name="stop_record">録音停止</string>
+    <string name="str_db_playlist_name">"マイ録音"</string>
+    <string name="alert_device_error">音声機器にエラーが発生しました</string>
+    <string name="ext_media_badremoval_notification_title">"SDカードが予期せず取り外されました"</string>
+    <string name="error_sdcard_access">SDカードにアクセスできません</string>
+    <string name="confirm_device_info_full">SDカードに空き容量がありません。録音は保存されました。</string>
+    <string name="confirm_save_info_saved">記録は保存されました</string>
+    <string name="confirm_save_info_saved_to">この記録は以下へ保存されました</string>
+	<string name="sim_toolkit">SIMツールキット</string>
+    <string name="activity_not_found">"アプリは端末にインストールされていません。"</string>
+    <string name="no_sim_card_inserted" product="default">SIMツールキットを起動する場合は、SIMカードを挿入してください</string>
+    <string name="airplane_mode_on" product="default">機内モードが有効なため、SIMツールキットを起動できません</string>
+    <string name="lable_sim_not_ready" product="default">SIMツールキットが存在しないか、サポートされていません</string>
+    <string name="gemini_3g_indic">"3G"</string>
+    <string name="callFailed_dsac_vt_incompatible_destination">ビデオ通話を設定できません。お使いの携帯端末ではビデオ通話がサポートされていません。音声通話を試みますか？</string>
+    <string name="callFailed_dsac_vt_resource_unavailable">ビデオ通話を設定できません。お使いの携帯端末は3Gサービス圏外です。音声通話を試みますか？</string>
+    <string name="callFailed_dsac_vt_bearer_not_avail">ビデオ通話を設定できません。音声通話を試みますか？</string>
+    <string name="callFailed_dsac_vt_out_of_3G_yourphone">お使いの携帯端末は3Gサービス圏外です。音声通話を試みますか？</string>
+    <string name="callFailed_dsac_vt_bear_not_authorized">ビデオ通話を設定できません。お使いのSIMカードではビデオ通話が有効になっていません。音声通話を試みますか？</string>
+    <string name="notification_voicemail">"ボイスメール"</string>
+    <string name="turn_on_3g_service_message">3GサービスがOFFになっています。ONにしますか？</string>
+    <string name="associate_sim_missing_message">"%1$s SIMカードは使用できません。%2$s経由で通話を試みますか？"</string>
+    <string name="associate_sim_missing_other">"その他"</string>
+    <string name="vt_incoming_call">ビデオ通話着信</string>
+    <string name="vt_settings">動画設定</string>
+    <string name="vt_local_video_zoom">ローカル動画拡大</string>
+    <string name="vt_local_video_brightness">ローカル動画照度</string>
+    <string name="vt_local_video_effect">ローカル動画効果</string>
+    <string name="vt_local_video_nightmode">ローカル動画夜間モード</string>
+    <string name="vt_peer_video_quality">ピア動画品質</string>
+    <string name="vt_enable_back_camera">リアカメラを有効にする</string>
+    <string name="vt_enable_back_camera_description">カメラがONの場合、カメラを切り替えることが可能です</string>
+    <string name="vt_peer_video_bigger">より大きなピア動画</string>
+    <string name="vt_peer_video_bigger_description">ONにすると、ピア動画がローカル動画より大きくなります</string>
+    <string name="vt_outgoing_call">ビデオ通話発信</string>
+    <string name="vt_outgoing_call_description">ビデオ通話を行う際はローカル動画を表示</string>
+    <string name="vt_incoming_call_description">ビデオ通話を着信する際はローカル動画を表示</string>
+    <string name="vt_incoming_showme_always">"常に使用"</string>
+    <string name="vt_incoming_showme_ask">"確認する"</string>
+    <string name="vt_incoming_showme_disable">"無効にする"</string>
+    <string name="vt_pic_replace_local_default">デフォルト画像</string>
+    <string name="vt_pic_replace_local_freezeme">自身をフリーズ</string>
+    <string name="vt_pic_replace_local_mypic">マイ写真</string>
+    <string name="vt_local_video_display">ローカル動画表示</string>
+    <string name="vt_sd_null">SDカードを\n使用できません</string>
+    <string name="vt_sd_not_enough">SDカードの\n空き容量がありません</string>
+    <string name="vt_peer_video_quality_normal">"標準"</string>
+    <string name="vt_peer_video_quality_sharp">シャープ</string>
+    <string name="vt_ask_show_local">ローカル動画をピアに見せますか？</string>
+    <string name="vt_ask_show_local_yes">"はい"</string>
+    <string name="vt_ask_show_local_no">"いいえ"</string>
+    <string name="vt_change_my_pic">変更</string>
+    <string name="vt_pic_saved_to_sd">スナップ写真をSDカードに保存しました</string>
+    <string name="vt_pic_saved_to_sd_fail">スナップ写真を保存できませんでした</string>
+    <string name="vt_error_network">ネットワークに接続できません。ビデオ通話は切断されます。</string>
+    <string name="vt_error_media">動画を正しく表示できません。ビデオ通話は切断されます。</string>
+    <string name="vt_swap_video">動画を切り替える</string>
+    <string name="vt_local_video_contrast">ローカル動画コントラスト</string>
+    <string name="vt_menu_switch">"カメラを切り替え"</string>
+    <string name="vt_menu_hide_me">ローカル動画を隠す</string>
+    <string name="vt_menu_show_me">ローカル動画を表示する</string>
+    <string name="vt_menu_snapshot">友人とのスナップ写真</string>
+    <string name="vt_dis_peer_rep">ピア動画を表示する</string>
+    <string name="vt_dis_peer_rep_des">ピア動画を表示できない場合は代わりに画像を表示する</string>
+    <string name="vt_peer_video_rep">ピア動画の置き換え</string>
+    <string name="vt_peer_video_rep_des">ピア動画を表示できない場合の代わりの画像を設定する</string>
+    <string name="vt_vocie_answer">音声着信</string>
+    <string name="vt_wait_voice">音声通話の接続待ち</string>
+    <string name="vt_voice_connecting">音声通話接続中</string>
+    <string name="vt_auto_dropback">自動的に引き返す</string>
+    <string name="vt_auto_dropback_des">自動的に音声通話へ引き返して接続</string>
+    <string name="vt_cannot_support_setting">使用中のカメラはこの設定をサポートしていません</string>
+    <string name="vt_network_unreachable">ネットワークに接続できません</string>
+    <string name="vt_iot_error_01">ビデオ通話を設定できません</string>
+    <string name="vt_iot_error_02">通話中です</string>
+    <string name="vt_iot_error_03">応答がありません</string>
+    <string name="vt_iot_error_04">ネットワークがビジーです</string>
+    <string name="pref_camera_coloreffect_entry_none">"なし"</string>
+    <string name="pref_camera_coloreffect_entry_mono">モノ</string>
+    <string name="pref_camera_coloreffect_entry_sepia">"セピア"</string>
+    <string name="pref_camera_coloreffect_entry_negative">"白黒反転"</string>
+    <string name="pref_camera_coloreffect_entry_solarize">露出過度にする</string>
+    <string name="pref_camera_coloreffect_entry_posterize">"ポスタライズ"</string>
+    <string name="pref_camera_coloreffect_entry_whiteboard">白板</string>
+    <string name="pref_camera_coloreffect_entry_blackboard">黒板</string>
+    <string name="pref_camera_coloreffect_entry_aqua">水彩</string>
+    <string name="pref_camera_coloreffect_entry_pastel">パステル</string>
+    <string name="pref_camera_coloreffect_entry_mosaic">モザイク</string>
+    <string name="pref_camera_coloreffect_entry_redtint">赤みをつける</string>
+    <string name="pref_camera_coloreffect_entry_bluetint">青みをつける</string>
+    <string name="pref_camera_coloreffect_entry_greentint">緑をつける</string>
+    <string name="pref_camera_coloreffect_entry_sepiablue">セピアブルー</string>
+    <string name="pref_camera_coloreffect_entry_sepiagreen">セピアグリーン</string>
+    <string name="vt_peer_camera_open">リモートカメラが開いています</string>
+    <string name="vt_peer_camera_close">リモートカメラが閉じています</string>
+    <string name="vt_recorder_start">録音開始</string>
+    <string name="vt_recorder_voice_and_peer_video">音声とピア動画</string>
+    <string name="vt_recorder_only_voice">音声のみ</string>
+    <string name="vt_recorder_only_peer_video">ピア動画のみ</string>
+    <string name="vt_recording_saved">録音は保存されました</string>
+    <string name="vt_recording_saved_sd_full">SDカードに空き容量がありません。録音は保存されました。</string>
+    <string name="vt_recording_error">録音を保存できませんでした</string>
+    <string name="start_record_vt">録音開始</string>
+    <string name="stop_record_vt">録音停止</string>
+    <string name="cannot_answered_Video_Call">既に音声通話を行っているため、ビデオ通話を着信できません</string>
+    <string name="cannot_answered_Voice_Call">既にビデオ通話を行っているため、音声通話を着信できません</string>
+    <string name="callDurationFormat"><xliff:g id="minutes" example="42">%1$s</xliff:g> 分 <xliff:g id="seconds" example="28">%2$s</xliff:g> 秒</string>
+    <string name="reminder">通知</string>
+    <string name="vt_media_occupied">カメラに接続できないため、ビデオ通話に接続できません。他のアプリケーションがカメラを使用していないかどうか、確認してください。</string>
+    <string name="vt_media_video_fail">動画を正しく表示できません。ビデオ通話は切断されました</string>
+    <string name="incall_toast_unhold">保留解除</string>
+    <string name="dualtalk_tip_accept_disconnect_current" tools:ignore="MissingTranslation">この通話を着信すると、現在の通話を終了します。</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing" tools:ignore="MissingTranslation">この通話を着信すると、送信を終了します。</string>
+    <string name="dualtalk_tip_accept_disconnect_incoming" tools:ignore="MissingTranslation">この通話を着信すると、他の着信を受け取れません。</string>
+    <string name="dualtalk_tip_accept_disconnect_voice">この通話を着信すると、音声通話を終了します。</string>
+    <string name="dualtalk_tip_accept_disconnect_outgoing_reject_incoming">この通話を着信すると、送信を終了し、他の着信を受け取れなくなります。</string>
+    <string name="dualtalk_tip_accept_disconnect_current_reject_incoming">この通話を着信すると、現在の通話を終了し、他の着信を受け取れなくなります。</string>
+    <string name="end_call_because_can_not_hold">現在の通話を保留できないため、終了します。</string>
+    <string name="ring_only_once_title">着信音を1回のみ鳴らします</string>
+    <string name="ring_only_once_summary">音声通話モード時にビデオ通話を着信する場合は、着信音を1回のみ鳴らします</string>
+    <string name="fdn_contact_name_number_invalid">名前と番号を両方とも空欄にすることはできません。</string>
+    <string name="fdn_contact_number_invalid">連絡先番号が無効です。</string>
+    <string name="fdn_phone_book_busy">電話帳がビジーです。しばらくしてからもう一度お試しください。</string>
+    <string name="cdma_not_support">CDMAではこの機能はサポートされていません</string>
+    <string name="cdma_cfu_title">中国電信</string>
+    <string name="labelCFC">全ての転送をキャンセル</string>
+    <string name="cdma_cfu_dialog_sum">"常にこの番号を使用"</string>
+    <string name="dual_mic_title">ノイズリダクション</string>
+    <string name="dual_mic_summary">通話中の背景ノイズを除去します</string>
+    <string name="minutereminder_title">毎分通知</string>
+    <string name="minutereminder_summary">50秒ごとに通知する</string>
+    <string name="voice_call_settings">音声通話設定</string>
+    <string name="enable_sip_dialog_message">インターネット通話は無効です。有効にしますか？</string>
+    <string name="ip_prefix_setting">IPプレフィックス番号</string>
+    <string name="ip_prefix_setting_sum">IPプレフィックス番号設定</string>
+    <string name="enter_ip_prefix_number">プレフィックス番号を入力する</string>
+    <string name="ip_dial_error_toast_for_no_ip_prefix_number">音声通話設定にて、IPプレフィックス番号を最初に入力してください。</string>
+    <string name="ip_dial_error_toast_for_sip_call_selected">IPダイヤル機能はインターネット通話には適用されません。</string>
+    <string name="ip_prefix_edit_default_sum">IPダイヤル用のプレフィックス番号を入力する</string>
+    <string name="vt_cf_call_description">ビデオ通話の着信転送設定</string>
+    <string name="vt_cb_call_description">ビデオ通話の着信拒否設定</string>
+    <string name="vt_addtional_call_description">電話番号と通話中着信設定</string>
+    <string name="others">他の設定</string>
+    <string name="confirm_3g_switch">このSIMカードに3Gサービスを設定しますか？ビデオ通話のデフォルトSIMカードは、このSIMカードに設定されます。</string>
+    <string name="modem_switching">SIMカードの交換作業は約10秒かかります。お待ちください...</string>
+    <string name="confirm_3g_switch_to_off">3GサービスをOFFにしますか？自動的にビデオ通話サービスもOFFになります。</string>
+    <string name="service_3g_off">"OFF"</string>
+    <string name="enable_3G_service">3Gを有効にする</string>
+    <string name="setting_for_3G_service">3Gサービス</string>
+    <string name="network_forbidden">禁止されています</string>
+    <string name="voice_mail_dialog_text">以下の方からボイスメールが届いています： <xliff:g id="voicemail_sim_display_name">%s</xliff:g>。今すぐ聴きますか？</string>
+    <string name="lable_call_barring">"発信制限"</string>
+    <string name="lable_all_outgoing">全ての発信</string>
+    <string name="lable_all_outgoing_international">国際発信</string>
+    <string name="lable_all_out_except">母国の公衆携帯電話網を除く国際発信</string>
+    <string name="lable_all_incoming">全ての着信</string>
+    <string name="lable_incoming_calls_except">ローミング中の着信</string>
+    <string name="deactivate_all">全てキャンセルする</string>
+    <string name="change_password">拒否パスワードの変更</string>
+    <string name="call_barring_sum">ビデオ通話拒否設定</string>
+    <string name="lable_disable">無効済</string>
+    <string name="lable_enable">"有効"</string>
+    <string name="old_password_label">旧パスワード（4桁の番号）</string>
+    <string name="new_password_label">新パスワード（4桁の番号）</string>
+    <string name="invalid_password">4桁の数字のパスワードを入力してください。</string>
+    <string name="confirm_password_label">新しいパスワードを確認</string>
+    <string name="mismatch_password">パスワード入力が一致しません。再度お試しください。</string>
+    <string name="password_changed">パスワードを変更しました。</string>
+    <string name="enter_callbarring_password">着信拒否パスワードを入力する（4桁の数字）</string>
+    <string name="wrong_password">パスワードエラー</string>
+    <string name="error_title">"エラー"</string>
+    <string name="cell_broadcast">エリアメール</string>
+    <string name="cell_broadcast_settings">エリアメール設定</string>
+    <string name="cb_menu_language">"言語"</string>
+    <string name="cb_menu_add_channel">チャンネルを追加する</string>
+    <string name="cb_menu_channel_list">チャンネル一覧</string>
+    <string name="cb_dialog_title_language_choice">言語を選択する</string>
+    <string name="cb_channel_dialog_channel_name">チャンネル名（0ｰ10文字）</string>
+    <string name="cb_channel_dialog_channel_number">チャンネル番号（0-65534）</string>
+    <string name="cb_channel_dialog_channel_state">チャンネルを有効にする</string>
+    <string name="cb_channel_dialog_edit_channel">チャンネルを編集する</string>
+    <string name="cb_menu_edit">"編集"</string>
+    <string name="cb_menu_delete">"削除"</string>
+    <string name="cb_error_channel_num">チャンネル番号（0-65534）を入力してください。</string>
+    <string name="cb_error_channel_name">チャンネル名の長さが無効です（1-10文字以内に収めてください）。</string>
+    <string name="cb_error_language_select">少なくとも一つの言語を選択してください。</string>
+    <string name="cb_error_channel_id_exist">チャンネルIDは既に存在します。</string>
+    <string name="cb_all_languages">"すべての言語"</string>
+    <string name="cb_default_new_channel_name">新チャンネル</string>
+    <string name="fdn_errorcode_unknown_info">失敗しました。不明なエラーが発生しました。しばらくしてからもう一度お試しください。</string>
+    <string name="fdn_errorcode_number_info">失敗しました。連絡先番号が長すぎます。</string>
+    <string name="fdn_errorcode_name_info">失敗しました。連絡先名が長すぎます。</string>
+    <string name="fdn_errorcode_storage_info">失敗しました。空き容量がありません。</string>
+    <string name="fdn_errorcode_phb_info">失敗しました。電話帳がビジーです。しばらくしてからもう一度お試しください。</string>
+    <string name="fdn_errorcode_pin2_info">失敗しました。PIN2が無効です。</string>
+    <string name="net_or_simcard_busy">ネットワークまたはSIMカードがビジーです。しばらくしてからもう一度お試しください。</string>
+    <string name="gsm_umts_network_preferences_title">"ネットワークモード"</string>
+    <string name="gsm_umts_network_preferneces_summary">まだ実装されていません。</string>
+    <string name="gsm_umts_network_preferences_dialogtitle">"ネットワークモード"</string>
+    <string name="umts_preferred_network_mode_dialogtitle">"ネットワークモード"</string>
+    <string name="voice_call">音声通話</string>
+    <string name="video_call">"ビデオハングアウト"</string>
+    <string name="internet_call">"インターネット通話"</string>
+    <string name="sum_voice_call">音声通話関連設定</string>
+    <string name="sum_video_call">ビデオ通話関連設定</string>
+    <string name="sum_internet_call">インターネット通話関連設定</string>
+    <string name="voice_mail">"ボイスメール"</string>
+    <string name="sum_voice_mail">ボイスメールサービスと番号</string>
+    <string name="sum_cell_broadcast_control_on">エリアメールを有効にする</string>
+    <string name="sum_cell_broadcast_control_off">エリアメールを無効にする</string>
+    <string name="sum_cell_broadcast_setting">エリアメールの言語とチャンネル設定</string>
+    <string name="call_additional_sum">電話番号と通話中着信設定</string>
+    <string name="vt_call_settings">ビデオ通話設定</string>
+    <string name="vt_local_video_rep">ローカル動画の置き換え</string>
+    <string name="vt_pic_replace_local_description">カメラを利用できない場合の代わりの画像を設定する</string>
+    <string name="mo_code_unconditional_cf_active">無条件の着信転送\n有効</string>
+    <string name="mo_code_some_cf_active">条件付きの着信転送\nON</string>
+    <string name="mo_code_call_forwarded">着信転送完了</string>
+    <string name="mo_code_call_is_waiting">着信待ち</string>
+    <string name="mo_code_cug_call">ユーザーグループを閉鎖しました</string>
+    <string name="mo_code_outgoing_calls_barred">発信が禁止されています</string>
+    <string name="mo_code_incoming_calls_barred">着信側で着信が禁止されています</string>
+    <string name="mo_code_clir_suppression_rejected">発信者番号通知サービスをチェックする</string>
+    <string name="mo_code_call_deflected">通話を転送しました</string>
+    <string name="mt_code_forwarded_call">転送通話です</string>
+    <string name="mt_code_cug_call">ユーザーグループを閉鎖しました</string>
+    <string name="mt_code_call_on_hold">通話を保留しました</string>
+    <string name="mt_code_call_retrieved">通話を取得しました</string>
+    <string name="mt_code_multi_party_call">"グループ通話"</string>
+    <string name="mt_code_on_hold_call_released">通話保留を解除しました</string>
+    <string name="mt_code_forward_check_received">転送チェック：SMSメッセージを受け取りました</string>
+    <string name="mt_code_call_connecting_ect">通話転送中</string>
+    <string name="mt_code_call_connected_ect">通話転送有効</string>
+    <string name="mt_code_deflected_call">他へ向けられた通話です</string>
+    <string name="mt_code_additional_call_forwarded">追加着信が転送されています</string>
+    <string name="mt_code_forwarded_cf">着信転送完了</string>
+    <string name="mt_code_forwarded_cf_uncond">無条件で着信転送完了</string>
+    <string name="mt_code_forwarded_cf_cond">条件付きで着信転送完了</string>
+    <string name="mt_code_forwarded_cf_busy">通話中にて転送完了</string>
+    <string name="mt_code_forwarded_cf_no_reply">無応答にて転送完了</string>
+    <string name="mt_code_forwarded_cf_not_reachable">接続失敗にて転送完了</string>
+    <string name="sim_manage_sipcall">"インターネット通話"</string>
+    <string name="sim_manage_call_via">以下を経由して通話</string>
+    <string name="manual_select_title">手動選択</string>    
+	<string name="manual_select_dialog_msg">手動選択モードの最中は、携帯端末は他の通信事業者を選択しません。選択した通信事業者のサービスが失われた場合は、手動選択を再度行うか、自動選択モードに切り替える必要があります。\"自動選択\"の使用を推奨します。ネットワークを手動選択しますか？</string>    
+	<string name="no_service_msg_gemini">現時点では、\"<xliff:g id="operator">%s</xliff:g>\"SIMカード用に選択された通信事業者のサービスは\存在しません。\n\"自動選択\"を使用するか、手動で別の通信事業者を選択することを推奨します。</string>    
+	<string name="no_service_msg">現時点では、選択された通信事業者のサービスは\存在しません。\n\"自動選択\"を使用するか、手動で別の通信事業者を選択することを推奨します。</string>    
+	<string name="show_always_title">これ以上の警告は不要です</string>    
+	<string name="no_service_msg_title_gemini">\"<xliff:g id="operator">%s</xliff:g>\"のサービスは存在しません</string>    
+	<string name="no_service_msg_title">"通信サービスなし"</string>    
+    <string name="gemini_data_connection">データ接続</string>
+    <string name="plmn_list_setting_title">優先ネットワーク</string>
+    <string name="network_id">ネットワークID</string>
+    <string name="dialog_network_priority_title">優先度</string>
+    <string name="plmn_list_setting_add_plmn">新規公衆携帯電話網</string>
+    <string name="international_dialing_title">国際ダイヤルアシスト</string>
+    <string name="international_dialing_select_country">国際電話をかけていることが検出されました。通話先を選択してください。</string>
+    <string name="international_dialing_add_country_code"><xliff:g id="country_name">%s</xliff:g>の番号にかけていることが検出されました。国番号(+<xliff:g id="country_code">%s</xliff:g>)を追加しますか？</string>
+    <string name="international_dialing_add_country_code_and_area_code"><xliff:g id="area_name">%1$s</xliff:g>、<xliff:g id="country_name">%2$s</xliff:g>の番号にかけていることが検出されました。国番号と地域コード(+<xliff:g id="prefix">%3$s</xliff:g>)を追加しますか？</string>
+    <string name="international_dialing_change_country_prefix">"<xliff:g id="country_name">%s</xliff:g>の番号からかけていることが検出されました。国際電話のプレフィックスを'+'に変更しますか？"</string>
+    <string name="international_dialing_add_country_code_input_area_code"><xliff:g id="country_name">%s</xliff:g>の番号にかけていることが検出されました。もしそうであれば、地域コードを入力してください。</string>
+    <string name="international_dialing_add_country_code_default_input_area_code"><xliff:g id="country_name">%s</xliff:g>の番号にかけていることが検出されました。目的地の都市名が<xliff:g id="area_name">%s</xliff:g>でないのであれば、地域コードを入力してください。</string>
+    <string name="international_dialing_need_area_code">通話を行うためには、目的地の都市の地域コードが必要です。</string>
+    <string name="international_dialing_input_area_code">地域コードを入力してください</string>
+    <string name="international_dialing_dialed_number">通話先番号：</string>
+    <string name="international_dialing_confirm_area_code">目的地の都市名が<xliff:g id="area_name">%s</xliff:g>でないのであれば、目的地の地域コードを以下に入力してください。</string>
+    <string name="international_dialing_click_below_button">国番号を変更する場合は、以下のボタンをクリックしてください。</string>
+    <string name="international_dialing_yes">はい。以下の番号を使用します：</string>
+    <string name="international_dialing_no">いいえ。元の番号を使用します：</string>
+    <string name="international_dialing_call_button">"発信"</string>
+    <string name="international_dialing_area_code">地域コード</string>
+    <string name="international_dialing_invalid_number">番号が無効です。発信を継続しますか？</string>
+    <string name="international_dialing_add_country_code_and_area_code_without_prefix">国番号と地域コードを追加しますか？</string>
+    <string name="no_search_result">検索結果無し</string>
+    <string name="which_call_to_activate">どの通話を有効にしますか？</string>
+    <string name="gemini_3g_disable_warning_case0">"SIMのデータローミングを有効にしてください。データローミング料金が大幅にかかる可能性があります。このSIMを選択してデータローミングを有効にしますか？"</string>
+    <string name="gemini_3g_disable_warning_case1">"このSIMでは3Gサービスを利用できません。高速なデータ接続ができない可能性があります。設定＞無線ネットワーク＞モバイルネットワーク　メニューから3Gサービス設定を変更できます。このSIMを選択しますか？"</string>
+    <string name="gemini_3g_disable_warning_case2">"SIMのデータローミングを有効にしてください。データローミング料金が大幅にかかる可能性があります。また、このSIMでは3Gサービスを利用できません。高速なデータ接続ができない可能性があります。設定＞無線ネットワーク＞モバイルネットワーク　メニューから変更できます。このSIMを選択してデータローミングを有効にしますか？"</string>
+    <string name="disable_data_connection_msg">利用可能なネットワークを検索する場合、使用中のデータ接続が切断されます。続行しますか？</string>
+    <string name="voice_command_notification_ticker">\"<xliff:g id="first_voice">%s</xliff:g>\" または \"<xliff:g id="second_voice">%s</xliff:g>\"と言えば着信を受け取ったり、無視できます。</string>
+    <string name="voice_command_notification_title">音声制御</string>
+    <string name="voice_command_notification_message">携帯端末のボイス制御が有効です</string>
+    <string name="callFailed_simError_cdma">UIM/SIMがない、またはUIM/SIMエラー</string>
+    <string name="callFailed_simError_slotNumber">スロット<xliff:g id="slotNumber">%s</xliff:g>にSIMがない、またはSIMエラー</string>
+    <string name="callFailed_cdma_notEmergency">"緊急通報のみ可能です。"</string>
+    <string name="buttonTxtContinue">"次へ"</string>
+    <string name="fdn_only_error">"発信番号制限で指定された番号に対してのみ操作できます。"</string>
+    <string name="network_setting_all_forbidden_dialog">利用可能なネットワークが見つかりません。3Gサービスに切り替えるか、禁止されているネットワークをクリックして手動登録してください。</string>
+    <string name="reset_data_usage">データ使用量をリセットする</string>
+    <string name="simContacts_emptyLoading_ex">%s\u2026から連絡先を読み取り中</string>
+    <string name="one_retry_left">1回再試行できます</string>
+    <string name="retries_left"><xliff:g id="number">%d</xliff:g>回の再試行が可能です</string>
+    <string name="pin2_unblocked">PIN2のブロックを解除しました</string>
+    <string name="unblock_pin2">PIN2ブロックを解除する</string>
+    <string name="sim_permanently_locked">PUK2コードを10回以上誤って入力したため、SIMカードが恒久的にロックされました</string>
+    <string name="pin_length_indicate">（4-8桁）</string>
+    <string name="puk_length_indicate">（8桁）</string>
+    <string name="caller_manage_manage_done_text">"通話に戻る"</string>
+    <string name="card_title_incoming_vt_call">ビデオ通話着信</string>
+    <string name="voicemail_settings_for"><xliff:g id="provider_name">%s</xliff:g>の設定</string>
+    <string name="sip_call_options_title_single_sim">"インターネット通話オプション"</string>
+    <string name="description_search_button">"検索"</string>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item>2G/3G （自動）</item>
+        <item>3Gのみ</item>
+        <item>2Gのみ</item>
+    </string-array>
+    <string-array name="umts_network_preferences_choices">
+        <item>2G/3G （自動）</item>
+        <item>3Gのみ</item>
+    </string-array>
+    <string-array name="lte_usim_prefer_network_mode_choices">
+        <item>4G/3G/2G （自動）</item>
+        <item>3G/2G （自動）</item>
+        <item>2Gのみ</item>
+    </string-array>
+    <string-array name="lte_sim_prefer_network_mode_choices">
+        <item>3G/2G （自動）</item>
+        <item>2Gのみ</item>
+    </string-array>
+    <string name="cipher_indication_notification_title">音声暗号化無し</string>
+    <string name="cipher_indication_notification_message">音声暗号化はネットワークによりOFFにされています</string>
+    <string name="network_type">ネットワークの種類</string>
+    <string name="cancel">"キャンセル"</string>
+    <string name="volte_add_conference_member_title">会議に追加</string>
+    <string name="add_member_msg">番号または名前を入力</string>
+    <string name="card_title_incoming_conference">会議の招待</string>
+    <string name="addConferenceMemeberText">メンバーを追加</string>
+    <string name="add_conference_member_limit">一度に1つの番号のみを追加できます。</string>
+    <string name="conference_member_join"><xliff:g id="member_name">%s</xliff:g>が会議に参加しました。</string>
+    <string name="conference_member_leave"><xliff:g id="member_name">%s</xliff:g>が会議から退出しました。</string>
+    <string name="conference_member_adding"><xliff:g id="member_name">%s</xliff:g>を追加しています。</string>
+    <string name="conference_member_add_fail"><xliff:g id="member_name">%s</xliff:g>の追加に失敗しました。</string>
+    <string name="removeMember">"削除"</string>
+    <string name="memberStatus">"端末の状態"</string>
+    <string name="volte_call_waiting_indication_text">相手が通話中です。お待ちください。</string>
+    <string name="alert_dialog_yes">"はい"</string>
+    <string name="alert_dialog_no">"いいえ"</string>
+</resources>

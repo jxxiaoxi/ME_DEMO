@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+
+    <!-- Caller information -->
+    <LinearLayout
+        android:id="@+id/conferenceCallerSeparate"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingStart="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:paddingStart="8dp"
+             android:gravity="center_vertical"
+             android:orientation="vertical">
+
+            <!-- Name or number of this caller -->
+            <TextView
+                 android:id="@+id/conferenceCallerName"
+                 android:textAppearance="?android:attr/textAppearanceLarge"
+                 android:textSize="18sp"
+                 android:singleLine="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:layout_marginEnd="2dp"
+                 />
+
+            <!-- Number of this caller if name is supplied above -->
+            <LinearLayout
+                 android:layout_width="wrap_content"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal"
+                 android:gravity="bottom">
+
+                <!-- Number -->
+                <TextView
+                     android:id="@+id/conferenceCallerNumber"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:textSize="14sp"
+                     android:ellipsize="marquee"
+                     android:textColor="@color/manage_conference_secondary_text_color"
+                     android:singleLine="true"
+                     android:layout_marginEnd="8dp" />
+
+                <!-- Number type -->
+                <TextView
+                    android:id="@+id/conferenceCallerNumberType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/manage_conference_secondary_text_color"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:gravity="start" />
+
+            </LinearLayout>  <!-- End of caller number -->
+
+        </LinearLayout>  <!-- End of caller information -->
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/status"
+        android:src="@drawable/mtk_ic_volte_conference_call_status_online"
+        android:scaleType="center"
+        android:contentDescription="@string/memberStatus"
+        android:gravity = "center_vertical"
+        android:layout_width="46dp"
+        android:layout_height="46dp" />
+
+    <ImageButton
+         android:id="@+id/conferenceCallerDisconnect"
+         android:src="@drawable/mtk_ic_volte_conference_remove_member"
+         android:scaleType="center"
+         style="?android:attr/borderlessButtonStyle"
+         android:layout_marginRight="3dp"
+         android:layout_marginLeft="20dp"
+         android:layout_width="80dp"
+         android:layout_height="match_parent"
+         android:contentDescription="@string/onscreenEndCallText" />
+
+</LinearLayout>

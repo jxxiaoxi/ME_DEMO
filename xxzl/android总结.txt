@@ -1,0 +1,228 @@
+一，android属性：
+1.(androidManifest.xml)android:configChanges="orientation|keyboardHidden"  通过设置这个属性可以使Activity捕捉设备状态变化 （http://www.cnblogs.com/charley_yang/archive/2011/04/17/2018940.html）
+2.(androidManifest.xml)android:screenOrientation Activity在屏幕当中显示的方向
+3.(androidManifest.xml)supports-screens 适应不同屏幕大小 (http://wiki.eoeandroid.com/index.php?title=Supports-screens&diff=8457&oldid=8452)
+
+
+
+二：实现特殊效果的组件
+1.ViewFlipper 仿UC的翻页效果，左右滑动activity（http://www.oschina.net/android/108/viewflipper）
+2.WindowManager 悬浮按钮 (http://www.cnblogs.com/hanyonglu/archive/2012/02/13/2350171.html)
+
+
+
+三.总结
+   1.自定义view类（http://wiki.eoeandroid.com/Creating_a_View_Class）
+     a.自定义view要继承现有的view或view的子类
+     b.在res/values/attrs.xml中定义<declare-styleable>资源说明自定义的属性
+     c.申请自定义属性，XML标签中所有的属性都从资源包中读取出来并作为一个AttributeSet传递给view的构造函数，但是直接用attributeset并不完美，一般的做法是：将AttributeSet传递给
+       obtainStyledAttributes()  方法。这个方法传回了一个TypedArray数组
+     d.添加属性和事件，为了更好的控制view的属性，需要暴露每个自定义属性的一对getter和setter，setter方法里面需调用了invalidate()和requestLayout()方法，保证view的可靠性
+     e.一定要构造方法public xxx(Context context, AttributeSet attrs) 否则会报错
+
+   2.Android实战经验之图像处理及特效处理的集锦（总结版） http://www.cnblogs.com/bill-joy/archive/2012/06/29/2570279.html
+
+   3.contentprovider 的应用学习：http://my.oschina.net/kevin008/blog/2196
+  
+   4.开关学习：http://iaiai.iteye.com/blog/1688131
+
+
+   5.PreferenceActivity(http://blog.csdn.net/wangjia55/article/details/8224484)
+     a. preference下的View是有限的，只有下面几个：
+        CheckBoxPreference:CheckBox选择项，对应的值的ture或flase
+        EditTextPreference:输入编辑框，值为String类型，会弹出对话框供输入。
+        ListPreference: 列表选择，弹出对话框供选择。
+        Preference：只进行文本显示，需要与其他进行组合使用。
+        PreferenceCategory：用于分组。
+        RingtonePreference：系统玲声选择
+     b.其包含PreferenceScreen（一个界面包含所有的元素），PreferenceCategory（在一个界面在对所有元素分组）；
+     c.PreferenceCategory可以包含另外一个PreferenceScreen，表示点击后，跳转到另外一个PreferenceScreen（界面）
+     d.CheckBoxPreference自定义checkbox可以参考http://blog.csdn.net/ywtcy/article/details/7895814
+
+    6.判断apk是否已经安装可以用：（参照文件http://kalogen.iteye.com/blog/1580703）
+      1.PackageManager pm = this.getPackageManager();
+      2.PackageInfo packageInfo = pm.getPackageInfo(packageName, 0);
+      3.当2报NameNotFoundException异常时，说明未安装，在catch中获取即可
+
+    7.android 下载应用 通知栏显示进度 下完之后点击安装 （很实用） (http://blog.csdn.net/abc13939746593/article/details/8160883)
+
+    8.最常用到的intent（http://www.cnblogs.com/mhlstar/archive/2012/02/24/2366971.html）
+
+    9.通过intent安装apk文件以及MIME的介绍（http://edison-cool911.iteye.com/blog/695077）
+
+    10.获取第三方apk的图标：
+	 PackageManager pm = this.getPackageManager();
+         PackageInfo packageInfo = pm.getPackageArchiveInfo(file.getAbsolutePath(),PackageManager.GET_ACTIVITIES);
+         ApplicationInfo applicationInfo = packageInfo.applicationInfo;
+	 //下面两句很重要，否则不能正确显示apk的图片而是默认的本程序默认的图片
+         applicationInfo.sourceDir = archiveFilePath;  
+	 applicationInfo.publicSourceDir = archiveFilePath;//archiveFilePath为文件路径
+	 appInfo.setAppIcon(applicationInfo.loadIcon(pm));
+
+    11.android.mk的分析（http://blog.csdn.net/hudashi/article/details/7059006）
+                      （http://blog.chinaunix.net/uid-14198351-id-3131137.html)
+
+  
+    12.网络下载（http://lpqsun-126-com.iteye.com/blog/1084311）
+       在线更新apk（http://www.cnblogs.com/Amandaliu/archive/2011/08/22/2148936.html）
+       HttpUrlConnection和HttpClient的用法(http://www.cnblogs.com/qingblog/archive/2012/10/23/2735026.html)
+
+
+    13.android网络编程：
+       a.网络常用编程分为：1.针对tcp/ip的Socket,ServerSocket
+                     2.针对直接URL的URL，URLConnection和HttpConnection
+                     3.基于Apache HttpClient客户端的HTTP编程
+       b.HttpClient分别用来提交HTTP GET和HTTP POST请求，其步骤如下：（http://blog.csdn.net/yyj984551002/article/details/7779009）
+                        1.创建HttpGet或HttpPost对象，将要请求的URL通过构造方法传入HttpGet或HttpPost对象。
+                        2.使用DefaultHttpClient类的execute方法发送HTTP GET或HTTP POST请求，并返回HttpResponse对象。
+                        3.通过HttpResponse接口的getEntity方法返回响应信息，并进行相应的处理。（判断请求响应状态码，状态码为200表示服务端成功响应了客户端的请求，
+
+    14.context 详细解释（http://blog.csdn.net/qq272803220/article/details/7327178）
+
+     15.adb logcat的使用总结（http://blog.chinaunix.net/uid-22981446-id-3248800.html）
+       1.输出自己指定的log
+        a.adb logcat | grep MyApp 输出T任意的包含MyApp（不管是tab还是内容）的log
+        b.adb logcat | grep -i myapp #忽略大小写， 输出Tab为MyApp（不管是tab还是内容,不区分大小写）的log
+        c.如果我们只需要输出指定tab的log，此时我们可以观察正常的log信息（D/KeyguardViewMediator(  232): setHidden false），
+          此时我们发现tab是从第三个字母开始的,因此我们可以用：adb logcat | grep "^..KeyguardViewMediator"
+        d.根据这个格式也可以设置只显示某个优先级的 log，再匹配行首第一个字符即可。例如仅显示 Error 级别 tag 为 MyApp 的输出：adb logcat | grep "^E.MyApp" ，
+          Inffo级别的log：adb logcat | grep "^I.MyApp"
+        e.如果我们要输出多个指定的Tab的log，使用 | 分割多个匹配表达式，“|”前要加转义符“\”，adb logcat | grep "^..MyApp\|^..MyActivity"
+        f.过滤掉某些不要的tab log，还是使用 grep，用法也跟上面的一样，加一个 -v 即可。例如要过滤 tag 为 MyApp 和 MyActivity 的输出：adb logcat | grep -v "^..MyApp\|^..MyActivity"
+        g.过滤 log 文件有时需要分析 log 文件，过滤 log 文件还是使用 grep。例如 log 文件为 myapp.log，要匹配 tag 为 MyApp 和 MyActivity 的输出，然后输出到 newmyapp.log：
+          cat myapp.log | grep "^..MyApp\|^..MyActivity" > newmyapp.log 
+
+
+     16.android线程的处理（http://blog.csdn.net/hudashi/article/details/8451540,http://www.360doc.com/content/11/0927/18/7806402_151676676.shtml）,android UI线程是非线程
+        a.AsyncTask最大的特点是任务在主线程之外运行，而回掉的方法在主线程中执行（AsyncTask的任务其实最后是在AsyncTask本身的一个静态线程池变量中被执行的），与
+          UI进行交互的AsyncTask的函数接口有，cancel（），onProgressUpdate(),onPostExecute()这个是doInBackground执行完后调用，为了安全AsyncTask必须在UI线程上被实例.
+          doInBackground()方法会自动地在工作者线程中执行,onPreExecute()、onPostExecute()和onProgressUpdate()方法会在UI线程中被调用,doInBackground()方法的返回值会
+          被传递给onPostExecute()方法在doInBackground()方法中你可以调用publishProgress()方法，每一次调用都会使UI线程执行一次 onProgressUpdate()方法
+        b.android.os.AsyncTask<Params, Progress, Result>,第一个为doInBackground接受的参数，第二个为显示进度的参数，第三个为doInBackground返回和onPostExecute传入的参数
+      
+      17.数据库中：Cursor cursor = apkdb.query(DBName, new String[] { "info_name" },"info_name=?", new String[] { name }, null, null, null);
+
+     18.java中的模板模式，应用场景：
+           1) 一次性实现一个算法的不变的部分，并将可变的行为留给子类来实现。
+           2) 各子类中公共的行为应被提取出来并集中到一个公共父类中以避免代码重复。首先识别现有代码中的不同之处，并且将不同之处分离为新的操作。最后，用一个调用这些新的操作的模板方法来替换这些不同的代码。
+        
+     19.在activity中，如果有两个activity A和B，A继承了B，并且A中复写B中xx方法，当在A中去调用xx方法的时候，这时调用的是之类B中的xx方法，应为当A创建的时候把对象传给了B，当B创建的时候，那个this指向了
+        A，而不是B本身
+
+
+     20.android的解析方式（XmlResourceParser类的使用）（http://www.iteye.com/topic/1122056）
+
+
+     21.Handler sendMessage 与 obtainMessage (sendToTarget)比较 
+        最主要的区别是obtainMessage是从MessagePool拿的对象而不是像new Message（）那样，这样省去了创建对象申请内存的开销，于message产生之后你使用obtainMessage 或者是 sendMessage 效率影响
+        （http://blog.csdn.net/winson_jason/article/details/8149284）
+
+
+     22.把24小时制的时间转换成12小时制的算法：
+           if (hour >= 12) {
+	        hour = (hour == 12) ? hour : hour % 12;
+		mAmPm.setImageResource(R.drawable.pm);
+	   } else {
+		if (hour == 0)
+		hour = 12;
+	        mAmPm.setImageResource(R.drawable.am);
+	   }
+
+
+     23.vim常用命令
+       1.返回上一层目录 -
+       2.改文件的名字 R
+       3.跳到指定的行 如50行 50gg
+       4.gg 跳到文件的开始
+       5.G 跳到文件的结束 
+
+     24.读取assets目录下的文件 http://abc20899.iteye.com/blog/1096620
+
+     25.锁屏流程分析 http://blog.csdn.net/qinjuning/article/details/7505703
+
+
+     26.ubunto 添加回收站到桌面 gconf-editor /apps /nautilus/desktop/trash_icon_visible   打上勾就可以了。
+
+附加：android学习网站http://wiki.eoeandroid.com/Android_Training
+动画参考http://blog.csdn.net/sjf0115/article/details/7265307
+
+优秀博客：1.http://blog.chinaunix.net/uid-22981446-id-3290288.html
+        2.android之Launcher对于AppWidget处理的分析：AppWidgetHost角色 （http://blog.csdn.net/thl789/article/details/7893292）
+        3.AppWidget更新动作的原理：http://blog.csdn.net/wangshione/article/details/6060280
+        4.MiediaProvider分析（http://blog.csdn.net/thl789/article/details/7583352）
+        5.Android Audio系统之RingerMode (http://blog.csdn.net/thl789/article/details/7450861)
+        6.http://blog.csdn.net/sergeycao/article/category/1272838?reload
+        7.http://www.cnblogs.com/innost/archive/2011/01/09/1931456.html (Android深入浅出之Binder机制)
+        8.http://www.ibm.com/developerworks/cn/aix/library/es-unix-find.html（find 命令）
+
+优秀网站
+      chinaunix.net
+
+
+
+    27.在xp下搭建android开发环境：http://www.cnblogs.com/BetterWF/archive/2011/12/23/2299596.html
+       eclipse设置：http://yuanzhifei89.iteye.com/blog/974082
+       eclipse快捷键的使用：http://www.cnblogs.com/neng/archive/2012/08/11/2633969.html
+       xp开发android的eclipse可以直接下载 ADT Bundle的sdk，这样里面已经有adt，eclipse一整套
+       
+    28.Fragment的学习： http://blog.csdn.net/lilu_leo/article/details/7671533
+
+
+
+    29.天气apk开发参考网站及注意点：
+      （1）.获取天气的资源网站：中国国家气象局天气预报，网址：http://www.weather.com.cn/data/sk/101010100.html；http://www.weather.com.cn/data/cityinfo/101010100.html；
+           http://m.weather.com.cn/data/101010100.html；其中101010100是城市代号。可以参照博客：http://blog.csdn.net/hello_haozi/article/details/7564223
+
+    30.laucher 日历图标动态显示日期功能开发
+       （1）参考资料：桌面显示未读短信 http://www.nmjtzy.com.cn/article_1084048.html； 4.0laucher启动：http://blog.sina.com.cn/s/blog_4cd5d2bb0101fi4e.html
+
+
+    31.android4.4 屏蔽home键  
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_HOMEKEY_DISPATCHED,WindowManager.LayoutParams.FLAG_HOMEKEY_DISPATCHED);//屏蔽home键
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);  //让一个activity 浮在锁屏界面的上方，返回即进入解锁界面（在当前界面上锁，按power键亮屏，显示当前界面，按返回键，进入的是解锁界面）
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD); //解除锁屏
+
+    32.加密不乱码的做法：git init --》 git add --》git commit --》 然后拷贝.git文件
+
+phone 模块相关文章
+http://wenku.baidu.com/view/afb2dc355a8102d276a22fdf.html
+http://www.cnblogs.com/chenxian/archive/2010/09/28/1837489.html  Android_Phone源代码来电流程解读
+
+android 计算器模块分析：http://www.manong.net/thread-120-1-1.html
+
+android 日历模块分析：http://www.myexception.cn/android/1250437.html ;http://www.jcodecraeer.com/plus/search.php?kwtype=0&q=%C8%D5%C0%FA
+
+android开发注意事项：http://mobile.51cto.com/hot-318694.htm
+Android社区：StackOverflow.com（针对Android开发的关键字，技术实现的查询和疑难解答）
+中文api翻译博客：http://www.cnblogs.com/over140/category/277077.html
+王宪明的android学习之旅 : http://blog.csdn.net/wdaming1986/article/details/7017742
+傲慢的上校:http://blog.csdn.net/lilu_leo/article/details/
+丹丹：http://blog.csdn.net/dany1202/article/details/6532024
+详细天气插件是实现：http://blog.csdn.net/way_ping_li/article/details/9260915
+网络编程：http://book.51cto.com/art/201308/408969.htm
+游戏编程：http://blog.51cto.com/zt/33
+业内网站：http://bbs.52rd.com/forum.php
+android 源码查看网站：android.googlesource.com/
+android 开发者网站： developer.android.com/guide/components/aidl.html
+android 资源网站： http://source.android.com
+java的回调机制： http://blog.csdn.net/fengyifei11228/article/details/5729445
+android 仿电话本，listview快速查找：http://blog.csdn.net/worker90/article/details/7785606
+settings TAB 方式修改: http://my.oschina.net/cjkall/blog/195789   http://blog.csdn.net/way_ping_li/article/details/30089601
+
+上海做手机的公司：http://bbs.52rd.com/Thread-232896-1-6.html
+
+AsyncTask 源码分析 http://ju.outofmemory.cn/entry/69782
+优秀网站 http://ju.outofmemory.cn
+android 设计模式： http://www.cnblogs.com/qianxudetianxia/
+html 学习网站：http://www.w3school.com.cn/html/html_intro.asp
+
+python 在线学习： http://itlab.idcquan.com/linux/manual/Python_chinese/ch03s05.html
+
+android 锁屏 http://blog.csdn.net/cnhua57inyu/article/details/38750633
+
+引路峰移动软件：http://www.imobilebbs.com/
+
+api之家：http://www.apihome.cn/api/android/
+
+android UI与开发 ： http://tech.ddvip.com/
+

@@ -1,0 +1,110 @@
+﻿今天重新装了系统，由于现在的android2.3编译是使用64位系统的，所以要重新搭建环境
+   第一：装完系统后，首先就是安装java，从http://www.oracle.com/technetwork/java/javase /downloads/index.html 下载Java SE 6 Update 27，下载下来的jdk-6u27-linux-x64.bin，然后放到你想要安装的目录下，在这里我放在/home/java，进入/home /java下打开终端输入：sudo sh jdk-6u27-linux-x64.bin,就会解压安装，最后形成jdk1.6.0_27的目录，接下来就是添加环境变量，在终端输入gedit /etc/bash.bashrc打开这个文件，在里面添加你的安装的路径，在打开的文件里面的最后一行输入：
+export JAVA_HOME=/home/java/jdk1.6.0_27
+export PATH=$PATH:$JAVA_HOME/bin
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+然后保存退出，在终端输入：source /etc/bash.bashrc，在终端输入java -version就会显示：
+java version "1.6.0_27"
+Java(TM) SE Runtime Environment (build 1.6.0_27-b07)
+Java HotSpot(TM) 64-Bit Server VM (build 20.2-b06, mixed mode)
+   第二:安装完java后，就在安装32位的兼容包，在终端输入：sudo apt-get install ia32-libs*，不然32位程序无法运行
+   第三：编译android时也会出现一些问题，我从网上找到一些文档，照着做，出现的问题都解决了，所以做完第二步后直接将所有又能出错的问题，把相关的包都安装上去就行。
+
+错误:
+/usr/include/gnu/stubs.h:7:27: error: gnu/stubs-32.h: No such file or directory
+
+make: *** [out/host/linux-x86/obj/EXECUTABLES/acp_intermediates/acp.o] 错误 1
+
+解决:
+　　sudo apt-get install libc6-dev-i386
+
+错误:
+make: *** [out/host/linux-x86/obj/EXECUTABLES/acp_intermediates/acp] error 1
+
+解决:
+　　sudo apt-get install g++-multilib
+
+错误:
+external/clearsilver/cgi/cgi.c:22: fatal error: zlib.h: No such file or directory
+compilation terminated.
+make: *** [out/host/linux-x86/obj/SHARED_LIBRARIES/libneo_cgi_intermediates/cgi.o] Error 1
+
+解决:
+sudo apt-get install zlib1g-dev
+
+错误:
+/usr/bin/ld: cannot find -lz
+collect2: ld returned 1 exit status
+make: *** [out/host/linux-x86/obj/EXECUTABLES/aapt_intermediates/aapt] Error 1
+
+解决：
+sudo apt-get install lib32z1-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install lib64z1-dev
+
+
+错误:
+bison -d  -o out/host/linux-x86/obj/EXECUTABLES/aidl_intermediates/aidl_language_y.cpp frameworks/base/tools/aidl/aidl_language_y.y
+/bin/bash: bison: command not found
+make: *** [out/host/linux-x86/obj/EXECUTABLES/aidl_intermediates/aidl_language_y.cpp] Error 127
+
+解决:
+sudo apt-get install bison
+
+错误:
+Lex: aidl <= frameworks/base/tools/aidl/aidl_language_l.l
+/bin/bash: flex: command not found
+make: *** [out/host/linux-x86/obj/EXECUTABLES/aidl_intermediates/aidl_language_l.cpp] Error 127
+
+解决:
+sudo apt-get install flex
+
+
+错误:
+/usr/bin/ld: cannot find -lncurses
+collect2: ld returned 1 exit status
+make: *** [out/host/linux-x86/obj/EXECUTABLES/adb_intermediates/adb] Error 1
+
+解决:
+sudo apt-get install lib32ncurses5-dev
+sudo apt-get install libncurses5-dev
+
+
+错误:
+prebuilt/linux-x86/sdl/include/SDL/SDL_syswm.h:55: fatal error: X11/Xlib.h: No such file or directory
+compilation terminated.
+make: *** [out/host/linux-x86/obj/EXECUTABLES/emulator_intermediates/Android/main-common.o] Error 1
+
+解决:
+sudo apt-get install libx11-dev
+
+错误:
+sh: gperf: not found
+calling gperf failed: 32512 at ./makeprop.pl line 96.
+make: *** [out/target/product/generic/obj/STATIC_LIBRARIES/libwebcore_intermediates/WebCore/css/CSSPropertyNames.h] Error 25
+make: *** Deleting file `out/target/product/generic/obj/STATIC_LIBRARIES/libwebcore_intermediates/WebCore/css/CSSPropertyNames.h'
+
+解决:
+sudo apt-get install gperf
+
+错误：
+fatal error: GL/glx.h: No such file or directory
+development/tools/emulator/opengl/host/libs/Translator/GLcommon/GLDispatch.cpp:22: fatal error: GL/glx.h: No such file or directory
+compilation terminated.
+make: *** [out/host/linux-x86/obj/STATIC_LIBRARIES/libGLcommon_intermediates/GLDispatch.o] Error 1
+
+解决方法：sudo apt-get install libgl1-mesa-dev
+
+错误：
+make: *** [out/target/common/obj/PACKAGING/checkapi-current-timestamp] 错误 38
+
+
+解决办法：make update-api
+
+   第四：安装上面的包后，编译的时候如果还会报错的话，我们可以将java的环境变量进行输出：
+
+export JAVA_HOME=/home/java/jdk1.6.0_27
+export PATH=$PATH:$JAVA_HOME/bin
+
+然后重新编译一下，就ok了。
+

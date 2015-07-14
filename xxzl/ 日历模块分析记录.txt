@@ -1,0 +1,14 @@
+4.0 日历模块简析
+
+1.日历的整体架构
+  a.日历主要是用AllInOneActivity加载不同的Fragments和actionbar组成
+  b.主要的Fragments有：AgendaFragment，DayFragment，DayFragment，MonthByWeekFragment；与其相对应的试图是：日程视图，日视图，周视图，月视图；与其对应大概的代码位置：com.android.calendar.agenda，
+    DayView.Java（周视图和日视图），com.android.calendar.month。
+
+2.AllInOneActivity的简要分析
+  a.onCreate函数中几个比较重要的方法：（1）configureActionBar(viewType)，这个方法是控制日列界面上面的那块视图。如果设备是平板走createTabs(viewType)，手机走createButtonsSpinner(viewType)。在createButtonsSpinner方法中 new CalendarViewAdapter (this, viewType)一个对象，在实例话CalendarViewAdapter对象的时候，mButtonNames这个参数加载了对应的下拉Spinner的列表，getDropDownView方法里;
+对下拉的Spinner加载对应的内容（如 日   9月6日），viewType和date对应这两个参数；
+  （2）.initFragments方法中调用了setMainPane， setMainPane里面的switch (viewType)是根据不同的viewType加载不同的Fragments。
+
+3.各个Fragments和AllInOneActivity之间的调控由CalendarController控制。它对应了大部分的事件处理，可以简单的理解位一个事件连接器。CalendarController中定义了EventHandler接口，接口中定义了        getSupportedEventTypes();handleEvent(EventInfo event);void eventsChanged()三个方法。CalendarController中sendEvent方法很重要，里面是大部分时间处理的入口
+

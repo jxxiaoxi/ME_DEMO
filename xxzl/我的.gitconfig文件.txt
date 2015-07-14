@@ -1,0 +1,32 @@
+这个文件使用来配置 git的，放在用户根目录下，如一些命令的缩写等，
+内容如下：
+
+[user]
+	name = liuwei //用户名
+	email = liuwei@hymost.com // 邮箱名
+
+[alias]
+    ch = checkout //chekout的缩写
+    co = commit
+    st = status
+    rs = reset
+    br = branch
+    pl = pull
+    oneline = log --pretty=oneline --since='2 days ago'
+    lg = log --pretty=format:'%h |%an |%ai |%s'
+    onelog = log -p -1
+    dc = dcommit
+    rb = rebase
+
+[color] //颜色配置
+    status = auto
+    branch = auto
+    ui = auto
+    diff = auto
+    interactive = auto
+[core]
+    editor = vim
+[push]
+    default = matching
+[rerere]
+    autoupdate = no

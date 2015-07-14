@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/call_button_locked"
+    android:visibility="gone"
+    android:layout_height="150dip"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/inCallControlsBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/calllock_iconbg" />
+
+    <AbsoluteLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/calllocktext"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="100dip"
+            android:layout_y="88dip"
+            android:text="@string/slide_call"/>
+
+        <ImageView
+            android:id="@+id/calllock"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="42dip"
+            android:layout_y="80dip"
+            android:src="@drawable/calllock_icon" />
+    </AbsoluteLayout>
+
+</RelativeLayout>

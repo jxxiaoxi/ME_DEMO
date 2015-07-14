@@ -1,0 +1,92 @@
+gedit 打开文本工具
+3rdparty/app/app6820/special/android/vendor/sprd/product 控制桌面应用程序
+package com.android.settings / DeviceInfoSettings /onCreate  // 设置版本号等信息
+
+/home/liuwei/xiangmu/6820_w120911/out/target/common/obj/APPS/ 资源文件目录
+
+ ./mk -o=2sim 工程名 u adr 模块相对路径  编译相应模块
+
+
+本地创建一个分支并与服务器相连
+git checkout -b c905_blf_lc107_YL2025 //本地创建一个分支
+git push origin c905_blf_lc107_YL2025:c905_blf_lc107_YL2025  //把分支上传到服务器
+git branch --set-upstream c905_blf_lc107_YL2025 origin/c905_blf_lc107_YL2025 //本地与服务器关联
+git remote show origin //查看是否关联成功
+
+
+修改tp
+EKTF2K 为要上传的tp名字
+1.把tp从服务器存放的地方copy到自己的项目下 /home/liuwei/桌面/liuwei/eng_6820_c905_BLF_LC107_c03_YL2025/6820_w120911/3rdparty/tp
+2.改变权限
+liuwei@liuwei:~/eng_6820_c905_BLF_LC107_c03_YL2025/6820_w120911/3rdparty/tp/EKTF2K$ chmod -R 777 /home/liuwei/eng_6820_c905_BLF_LC107_c03_YL2025/6820_w120911/3rdparty/tp/EKTF2K/
+3.添加tp
+/home/liuwei/桌面/liuwei/eng_6820_c905_BLF_LC107_c03_YL2025/6820_w120911/customize/make/sp6820a.mak文件夹下加 EKTF2K
+3RDPARTY_TP   = EKTF2K # FT5206 #FT5206 PIXCIR GT81X
+
+
+压缩成tar格式文件： tar -zcvy xxx.tar.gz aaa
+压缩成rar格式文件： rar a C905_BLF_LM015_v05.rar /home/liuwei/桌面/bin_C905 
+
+音频参数目录 /home/liuwei/桌面/liuwei/2.3/C910_JN/android235_w1220p12/customize/customer_cfg/c910_jinnuo/res/hw_params
+
+编译home/liuwei/桌面/liuwei/user_vector/ueser_C905_BLF_LC107/6820_w120911/frameworks/policies
+
+git知识参考  http://hi.baidu.com/uiovcwazozbhosq/item/a6f94a368eeb2bfbde2221f3
+
+ubunto版本更新
+sudo apt-get update
+sudo apt-get upgrade
+
+git查看某个人的提交
+查看某个作者的提交历史：$ git log --author="stupid" （http://hi.baidu.com/abcdxyzk/item/1e77387a313522306dc37c02）
+
+
+查看国家和语言简称 http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements  http://www.loc.gov/standards/iso639-2/php/code_list.php 
+
+
+平台改ui  ：sprdroid_base.mk中加控制宏  sprd_core.mk 去掉：  hylauncher \hytheme \ hytheme1 \    spard_app.mk 去掉：hylauncher \ hytheme
+
+多语言项目 应加:app-multilanguage 解决语言不流利问题
+
+
+本地切换分支  git checkout --track 分支名称  （分支名称不存在）
+
+指定目录下找东西： find ./ -name *msn*.apk
+改system的大小分配：/home/liuwei/桌面/liuwei/2.3/zhongnuo/android235_w1220p12/u-boot/include/configs/c910hvga.h
+
+修改android默认版本号 c905_blf_lc107a1_flb/special/android/build/core/version_defaults.mk
+
+修改默认输入法 c905_blf_lc107a1_flb/special/android/frameworks/base/packages/SettingsProvider/res/values/defaults.xml 
+<string name="config_default_input_method_xunfei" translatable="false">com.android.inputmethod.pinyin/.PinyinIME</string> 包名和服务名
+
+
+adb shell input text "www.wapdam.com"重电脑向手机输入
+
+联系人后9位匹配修改 frameworks/base/telephony/java/android/telephony/PhoneNumberUtils.java
+                 external/sqlite/android/OldPhoneNumberUtils.cpp
+
+反编译apk 先进入apktool-install-linux-r04-brut1  用命令./apktool d -f /home/liuwei/tool/反编译工具/SmartKeyboard.apk（apk路径） ss（解压到的目录） （http://blog.csdn.net/sunboy_2050/article/details/6727581）
+
+世界时区查询 http://cn.wtzclock.com/
+
+4+2项目内存分配 rom+ram 512+256 
+
+/home/liuwei/2.3/xinweiyuan_in/android235_w1220p12/out/target/product/hsdroid/obj/PACKAGING/target_files_intermediates 升级包的路径
+
+
+android原生态编译步棸：1.source build/envsetup.sh（配置环境）； 2.build/envsetup.sh（配置环境）； 3.lunch（查看项目）； 4.选择要编的项目，默认的为full-eng；5.kheader（配置环境）不是必须； 6.make -j4（其中4表示进程数字，也可以是8或16）
+
+
+4.0eng版本adb shell：adb root adb remount adb shell
+
+
+git clean -f ;git reset --hard origin/master ;git pull 
+
+开发者网站 https://developer.android.com
+
+
+kclean 配置换
+
+yangjinxing317
+jin2012xing
+

@@ -1,0 +1,36 @@
+一、错误： libcore/luni/src/main/java/libcore/reflect/AnnotationAccess.java:695: type parameters of A cannot be determined; no unique maximal instance exists for type variable A with upper bounds A,java.lang.annotation.Annotation
+        return AnnotationFactory.createAnnotation(annotationClass, members);
+     .....
+    1 error
+    host C: libcrypto_static <= external/openssl/crypto/x509v3/v3_akeya.c
+    host C: libcrypto_static <= external/openssl/crypto/x509v3/v3_alt.c
+    make: *** [out/target/common/obj/JAVA_LIBRARIES/core_intermediates/classes-full-debug.jar] Error 41
+   这个错误是jdk版本太低，需要升级，
+
+jdk的升级步骤：
+1.wget --no-cookies --header "Cookie: gpw_e24=http://www.oracle.com/" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin 如果这个报错的话，需用
+  wget --no-check-certificate --header "Cookie: gpw_e24=http://www.oracle.com/" http://download.oracle.com/otn-pub/java/jdk/6u45-b06/jdk-6u45-linux-x64.bin 下载1.6.0_45版本的jdk
+
+2.下载完毕，按下面步骤更新
+    chmod u+x jdk-6u45-linux-x64.bin
+    ./jdk-6u45-linux-x64.bin
+    sudo mv jdk1.6.0_45 /usr/lib/jvm/
+    sudo update-alternatives --install /usr/bin/jar jar /usr/lib/jvm/jdk1.6.0_45/bin/jar 60
+    sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.6.0_45/bin/java 60
+    sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.6.0_45/bin/javac 60
+    sudo update-alternatives --install /usr/bin/javap javap /usr/lib/jvm/jdk1.6.0_45/bin/javap 60
+    sudo update-alternatives --install /usr/bin/javadoc javadoc /usr/lib/jvm/jdk1.6.0_45/bin/javadoc 60
+    sudo update-alternatives --config jar
+    sudo update-alternatives --config java
+    sudo update-alternatives --config javac
+    sudo update-alternatives --config javap
+    sudo update-alternatives --config javadoc
+
+3.配置下~/.bashrc
+    export JAVA_HOME=/usr/lib/jvm/jdk1.6.0_45
+    export PATH=$PATH:$JAVA_HOME/jre/bin
+    export CLASSPATH=/usr/lib/jvm/jdk1.6.0_45/lib:/usr/lib/jvm/jdk1.6.0_45/jre/lib:$CLASSPATH
+    source ~/.bashrc
+
+4.更新完毕，查看jdk版本
+   java -version

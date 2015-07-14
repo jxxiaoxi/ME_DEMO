@@ -1,0 +1,8 @@
+1.os.system(command)这个函数可以调用shell运行命令行command并且返回它的返回值。试一下在 python的解释器里输入os.system(”ls -l”)，就可以看到”ls”列出了当前目录下的文件。
+  可以说，通过这个函数，python就拥有了shell的所有能力
+
+2.但是python中有和os.system(command)对应的函数，如：shell中最常用的是ls命令，python对应的写法是：os.listdir(dirname)
+
+3.应用python编写shell脚本经常要用到os,shutil,glob(正则表达式的文件名),tempfile(临时文件),pwd(操作/etc/passwd文件),grp(操作/etc/group文件),commands(取得一个命令的输出)
+
+
